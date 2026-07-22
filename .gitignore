@@ -1,0 +1,13 @@
+*
+!.gitignore
+!.gitattributes
+!README.md
+!shadowrun-berlin-2080-karte.html
+!shadowrun-berlin-2080-karte-offline.html
+!output/
+output/*
+!output/map/
+output/map/*
+!output/map/vendor/
+!output/map/vendor/**
+
