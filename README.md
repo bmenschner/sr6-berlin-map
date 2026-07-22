@@ -1,11 +1,16 @@
 # Shadowrun Berlin 2080 – interaktive Karte
 
-Dieses Repository enthält zwei Ausgaben derselben interaktiven Berlin-Karte:
+Die veröffentlichte Hybrid-PWA ist unter **[bmenschner.github.io/sr6-berlin-map](https://bmenschner.github.io/sr6-berlin-map/)** erreichbar. Das Repository enthält drei Ausgaben derselben interaktiven Berlin-Karte:
 
+- `index.html` – Hauptanwendung für GitHub Pages und installierbare Hybrid-PWA. Sie verwendet online die vollständigen Straßenkarten und wechselt manuell oder bei Verbindungsabbruch auf die eingebettete Offline-Kartenbasis.
 - `shadowrun-berlin-2080-karte.html` – Online-Version mit OpenStreetMap, einer kontrastreichen CARTO-Straßennamenebene und der amtlichen Berlin-Karte ÜK50. Die benötigte Leaflet-Bibliothek liegt unter `output/map/vendor/`.
 - `shadowrun-berlin-2080-karte-offline.html` – transportable Einzeldatei mit eingebetteter Kartenbibliothek, Markern, Beschreibungen, Grenzen und einer für flüssiges Zoomen optimierten Shadowrun-Kartenbasis. OSM und ÜK50 bleiben optionale Online-Ebenen.
 
-Beide Dateien können direkt im Browser geöffnet werden. Für die Offline-Version werden keine weiteren lokalen Dateien benötigt.
+Alle drei Dateien können direkt im Browser geöffnet werden. Für die Offline-Version werden keine weiteren lokalen Dateien benötigt. PWA-Installation, Service Worker und automatische Updates funktionieren aus Sicherheitsgründen nur über die HTTPS-Adresse oder einen lokalen Webserver, nicht über `file://`.
+
+Über **„Online / Offline“** in der oberen Menüleiste wird die Kartenbasis ohne Seitenwechsel umgeschaltet. Online stehen OSM, die verstärkte CARTO-Beschriftung und ÜK50 zur Verfügung. Offline werden alle externen Kartenebenen entfernt und die eingebettete Shadowrun-Übersicht aktiviert; Zoom, Kartenposition, Auswahl, Marker, Personen, Suche, Grenzen und Detailkarten bleiben erhalten. Eine manuelle Offlinewahl wird gespeichert. Bricht bei gewähltem Onlinemodus die Verbindung ab, schaltet die App vorübergehend offline und kehrt nach Wiederherstellung automatisch online zurück.
+
+Über **„App installieren“** lässt sich die GitHub-Pages-Ausgabe in unterstützten Browsern als eigenständige Anwendung installieren. Chromium-Browser öffnen den nativen Installationsdialog; auf iPhone und iPad zeigt die Karte die passende Home-Bildschirm-Anleitung. Der Service Worker speichert ausschließlich die Anwendung, ihre eingebettete Kartenbasis und die App-Symbole. Externe OSM-, CARTO- und ÜK50-Kacheln werden nicht für Offlinegebiete vorgeladen. Sobald eine neue App-Version bereitsteht, erscheint ein kontrollierter Aktualisierungshinweis.
 
 Über **„Light / Dark“** in der oberen Menüleiste lässt sich die gesamte Oberfläche umschalten. Der Lightmode übernimmt die helle Papier-, Magenta-, Anthrazit-, Türkis- und Orange-Palette der Berlin-2080-Karten v06; der gewählte Modus bleibt beim nächsten Öffnen erhalten. Marker, Gebietsstatus, exterritoriale Flächen sowie die einzeln aktivierbaren Bezirks-, Stadtteil-, Umland- und Stadtgrenzen wechseln auf abgestimmte kontrastreiche Farben, ohne ihre Ebenenfunktion zu verlieren.
 
