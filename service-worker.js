@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'sr6-berlin-2080-v1';
+const CACHE_VERSION = 'sr6-berlin-2080-v2';
 const APP_ENTRY = new URL('./index.html', self.registration.scope).href;
 const APP_SHELL = [
   './index.html',
