@@ -7,6 +7,15 @@ Dieses Repository enthält zwei Ausgaben derselben interaktiven Berlin-Karte:
 
 Beide Dateien können direkt im Browser geöffnet werden. Für die Offline-Version werden keine weiteren lokalen Dateien benötigt.
 
+Über **„Detailkarten“** öffnet sich ein eingebettetes, zoombares Kartenarchiv mit:
+
+- zehn Orts-, Gebäude- und Kiezplänen (Babylon, Hauergasse, Kasbah, Kellerclubs, Osramhöfe, Schrapnell, Emma-Goldman-Schulkiez, Spreeland Funpark, Blauer Engel und Vesuv),
+- dem Bezirksplan von Renrakusan,
+- dem Liniennetzplan der Berliner Magnetschwebebahnen,
+- zwei hochauflösenden Berlin-Referenzkarten v06.
+
+Zugehörige Ortspläne sind zusätzlich direkt am jeweiligen Marker verlinkt. Die allgemeine Kellerclub-Karte sowie Netz- und Referenzkarten liegen nur im Kartenarchiv, damit keine künstlichen oder doppelten Standortmarker entstehen. Ein bestimmter Plan kann auch über `?atlas=schluessel` geöffnet werden, zum Beispiel `?atlas=hauergasse`.
+
 ## Hinweise
 
 Dies ist ein inoffizielles, nichtkommerzielles Fanprojekt. Shadowrun und zugehörige Bezeichnungen sowie Inhalte der verwendeten Quellenbücher verbleiben bei den jeweiligen Rechteinhabern. Kartengrundlagen und Grenzdaten werden in der Anwendung den jeweiligen Anbietern zugeordnet, darunter OpenStreetMap-Mitwirkende, Geoportal Berlin und GeoBasis-DE/LGB.
