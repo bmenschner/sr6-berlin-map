@@ -9,6 +9,10 @@ Beide Dateien können direkt im Browser geöffnet werden. Für die Offline-Versi
 
 Über **„Light / Dark“** in der oberen Menüleiste lässt sich die gesamte Oberfläche umschalten. Der Lightmode übernimmt die helle Papier-, Magenta-, Anthrazit-, Türkis- und Orange-Palette der Berlin-2080-Karten v06; der gewählte Modus bleibt beim nächsten Öffnen erhalten. Marker, Gebietsstatus, exterritoriale Flächen sowie die einzeln aktivierbaren Bezirks-, Stadtteil-, Umland- und Stadtgrenzen wechseln auf abgestimmte kontrastreiche Farben, ohne ihre Ebenenfunktion zu verlieren.
 
+Mit **„Orte / Personen“** wechselt die Seitenleiste zwischen dem Standortkatalog und 27 kuratierten Berliner Persönlichkeiten. Die Personen-Dossiers enthalten Rolle, Zugehörigkeit, Quellenbeleg und – soweit eindeutig belegt – Verknüpfungen zu bestehenden Orten oder Bezirken. 26 Personen besitzen solche Bezüge; Nakaira wird bewusst nur als berlinweit geführt, ohne einen erfundenen Kartenpunkt. Die optionale Ebene **„Personenbezüge“** hebt verknüpfte bestehende Marker hervor und erzeugt keine zusätzlichen Standortmarker.
+
+Die Suche arbeitet unabhängig vom gewählten Umschalter und durchsucht immer Orte und Personen gemeinsam. Sie berücksichtigt unter anderem Namen, Aliasse, Beschreibungen, Rollen, Zugehörigkeiten, Quellen und Seitenangaben und gruppiert die Treffer nach **„Orte“** und **„Personen“**. Dadurch findet beispielsweise eine Personensuche auch den zugeordneten Ort. Personen lassen sich über `?person=schluessel` direkt öffnen, zum Beispiel `?person=nakaira`.
+
 Über **„Detailkarten“** öffnet sich ein eingebettetes, zoombares Kartenarchiv mit:
 
 - zehn Orts-, Gebäude- und Kiezplänen (Babylon, Hauergasse, Kasbah, Kellerclubs, Osramhöfe, Schrapnell, Emma-Goldman-Schulkiez, Spreeland Funpark, Blauer Engel und Vesuv),
