@@ -1,5 +1,73 @@
 {
-  "sources": [
+  "schemaVersion": 1,
+  "books": [
+    {
+      "id": "berlin-4d",
+      "title": "Berlin 4D",
+      "edition": "SR4"
+    },
+    {
+      "id": "datapuls-berlin",
+      "title": "Datapuls: Berlin",
+      "edition": "SR5"
+    },
+    {
+      "id": "datapuls-kunstraub",
+      "title": "Datapuls: Kunstraub",
+      "edition": "SR5"
+    },
+    {
+      "id": "datapuls-10-konzerne",
+      "title": "Datapuls: 10 Konzerne",
+      "edition": "SR5"
+    },
+    {
+      "id": "berlin-2080",
+      "title": "Berlin 2080",
+      "edition": "SR6"
+    },
+    {
+      "id": "schattenleben-berlin",
+      "title": "Schattenleben: Berlin",
+      "edition": "SR6"
+    },
+    {
+      "id": "renrakusan",
+      "title": "Renrakusan-Bezirksplan",
+      "edition": "SR6"
+    },
+    {
+      "id": "sr6-quellenkorpus",
+      "title": "Shadowrun-6D-Quellenkorpus",
+      "edition": "SR6"
+    },
+    {
+      "id": "schattenload-2019",
+      "title": "Schattenload 2019",
+      "edition": "SR6"
+    },
+    {
+      "id": "schattenload-2020",
+      "title": "Schattenload 2020",
+      "edition": "SR6"
+    },
+    {
+      "id": "auswurfschock",
+      "title": "Auswurfschock",
+      "edition": "SR6"
+    },
+    {
+      "id": "hinter-dem-vorhang",
+      "title": "Hinter dem Vorhang",
+      "edition": "SR6"
+    },
+    {
+      "id": "schlagschatten",
+      "title": "Schlagschatten",
+      "edition": "SR6"
+    }
+  ],
+  "citations": [
     "Auswurfschock, S. 180–183",
     "Auswurfschock: 180–183",
     "Berlin 2080 Karte v04",

@@ -34,6 +34,7 @@
     return {
       geojson: places,
       persons: asArray(packages.people),
+      availableEditions: asArray(manifest.availableEditions),
       atlas: asArray(packages.atlas),
       areaStatus: zones,
       corporateAreas: featureCollection('Exterritoriale Konzerngebiete', corporateFeatures),

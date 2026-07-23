@@ -18,6 +18,10 @@ Mit **„Orte / Personen“** wechselt die Seitenleiste zwischen dem Standortkat
 
 Die Suche arbeitet unabhängig vom gewählten Umschalter und durchsucht immer Orte und Personen gemeinsam. Der globale Suchindex ist stadtübergreifend: Ein Treffer aus einer anderen Stadt wechselt beim Öffnen automatisch in deren Stadtpaket. Direktlinks enthalten deshalb optional die Stadt, zum Beispiel `?city=berlin-2080&person=nakaira`.
 
+Im Ebenenmenü lassen sich die vorhandenen Spielversionen **SR4**, **SR5** und **SR6** getrennt ein- und ausblenden. Ein Ort oder eine Person, der beziehungsweise die in mehreren Editionen vorkommt, bleibt dabei ein gemeinsamer Listeneintrag und ein gemeinsamer Marker. Die Ebenen bestimmen nur die normale Karten- und Listenansicht; die Suche bleibt bewusst vollständig und macht auch einen Treffer aus einer ausgeblendeten Edition vorübergehend sichtbar.
+
+In den Detailkarten stehen bei mehreren vorhandenen Editionen direkt über dem Quellenauszug Umschaltflächen wie **SR4 / SR5 / SR6** bereit. Quellenangaben tragen die zugehörige Edition in Klammern. Wo eine Edition einen Eintrag zwar belegt, aber noch kein eigener Auszug hinterlegt ist, zeigt die Karte einen gekennzeichneten Quellennachweis statt einen Text aus einer anderen Edition als editionsspezifisch auszugeben.
+
 ## Mehrstadt-Architektur
 
 `data/cities.json` ist das Stadtverzeichnis. Jede Stadt besitzt unter `data/STADT-ID/` ein eigenes Manifest sowie getrennte Dateien für Orte, Personen, Detailkarten, Gebietsstatus, Bezirke, Stadtteile, Umland, Stadtgrenze, Beschriftungen und Quellen. Schwere Bilder liegen unter `assets/cities/STADT-ID/` und werden nur bei Bedarf geladen. Die Online-PWA hält dadurch keine Stadtgeometrien mehr direkt in `index.html`.
@@ -33,7 +37,7 @@ Ein neues Stadtpaket wird in dieser Reihenfolge ergänzt:
 
 Alle Orts- und Personenobjekte besitzen zusätzlich zu ihren bisherigen IDs eine stadtweit stabile `global_id`. Personenverknüpfungen werden beim Erzeugen gegen vorhandene Orte geprüft. Der Validator verhindert doppelte IDs, ungültige Koordinaten, fehlende Dateien und nicht auflösbare Personenbezüge.
 
-Der Berlin-Generator erzeugt aus einer Datenbasis sowohl das modulare Stadtpaket als auch die weiterhin transportable Offline-Einzeldatei. Neue Städte benötigen keine Änderungen am Kartenlader oder an der Stadtwahl.
+Der Berlin-Generator erzeugt aus einer Datenbasis sowohl das modulare Stadtpaket als auch die weiterhin transportable Offline-Einzeldatei. Quellen werden dabei einem Editionskatalog zugeordnet; Orte und Personen erhalten strukturierte Quellen, Spielversionen und editionsweise Beschreibungen. Neue Städte benötigen keine Änderungen am Kartenlader oder an der Stadtwahl.
 
 Über **„Detailkarten“** öffnet sich ein eingebettetes, zoombares Kartenarchiv mit:
 

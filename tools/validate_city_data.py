@@ -10,6 +10,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 REGISTRY_PATH = ROOT / "data/cities.json"
+VALID_EDITIONS = {f"SR{number}" for number in range(1, 7)}
 
 
 def read_json(path: Path):
@@ -41,13 +42,49 @@ def validate_feature_collection(payload: dict, label: str) -> None:
         validate_coordinates(geometry.get("coordinates"), f"{label}, Feature {index + 1}")
 
 
+def validate_edition_data(entry: dict, label: str) -> set[str]:
+    editions = entry.get("editions")
+    if not isinstance(editions, list) or not editions:
+        raise ValueError(f"{label}: keine Spielversion zugeordnet")
+    edition_set = set(editions)
+    unknown = sorted(edition_set - VALID_EDITIONS)
+    if unknown:
+        raise ValueError(f"{label}: unbekannte Spielversion(en): {', '.join(unknown)}")
+    if len(editions) != len(edition_set):
+        raise ValueError(f"{label}: doppelte Spielversion")
+
+    descriptions = entry.get("edition_descriptions")
+    if not isinstance(descriptions, dict) or set(descriptions) != edition_set:
+        raise ValueError(f"{label}: Editionsbeschreibungen passen nicht zu den Spielversionen")
+    for edition, description in descriptions.items():
+        if not isinstance(description, dict):
+            raise ValueError(f"{label}: ungültige Beschreibung für {edition}")
+        if not description.get("preview") or not description.get("full"):
+            raise ValueError(f"{label}: leerer Beschreibungstext für {edition}")
+        sources = description.get("sources")
+        if not isinstance(sources, list) or not sources:
+            raise ValueError(f"{label}: kein Quellenbeleg für {edition}")
+        if any(source.get("edition") != edition for source in sources):
+            raise ValueError(f"{label}: Quellenbeleg ist der falschen Edition zugeordnet")
+
+    sources = entry.get("sources")
+    if not isinstance(sources, list) or not sources:
+        raise ValueError(f"{label}: strukturierte Quellen fehlen")
+    for source in sources:
+        if source.get("edition") not in edition_set or source.get("edition") not in VALID_EDITIONS:
+            raise ValueError(f"{label}: unklassifizierte oder unpassende Quelle {source.get('citation')}")
+        if not source.get("citation") or not source.get("bookId"):
+            raise ValueError(f"{label}: unvollständige Quellenangabe")
+    return edition_set
+
+
 def validate_city(city: dict, global_ids: set[str]) -> tuple[int, int]:
     manifest_path = ROOT / city["manifest"]
     manifest = read_json(manifest_path)
     if manifest.get("id") != city.get("id"):
         raise ValueError(f"{manifest_path.relative_to(ROOT)}: Stadt-ID stimmt nicht mit cities.json überein")
     city_dir = manifest_path.parent
-    required = {"places", "people", "atlas", "zones", "districts", "neighborhoods", "outskirts", "boundary", "labels"}
+    required = {"places", "people", "atlas", "zones", "districts", "neighborhoods", "outskirts", "boundary", "labels", "sources"}
     missing = sorted(required - set(manifest.get("files", {})))
     if missing:
         raise ValueError(f"{city['id']}: fehlende Dateiverweise: {', '.join(missing)}")
@@ -58,6 +95,7 @@ def validate_city(city: dict, global_ids: set[str]) -> tuple[int, int]:
     places = read_json(city_dir / manifest["files"]["places"])
     validate_feature_collection(places, f"{city['id']} Orte")
     place_ids: set[object] = set()
+    city_editions: set[str] = set()
     for feature in places["features"]:
         properties = feature.get("properties") or {}
         place_id = properties.get("id")
@@ -70,6 +108,7 @@ def validate_city(city: dict, global_ids: set[str]) -> tuple[int, int]:
         global_ids.add(global_id)
         if not properties.get("name") or not properties.get("category"):
             raise ValueError(f"{city['id']}: Ort {place_id} ohne Name oder Kategorie")
+        city_editions.update(validate_edition_data(properties, f"{city['id']}: Ort {place_id}"))
 
     people = read_json(city_dir / manifest["files"]["people"])
     person_ids: set[object] = set()
@@ -82,6 +121,7 @@ def validate_city(city: dict, global_ids: set[str]) -> tuple[int, int]:
         if not global_id or global_id in global_ids:
             raise ValueError(f"{city['id']}: fehlende oder doppelte globale Personen-ID {global_id}")
         global_ids.add(global_id)
+        city_editions.update(validate_edition_data(person, f"{city['id']}: Person {person_id}"))
         for link in person.get("locations", []):
             if link.get("id") not in place_ids:
                 raise ValueError(f"{city['id']}: {person.get('name')} verweist auf unbekannten Ort {link.get('id')}")
@@ -102,6 +142,19 @@ def validate_city(city: dict, global_ids: set[str]) -> tuple[int, int]:
     offline_base = manifest.get("assets", {}).get("offlineBase")
     if offline_base and not (city_dir / offline_base).resolve().exists():
         raise ValueError(f"{city['id']}: Offline-Kartenbasis fehlt: {offline_base}")
+
+    manifest_editions = manifest.get("availableEditions")
+    if not isinstance(manifest_editions, list) or set(manifest_editions) != city_editions:
+        raise ValueError(f"{city['id']}: availableEditions stimmt nicht mit den Stadtinhalten überein")
+
+    sources_payload = read_json(city_dir / manifest["files"]["sources"])
+    books = sources_payload.get("books")
+    citations = sources_payload.get("citations")
+    if not isinstance(books, list) or not isinstance(citations, list):
+        raise ValueError(f"{city['id']}: Quellenkatalog ist unvollständig")
+    book_ids = [book.get("id") for book in books]
+    if len(book_ids) != len(set(book_ids)) or any(book.get("edition") not in VALID_EDITIONS for book in books):
+        raise ValueError(f"{city['id']}: Quellenkatalog enthält doppelte Bücher oder ungültige Editionen")
     return len(place_ids), len(person_ids)
 
 

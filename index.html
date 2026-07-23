@@ -134,6 +134,11 @@
     .detail-grid dt { color: var(--muted); }
     .detail-grid dd { margin: 0; }
     .source-copy { margin: 2px 0 13px; padding: 10px 11px 9px; border-left: 2px solid var(--pink); background: linear-gradient(90deg, rgba(255,46,166,.08), rgba(64,248,221,.025)); }
+    .edition-tabs { display: flex; flex-wrap: wrap; gap: 5px; margin: 2px 0 8px; }
+    .edition-tab { min-width: 46px; border: 1px solid var(--line); border-radius: 4px; padding: 5px 9px; background: rgba(0,0,0,.18); color: var(--muted); cursor: pointer; font: 800 10px/1.2 ui-monospace, monospace; letter-spacing: .06em; }
+    .edition-tab:hover { border-color: var(--cyan); color: var(--cyan); }
+    .edition-tab[aria-selected="true"] { border-color: var(--pink); background: linear-gradient(90deg, rgba(255,46,166,.16), rgba(64,248,221,.07)); color: var(--text); box-shadow: inset 0 -2px var(--pink); }
+    .edition-tab[data-has-excerpt="false"]::after { content: " ·"; color: var(--amber); }
     .source-kicker { display: flex; justify-content: space-between; gap: 8px; margin-bottom: 6px; color: var(--cyan); font: 700 9px/1.3 ui-monospace, monospace; letter-spacing: .12em; text-transform: uppercase; }
     .source-kicker span:last-child { color: var(--muted); text-align: right; letter-spacing: 0; text-transform: none; }
     .source-copy p { margin: 0; color: #e8f6f4; font-size: 13px; line-height: 1.55; }
@@ -272,6 +277,8 @@
     :root[data-theme="light"] .detail-head { background: linear-gradient(90deg, rgba(177,18,103,.1), transparent); }
     :root[data-theme="light"] .badge { background: rgba(11,143,155,.06); }
     :root[data-theme="light"] .source-copy { background: linear-gradient(90deg, rgba(177,18,103,.075), rgba(11,143,155,.025)); }
+    :root[data-theme="light"] .edition-tab { background: rgba(255,255,255,.54); }
+    :root[data-theme="light"] .edition-tab[aria-selected="true"] { background: linear-gradient(90deg, rgba(177,18,103,.12), rgba(11,143,155,.06)); }
     :root[data-theme="light"] .source-copy p { color: #273238; }
     :root[data-theme="light"] .atlas-dialog { background: rgba(211,215,213,.88); }
     :root[data-theme="light"] .atlas-panel { border-color: rgba(177,18,103,.42); background: #f4f4f1; box-shadow: 0 24px 80px rgba(32,39,44,.28); }
@@ -415,6 +422,7 @@
           <div class="detail-body">
             <div class="badges" id="detail-badges"></div>
             <button class="detail-plan-btn" id="detail-plan-open" type="button" hidden>▦ Zugehörige Detailkarte öffnen</button>
+            <div class="edition-tabs" id="edition-tabs" role="tablist" aria-label="Beschreibung nach Spielversion" hidden></div>
             <section class="source-copy" aria-label="Beschreibung aus den Quellenbüchern">
               <div class="source-kicker"><span id="description-kind">Quellenauszug</span><span id="description-source"></span></div>
               <p id="description-preview"></p>
@@ -511,6 +519,20 @@
       document.querySelector('meta[name="description"]').setAttribute('content', `Interaktive Shadowrun-Karte von ${cityLabel} mit Orten, Personen, Bezirken und Detailkarten.`);
       const HAS_OFFLINE_BASE = Boolean(OFFLINE_BASE);
       const PERFORMANCE_MODE = HAS_OFFLINE_BASE && !HYBRID_APP;
+      const editionOrder = ['SR1', 'SR2', 'SR3', 'SR4', 'SR5', 'SR6'];
+      const availableEditions = (DATA.availableEditions || []).slice().sort((first, second) => editionOrder.indexOf(first) - editionOrder.indexOf(second));
+      const editionStorageKey = `sr6-edition-layers:${cityContext.city.id}`;
+      let activeEditions = new Set(availableEditions);
+      try {
+        const storedEditions = JSON.parse(window.localStorage.getItem(editionStorageKey) || 'null');
+        if (Array.isArray(storedEditions)) activeEditions = new Set(storedEditions.filter(edition => availableEditions.includes(edition)));
+      } catch (error) {}
+      const entryEditions = entry => Array.isArray(entry.editions) ? entry.editions : [];
+      const matchesEditionLayers = entry => entryEditions(entry).some(edition => activeEditions.has(edition));
+      const editionBadgeText = entry => entryEditions(entry).join(' · ');
+      const sourceLabel = reference => `${reference.citation} (${reference.edition})`;
+      const sourceLabels = references => (references || []).map(sourceLabel).join(' · ');
+      let preferredDescriptionEdition = '';
       const atlasItems = Array.isArray(DATA.atlas) ? DATA.atlas : [];
       const atlasByKey = new Map(atlasItems.map(plan => [plan.key, plan]));
       const persons = Array.isArray(DATA.persons) ? DATA.persons : [];
@@ -756,16 +778,33 @@
       map.attributionControl.addAttribution('Grenzen: Geoportal Berlin / ALKIS, dl-de-zero-2.0 · GeoBasis-DE/LGB, dl-de/by-2-0');
       const personRelationMarkers = [];
       const personRelationLayer = L.layerGroup();
-      [...personsByLocation.keys()].forEach(locationId => {
-        const feature = DATA.geojson.features.find(item => item.properties.id === locationId);
-        if (!feature) return;
-        const [lon, lat] = feature.geometry.coordinates;
-        const ring = L.circleMarker([lat, lon], {
-          radius: 10, color: themePalette().personAccent, weight: 2, opacity: .9,
-          fillOpacity: 0, dashArray: '3 3', interactive: false
+      function rebuildPersonRelationMarkers() {
+        personRelationLayer.clearLayers();
+        personRelationMarkers.splice(0);
+        const visibleLocations = new Set();
+        persons.filter(matchesEditionLayers).forEach(person => {
+          (person.locations || []).forEach(link => visibleLocations.add(link.id));
         });
-        ring.addTo(personRelationLayer);
-        personRelationMarkers.push(ring);
+        visibleLocations.forEach(locationId => {
+          const feature = DATA.geojson.features.find(item => item.properties.id === locationId);
+          if (!feature) return;
+          const [lon, lat] = feature.geometry.coordinates;
+          const ring = L.circleMarker([lat, lon], {
+            radius: 10, color: themePalette().personAccent, weight: 2, opacity: .9,
+            fillOpacity: 0, dashArray: '3 3', interactive: false
+          });
+          ring.addTo(personRelationLayer);
+          personRelationMarkers.push(ring);
+        });
+      }
+      rebuildPersonRelationMarkers();
+      const editionLayers = new Map();
+      const editionByLayer = new Map();
+      availableEditions.forEach(edition => {
+        const layer = L.layerGroup();
+        editionLayers.set(edition, layer);
+        editionByLayer.set(layer, edition);
+        if (activeEditions.has(edition)) layer.addTo(map);
       });
       const overlays = {
         'Straßennamen verstärkt': streetLabels,
@@ -778,6 +817,7 @@
         'Shadowrun-Bezirksnamen': loreLabels,
         'Berliner Stadtgrenze': cityBoundary
       };
+      availableEditions.forEach(edition => { overlays[`Spielversion · ${edition}`] = editionLayers.get(edition); });
       const layerControl = L.control.layers(
         { 'Straßenkarte (OSM)': street, 'Amtliche Berlin-Karte ÜK50': official },
         overlays,
@@ -786,6 +826,7 @@
       let activeOnlineBase = street;
       let labelsWanted = true;
       let switchingMapMode = false;
+      let interfaceReady = false;
 
       function syncNetworkLayerControls() {
         const disabled = activeMapMode === 'offline';
@@ -849,9 +890,27 @@
         if (activeMapMode === 'offline') map.removeLayer(event.layer);
       });
       map.on('overlayadd', event => {
+        if (editionByLayer.has(event.layer)) {
+          activeEditions.add(editionByLayer.get(event.layer));
+          try { window.localStorage.setItem(editionStorageKey, JSON.stringify([...activeEditions])); } catch (error) {}
+          if (!interfaceReady) return;
+          rebuildPersonRelationMarkers();
+          populateCategories();
+          applyFilters();
+          return;
+        }
         if (event.layer === streetLabels && !switchingMapMode) labelsWanted = true;
       });
       map.on('overlayremove', event => {
+        if (editionByLayer.has(event.layer)) {
+          activeEditions.delete(editionByLayer.get(event.layer));
+          try { window.localStorage.setItem(editionStorageKey, JSON.stringify([...activeEditions])); } catch (error) {}
+          if (!interfaceReady) return;
+          rebuildPersonRelationMarkers();
+          populateCategories();
+          applyFilters();
+          return;
+        }
         if (event.layer === streetLabels && !switchingMapMode) labelsWanted = false;
       });
       document.getElementById('map-mode-offline').disabled = !HAS_OFFLINE_BASE;
@@ -905,7 +964,11 @@
 
       function populateCategories() {
         const currentValue = category.value;
-        const source = browseMode === 'persons' ? persons : DATA.entities;
+        const source = (
+          browseMode === 'persons'
+            ? persons
+            : DATA.geojson.features.map(feature => feature.properties)
+        ).filter(matchesEditionLayers);
         const values = [...new Set(source.map(item => item.category))].sort((a,b) => a.localeCompare(b,'de'));
         category.replaceChildren();
         const all = document.createElement('option');
@@ -934,7 +997,7 @@
           const feature = featureById.get(link.id);
           return `${feature ? feature.properties.name : ''} ${link.relation}`;
         }).join(' ');
-        return fold(`${person.name} ${(person.aliases || []).join(' ')} ${person.category} ${person.role} ${person.affiliation} ${person.status} ${person.metatype || ''} ${person.summary} ${person.description} ${person.source} ${person.scope || ''} ${linkedPlaces}`);
+        return fold(`${person.name} ${(person.aliases || []).join(' ')} ${person.category} ${person.role} ${person.affiliation} ${person.status} ${person.metatype || ''} ${person.summary} ${person.description} ${person.source} ${(person.editions || []).join(' ')} ${JSON.stringify(person.edition_descriptions || {})} ${person.scope || ''} ${linkedPlaces}`);
       }
 
       function placeSearchText(feature) {
@@ -946,7 +1009,7 @@
         const relatedPeople = (personsByLocation.get(p.id) || []).map(item =>
           `${item.person.name} ${(item.person.aliases || []).join(' ')} ${item.person.source} ${item.relation}`
         ).join(' ');
-        return fold(`${p.id} ${pad(p.id)} ${p.name} ${p.category} ${p.source_pages} ${p.map_source} ${p.description_preview} ${p.description_full || ''} ${planText} ${relatedPeople}`);
+        return fold(`${p.id} ${pad(p.id)} ${p.name} ${p.category} ${p.source_pages} ${p.map_source} ${p.description_preview} ${p.description_full || ''} ${(p.editions || []).join(' ')} ${JSON.stringify(p.edition_descriptions || {})} ${planText} ${relatedPeople}`);
       }
 
       function markerStyle(feature, active = false) {
@@ -1039,6 +1102,48 @@
         document.getElementById('description-full').textContent = remainder;
       }
 
+      function renderEditionDescriptions(entry, fallback) {
+        const tabs = document.getElementById('edition-tabs');
+        const descriptions = entry.edition_descriptions || {};
+        const editions = Object.keys(descriptions).sort((first, second) => editionOrder.indexOf(first) - editionOrder.indexOf(second));
+        tabs.replaceChildren();
+        tabs.hidden = editions.length < 2;
+        if (!editions.length) {
+          setDescription(fallback.kind, fallback.source, fallback.preview, fallback.full, fallback.hasMore);
+          return;
+        }
+        const newestExcerpt = editions.slice().reverse().find(edition => descriptions[edition].hasExcerpt);
+        const selectedEdition = editions.includes(preferredDescriptionEdition)
+          ? preferredDescriptionEdition
+          : newestExcerpt || editions[editions.length - 1];
+        const selectEdition = edition => {
+          preferredDescriptionEdition = edition;
+          tabs.querySelectorAll('.edition-tab').forEach(button => button.setAttribute('aria-selected', button.dataset.edition === edition ? 'true' : 'false'));
+          const description = descriptions[edition];
+          setDescription(
+            description.kind,
+            sourceLabels(description.sources),
+            description.preview,
+            description.full,
+            description.hasMore,
+          );
+        };
+        editions.forEach(edition => {
+          const button = document.createElement('button');
+          button.type = 'button';
+          button.className = 'edition-tab';
+          button.dataset.edition = edition;
+          button.dataset.hasExcerpt = descriptions[edition].hasExcerpt ? 'true' : 'false';
+          button.setAttribute('role', 'tab');
+          button.setAttribute('aria-selected', 'false');
+          button.title = descriptions[edition].hasExcerpt ? `${edition}-Beschreibung` : `${edition}-Quellennachweis`;
+          button.textContent = edition;
+          button.addEventListener('click', () => selectEdition(edition));
+          tabs.appendChild(button);
+        });
+        selectEdition(selectedEdition);
+      }
+
       function renderRelated(title, entries) {
         const block = document.getElementById('related-block');
         const list = document.getElementById('related-list');
@@ -1060,12 +1165,12 @@
         const detailPlans = (p.detail_plans || []).map(key => atlasByKey.get(key)).filter(Boolean);
         document.getElementById('detail-id').textContent = pad(p.id);
         document.getElementById('detail-title').textContent = p.name;
-        document.getElementById('detail-badges').innerHTML = `<span class="badge">${escapeHtml(p.category)}</span><span class="badge">${escapeHtml(p.accuracy)}</span>${p.detail_map ? `<span class="badge">Detail ${escapeHtml(p.detail_map)}</span>` : ''}${detailPlans.length ? '<span class="badge">Ortsplan vorhanden</span>' : ''}`;
+        document.getElementById('detail-badges').innerHTML = `<span class="badge">${escapeHtml(p.category)}</span><span class="badge">${escapeHtml(p.accuracy)}</span>${(p.editions || []).map(edition => `<span class="badge">${escapeHtml(edition)}</span>`).join('')}${p.detail_map ? `<span class="badge">Detail ${escapeHtml(p.detail_map)}</span>` : ''}${detailPlans.length ? '<span class="badge">Ortsplan vorhanden</span>' : ''}`;
         const detailPlanButton = document.getElementById('detail-plan-open');
         detailPlanButton.hidden = detailPlans.length === 0;
         detailPlanButton.dataset.key = detailPlans.length ? detailPlans[0].key : '';
         detailPlanButton.textContent = detailPlans.length ? `▦ ${detailPlans[0].title} öffnen` : '';
-        setDescription(p.description_kind, p.description_source, p.description_preview, p.description_full, p.description_has_more);
+        renderEditionDescriptions(p, { kind: p.description_kind, source: p.description_source, preview: p.description_preview, full: p.description_full, hasMore: p.description_has_more });
         const relatedPeople = personsByLocation.get(p.id) || [];
         renderRelated('Personen von Interesse', relatedPeople.map(item => ({
           label: item.person.name,
@@ -1074,8 +1179,8 @@
         })));
         const locationCount = 1 + (p.alternate_locations || []).length;
         document.getElementById('detail-grid').innerHTML = `
-          <dt>Quellen</dt><dd>${escapeHtml(p.source_pages || 'Berlin 2080 Karte v04')}</dd>
-          <dt>Kartenquelle</dt><dd>${escapeHtml(p.map_source || 'Berlin 2080 Karte v04')}</dd>
+          <dt>Quellen</dt><dd>${(p.sources || []).map(reference => escapeHtml(sourceLabel(reference))).join('<br>') || escapeHtml(p.source_pages || 'Berlin 2080 Karte v04')}</dd>
+          <dt>Kartenquelle</dt><dd>${(p.map_sources || []).map(reference => escapeHtml(sourceLabel(reference))).join('<br>') || escapeHtml(p.map_source || 'Berlin 2080 Karte v04')}</dd>
           <dt>Position</dt><dd>${escapeHtml(p.placement_note || p.accuracy)}</dd>
           ${locationCount > 1 ? `<dt>Standorte</dt><dd>${locationCount} auf der Einzelkarte</dd>` : ''}
           <dt>Koordinaten</dt><dd>${feature.geometry.coordinates[1].toFixed(5)}, ${feature.geometry.coordinates[0].toFixed(5)}</dd>`;
@@ -1085,11 +1190,11 @@
       function showPersonDetails(person) {
         document.getElementById('detail-id').textContent = 'POI';
         document.getElementById('detail-title').textContent = person.name;
-        document.getElementById('detail-badges').innerHTML = `<span class="badge">${escapeHtml(person.category)}</span><span class="badge">${escapeHtml(person.status)}</span>${person.metatype ? `<span class="badge">${escapeHtml(person.metatype)}</span>` : ''}`;
+        document.getElementById('detail-badges').innerHTML = `<span class="badge">${escapeHtml(person.category)}</span><span class="badge">${escapeHtml(person.status)}</span>${(person.editions || []).map(edition => `<span class="badge">${escapeHtml(edition)}</span>`).join('')}${person.metatype ? `<span class="badge">${escapeHtml(person.metatype)}</span>` : ''}`;
         const detailPlanButton = document.getElementById('detail-plan-open');
         detailPlanButton.hidden = true;
         detailPlanButton.dataset.key = '';
-        setDescription('Personendossier', person.source, person.summary, person.description, true);
+        renderEditionDescriptions(person, { kind: 'Personendossier', source: person.source, preview: person.summary, full: person.description, hasMore: true });
         const linkedLocations = (person.locations || []).map(link => {
           const feature = featureById.get(link.id);
           return feature ? {
@@ -1106,7 +1211,7 @@
           <dt>Rolle</dt><dd>${escapeHtml(person.role)}</dd>
           <dt>Zugehörigkeit</dt><dd>${escapeHtml(person.affiliation)}</dd>
           <dt>Kartenbezug</dt><dd>${escapeHtml(mapReference)}</dd>
-          <dt>Quelle</dt><dd>${escapeHtml(person.source)}</dd>`;
+          <dt>Quellen</dt><dd>${(person.sources || []).map(reference => escapeHtml(sourceLabel(reference))).join('<br>') || escapeHtml(person.source)}</dd>`;
         document.getElementById('detail-card').classList.add('open');
       }
 
@@ -1175,7 +1280,7 @@
           const p = feature.properties;
           const button = document.createElement('button');
           button.type = 'button'; button.className = `result${p.id === selected ? ' active' : ''}`; button.dataset.type = 'place'; button.dataset.id = p.id;
-          button.innerHTML = `<span class="num">${pad(p.id)}</span><span><span class="result-name">${escapeHtml(p.name)}</span><br><span class="result-cat">${escapeHtml(p.category)}</span></span><span class="pin" style="color:${categoryColor(p.category)};background:currentColor"></span>`;
+          button.innerHTML = `<span class="num">${pad(p.id)}</span><span><span class="result-name">${escapeHtml(p.name)}</span><br><span class="result-cat">${escapeHtml(p.category)} · ${escapeHtml(editionBadgeText(p))}</span></span><span class="pin" style="color:${categoryColor(p.category)};background:currentColor"></span>`;
           button.addEventListener('click', () => selectFeature(feature)); list.appendChild(button);
         });
       }
@@ -1184,7 +1289,7 @@
         entries.slice().sort((first, second) => first.name.localeCompare(second.name, 'de', { sensitivity: 'base' })).forEach(person => {
           const button = document.createElement('button');
           button.type = 'button'; button.className = `result${selectedPerson && person.id === selectedPerson.id ? ' active' : ''}`; button.dataset.type = 'person'; button.dataset.personId = person.id;
-          button.innerHTML = `<span class="person-glyph" aria-hidden="true">P</span><span><span class="result-name">${escapeHtml(person.name)}</span><br><span class="result-cat">${escapeHtml(person.category)}</span></span><span class="pin" style="color:${themePalette().personAccent};background:currentColor"></span>`;
+          button.innerHTML = `<span class="person-glyph" aria-hidden="true">P</span><span><span class="result-name">${escapeHtml(person.name)}</span><br><span class="result-cat">${escapeHtml(person.category)} · ${escapeHtml(editionBadgeText(person))}</span></span><span class="pin" style="color:${themePalette().personAccent};background:currentColor"></span>`;
           button.addEventListener('click', () => selectPerson(person)); list.appendChild(button);
         });
       }
@@ -1195,7 +1300,8 @@
           button.type = 'button';
           button.className = 'result';
           button.dataset.type = 'cross-city';
-          button.innerHTML = `<span class="num">${escapeHtml((item.cityName || item.cityId).slice(0, 3).toUpperCase())}</span><span><span class="result-name">${escapeHtml(item.name)}</span><br><span class="result-cat">${escapeHtml(item.cityLabel)} · ${escapeHtml(item.category)}</span></span><span class="pin" style="color:${categoryColor(item.category)};background:currentColor"></span>`;
+          const itemEditions = (item.editions || []).join(' · ');
+          button.innerHTML = `<span class="num">${escapeHtml((item.cityName || item.cityId).slice(0, 3).toUpperCase())}</span><span><span class="result-name">${escapeHtml(item.name)}</span><br><span class="result-cat">${escapeHtml(item.cityLabel)} · ${escapeHtml(item.category)}${itemEditions ? ` · ${escapeHtml(itemEditions)}` : ''}</span></span><span class="pin" style="color:${categoryColor(item.category)};background:currentColor"></span>`;
           button.addEventListener('click', () => {
             const target = new URL(window.location.href);
             target.search = '';
@@ -1237,12 +1343,12 @@
           filtered = DATA.geojson.features.filter(feature => mapIds.has(feature.properties.id));
         } else if (browseMode === 'persons') {
           crossCityResults = [];
-          personResults = persons.filter(person => !category.value || person.category === category.value);
+          personResults = persons.filter(person => matchesEditionLayers(person) && (!category.value || person.category === category.value));
           placeResults = [];
-          filtered = DATA.geojson.features.slice();
+          filtered = DATA.geojson.features.filter(feature => matchesEditionLayers(feature.properties));
         } else {
           crossCityResults = [];
-          placeResults = DATA.geojson.features.filter(feature => !category.value || feature.properties.category === category.value);
+          placeResults = DATA.geojson.features.filter(feature => matchesEditionLayers(feature.properties) && (!category.value || feature.properties.category === category.value));
           personResults = [];
           filtered = placeResults.slice();
         }
@@ -1290,6 +1396,7 @@
         mapEl.classList.toggle('zoom-detail', map.getZoom() >= 12);
         markerById.forEach((markers, id) => markers.forEach(marker => marker.setStyle(markerStyle(featureById.get(id), markerIsActive(id)))));
       });
+      interfaceReady = true;
       buildAtlasNavigation();
       populateCategories();
       applyFilters();

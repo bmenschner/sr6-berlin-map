@@ -22,6 +22,36 @@
         "global_id": "berlin-2080:place:449-mitte"
       }
     ],
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 116",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Personendossier",
+        "preview": "Zöller führt seit 2078 die Berliner Regierung und zugleich die BERVAG.",
+        "full": "Der wirtschaftspolitisch profilierte Erste Bürgermeister wirbt für Berlin als europäischen Banken- und Wirtschaftsstandort. Hinter seinem freundlichen öffentlichen Auftreten steht ein harter Geschäftsmann, der diskrete Schattenkontakte über seinen Sicherheitsapparat pflegt.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 116",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
     "global_id": "berlin-2080:person:paul-reinhard-zoeller"
   },
   {
@@ -48,6 +78,36 @@
         "global_id": "berlin-2080:place:442-lichtenberg"
       }
     ],
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 116–117",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Personendossier",
+        "preview": "Pflügler vermittelt zwischen Berlins Machtblöcken und entscheidet festgefahrene Konflikte.",
+        "full": "Der Lichtenberger Pfarrer gilt als einer der Architekten der Berliner Einigung. Als Leiter des mächtigen Schlichtungsausschusses versucht er unlösbare Streitfälle zusammenzuführen und greift dafür bei Bedarf auch auf präzise Schattenarbeit zurück.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 116–117",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
     "global_id": "berlin-2080:person:morek-pfluegler"
   },
   {
@@ -73,6 +133,36 @@
         "global_id": "berlin-2080:place:205-miyako-arkologie-renraku"
       }
     ],
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 117",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Personendossier",
+        "preview": "Ozu verantwortet Ratskanzlei, Protokoll, Öffentlichkeitsarbeit und den Schutz der Bezirksabgeordneten.",
+        "full": "Der Renraku-Konzernpolitiker stieg nach dem Verschwinden Ichiro Koizumis und dem Tod Michael Koslowskis zum Dritten Bürgermeister auf. Seine Karriere, seine Konzernloyalität und mehrere ungeklärte Vorgänge machen ihn für Berlins Schatten besonders interessant.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 117",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
     "global_id": "berlin-2080:person:takeshi-ozu"
   },
   {
@@ -93,6 +183,36 @@
         "global_id": "berlin-2080:place:208-saeder-krupp-arkologie-der-hort"
       }
     ],
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 117",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Personendossier",
+        "preview": "Landolt ist S-Ks Berliner Powerfrau und eine international erfahrene Social-Engineering-Expertin.",
+        "full": "Die makellos auftretende Konzernmanagerin vertritt S-K Tempelhof und soll zugleich als Troubleshooterin für S-K Prime arbeiten. Über Mittelsleute ist sie tief mit dem Berliner Schattenmarkt verbunden.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 117",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
     "global_id": "berlin-2080:person:franziska-landolt"
   },
   {
@@ -118,6 +238,36 @@
         "global_id": "berlin-2080:place:212-schering-hauptquartier"
       }
     ],
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 58–59 und 76–77",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Personendossier",
+        "preview": "Nordins Gebietsabtretung an Z-IC Tegel löste in Reinickendorf eine politische Krise aus.",
+        "full": "Als Leiterin des Reinickeforums vertrat Nordin zentrale Wirtschaftsinteressen des Bezirks. Nach der Abtretung großer Gebiete an Z-IC wurde sie von der Bezirksversammlung abgesetzt; die Rechtmäßigkeit dieser Entscheidung ist innerhalb der Lore weiterhin umstritten.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 58–59 und 76–77",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
     "global_id": "berlin-2080:person:sofia-nordin"
   },
   {
@@ -140,6 +290,36 @@
         "global_id": "berlin-2080:place:441-pankow"
       }
     ],
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 117–118",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Personendossier",
+        "preview": "Der Altstalinist ringt nach Gargaris Tod um politischen Einfluss und sein eigenes Überleben.",
+        "full": "Bronstein kompensiert sein begrenztes Stimmgewicht durch Dogmatik, Medienpräsenz und Kontakte zu Konzerngegnern. Im Machtkampf der zersplitterten Pankower Vory versucht er, nicht nur zu bestehen, sondern am Ende als politischer Gewinner übrig zu bleiben.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 117–118",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
     "global_id": "berlin-2080:person:wladimir-bronstein"
   },
   {
@@ -161,6 +341,36 @@
         "global_id": "berlin-2080:place:444-kopenick"
       }
     ],
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 117–118",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Personendossier",
+        "preview": "Rabeja verbindet kommunistische Politik mit einem weitreichenden Netz aus Kontakten und Gefälligkeiten.",
+        "full": "Die schon während des Status F erfolgreiche Vermittlerin besitzt ein außergewöhnlich dichtes Berliner Beziehungsnetz. Über dieses konnte sie unter anderem Shiawase zu Investitionen und zur Unterstützung Köpenicks bewegen.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 117–118",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
     "global_id": "berlin-2080:person:lena-rabeja"
   },
   {
@@ -181,6 +391,36 @@
         "global_id": "berlin-2080:place:450-kreuzhain"
       }
     ],
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 43–44 und 117",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Personendossier",
+        "preview": "Özgün war eine zentrale Vermittlerin der Berliner Anarchie und der späteren Einigung.",
+        "full": "Die Erwachte gehörte bereits im anarchistischen Kreuzberg zu den wichtigsten Vermittlerinnen. Gemeinsam mit Morek Pflügler öffnete sie den Dialog mit den Konzernen und prägte damit die politische Neuordnung Berlins.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 43–44 und 117",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
     "global_id": "berlin-2080:person:mitra-oezguen"
   },
   {
@@ -201,6 +441,36 @@
         "global_id": "berlin-2080:place:446-chawi"
       }
     ],
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 34 und 117",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Personendossier",
+        "preview": "Kilic vertritt den politisch und wirtschaftlich vielstimmigen Bezirk Chawi in der BAV.",
+        "full": "Ihre Stellung entsteht in einem Bezirk, in dem DeMeKo, Einzelhandel, Immobilieninteressen und lokale Organisationen miteinander konkurrieren. In der Bezirksabgeordnetenversammlung gilt sie als eine der deutlich wahrnehmbaren Stimmen der Normbezirke.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 34 und 117",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
     "global_id": "berlin-2080:person:milena-kilic"
   },
   {
@@ -221,6 +491,36 @@
         "global_id": "berlin-2080:place:448-gropiusstadt"
       }
     ],
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 117–119",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Personendossier",
+        "preview": "Der Hexer hält sich politisch, indem er Gegner überlebt und bei Konflikten Runner einsetzt.",
+        "full": "Sukrow bewegt sich zwischen Neo-Anarchisten, Horde und Vory. Seine robuste Machtbasis und die Bereitschaft, Schattenkräfte gegen Feinde einzusetzen, machen ihn zu einem besonders runrelevanten Bezirksvertreter.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 117–119",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
     "global_id": "berlin-2080:person:aleksandr-sukrow"
   },
   {
@@ -249,6 +549,36 @@
         "global_id": "berlin-2080:place:323-eiswerder"
       }
     ],
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 94–96 und 118–119",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Personendossier",
+        "preview": "Fletscher machte Spandau zum Alternativbezirk und wurde damit zugleich Hoffnungsträger und Zielscheibe.",
+        "full": "Der frühere Kopf der Eiswerder-Anarchisten wurde 2077 zum Bezirksabgeordneten gewählt. Sein Versuch, zwischen Alternativen und Normalbevölkerung zu vermitteln, verschärfte zugleich den Konflikt mit den militanten Kräften auf der Inselfestung.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 94–96 und 118–119",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
     "global_id": "berlin-2080:person:jurek-fletscher-kowalczyk"
   },
   {
@@ -269,6 +599,36 @@
         "global_id": "berlin-2080:place:443-marzahn"
       }
     ],
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 117–119",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Personendossier",
+        "preview": "Kotov verbindet politisches Amt, beträchtliches Vermögen und Verbindungen in das Vory-Milieu.",
+        "full": "Der exilrussische Finanzmagnat gehört zu den Berliner Bezirksvertretern, die sich Unterstützung direkt kaufen können. Seine Stellung in Marzahn wird von wirtschaftlicher Macht und dem dortigen Vory-Einfluss geprägt.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 117–119",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
     "global_id": "berlin-2080:person:jaromir-kotov"
   },
   {
@@ -289,6 +649,36 @@
         "global_id": "berlin-2080:place:453-falkensee"
       }
     ],
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 117–119",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Personendossier",
+        "preview": "Der Dönerunternehmer und Clanpatriarch verfügt in Falkensee über Personal, Geld und politische Reichweite.",
+        "full": "Özdemir stützt seine Macht auf den Familienclan und dessen weitreichende Geschäfte. Das Netzwerk kann politische Interessen ebenso durchsetzen wie Übernahmen und Bereinigungen im kriminellen Umfeld.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 117–119",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
     "global_id": "berlin-2080:person:aslan-oezdemir"
   },
   {
@@ -314,6 +704,36 @@
         "global_id": "berlin-2080:place:302-bgs-kaserne-oranienburg"
       }
     ],
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 117–118",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Personendossier",
+        "preview": "Faber vertritt den schwer gesicherten BGS-Bezirk Oranienburg gegenüber dem Berliner Rat.",
+        "full": "Der ehemalige Oberst reagiert mit stoischer Ruhe auf den politischen Druck aus Berlin. Unter seiner Vertretung wächst die militärische Präsenz in Oranienburg, was regelmäßig Spekulationen über die Absichten der ADL nährt.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 117–118",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
     "global_id": "berlin-2080:person:ralph-faber"
   },
   {
@@ -334,6 +754,36 @@
         "global_id": "berlin-2080:place:455-potsdam"
       }
     ],
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 117–119",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Personendossier",
+        "preview": "Von Wittich vertritt Potsdam mit Rückhalt aus Partei- und Stiftungsmitteln.",
+        "full": "Seine politische Basis liegt im Zusammenspiel von Preußenstiftung, Draco Foundation und konservativen Netzwerken. Anders als viele alternative Politiker kann er notwendige Unterstützung unmittelbar finanzieren.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 117–119",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
     "global_id": "berlin-2080:person:fabian-von-wittich"
   },
   {
@@ -360,6 +810,36 @@
         "global_id": "berlin-2080:place:188-aztech-arkologie"
       }
     ],
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 117–118",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Personendossier",
+        "preview": "Cazares vertritt Aztechnology im extraterritorialen Schönwalde und muss sich vor allem mit dem BGS arrangieren.",
+        "full": "Der öffentlich smart auftretende Konzernpolitiker steht zwischen Aztechnologys Berliner Interessen und den ständigen Kontrollen sowie Behinderungen durch den Bundesgrenzschutz an den Außengrenzen des Bezirks.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 117–118",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
     "global_id": "berlin-2080:person:ferdinand-cazares"
   },
   {
@@ -385,6 +865,36 @@
         "global_id": "berlin-2080:place:185-agc-tower"
       }
     ],
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 117–118",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Personendossier",
+        "preview": "Schlüter führt MSI und vertritt den stark abgeschotteten Konzernbezirk Siemensstadt.",
+        "full": "Der zurückgezogen lebende Konzernchef verlässt Siemensstadt nur selten. Seine Arbeit konzentriert sich auf den digitalen und industriellen Komplex von MSI und AG Chemie, der im Bezirk nahezu alle Strukturen dominiert.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 117–118",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
     "global_id": "berlin-2080:person:robert-schlueter-junior"
   },
   {
@@ -410,6 +920,36 @@
         "global_id": "berlin-2080:place:218-zeta-business-club-villa-borsig"
       }
     ],
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 76 und 117–118",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Personendossier",
+        "preview": "Thompson führt den Konzernbezirk Tegel mit verschärfter Sicherheit und steht im Fall Koslowski unter Verdacht.",
+        "full": "Der britische Konzernpolitiker reagierte auf den Tod seines Vorgängers mit engmaschigen Kontrollen, Kameras und Sicherheitskräften. Zugleich wird er weiterhin als Hauptverdächtiger im ungeklärten Mordfall Koslowski behandelt.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 76 und 117–118",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
     "global_id": "berlin-2080:person:nathan-thompson"
   },
   {
@@ -430,6 +970,36 @@
         "global_id": "berlin-2080:place:457-strausberg"
       }
     ],
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 72 und 117",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Personendossier",
+        "preview": "Katschmarek verbindet grüne Politik mit dem Kampf gegen die Shiawase-Müllhalden vor Strausberg.",
+        "full": "Die Bezirksvertreterin gewann 2078 erneut mit einer groß angelegten Umweltkampagne. Im Mittelpunkt stehen Grundwasser, Luftverschmutzung, Seuchen und die wachsende Dämonenrattenplage der benachbarten Exterritorialgebiete.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 72 und 117",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
     "global_id": "berlin-2080:person:doreen-katschmarek"
   },
   {
@@ -455,6 +1025,36 @@
         "global_id": "berlin-2080:place:217-zehlendorfer-platte-proteus"
       }
     ],
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 117",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Personendossier",
+        "preview": "Buzek vertritt das hochgesicherte Zehlendorf mit enger Bindung an Proteus und Evo.",
+        "full": "Ihre politische Stellung ruht auf dem Einfluss von Proteus und Evo im wohlhabenden Südwesten. Die Zehlendorfer Platte bildet dabei eines der sichtbarsten Macht- und Forschungszentren ihres Umfelds.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 117",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
     "global_id": "berlin-2080:person:izabella-buzek"
   },
   {
@@ -480,6 +1080,36 @@
         "global_id": "berlin-2080:place:204-messerschmitt-kawasaki-die-fabrik"
       }
     ],
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 64 und 117",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Personendossier",
+        "preview": "Thielke vertritt den von Messerschmitt-Kawasaki geprägten Bezirk überraschend gemäßigt.",
+        "full": "Der M-K-nahe Politiker versucht, Konzerninteressen und die rasante Entwicklung Schönefelds in der BAV zu vertreten. Die harte Sicherheitspolitik überlässt er weitgehend dem örtlichen M-K-Sicherheitsapparat.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 64 und 117",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
     "global_id": "berlin-2080:person:gregor-thielke"
   },
   {
@@ -495,6 +1125,36 @@
     "source": "Berlin 2080, S. 21–22",
     "locations": [],
     "scope": "Berlinweit; kein eindeutig kartierter B1L-Standort",
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 21–22",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Personendossier",
+        "preview": "Nakaira ist eine der bekanntesten Stimmen Berlins und verbindet Medienprominenz mit neo-anarchistischer Vergangenheit.",
+        "full": "Ihre frühen, unter Gefahr gedrehten Videos und bissigen Kommentare machten sie in der alternativen Szene bekannt. Heute moderiert sie mehrere B1L-Formate, prägt Politik-, Mode- und Szenedebatten und engagiert Runner sowohl zum Selbstschutz als auch für neue Geschichten.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 21–22",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
     "global_id": "berlin-2080:person:nakaira"
   },
   {
@@ -517,6 +1177,36 @@
         "global_id": "berlin-2080:place:304-black-pirate"
       }
     ],
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 94–95",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Personendossier",
+        "preview": "Daemonika wurde mit aggressivem Punk und German Hardstyle zur Berliner Anarchie-Ikone.",
+        "full": "Seit ihrem Durchbruch 2078 verbindet sie Kultstatus, politische Provokation und Aufrufe zu Widerstand. Die offizielle Biografie ihres Labels gilt als erfunden; auffällige Cybergliedmaßen nähren Spekulationen über eine Verbindung zur verschwundenen Performerin Osiris.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 94–95",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
     "global_id": "berlin-2080:person:daemonika"
   },
   {
@@ -538,6 +1228,36 @@
         "global_id": "berlin-2080:place:323-eiswerder"
       }
     ],
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 95–96",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Personendossier",
+        "preview": "Talabani will Eiswerder als Trainingslager und Festung für den erwarteten Endkampf ausbauen.",
+        "full": "Die weißhaarige Elfin führt die militante Fraktion der Inselfestung und ist gut mit Axis F vernetzt. Ihre Aufrüstungspolitik steht den gemäßigteren Kräften um Fletscher und Rosinski unversöhnlich gegenüber.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 95–96",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
     "global_id": "berlin-2080:person:leila-talabani"
   },
   {
@@ -558,6 +1278,36 @@
         "global_id": "berlin-2080:place:296-anarchistische-schwarze-kreuz-klinik-eiswerder"
       }
     ],
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 96",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Personendossier",
+        "preview": "Rosinski ist medizinisch nahezu unersetzlich und politisch der wichtigste offene Gegner Talabanis auf Eiswerder.",
+        "full": "Der Klinikleiter steht für den gemäßigten Kurs der Inselfestung. Obwohl er nach dem Weggang anderer Gemäßigter zunehmend isoliert ist, sichern ihm seine medizinische Bedeutung und seine lange Geschichte mit der Inselgemeinschaft eine außergewöhnlich feste Stellung.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 96",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
     "global_id": "berlin-2080:person:mark-rosinski"
   },
   {
@@ -578,6 +1328,36 @@
         "global_id": "berlin-2080:place:442-lichtenberg"
       }
     ],
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 119",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Personendossier",
+        "preview": "Fienchen gehört zu den prägnantesten Stimmen der alternativen Berliner Politik und Schattenszene.",
+        "full": "Durch ihre Arbeit für die Lichtenberger Verwaltungs-Genossenschaft und die Initiative Berliner Vollbewaffnung besitzt sie Einblick in Sicherheits-, Rechts- und Kiezfragen. Trotz ihres provokanten Auftretens wird sie als mögliche politische Nachfolgerin Morek Pflüglers gehandelt.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 119",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
     "global_id": "berlin-2080:person:fienchen"
   },
   {
@@ -598,6 +1378,36 @@
         "global_id": "berlin-2080:place:444-kopenick"
       }
     ],
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 118 und 138",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Personendossier",
+        "preview": "Tichonow verbindet literarische Prominenz mit radikaler Technikpolitik und mutmaßlichen Sprawlguerilla-Kontakten.",
+        "full": "Der Schriftsteller propagiert eine KI-gesteuerte realkommunistische Welttechnokratie. Als enger Vertrauter Lena Rabejas und wegen angeblicher Beziehungen zu E-Wall steht er unter Beobachtung des Verfassungsschutzes.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 118 und 138",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
     "global_id": "berlin-2080:person:arkady-tichonow"
   },
   {
@@ -621,6 +1431,36 @@
         "global_id": "berlin-2080:place:68-cafe-cezve"
       }
     ],
+    "sources": [
+      {
+        "bookId": "schattenleben-berlin",
+        "title": "Schattenleben: Berlin",
+        "edition": "SR6",
+        "citation": "Schattenleben: Berlin, S. 7",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Personendossier",
+        "preview": "Kaschmir gehört mit ihrem über Jahrzehnte gewachsenen Netzwerk zu den einflussreichsten Connections der Berliner Schatten.",
+        "full": "Die unauffällige Betreiberin des Café Cezve übernahm das Informationsgeschäft von Altug Burakgazi. Viele später legendäre Runner erhielten über sie oder den Cezve-Clan ihre erste Chance; zugleich sorgt sie mit ihrem lokalen Netz für Schutz, Arbeit und Informationen im Kreuzbasar-Kiez.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "schattenleben-berlin",
+            "title": "Schattenleben: Berlin",
+            "edition": "SR6",
+            "citation": "Schattenleben: Berlin, S. 7",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
     "global_id": "berlin-2080:person:kazimira-kaschmir-burakgazi"
   },
   {
@@ -642,6 +1482,36 @@
         "global_id": "berlin-2080:place:99-zankapfel"
       }
     ],
+    "sources": [
+      {
+        "bookId": "schattenleben-berlin",
+        "title": "Schattenleben: Berlin",
+        "edition": "SR6",
+        "citation": "Schattenleben: Berlin, S. 8",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Personendossier",
+        "preview": "Alhazred ist einer der ältesten Vermittler Berlins und ein gefürchteter professioneller Rufkiller.",
+        "full": "Der politisch neutrale Meistermanipulator verbindet die einflussreiche diskordianische Szene mit den Nemessiden, einer Gang professioneller Persönlichkeitsattentäter. Er verlässt seinen luxuriösen Rückzugsort unter dem Zankapfel nur selten und setzt für seine Ziele bevorzugt Mittelsleute und Runner ein.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "schattenleben-berlin",
+            "title": "Schattenleben: Berlin",
+            "edition": "SR6",
+            "citation": "Schattenleben: Berlin, S. 8",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
     "global_id": "berlin-2080:person:saif-alhazred"
   },
   {
@@ -662,6 +1532,36 @@
         "global_id": "berlin-2080:place:196-evo-hauptquartier"
       }
     ],
+    "sources": [
+      {
+        "bookId": "schattenleben-berlin",
+        "title": "Schattenleben: Berlin",
+        "edition": "SR6",
+        "citation": "Schattenleben: Berlin, S. 8–9",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Personendossier",
+        "preview": "Sigma vermittelt rücksichtslose Konzernjobs rund um Biotechnologie, Gentechnik und Transhumanismus.",
+        "full": "Tey verkörpert den Berliner Typus des Konzernhais: ehrgeizig, brutal und vor allem sich selbst verpflichtet. Schwarze Visitenkarten mit Sigma-Zeichen und RFID-Kontakt dienen als Markenzeichen; selbst höfliche Geschäftspartner müssen jederzeit mit einem Verrat rechnen.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "schattenleben-berlin",
+            "title": "Schattenleben: Berlin",
+            "edition": "SR6",
+            "citation": "Schattenleben: Berlin, S. 8–9",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
     "global_id": "berlin-2080:person:sigma"
   },
   {
@@ -683,6 +1583,50 @@
         "global_id": "berlin-2080:place:392-triage-privatklinik"
       }
     ],
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 44 und 154",
+        "purpose": "description"
+      },
+      {
+        "bookId": "schattenleben-berlin",
+        "title": "Schattenleben: Berlin",
+        "edition": "SR6",
+        "citation": "Schattenleben: Berlin, S. 7",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Personendossier",
+        "preview": "Ezkibel operiert seit den 2040ern und gilt als medizinisches Gedächtnis des Kreuzbasars.",
+        "full": "Der erfahrene elfische Straßendoc ist ein langjähriger Verbündeter Kaschmirs und des Cezve-Clans. Neben diskreter Behandlung bietet seine ungewöhnlich lange Berliner Laufbahn Zugang zu Informationen aus den frühen Jahrzehnten der lokalen Schatten- und Kiezgeschichte.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 44 und 154",
+            "purpose": "description"
+          },
+          {
+            "bookId": "schattenleben-berlin",
+            "title": "Schattenleben: Berlin",
+            "edition": "SR6",
+            "citation": "Schattenleben: Berlin, S. 7",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
     "global_id": "berlin-2080:person:xabier-ezkibel"
   },
   {
@@ -703,6 +1647,36 @@
         "global_id": "berlin-2080:place:212-schering-hauptquartier"
       }
     ],
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 112",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Personendossier",
+        "preview": "Brugger steht nominell über den übrigen Berliner Z-IC-Vertretern und gibt bei Schering den Ton an.",
+        "full": "Unter ihrer Leitung erreichte Schering den größten Berliner Marktanteil bei Medikamenten und Medizingütern. Sie kontrolliert ein stadtweites Netz aus Verwaltung, Forschung, Produktion, Vertrieb und teils getarnten Laboren.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 112",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
     "global_id": "berlin-2080:person:astrid-brugger"
   },
   {
@@ -723,6 +1697,36 @@
         "global_id": "berlin-2080:place:204-messerschmitt-kawasaki-die-fabrik"
       }
     ],
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 63 und 106",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Personendossier",
+        "preview": "Anger steuert Produktion und Flughafenbetrieb in Schönefeld und gilt als harter Gegner der Sprawlguerilla.",
+        "full": "Der M-K-Chef verwaltet den Konzern seit den frühen 2070ern wieder von Schönefeld aus. Er sorgt für den Betrieb der gewaltigen Fabrik und des Flughafens BSI und verfolgt gegenüber Berliner Anarchisten eine ausgesprochen kompromisslose Linie.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 63 und 106",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
     "global_id": "berlin-2080:person:mathias-anger"
   },
   {
@@ -743,6 +1747,36 @@
         "global_id": "berlin-2080:place:185-agc-tower"
       }
     ],
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 107",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Personendossier",
+        "preview": "Koerting lenkt AG Chemie gemeinsam mit Robert Schlüter junior und verfügt über tiefe Pharmaerfahrung.",
+        "full": "Der frühere Schering-Chef bildet mit dem charismatischeren MSI-Leiter Schlüter die Berliner AGC-Doppelspitze. Sein Einfluss reicht von der Schwerindustrie Siemensstadts bis in Universitäten, Chemie- und Pharmanetzwerke.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 107",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
     "global_id": "berlin-2080:person:arndt-wilhelm-koerting"
   },
   {
@@ -763,6 +1797,36 @@
         "global_id": "berlin-2080:place:444-kopenick"
       }
     ],
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 106",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Personendossier",
+        "preview": "Hanzo führt Shiawases Deutschlandgeschäft aus Köpenick und ringt um Einfluss im Familienkonzern.",
+        "full": "Mit der Verlegung der Deutschlandzentrale nach Berlin verknüpfte Hanzo Shiawases Umweltgeschäft eng mit Köpenick. Sein anhaltender Streit mit dem früheren Deutschlandchef Leonard Berger und der Machtverlust seines Förderers Korin Yamana gefährden jedoch seine Position.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 106",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
     "global_id": "berlin-2080:person:takumi-hanzo"
   },
   {
@@ -783,6 +1847,36 @@
         "global_id": "berlin-2080:place:217-zehlendorfer-platte-proteus"
       }
     ],
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 73",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Personendossier",
+        "preview": "Reuter ist ein langjähriger Berliner Sicherheitskommandeur und kompromissloser Konzernhardliner.",
+        "full": "Der frühere Kommandeur der Friedenstruppen von 2060 prägt Proteus' Berliner Sicherheitsapparat stärker als der offizielle Geschäftsführer. Er träumt weiterhin vom endgültigen Sieg über das anarchistische Berlin.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 73",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
     "global_id": "berlin-2080:person:oskar-reuter"
   },
   {
@@ -803,6 +1897,36 @@
         "global_id": "berlin-2080:place:208-saeder-krupp-arkologie-der-hort"
       }
     ],
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 116",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Personendossier",
+        "preview": "Sigorski gilt als wichtiger Mittelsmann zwischen Franziska Landolt und Berlins Schatten.",
+        "full": "Der Sicherheitschef gehört zu den diskreten Akteuren, über die S-Ks Berliner Geschäftsführung Runner und andere Schattenkräfte erreichen kann. Damit ist er ein zentraler operativer Arm Landolts außerhalb offizieller Konzernwege.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 116",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
     "global_id": "berlin-2080:person:roman-sigorski"
   },
   {
@@ -828,6 +1952,60 @@
         "global_id": "berlin-2080:place:284-park-sanssouci"
       }
     ],
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 116–117",
+        "purpose": "description"
+      },
+      {
+        "bookId": "datapuls-kunstraub",
+        "title": "Datapuls: Kunstraub",
+        "edition": "SR5",
+        "citation": "Datapuls: Kunstraub, S. 12",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR5",
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR5": {
+        "kind": "Personendossier",
+        "preview": "Jandorf verbindet Diplomatie, Berliner Kulturpolitik und das schattenkundige Netzwerk der Preußenstiftung.",
+        "full": "Die Kunstexpertin wirkte maßgeblich an der Berliner Einigung mit und vertritt die ADL dauerhaft im Rat. Als BERVAG-Kulturdirektorin und Aufsichtsrätin der Preußenstiftung verfügt sie über Kontakte zu Spezialisten für Wiederbeschaffung, Kunstraub und diskrete Kulturmissionen.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "datapuls-kunstraub",
+            "title": "Datapuls: Kunstraub",
+            "edition": "SR5",
+            "citation": "Datapuls: Kunstraub, S. 12",
+            "purpose": "description"
+          }
+        ]
+      },
+      "SR6": {
+        "kind": "Personendossier",
+        "preview": "Jandorf verbindet Diplomatie, Berliner Kulturpolitik und das schattenkundige Netzwerk der Preußenstiftung.",
+        "full": "Die Kunstexpertin wirkte maßgeblich an der Berliner Einigung mit und vertritt die ADL dauerhaft im Rat. Als BERVAG-Kulturdirektorin und Aufsichtsrätin der Preußenstiftung verfügt sie über Kontakte zu Spezialisten für Wiederbeschaffung, Kunstraub und diskrete Kulturmissionen.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 116–117",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
     "global_id": "berlin-2080:person:isabelle-jandorf"
   },
   {
@@ -853,6 +2031,60 @@
         "global_id": "berlin-2080:place:292-zitadelle-spandau-psiaid"
       }
     ],
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 8, 121 und 161",
+        "purpose": "description"
+      },
+      {
+        "bookId": "datapuls-berlin",
+        "title": "Datapuls: Berlin",
+        "edition": "SR5",
+        "citation": "Datapuls: Berlin, S. 18",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR5",
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR5": {
+        "kind": "Personendossier",
+        "preview": "Wojenko leitet die zentralen Polizeiaufgaben Berlins und gehört zu den Initiatoren des Kassandra-Systems.",
+        "full": "Der frühere Regierungschef verfügt als Polizeidirektor über einen umfassenden Aufklärungsapparat. Seine PsiAid-Verbindungen, die Kontrolle zentraler Polizeiaufgaben und seine Rolle beim Marschall-Pilotprojekt machen ihn zu einem der mächtigsten Sicherheitsakteure der Stadt.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "datapuls-berlin",
+            "title": "Datapuls: Berlin",
+            "edition": "SR5",
+            "citation": "Datapuls: Berlin, S. 18",
+            "purpose": "description"
+          }
+        ]
+      },
+      "SR6": {
+        "kind": "Personendossier",
+        "preview": "Wojenko leitet die zentralen Polizeiaufgaben Berlins und gehört zu den Initiatoren des Kassandra-Systems.",
+        "full": "Der frühere Regierungschef verfügt als Polizeidirektor über einen umfassenden Aufklärungsapparat. Seine PsiAid-Verbindungen, die Kontrolle zentraler Polizeiaufgaben und seine Rolle beim Marschall-Pilotprojekt machen ihn zu einem der mächtigsten Sicherheitsakteure der Stadt.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 8, 121 und 161",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
     "global_id": "berlin-2080:person:yilmaz-wojenko"
   },
   {
@@ -880,6 +2112,60 @@
         "global_id": "berlin-2080:place:205-miyako-arkologie-renraku"
       }
     ],
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 8 und 116",
+        "purpose": "description"
+      },
+      {
+        "bookId": "datapuls-berlin",
+        "title": "Datapuls: Berlin",
+        "edition": "SR5",
+        "citation": "Datapuls: Berlin, S. 18",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR5",
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR5": {
+        "kind": "Personendossier",
+        "preview": "Koizumi verantwortet den Berliner Verkehr und wirkt am stadtweiten Kassandra-Überwachungssystem mit.",
+        "full": "Die Tochter des verschwundenen Renraku-Bezirksvertreters Ichiro Koizumi bewegt sich unter erheblichem Sicherheitsdruck. Eine zwölfköpfige Samurai-Leibgarde schützt sie, während sie BERVAG-Verkehrssysteme und Renrakus Überwachungskompetenz miteinander verknüpft.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "datapuls-berlin",
+            "title": "Datapuls: Berlin",
+            "edition": "SR5",
+            "citation": "Datapuls: Berlin, S. 18",
+            "purpose": "description"
+          }
+        ]
+      },
+      "SR6": {
+        "kind": "Personendossier",
+        "preview": "Koizumi verantwortet den Berliner Verkehr und wirkt am stadtweiten Kassandra-Überwachungssystem mit.",
+        "full": "Die Tochter des verschwundenen Renraku-Bezirksvertreters Ichiro Koizumi bewegt sich unter erheblichem Sicherheitsdruck. Eine zwölfköpfige Samurai-Leibgarde schützt sie, während sie BERVAG-Verkehrssysteme und Renrakus Überwachungskompetenz miteinander verknüpft.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 8 und 116",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
     "global_id": "berlin-2080:person:aiko-koizumi"
   },
   {
@@ -900,6 +2186,36 @@
         "global_id": "berlin-2080:place:385-sternschutz-einsatzzentrum"
       }
     ],
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 116–117",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Personendossier",
+        "preview": "Cattarius führt die weiterhin politisch brisante Untersuchung zum Tod des Z-IC-Vertreters Michael Koslowski.",
+        "full": "Die Chefermittlerin behandelt den ungeklärten Mord als möglichen Z-IC-Insiderjob. Dadurch berührt ihre Arbeit unmittelbar die Machtverhältnisse im Konzernbezirk Tegel und die Stellung Nathan Thompsons.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 116–117",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
     "global_id": "berlin-2080:person:tanja-cattarius"
   },
   {
@@ -922,6 +2238,36 @@
         "global_id": "berlin-2080:place:116-osramhofe"
       }
     ],
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 124–125",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Personendossier",
+        "preview": "Drakova kontrolliert große Teile des Berliner Vory-Erbes und führt ihr Syndikat aus den Osramhöfen.",
+        "full": "Nach Gargaris Tod zog die erfahrene Schieberin erhebliche Macht, Geschäfte und Territorien an sich. Ihre elfische Führungsriege, mögliche Drachenverbindungen und der Konflikt mit rivalisierenden Vory-Lideri machen sie zur gefährlichsten Unterweltfigur im Nordosten Berlins.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 124–125",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
     "global_id": "berlin-2080:person:nadjeska-drakova-girkin"
   },
   {
@@ -950,6 +2296,36 @@
         "global_id": "berlin-2080:place:448-gropiusstadt"
       }
     ],
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 37–38 und 133",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Personendossier",
+        "preview": "Balrog führt die Horde und beherrscht mit ihr den Gangbezirk Gropiusstadt.",
+        "full": "Der Troll-Boss etablierte die Horde nach blutigen Kämpfen als dominierende Macht des Bezirks. Von Block X aus verbindet er Gangherrschaft, Wettgeschäft und den Versuch, die Horde als Polizeidienst anerkennen zu lassen.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 37–38 und 133",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
     "global_id": "berlin-2080:person:bal-balrog-kovac"
   },
   {
@@ -976,6 +2352,36 @@
         "global_id": "berlin-2080:place:448-gropiusstadt"
       }
     ],
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 37 und 133",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Personendossier",
+        "preview": "Tsantidis bildet gemeinsam mit Balrog die sichtbare Machtspitze der Horde in Gropiusstadt.",
+        "full": "Die Ork-Hexe gehört zu Balrogs wichtigsten Lieutenants und ergänzt die rohe Gangmacht um magische Kompetenz. Ihre Stellung verbindet die Führung von Block X mit den berlinweiten Operationen der Horde.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 37 und 133",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
     "global_id": "berlin-2080:person:ioanna-tsantidis"
   },
   {
@@ -996,6 +2402,36 @@
         "global_id": "berlin-2080:place:451-renrakusan"
       }
     ],
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 126–127",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Personendossier",
+        "preview": "Maeda führt seit rund einem Jahrzehnt die Berliner Yakuza und ihre hochmobile Bosozoku-Strikeforce.",
+        "full": "Der erfahrene Oyabun stabilisiert die Yakuza durch strategische Geschäfte, externe Runner und die blitzschnell einsetzbaren 99 Ronin. Seine Organisation nutzt die Unruhe der konkurrierenden Berliner Syndikate.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 126–127",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
     "global_id": "berlin-2080:person:takeo-maeda"
   },
   {
@@ -1018,6 +2454,36 @@
         "global_id": "berlin-2080:place:382-sayid-jazrir-moschee"
       }
     ],
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 85–86",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Personendossier",
+        "preview": "Ahmad Khalil ist der Erste unter Gleichen der Familienoberhäupter im Berliner Emirat.",
+        "full": "Der Patriarch übernahm 2077 nach dem Tod seines Vaters Umar die Führung der reichsten und mächtigsten Familie des Emirats. Seine Autorität beruht auf Familienmacht, religiöser Stellung und dem Ausgleich zwischen den zahlreichen Einflussgebieten Kreuzbergs.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 85–86",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
     "global_id": "berlin-2080:person:ahmad-khalil"
   },
   {
@@ -1033,6 +2499,36 @@
     "source": "Berlin 2080, S. 36 und 129–130",
     "locations": [],
     "scope": "Berlinweit; Schwerpunkt Bauwirtschaft und westlicher Außenring",
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 36 und 129–130",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Personendossier",
+        "preview": "Moratti verbindet legale Bauwirtschaft mit der Führung der Berliner Mafia.",
+        "full": "Der Baulöwe kappte öffentlich zahlreiche Verbindungen zur Unterwelt und überließ das Tagesgeschäft seiner rechten Hand Davide Cefarillo. Hinter der Fassade bleibt er jedoch das Oberhaupt einer Familie, deren Bau-, Schmuggel- und BTL-Geschäfte berlinweit wirken.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 36 und 129–130",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
     "global_id": "berlin-2080:person:daniel-moratti"
   },
   {
@@ -1055,6 +2551,36 @@
         "global_id": "berlin-2080:place:450-kreuzhain"
       }
     ],
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 126–127",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Personendossier",
+        "preview": "Tauh’d übernahm nach Asena Buluts Tod die Berliner Wölfe und richtete sie gegen die Sprawlguerilla aus.",
+        "full": "Der langjährige Vertrauensmann vereinte rasch die patriarchalen Fraktionen des Rudels. Seine Kontakte in das Emirat und zu radikalen Islamisten verschaffen ihm neue Optionen, isolieren die Berliner Wölfe aber zugleich von anderen Rudeln.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 126–127",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
     "global_id": "berlin-2080:person:abbas-tauhd-abu-el-hawa"
   },
   {
@@ -1075,6 +2601,36 @@
         "global_id": "berlin-2080:place:233-mahagoni"
       }
     ],
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 127–128",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Personendossier",
+        "preview": "Daisy ist eine der wichtigsten Berliner Beschafferinnen und prägt die lokale Likedeeler-Fraktion.",
+        "full": "Über ihr Netzwerk beschafft sie Waren aus allen Himmelsrichtungen und schleust sie an Zoll, Polizei, Konzernen und Syndikaten vorbei. Ihre wirtschaftlich orientierte Fraktion besitzt innerhalb der Berliner Likedeeler besonders großen Einfluss und weitreichende Kontakte auf Havel und Spree.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 127–128",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
     "global_id": "berlin-2080:person:daisy-fix"
   },
   {
@@ -1095,6 +2651,36 @@
         "global_id": "berlin-2080:place:450-kreuzhain"
       }
     ],
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 85–86, 126–127 und weitere",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Personendossier",
+        "preview": "Safiya kommentiert besonders fundiert das Emirat, die Grauen Wölfe und Berlins kriminelle Netzwerke.",
+        "full": "Die wiederkehrende Schattenstimme liefert Einordnungen zu Familienclans, Scharia-Gebieten, Syndikaten und magischen Gefahren. Ihre Beiträge zeigen detaillierte Ortskenntnis und belastbare Verbindungen in die Kreuzhainer sowie berlinweite Unterweltszene.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 85–86, 126–127 und weitere",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
     "global_id": "berlin-2080:person:safiya-dafiya"
   },
   {
@@ -1115,6 +2701,36 @@
         "global_id": "berlin-2080:place:450-kreuzhain"
       }
     ],
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 128",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Personendossier",
+        "preview": "Baba Iveta gilt als lebende Legende der Kreuzhainer Ork-Clans.",
+        "full": "Als Übermutter einer riesigen Familie verfügt sie im gesamten Bezirk über Nachkommen und Verwandte, die ihr gehorchen. Dieses dichte Clan- und Kieznetz macht sie zu einer außergewöhnlich einflussreichen lokalen Machtfigur.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 128",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
     "global_id": "berlin-2080:person:baba-iveta-jankulovski"
   },
   {
@@ -1133,6 +2749,36 @@
     "source": "Berlin 2080, S. 129–130",
     "locations": [],
     "scope": "Berlinweit; operative Geschäfte der Italo-Mafia",
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 129–130",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Personendossier",
+        "preview": "Cefarillo hält als rechte Hand Daniel Morattis die Berliner Geschäfte der Familie am Laufen.",
+        "full": "Während Moratti öffentlich zurückgezogen lebt, organisiert Cefarillo Bauprojekte, BTL-Schmuggel und das Tagesgeschäft. Seine Fixierung auf die Shader und das enorme Kopfgeld auf den Alten Fritz erzeugen zusätzliche Konflikte.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 129–130",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
     "global_id": "berlin-2080:person:davide-che-cefarillo"
   },
   {
@@ -1148,6 +2794,60 @@
     "source": "Berlin 2080, S. 10 und 141; Datapuls: Berlin, S. 4",
     "locations": [],
     "scope": "Berlinweit und im Schwarzen Netz",
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 10 und 141",
+        "purpose": "description"
+      },
+      {
+        "bookId": "datapuls-berlin",
+        "title": "Datapuls: Berlin",
+        "edition": "SR5",
+        "citation": "Datapuls: Berlin, S. 4",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR5",
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR5": {
+        "kind": "Personendossier",
+        "preview": "Anne gehört zu den traditionsreichsten Stimmen der Berliner Schatten und bewahrt deren digitales Erbe.",
+        "full": "Nach längerer Abwesenheit kehrte die erfahrene Shadowtalkerin nach Berlin zurück. Sie kommentiert Stadt, Konzerne und Szene mit jahrzehntelanger Perspektive und betreut aktuelle sowie historische Dateien des nachgebildeten Schattenland-Berlin-Knotens.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "datapuls-berlin",
+            "title": "Datapuls: Berlin",
+            "edition": "SR5",
+            "citation": "Datapuls: Berlin, S. 4",
+            "purpose": "description"
+          }
+        ]
+      },
+      "SR6": {
+        "kind": "Personendossier",
+        "preview": "Anne gehört zu den traditionsreichsten Stimmen der Berliner Schatten und bewahrt deren digitales Erbe.",
+        "full": "Nach längerer Abwesenheit kehrte die erfahrene Shadowtalkerin nach Berlin zurück. Sie kommentiert Stadt, Konzerne und Szene mit jahrzehntelanger Perspektive und betreut aktuelle sowie historische Dateien des nachgebildeten Schattenland-Berlin-Knotens.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 10 und 141",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
     "global_id": "berlin-2080:person:anne-archiste"
   },
   {
@@ -1168,6 +2868,50 @@
         "global_id": "berlin-2080:place:304-black-pirate"
       }
     ],
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 171",
+        "purpose": "description"
+      },
+      {
+        "bookId": "hinter-dem-vorhang",
+        "title": "Hinter dem Vorhang",
+        "edition": "SR6",
+        "citation": "Hinter dem Vorhang, S. 163",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Personendossier",
+        "preview": "Nanta ist ein großer Berliner Musikstar mit bodenständigen, leicht anarchischen Mitsingtexten.",
+        "full": "Ihre Schwoof-Musik verbindet Berliner Alltagsnähe, eingängige Refrains und eine anarchische Grundhaltung. Gemeinsam mit Daemonika gehört sie zu den beiden großen Aushängeschildern des unabhängigen Labels Black Pirate.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 171",
+            "purpose": "description"
+          },
+          {
+            "bookId": "hinter-dem-vorhang",
+            "title": "Hinter dem Vorhang",
+            "edition": "SR6",
+            "citation": "Hinter dem Vorhang, S. 163",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
     "global_id": "berlin-2080:person:nanta-nierenstich"
   },
   {
@@ -1183,6 +2927,50 @@
     "source": "Berlin 2080, S. 171; Hinter dem Vorhang, S. 163",
     "locations": [],
     "scope": "Berliner Musik- und Clubszene",
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 171",
+        "purpose": "description"
+      },
+      {
+        "bookId": "hinter-dem-vorhang",
+        "title": "Hinter dem Vorhang",
+        "edition": "SR6",
+        "citation": "Hinter dem Vorhang, S. 163",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Personendossier",
+        "preview": "Doria Grey ist eine berühmte Industrial-Künstlerin und seit den 2070ern fest mit Retrosic Records verbunden.",
+        "full": "Mit „Into the Shadows“ gelang ihr bereits in den 2070ern der Durchbruch. Ihr schneller Aufstieg machte auch Retrosic Records bekannt; dem Label werden wegen dieser engen Verbindung Kontakte in die Schatten nachgesagt.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 171",
+            "purpose": "description"
+          },
+          {
+            "bookId": "hinter-dem-vorhang",
+            "title": "Hinter dem Vorhang",
+            "edition": "SR6",
+            "citation": "Hinter dem Vorhang, S. 163",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
     "global_id": "berlin-2080:person:doria-grey"
   },
   {
@@ -1203,6 +2991,36 @@
         "global_id": "berlin-2080:place:284-park-sanssouci"
       }
     ],
+    "sources": [
+      {
+        "bookId": "datapuls-kunstraub",
+        "title": "Datapuls: Kunstraub",
+        "edition": "SR5",
+        "citation": "Datapuls: Kunstraub, S. 10–13",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR5"
+    ],
+    "edition_descriptions": {
+      "SR5": {
+        "kind": "Personendossier",
+        "preview": "Rosskotten lenkt eine der mächtigsten deutschen Kunstinstitutionen von Potsdam aus.",
+        "full": "Die frühere Konzernlobbyistin führt die Stiftung deutlich diskreter als ihr Vorgänger und versteht es, Verhandlungspartner mit feinen Mitteln unter Druck zu setzen. Kunstrückführung, Denkmalschutz und eigene Schattenaufträge gehören zum politischen und operativen Instrumentarium der Stiftung.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "datapuls-kunstraub",
+            "title": "Datapuls: Kunstraub",
+            "edition": "SR5",
+            "citation": "Datapuls: Kunstraub, S. 10–13",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
     "global_id": "berlin-2080:person:sara-rosskotten"
   },
   {
@@ -1224,6 +3042,36 @@
         "global_id": "berlin-2080:place:161-adlon"
       }
     ],
+    "sources": [
+      {
+        "bookId": "berlin-4d",
+        "title": "Berlin 4D",
+        "edition": "SR4",
+        "citation": "Berlin 4D, S. 61",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR4"
+    ],
+    "edition_descriptions": {
+      "SR4": {
+        "kind": "Personendossier",
+        "preview": "Truesdale erfüllt den mächtigsten Gästen des Adlon selbst ausgefallene Wünsche und besitzt zahllose Kontakte.",
+        "full": "Der elfische Adept folgt dem Weg des Sprechers und verbindet außergewöhnlichen Charme mit einem dichten Netz aus VIP-, Konzern- und Szenekontakten. In dem als neutraler Kontaktbörse geltenden Luxushotel ist er eine ideale diskrete Schnittstelle zu Berlins einflussreichsten Besuchern.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-4d",
+            "title": "Berlin 4D",
+            "edition": "SR4",
+            "citation": "Berlin 4D, S. 61",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
     "global_id": "berlin-2080:person:gerard-truesdale"
   },
   {
@@ -1244,6 +3092,36 @@
         "global_id": "berlin-2080:place:366-muggelberge"
       }
     ],
+    "sources": [
+      {
+        "bookId": "schattenleben-berlin",
+        "title": "Schattenleben: Berlin",
+        "edition": "SR6",
+        "citation": "Schattenleben: Berlin, S. 6",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Personendossier",
+        "preview": "Kalauk schuf den Pakt, der Sorben vor den Erwachten Wesen und Geistern des Spreewalds schützt.",
+        "full": "Der Priester verband sorbischen katholischen Glauben und erwachte schamanische Praxis. Sein Abkommen mit dem Spreewald schützt Menschen sorbischer Abstammung, solange sie Natur, Ruhe und örtliche Gepflogenheiten achten.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "schattenleben-berlin",
+            "title": "Schattenleben: Berlin",
+            "edition": "SR6",
+            "citation": "Schattenleben: Berlin, S. 6",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
     "global_id": "berlin-2080:person:swonimir-kalauk"
   },
   {
@@ -1259,6 +3137,36 @@
     "source": "Berlin 2080, S. 141",
     "locations": [],
     "scope": "The Void im Schwarzen Netz; kein physischer Standort bekannt",
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 141",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Personendossier",
+        "preview": "Krypt arbeitet an einem angeblich unknackbar verschlüsselten Kommlink für freie Bürger.",
+        "full": "Nach mehreren Attentatsversuchen tauchte die Berliner Matrixlegende mit einem CryptoLink-Prototypen unter. Der Cracker-Host The Void gilt als praktisch einziger Ort, an dem Krypt gelegentlich noch erreichbar ist.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 141",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
     "global_id": "berlin-2080:person:krypt"
   }
 ]

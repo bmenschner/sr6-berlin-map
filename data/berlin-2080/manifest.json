@@ -3,7 +3,12 @@
   "id": "berlin-2080",
   "name": "Berlin",
   "year": 2080,
-  "dataVersion": 1,
+  "dataVersion": 2,
+  "availableEditions": [
+    "SR4",
+    "SR5",
+    "SR6"
+  ],
   "center": [
     52.5200066,
     13.404954

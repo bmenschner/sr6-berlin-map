@@ -21,6 +21,22 @@ CITY_DATA_DIR = PUBLIC_DATA_DIR / CITY_ID
 CITY_ASSET_DIR = ROOT / "assets/cities" / CITY_ID
 CITY_DETAIL_PLAN_DIR = CITY_ASSET_DIR / "detail-maps"
 CITY_OFFLINE_BASE = CITY_ASSET_DIR / "offline-base.webp"
+EDITION_ORDER = ["SR1", "SR2", "SR3", "SR4", "SR5", "SR6"]
+SOURCE_BOOKS = [
+    {"id": "berlin-4d", "title": "Berlin 4D", "edition": "SR4", "patterns": ["Berlin 4D"]},
+    {"id": "datapuls-berlin", "title": "Datapuls: Berlin", "edition": "SR5", "patterns": ["Datapuls Berlin", "Datapuls: Berlin"]},
+    {"id": "datapuls-kunstraub", "title": "Datapuls: Kunstraub", "edition": "SR5", "patterns": ["Datapuls: Kunstraub"]},
+    {"id": "datapuls-10-konzerne", "title": "Datapuls: 10 Konzerne", "edition": "SR5", "patterns": ["Datapuls: 10 Konzerne"]},
+    {"id": "berlin-2080", "title": "Berlin 2080", "edition": "SR6", "patterns": ["Berlin 2080"]},
+    {"id": "schattenleben-berlin", "title": "Schattenleben: Berlin", "edition": "SR6", "patterns": ["Schattenleben Berlin", "Schattenleben: Berlin"]},
+    {"id": "renrakusan", "title": "Renrakusan-Bezirksplan", "edition": "SR6", "patterns": ["Renrakusan-"]},
+    {"id": "sr6-quellenkorpus", "title": "Shadowrun-6D-Quellenkorpus", "edition": "SR6", "patterns": ["Shadowrun-6D-Quellenkorpus"]},
+    {"id": "schattenload-2019", "title": "Schattenload 2019", "edition": "SR6", "patterns": ["Schattenload 12/2019", "Schattenload Dezember 2019"]},
+    {"id": "schattenload-2020", "title": "Schattenload 2020", "edition": "SR6", "patterns": ["Schattenload 12/2020"]},
+    {"id": "auswurfschock", "title": "Auswurfschock", "edition": "SR6", "patterns": ["Auswurfschock"]},
+    {"id": "hinter-dem-vorhang", "title": "Hinter dem Vorhang", "edition": "SR6", "patterns": ["Hinter dem Vorhang"]},
+    {"id": "schlagschatten", "title": "Schlagschatten", "edition": "SR6", "patterns": ["Schlagschatten"]},
+]
 CATALOG = ROOT / "output/data/berlin-2080-katalog.json"
 DESCRIPTIONS = ROOT / "output/data/berlin-2080-beschreibungen.json"
 SOURCE_SVG = ROOT / "tmp/pdfs/berlin-uebersicht.svg"
@@ -2707,6 +2723,141 @@ def search_text(*values: object) -> str:
     return unicodedata.normalize("NFKD", " ".join(flattened)).encode("ascii", "ignore").decode("ascii").lower()
 
 
+def source_book(citation: str) -> dict | None:
+    folded = citation.casefold()
+    for book in SOURCE_BOOKS:
+        if any(pattern.casefold() in folded for pattern in book["patterns"]):
+            return book
+    return None
+
+
+def parse_source_references(value: str, purpose: str) -> list[dict]:
+    references = []
+    for raw in re.split(r"\s*;\s*", value or ""):
+        citation = raw.strip()
+        if not citation:
+            continue
+        book = source_book(citation)
+        references.append(
+            {
+                "bookId": book["id"] if book else "unclassified",
+                "title": book["title"] if book else citation,
+                "edition": book["edition"] if book else "UNKLAR",
+                "citation": citation,
+                "purpose": purpose,
+            }
+        )
+    return references
+
+
+def deduplicate_sources(references: list[dict]) -> list[dict]:
+    result = []
+    seen = set()
+    for reference in references:
+        normalized_citation = reference["citation"].casefold()
+        normalized_citation = re.sub(r",?\s*s\.\s*", ":", normalized_citation)
+        normalized_citation = re.sub(r"\s*:\s*", ":", normalized_citation)
+        normalized_citation = re.sub(r"\s+", "", normalized_citation)
+        key = (reference["edition"], normalized_citation)
+        if key in seen:
+            continue
+        seen.add(key)
+        result.append(reference)
+    return result
+
+
+def edition_sort_key(edition: str) -> int:
+    return EDITION_ORDER.index(edition) if edition in EDITION_ORDER else -1
+
+
+def build_edition_descriptions(
+    name: str,
+    references: list[dict],
+    description_source: str,
+    description_kind: str,
+    preview: str,
+    full: str,
+    has_more: bool,
+) -> dict:
+    description_references = parse_source_references(description_source, "description")
+    description_editions = {
+        reference["edition"]
+        for reference in description_references
+        if reference["edition"] in EDITION_ORDER
+    }
+    editions = sorted(
+        {reference["edition"] for reference in references if reference["edition"] in EDITION_ORDER},
+        key=edition_sort_key,
+    )
+    descriptions = {}
+    for edition in editions:
+        edition_sources = [reference for reference in references if reference["edition"] == edition]
+        if edition in description_editions:
+            descriptions[edition] = {
+                "kind": description_kind,
+                "preview": preview,
+                "full": full,
+                "hasMore": has_more,
+                "hasExcerpt": True,
+                "sources": edition_sources,
+            }
+        else:
+            notice = (
+                f"{name} ist in den ausgewerteten Quellen dieser Edition belegt. "
+                f"Ein eigener {edition}-Quellenauszug ist noch nicht hinterlegt."
+            )
+            descriptions[edition] = {
+                "kind": "Quellennachweis",
+                "preview": notice,
+                "full": notice,
+                "hasMore": False,
+                "hasExcerpt": False,
+                "sources": edition_sources,
+            }
+    return descriptions
+
+
+def enrich_payload_with_editions(payload: dict) -> list[str]:
+    available = set()
+    for feature in payload["geojson"]["features"]:
+        properties = feature["properties"]
+        references = deduplicate_sources(
+            parse_source_references(properties.get("source_pages", ""), "reference")
+            + parse_source_references(properties.get("description_source", ""), "description")
+            + parse_source_references(properties.get("map_source", ""), "map")
+        )
+        descriptions = build_edition_descriptions(
+            properties["name"],
+            references,
+            properties.get("description_source", ""),
+            properties.get("description_kind", "Quellenauszug"),
+            properties.get("description_preview", ""),
+            properties.get("description_full", ""),
+            bool(properties.get("description_has_more")),
+        )
+        editions = sorted(descriptions, key=edition_sort_key)
+        properties["sources"] = references
+        properties["map_sources"] = parse_source_references(properties.get("map_source", ""), "map")
+        properties["editions"] = editions
+        properties["edition_descriptions"] = descriptions
+        available.update(editions)
+
+    for person in payload["persons"]:
+        references = deduplicate_sources(parse_source_references(person.get("source", ""), "description"))
+        descriptions = build_edition_descriptions(
+            person["name"], references, person.get("source", ""), "Personendossier",
+            person.get("summary", ""), person.get("description", ""), True,
+        )
+        editions = sorted(descriptions, key=edition_sort_key)
+        person["sources"] = references
+        person["editions"] = editions
+        person["edition_descriptions"] = descriptions
+        available.update(editions)
+
+    payload["availableEditions"] = sorted(available, key=edition_sort_key)
+    return payload["availableEditions"]
+
+
 def write_json(path: Path, payload: object, *, readable: bool = False) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     if readable:
@@ -2761,9 +2912,11 @@ def build_global_search_index(registry: dict) -> dict:
                     "globalId": properties.get("global_id"),
                     "name": properties["name"],
                     "category": properties.get("category", "Ort"),
+                    "editions": properties.get("editions", []),
                     "search": search_text(
                         properties.get("name"), properties.get("category"), properties.get("description_full"),
                         properties.get("description_source"), properties.get("source_pages"), properties.get("aliases"),
+                        properties.get("editions"), properties.get("edition_descriptions"),
                     ),
                 }
             )
@@ -2778,9 +2931,11 @@ def build_global_search_index(registry: dict) -> dict:
                     "globalId": person.get("global_id"),
                     "name": person["name"],
                     "category": person.get("category", "Person"),
+                    "editions": person.get("editions", []),
                     "search": search_text(
                         person.get("name"), person.get("aliases"), person.get("category"), person.get("role"),
                         person.get("affiliation"), person.get("summary"), person.get("description"), person.get("source"),
+                        person.get("editions"), person.get("edition_descriptions"),
                     ),
                 }
             )
@@ -2847,7 +3002,8 @@ def write_city_package(payload: dict, registry: dict) -> dict:
         "id": CITY_ID,
         "name": "Berlin",
         "year": 2080,
-        "dataVersion": 1,
+        "dataVersion": 2,
+        "availableEditions": payload["availableEditions"],
         "center": [52.5200066, 13.404954],
         "zoom": 10,
         "overlayBounds": payload["overlayBounds"],
@@ -2866,7 +3022,18 @@ def write_city_package(payload: dict, registry: dict) -> dict:
     write_json(CITY_DATA_DIR / files["outskirts"], payload["umlandBoundaries"])
     write_json(CITY_DATA_DIR / files["boundary"], payload["boundary"])
     write_json(CITY_DATA_DIR / files["labels"], payload["loreLabels"], readable=True)
-    write_json(CITY_DATA_DIR / files["sources"], {"sources": sources}, readable=True)
+    write_json(
+        CITY_DATA_DIR / files["sources"],
+        {
+            "schemaVersion": 1,
+            "books": [
+                {"id": book["id"], "title": book["title"], "edition": book["edition"]}
+                for book in SOURCE_BOOKS
+            ],
+            "citations": sources,
+        },
+        readable=True,
+    )
     write_json(CITY_DATA_DIR / "manifest.json", manifest, readable=True)
     build_global_search_index(registry)
     return manifest
@@ -3155,6 +3322,7 @@ def main() -> None:
         "cityBounds": [[52.3382448, 13.088345], [52.6755087, 13.7611609]],
         "regionBounds": region_bounds,
     }
+    enrich_payload_with_editions(payload)
     registry = update_city_registry()
     write_city_package(payload, registry)
     template = TEMPLATE.read_text(encoding="utf-8")
