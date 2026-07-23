@@ -1,10 +1,7 @@
 *
 !.gitignore
-!.gitattributes
 !README.md
 !index.html
-!shadowrun-berlin-2080-karte.html
-!shadowrun-berlin-2080-karte-offline.html
 !manifest.webmanifest
 !service-worker.js
 !.nojekyll

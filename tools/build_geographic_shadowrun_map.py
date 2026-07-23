@@ -60,11 +60,7 @@ OFFICIAL_BRANDENBURG_MUNICIPALITIES = ROOT / "tmp/geo-data/brandenburg-gemeinden
 BOUNDARY_SOURCE = ROOT / "tmp/berlin-stadtgrenze-nominatim.geojson"
 BOUNDARY_GEOJSON = ROOT / "output/data/berlin-stadtgrenze.geojson"
 TEMPLATE = ROOT / "tmp/build-visual/berlin-geographic-map-template.html"
-OUTPUT_HTML = ROOT / "shadowrun-berlin-2080-karte.html"
-OFFLINE_HTML = ROOT / "shadowrun-berlin-2080-karte-offline.html"
 PWA_HTML = ROOT / "index.html"
-LEAFLET_CSS = ROOT / "output/map/vendor/leaflet.css"
-LEAFLET_JS = ROOT / "output/map/vendor/leaflet.js"
 SOURCE_MAP_DIR = Path(
     "/mnt/c/Users/Privat/Documents/Shadowrun/Shadowrun 6D/02 - Quellenband/"
     "Shadowrun 6D - Berlin 2080 Maps"
@@ -3326,53 +3322,13 @@ def main() -> None:
     registry = update_city_registry()
     write_city_package(payload, registry)
     template = TEMPLATE.read_text(encoding="utf-8")
-    map_data = json.dumps(payload, ensure_ascii=False, separators=(",", ":"))
-    city_registry = json.dumps(registry, ensure_ascii=False, separators=(",", ":"))
-    html = (
-        template.replace("__MAP_DATA__", map_data)
-        .replace("__CITY_REGISTRY__", city_registry)
-        .replace("__OFFLINE_BASE_URL__", json.dumps(""))
-        .replace("__HYBRID_APP__", "false")
-    )
-    OUTPUT_HTML.write_text(html, encoding="utf-8")
-
-    leaflet_css = LEAFLET_CSS.read_text(encoding="utf-8")
-    transparent_png = (
-        "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII="
-    )
-    for asset_name in ("layers.png", "layers-2x.png", "marker-icon.png"):
-        asset = LEAFLET_CSS.parent / "images" / asset_name
-        asset_data = base64.b64encode(asset.read_bytes()).decode("ascii") if asset.exists() else transparent_png
-        asset_url = "data:image/png;base64," + asset_data
-        leaflet_css = leaflet_css.replace(f"images/{asset_name}", asset_url)
-    offline_base_url = "data:image/webp;base64," + base64.b64encode(OFFLINE_BASE_WEBP.read_bytes()).decode("ascii")
-    embedded_html = (
-        template.replace("__MAP_DATA__", map_data)
-        .replace("__CITY_REGISTRY__", city_registry)
-        .replace("__OFFLINE_BASE_URL__", json.dumps(offline_base_url))
-        .replace("__HYBRID_APP__", "false")
-    )
-    embedded_html = embedded_html.replace(
-        '<link rel="stylesheet" href="output/map/vendor/leaflet.css">',
-        f"<style>\n{leaflet_css}\n</style>",
-    ).replace(
-        '<script src="output/map/vendor/leaflet.js"></script>',
-        f"<script>\n{LEAFLET_JS.read_text(encoding='utf-8')}\n</script>",
-    ).replace(
-        '<script src="app/city-loader.js"></script>',
-        f"<script>\n{(ROOT / 'app/city-loader.js').read_text(encoding='utf-8')}\n</script>",
-    )
-    offline_html = embedded_html
     hybrid_html = (
         template.replace("__MAP_DATA__", "null")
         .replace("__CITY_REGISTRY__", "null")
         .replace("__OFFLINE_BASE_URL__", json.dumps(""))
         .replace("__HYBRID_APP__", "true")
     )
-    OFFLINE_HTML.write_text(offline_html, encoding="utf-8")
     PWA_HTML.write_text(hybrid_html, encoding="utf-8")
-    print(f"HTML: {OUTPUT_HTML} ({OUTPUT_HTML.stat().st_size:,} bytes)")
-    print(f"Offline HTML: {OFFLINE_HTML} ({OFFLINE_HTML.stat().st_size:,} bytes)")
     print(f"PWA HTML: {PWA_HTML} ({PWA_HTML.stat().st_size:,} bytes)")
     print(f"GeoJSON: {GEOJSON} ({len(geojson['features'])} placed locations)")
     print(f"Vector zones: {ZONES_GEOJSON} ({len(zones['features'])} polygons)")

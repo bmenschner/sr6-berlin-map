@@ -1,12 +1,10 @@
 # Shadowrun-Stadtkarten – interaktive PWA
 
-Die veröffentlichte Hybrid-PWA ist unter **[bmenschner.github.io/sr6-berlin-map](https://bmenschner.github.io/sr6-berlin-map/)** erreichbar. Die Anwendung ist für mehrere Shadowrun-Städte vorbereitet; Berlin 2080 ist das erste vollständige Stadtpaket. Das Repository enthält drei Ausgaben der Karte:
+Die veröffentlichte Hybrid-PWA ist unter **[bmenschner.github.io/sr6-berlin-map](https://bmenschner.github.io/sr6-berlin-map/)** erreichbar. Die Anwendung ist für mehrere Shadowrun-Städte vorbereitet; Berlin 2080 ist das erste vollständige Stadtpaket.
 
-- `index.html` – kleine Hauptanwendung für GitHub Pages und installierbare Hybrid-PWA. Sie lädt nur das gewählte Stadtpaket und speichert es anschließend für den Offlinebetrieb.
-- `shadowrun-berlin-2080-karte.html` – Online-Version mit OpenStreetMap, einer kontrastreichen CARTO-Straßennamenebene und der amtlichen Berlin-Karte ÜK50. Die benötigte Leaflet-Bibliothek liegt unter `output/map/vendor/`.
-- `shadowrun-berlin-2080-karte-offline.html` – transportable Einzeldatei mit eingebetteter Kartenbibliothek, Markern, Beschreibungen, Grenzen und einer für flüssiges Zoomen optimierten Shadowrun-Kartenbasis. OSM und ÜK50 bleiben optionale Online-Ebenen.
+`index.html` ist die einzige reguläre Anwendung für GitHub Pages und die installierbare Hybrid-PWA. Sie lädt nur das gewählte Stadtpaket und speichert es anschließend für den Offlinebetrieb.
 
-Die modulare PWA wird über die HTTPS-Adresse oder einen lokalen Webserver geöffnet, weil Browser externe JSON-Stadtpakete unter `file://` blockieren können. Die portable Offline-Version kann weiterhin direkt per Doppelklick geöffnet werden und benötigt keine weiteren Dateien. PWA-Installation, Service Worker und automatische Updates funktionieren nur über HTTPS oder einen lokalen Webserver.
+Die modulare PWA wird über die HTTPS-Adresse oder einen lokalen Webserver geöffnet, weil Browser externe JSON-Stadtpakete unter `file://` blockieren können. PWA-Installation, Service Worker und automatische Updates funktionieren nur über HTTPS oder einen lokalen Webserver. Für die Offline-Nutzung muss die Webapp mindestens einmal vollständig online geladen worden sein.
 
 Über **„Online / Offline“** in der oberen Menüleiste wird die Kartenbasis ohne Seitenwechsel umgeschaltet. Online stehen OSM, die verstärkte CARTO-Beschriftung und ÜK50 zur Verfügung. Offline werden alle externen Kartenebenen entfernt und die eingebettete Shadowrun-Übersicht aktiviert; Zoom, Kartenposition, Auswahl, Marker, Personen, Suche, Grenzen und Detailkarten bleiben erhalten. Eine manuelle Offlinewahl wird gespeichert. Bricht bei gewähltem Onlinemodus die Verbindung ab, schaltet die App vorübergehend offline und kehrt nach Wiederherstellung automatisch online zurück.
 
@@ -37,7 +35,7 @@ Ein neues Stadtpaket wird in dieser Reihenfolge ergänzt:
 
 Alle Orts- und Personenobjekte besitzen zusätzlich zu ihren bisherigen IDs eine stadtweit stabile `global_id`. Personenverknüpfungen werden beim Erzeugen gegen vorhandene Orte geprüft. Der Validator verhindert doppelte IDs, ungültige Koordinaten, fehlende Dateien und nicht auflösbare Personenbezüge.
 
-Der Berlin-Generator erzeugt aus einer Datenbasis sowohl das modulare Stadtpaket als auch die weiterhin transportable Offline-Einzeldatei. Quellen werden dabei einem Editionskatalog zugeordnet; Orte und Personen erhalten strukturierte Quellen, Spielversionen und editionsweise Beschreibungen. Neue Städte benötigen keine Änderungen am Kartenlader oder an der Stadtwahl.
+Der Berlin-Generator erzeugt aus einer Datenbasis das modulare Stadtpaket und die PWA-Einstiegsseite. Quellen werden dabei einem Editionskatalog zugeordnet; Orte und Personen erhalten strukturierte Quellen, Spielversionen und editionsweise Beschreibungen. Neue Städte benötigen keine Änderungen am Kartenlader oder an der Stadtwahl.
 
 Über **„Detailkarten“** öffnet sich ein eingebettetes, zoombares Kartenarchiv mit:
 
