@@ -1,0 +1,146 @@
+[
+  {
+    "name": "Reinickendorf",
+    "lat": 52.595682,
+    "lon": 13.291338,
+    "type": "district"
+  },
+  {
+    "name": "Pankow",
+    "lat": 52.604087,
+    "lon": 13.441417,
+    "type": "district"
+  },
+  {
+    "name": "Lichtenberg",
+    "lat": 52.534908,
+    "lon": 13.509763,
+    "type": "district"
+  },
+  {
+    "name": "Marzahn",
+    "lat": 52.52112,
+    "lon": 13.578834,
+    "type": "district"
+  },
+  {
+    "name": "Köpenick",
+    "lat": 52.429586,
+    "lon": 13.611218,
+    "type": "district"
+  },
+  {
+    "name": "Spandau",
+    "lat": 52.525798,
+    "lon": 13.178822,
+    "type": "district"
+  },
+  {
+    "name": "Chawi",
+    "lat": 52.497532,
+    "lon": 13.283139,
+    "type": "district"
+  },
+  {
+    "name": "Zehlendorf",
+    "lat": 52.434844,
+    "lon": 13.239076,
+    "type": "district"
+  },
+  {
+    "name": "Gropiusstadt",
+    "lat": 52.441079,
+    "lon": 13.454967,
+    "type": "district"
+  },
+  {
+    "name": "Mitte",
+    "lat": 52.532872,
+    "lon": 13.365899,
+    "type": "district"
+  },
+  {
+    "name": "Kreuzhain",
+    "lat": 52.503815,
+    "lon": 13.428242,
+    "type": "district"
+  },
+  {
+    "name": "Renrakusan",
+    "lat": 52.539773,
+    "lon": 13.430523,
+    "type": "district"
+  },
+  {
+    "name": "Aztech-Schönwalde",
+    "lat": 52.641968,
+    "lon": 13.039908,
+    "type": "outskirts"
+  },
+  {
+    "name": "Falkensee",
+    "lat": 52.57381,
+    "lon": 13.08169,
+    "type": "outskirts"
+  },
+  {
+    "name": "Oranienburg",
+    "lat": 52.742031,
+    "lon": 13.276628,
+    "type": "outskirts"
+  },
+  {
+    "name": "Potsdam",
+    "lat": 52.426174,
+    "lon": 13.029372,
+    "type": "outskirts"
+  },
+  {
+    "name": "Schönefeld",
+    "lat": 52.352633,
+    "lon": 13.467683,
+    "type": "outskirts"
+  },
+  {
+    "name": "Strausberg",
+    "lat": 52.566716,
+    "lon": 13.900386,
+    "type": "outskirts"
+  },
+  {
+    "name": "Z-IC Tegel",
+    "lat": 52.577,
+    "lon": 13.304,
+    "type": "corporate"
+  },
+  {
+    "name": "AGC Siemensstadt",
+    "lat": 52.548,
+    "lon": 13.276,
+    "type": "corporate"
+  },
+  {
+    "name": "S-K Tempelhof",
+    "lat": 52.454,
+    "lon": 13.405,
+    "type": "corporate"
+  },
+  {
+    "name": "Dreamland",
+    "lat": 52.557,
+    "lon": 13.448,
+    "type": "special"
+  },
+  {
+    "name": "Jevuhl",
+    "lat": 52.539,
+    "lon": 13.292,
+    "type": "special"
+  },
+  {
+    "name": "Westhafen",
+    "lat": 52.539,
+    "lon": 13.337,
+    "type": "special"
+  }
+]
