@@ -1,0 +1,1360 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#071018">
+  <meta name="description" content="Interaktive Shadowrun-Karte von Berlin 2080 mit Orten, Personen, Bezirken und Detailkarten.">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="SR Stadtkarten">
+  <title>Shadowrun Berlin 2080 - Straßenkarte</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon-192.png" sizes="192x192" type="image/png">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="stylesheet" href="output/map/vendor/leaflet.css">
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #020508;
+      --panel: rgba(5, 10, 17, .96);
+      --panel-2: #08121a;
+      --line: rgba(64, 248, 221, .26);
+      --text: #eefdfb;
+      --muted: #8fa9a6;
+      --cyan: #40f8dd;
+      --pink: #ff2ea6;
+      --amber: #ffad31;
+      --violet: #a878ff;
+      --green: #62ef8f;
+      --danger: #ff6a74;
+      --shadow: 0 18px 60px rgba(0,0,0,.58), 0 0 24px rgba(64,248,221,.06);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html, body { width: 100%; height: 100%; margin: 0; overflow: hidden; background: var(--bg); color: var(--text); }
+    body { background-image: linear-gradient(rgba(64,248,221,.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255,46,166,.025) 1px, transparent 1px); background-size: 32px 32px; }
+    button, input, select { font: inherit; }
+    button { color: inherit; }
+    .app { height: 100%; display: grid; grid-template-rows: auto minmax(0, 1fr); }
+    .topbar {
+      min-height: 62px; display: flex; align-items: center; gap: 18px; padding: 10px 16px;
+      border-bottom: 1px solid rgba(64,248,221,.48); background: linear-gradient(100deg, rgba(4,12,18,.98) 0%, rgba(9,10,24,.98) 55%, rgba(29,4,26,.98) 100%);
+      box-shadow: 0 8px 28px rgba(0,0,0,.45), 0 1px 18px rgba(64,248,221,.12); z-index: 1200;
+    }
+    .brand { min-width: max-content; }
+    .eyebrow { color: var(--cyan); font: 700 10px/1.2 ui-monospace, monospace; letter-spacing: .24em; text-transform: uppercase; text-shadow: 0 0 10px rgba(64,248,221,.65); }
+    h1 { margin: 4px 0 0; font-size: clamp(18px, 2.2vw, 27px); line-height: 1; letter-spacing: .08em; text-transform: uppercase; text-shadow: -1px 0 var(--pink), 1px 0 var(--cyan), 0 0 18px rgba(255,46,166,.28); }
+    .top-stats { display: flex; gap: 8px; flex-wrap: wrap; }
+    .stat { border: 1px solid var(--line); background: rgba(0,0,0,.22); padding: 7px 10px; border-radius: 4px; color: var(--muted); font-size: 12px; }
+    .stat b { color: var(--cyan); font-family: ui-monospace, monospace; }
+    .atlas-open { min-width: max-content; border: 1px solid rgba(255,46,166,.54); border-radius: 4px; padding: 8px 11px; background: linear-gradient(90deg, rgba(255,46,166,.13), rgba(64,248,221,.07)); color: var(--text); cursor: pointer; font: 700 11px/1.2 ui-monospace, monospace; letter-spacing: .05em; }
+    .atlas-open:hover { border-color: var(--cyan); color: var(--cyan); box-shadow: 0 0 18px rgba(64,248,221,.1); }
+    .theme-toggle { min-width: max-content; display: inline-flex; align-items: center; gap: 6px; border: 1px solid var(--line); border-radius: 4px; padding: 8px 10px; background: rgba(0,0,0,.18); color: var(--muted); cursor: pointer; font: 700 10px/1.2 ui-monospace, monospace; letter-spacing: .05em; }
+    .theme-toggle:hover { border-color: var(--pink); }
+    .theme-toggle [data-theme-choice] { opacity: .48; transition: opacity .15s, color .15s; }
+    :root:not([data-theme="light"]) .theme-toggle [data-theme-choice="dark"],
+    :root[data-theme="light"] .theme-toggle [data-theme-choice="light"] { color: var(--pink); opacity: 1; }
+    .top-actions { display: flex; align-items: center; gap: 8px; margin-left: auto; }
+    .city-picker { min-width: 132px; display: grid; gap: 2px; padding: 4px 7px; border: 1px solid var(--line); border-radius: 4px; background: rgba(0,0,0,.18); }
+    .city-picker span { color: var(--muted); font: 700 8px/1 ui-monospace, monospace; letter-spacing: .12em; text-transform: uppercase; }
+    .city-picker select { width: 100%; border: 0; padding: 0; outline: 0; background: transparent; color: var(--text); font: 700 10px/1.25 ui-monospace, monospace; cursor: pointer; }
+    .city-picker select:disabled { cursor: default; opacity: .75; }
+    .map-mode-toggle { min-width: max-content; display: inline-flex; align-items: stretch; overflow: hidden; border: 1px solid var(--line); border-radius: 4px; background: rgba(0,0,0,.18); }
+    .map-mode-button { display: inline-flex; align-items: center; gap: 5px; padding: 8px 9px; border: 0; border-right: 1px solid var(--line); background: transparent; color: var(--muted); cursor: pointer; font: 700 10px/1.2 ui-monospace, monospace; letter-spacing: .04em; }
+    .map-mode-button:last-child { border-right: 0; }
+    .map-mode-button:hover { color: var(--cyan); }
+    .map-mode-button[aria-pressed="true"] { background: linear-gradient(90deg, rgba(64,248,221,.14), rgba(255,46,166,.08)); color: var(--text); }
+    .map-mode-button[aria-pressed="true"] .mode-dot { background: var(--cyan); box-shadow: 0 0 8px var(--cyan); }
+    .map-mode-button[data-map-mode="offline"][aria-pressed="true"] .mode-dot { background: var(--amber); box-shadow: 0 0 8px var(--amber); }
+    .map-mode-button:disabled { opacity: .38; cursor: not-allowed; }
+    .mode-dot { width: 6px; height: 6px; border: 1px solid currentColor; border-radius: 50%; }
+    .install-button { min-width: max-content; border: 1px solid rgba(98,239,143,.46); border-radius: 4px; padding: 8px 10px; background: linear-gradient(90deg, rgba(98,239,143,.1), rgba(64,248,221,.05)); color: var(--green); cursor: pointer; font: 700 10px/1.2 ui-monospace, monospace; letter-spacing: .04em; }
+    .install-button:hover { border-color: var(--cyan); color: var(--cyan); }
+    .install-button[data-installed="true"] { color: var(--muted); border-color: var(--line); background: rgba(0,0,0,.14); }
+    .leaflet-control-layers label.network-layer-disabled { opacity: .42; cursor: not-allowed; }
+    .leaflet-control-layers label.network-layer-disabled input { cursor: not-allowed; }
+    .pwa-dialog { position: fixed; z-index: 3400; inset: 0; display: grid; place-items: center; padding: 18px; background: rgba(0,3,7,.82); backdrop-filter: blur(7px); }
+    .pwa-panel { width: min(460px, 100%); border: 1px solid rgba(64,248,221,.46); border-radius: 7px; background: #070b11; box-shadow: 0 24px 100px rgba(0,0,0,.76), 0 0 34px rgba(64,248,221,.1); }
+    .pwa-head { display: flex; align-items: center; gap: 12px; padding: 13px 14px 10px; border-bottom: 1px solid var(--line); background: linear-gradient(90deg, rgba(255,46,166,.14), rgba(64,248,221,.05)); }
+    .pwa-head h2 { flex: 1; margin: 0; font-size: 18px; }
+    .pwa-body { padding: 14px; color: var(--text); font-size: 13px; line-height: 1.55; }
+    .pwa-body p { margin: 0; }
+    .pwa-dialog-action { width: 100%; margin-top: 13px; padding: 9px 11px; border: 1px solid var(--pink); border-radius: 4px; background: linear-gradient(90deg, rgba(255,46,166,.14), rgba(64,248,221,.06)); color: var(--text); cursor: pointer; font: 700 11px/1.2 ui-monospace, monospace; }
+    .pwa-dialog-action:hover { border-color: var(--cyan); color: var(--cyan); }
+    .update-banner { position: absolute; z-index: 1080; top: 12px; left: 50%; display: flex; align-items: center; gap: 10px; max-width: calc(100% - 160px); padding: 8px 10px; transform: translateX(-50%); border: 1px solid var(--cyan); border-radius: 4px; background: rgba(5,10,17,.96); box-shadow: var(--shadow); color: var(--text); font: 11px/1.3 ui-monospace, monospace; }
+    .update-banner button { border: 1px solid var(--pink); border-radius: 3px; padding: 5px 8px; background: rgba(255,46,166,.1); color: var(--text); cursor: pointer; }
+    .visually-hidden { position: absolute !important; width: 1px !important; height: 1px !important; padding: 0 !important; margin: -1px !important; overflow: hidden !important; clip: rect(0,0,0,0) !important; white-space: nowrap !important; border: 0 !important; }
+    .workspace { min-height: 0; display: grid; grid-template-columns: 350px minmax(0, 1fr); }
+    .sidebar { min-height: 0; display: flex; flex-direction: column; border-right: 1px solid rgba(255,46,166,.34); background: linear-gradient(180deg, rgba(5,12,19,.98), rgba(10,5,17,.97)); z-index: 1100; box-shadow: var(--shadow); }
+    .filters { padding: 14px; border-bottom: 1px solid var(--line); }
+    .content-toggle { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; margin-bottom: 9px; }
+    .content-mode { border: 1px solid var(--line); border-radius: 4px; padding: 8px 9px; background: transparent; color: var(--muted); cursor: pointer; font: 700 10px/1.2 ui-monospace, monospace; letter-spacing: .08em; text-transform: uppercase; }
+    .content-mode:hover { border-color: var(--cyan); color: var(--cyan); }
+    .content-mode.active { border-color: var(--pink); background: linear-gradient(90deg, rgba(255,46,166,.12), rgba(64,248,221,.05)); color: var(--text); }
+    .search-wrap { position: relative; }
+    .search-wrap::before { content: "⌕"; position: absolute; left: 11px; top: 8px; color: var(--cyan); font-size: 20px; }
+    #search { width: 100%; padding: 11px 12px 11px 38px; border: 1px solid rgba(64,248,221,.32); border-radius: 4px; background: #080c12; color: var(--text); outline: none; }
+    #search:focus { border-color: var(--cyan); box-shadow: 0 0 0 3px rgba(64,248,221,.08); }
+    .filter-row { display: grid; grid-template-columns: 1fr auto; gap: 8px; margin-top: 9px; }
+    #category { width: 100%; padding: 9px; border: 1px solid var(--line); border-radius: 4px; background: #0c1119; color: var(--text); }
+    .ghost-btn { border: 1px solid var(--line); background: #0c1119; border-radius: 4px; padding: 0 11px; cursor: pointer; }
+    .ghost-btn:hover { border-color: var(--pink); color: var(--pink); }
+    .result-line { display: flex; justify-content: space-between; margin-top: 10px; color: var(--muted); font: 11px/1.3 ui-monospace, monospace; }
+    .result-line strong { color: var(--cyan); }
+    .result-list { min-height: 0; overflow: auto; padding: 6px; scrollbar-color: #30514d #090c12; }
+    .result-group { margin: 9px 9px 4px; color: var(--cyan); font: 700 9px/1.2 ui-monospace, monospace; letter-spacing: .14em; text-transform: uppercase; }
+    .result-group:first-child { margin-top: 5px; }
+    .result { width: 100%; display: grid; grid-template-columns: 38px 1fr auto; gap: 9px; align-items: center; padding: 9px; border: 1px solid transparent; border-radius: 4px; background: transparent; text-align: left; cursor: pointer; }
+    .result:hover, .result.active { border-color: rgba(64,248,221,.42); background: linear-gradient(90deg, rgba(64,248,221,.09), rgba(255,46,166,.04)); }
+    .result.active { border-left-color: var(--pink); box-shadow: inset 3px 0 10px rgba(255,46,166,.18); }
+    .num { color: var(--pink); font: 700 12px ui-monospace, monospace; }
+    .result-name { min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 13px; }
+    .result-cat { color: var(--muted); font: 9px ui-monospace, monospace; text-transform: uppercase; }
+    .pin { width: 8px; height: 8px; border-radius: 50%; box-shadow: 0 0 9px currentColor; }
+    .person-glyph { display: grid; place-items: center; width: 25px; height: 25px; border: 1px solid var(--pink); border-radius: 50%; color: var(--pink); font: 700 11px/1 ui-monospace, monospace; }
+    .map-wrap { position: relative; min-width: 0; min-height: 0; background: #02070a; }
+    #map { width: 100%; height: 100%; background: radial-gradient(circle at 50% 42%, #173231, #05090c 68%); }
+    #map::after { content: ""; position: absolute; inset: 0; pointer-events: none; z-index: 500; background: repeating-linear-gradient(0deg, transparent 0 4px, rgba(73,255,232,.016) 4px 5px); mix-blend-mode: screen; }
+    .map-wrap::before { content: ""; position: absolute; z-index: 700; inset: 0; pointer-events: none; background: radial-gradient(circle at center, transparent 52%, rgba(1,4,8,.22) 100%), linear-gradient(90deg, rgba(255,46,166,.1), transparent 1.5%, transparent 98.5%, rgba(64,248,221,.09)); }
+    .map-wrap::after { content: ""; position: absolute; z-index: 701; left: 0; right: 0; height: 2px; top: -4px; pointer-events: none; background: linear-gradient(90deg, transparent, rgba(64,248,221,.8), rgba(255,46,166,.78), transparent); box-shadow: 0 0 18px rgba(64,248,221,.7); animation: sector-scan 9s linear infinite; }
+    @keyframes sector-scan { to { transform: translateY(calc(100vh + 8px)); } }
+    .detail-card { position: absolute; z-index: 1000; right: 16px; bottom: 20px; width: min(430px, calc(100% - 32px)); border: 1px solid rgba(255,46,166,.42); border-radius: 6px; background: rgba(8,11,17,.95); box-shadow: var(--shadow); overflow: hidden; transform: translateY(calc(100% + 40px)); transition: transform .22s ease; }
+    .detail-card.open { transform: translateY(0); }
+    .detail-head { display: flex; gap: 11px; align-items: start; padding: 14px 15px 10px; border-bottom: 1px solid var(--line); background: linear-gradient(90deg, rgba(255,46,166,.13), transparent); }
+    .detail-id { color: var(--pink); font: 800 18px ui-monospace, monospace; }
+    .detail-title { flex: 1; margin: 0; font-size: 18px; line-height: 1.2; }
+    .close { border: 0; background: transparent; color: var(--muted); cursor: pointer; font-size: 21px; line-height: 1; }
+    .detail-body { max-height: min(62vh, 590px); overflow: auto; padding: 12px 15px 15px; font-size: 12px; line-height: 1.5; scrollbar-color: #30514d #090c12; }
+    .badges { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
+    .badge { border: 1px solid var(--line); border-radius: 999px; padding: 3px 8px; color: var(--cyan); background: rgba(64,248,221,.05); font: 10px ui-monospace, monospace; }
+    .detail-plan-btn { width: 100%; margin: 0 0 10px; padding: 9px 11px; border: 1px solid rgba(255,46,166,.48); border-radius: 4px; background: linear-gradient(90deg, rgba(255,46,166,.12), rgba(64,248,221,.06)); color: var(--text); cursor: pointer; text-align: left; font: 700 11px/1.3 ui-monospace, monospace; }
+    .detail-plan-btn:hover { border-color: var(--cyan); color: var(--cyan); }
+    .detail-grid { display: grid; grid-template-columns: 88px 1fr; gap: 7px 10px; }
+    .detail-grid dt { color: var(--muted); }
+    .detail-grid dd { margin: 0; }
+    .source-copy { margin: 2px 0 13px; padding: 10px 11px 9px; border-left: 2px solid var(--pink); background: linear-gradient(90deg, rgba(255,46,166,.08), rgba(64,248,221,.025)); }
+    .source-kicker { display: flex; justify-content: space-between; gap: 8px; margin-bottom: 6px; color: var(--cyan); font: 700 9px/1.3 ui-monospace, monospace; letter-spacing: .12em; text-transform: uppercase; }
+    .source-kicker span:last-child { color: var(--muted); text-align: right; letter-spacing: 0; text-transform: none; }
+    .source-copy p { margin: 0; color: #e8f6f4; font-size: 13px; line-height: 1.55; }
+    .source-more { margin-top: 3px; }
+    .source-more summary { width: max-content; color: var(--pink); cursor: pointer; font: 700 11px/1.4 ui-monospace, monospace; letter-spacing: .06em; list-style: none; }
+    .source-more summary::-webkit-details-marker { display: none; }
+    .source-more summary::before { content: "< "; color: var(--cyan); }
+    .source-more summary::after { content: " >"; color: var(--cyan); }
+    .source-more[open] > summary { display: none; }
+    .source-less { display: block; width: max-content; margin: 8px 0 0 auto; padding: 0; border: 0; background: transparent; color: var(--pink); cursor: pointer; font: 700 11px/1.4 ui-monospace, monospace; letter-spacing: .06em; }
+    .source-less::before { content: "< "; color: var(--cyan); }
+    .source-less::after { content: " >"; color: var(--cyan); }
+    .source-less:hover { color: var(--cyan); }
+    .related-block { margin: 2px 0 13px; padding-top: 10px; border-top: 1px solid var(--line); }
+    .related-title { margin-bottom: 7px; color: var(--cyan); font: 700 9px/1.3 ui-monospace, monospace; letter-spacing: .12em; text-transform: uppercase; }
+    .related-list { display: grid; gap: 6px; }
+    .related-link { width: 100%; display: grid; grid-template-columns: 1fr auto; gap: 8px; padding: 8px 9px; border: 1px solid var(--line); border-radius: 4px; background: transparent; color: var(--text); cursor: pointer; text-align: left; }
+    .related-link:hover { border-color: var(--pink); background: rgba(255,46,166,.05); }
+    .related-link strong { font-size: 11px; }
+    .related-link span { color: var(--muted); font: 9px/1.3 ui-monospace, monospace; }
+    .related-link .related-arrow { align-self: center; color: var(--pink); font-size: 13px; }
+    .source-more[hidden] { display: none; }
+    [hidden] { display: none !important; }
+    .atlas-dialog { position: fixed; z-index: 3000; inset: 0; display: grid; place-items: center; padding: 18px; background: rgba(0,3,7,.86); backdrop-filter: blur(7px); }
+    .atlas-panel { width: min(1500px, 100%); height: min(920px, 100%); display: grid; grid-template-rows: auto minmax(0,1fr); overflow: hidden; border: 1px solid rgba(64,248,221,.46); border-radius: 7px; background: #070b11; box-shadow: 0 24px 100px rgba(0,0,0,.76), 0 0 34px rgba(64,248,221,.1); }
+    .atlas-head { display: flex; align-items: center; gap: 12px; min-height: 58px; padding: 10px 14px; border-bottom: 1px solid var(--line); background: linear-gradient(90deg, rgba(255,46,166,.14), rgba(64,248,221,.05)); }
+    .atlas-head-copy { flex: 1; min-width: 0; }
+    .atlas-head-copy small { display: block; color: var(--cyan); font: 700 9px/1.2 ui-monospace, monospace; letter-spacing: .14em; text-transform: uppercase; }
+    .atlas-head h2 { margin: 4px 0 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 18px; }
+    .atlas-tools { display: flex; align-items: center; gap: 6px; }
+    .atlas-tool { min-width: 34px; height: 34px; border: 1px solid var(--line); border-radius: 4px; background: #0c1119; color: var(--text); cursor: pointer; }
+    .atlas-tool:hover { border-color: var(--cyan); color: var(--cyan); }
+    .atlas-zoom-readout { min-width: 48px; color: var(--muted); text-align: center; font: 10px ui-monospace, monospace; }
+    .atlas-main { min-height: 0; display: grid; grid-template-columns: 270px minmax(0,1fr); }
+    .atlas-nav { min-height: 0; overflow: auto; padding: 10px; border-right: 1px solid var(--line); background: linear-gradient(180deg, #090e15, #080a10); }
+    .atlas-intro { margin: 0 0 9px; padding: 9px; border-left: 2px solid var(--violet); color: var(--muted); font-size: 10px; line-height: 1.45; }
+    .atlas-item { width: 100%; display: grid; gap: 3px; margin-bottom: 5px; padding: 9px 10px; border: 1px solid transparent; border-radius: 4px; background: transparent; color: var(--text); text-align: left; cursor: pointer; }
+    .atlas-item:hover, .atlas-item.active { border-color: rgba(64,248,221,.4); background: rgba(64,248,221,.06); }
+    .atlas-item.active { border-left-color: var(--pink); box-shadow: inset 3px 0 rgba(255,46,166,.6); }
+    .atlas-item small { color: var(--cyan); font: 8px/1.2 ui-monospace, monospace; letter-spacing: .08em; text-transform: uppercase; }
+    .atlas-item span { font-size: 12px; line-height: 1.25; }
+    .atlas-content { min-width: 0; min-height: 0; display: grid; grid-template-rows: auto minmax(0,1fr); }
+    .atlas-meta { padding: 10px 14px; border-bottom: 1px solid var(--line); background: rgba(7,13,19,.94); }
+    .atlas-meta p { margin: 0; color: #dcecea; font-size: 12px; line-height: 1.45; }
+    .atlas-meta .atlas-source { margin-top: 5px; color: var(--muted); font: 9px/1.3 ui-monospace, monospace; }
+    .atlas-viewport { min-height: 0; overflow: auto; padding: 14px; background: #020407; scrollbar-color: #30514d #090c12; }
+    .atlas-image { display: block; width: 100%; height: auto; max-width: none; margin: 0 auto; border: 1px solid rgba(255,255,255,.12); background: #fff; box-shadow: 0 12px 48px rgba(0,0,0,.58); }
+    .boundary-key { position: absolute; z-index: 900; left: 12px; bottom: 12px; display: grid; gap: 5px; padding: 8px 10px; border: 1px solid var(--line); border-radius: 4px; background: rgba(7,10,15,.9); color: var(--text); font: 10px/1.2 ui-monospace, monospace; pointer-events: none; }
+    .boundary-key span { display: flex; align-items: center; gap: 8px; }
+    .boundary-key .key-title { margin-top: 2px; color: var(--muted); font-size: 9px; letter-spacing: .12em; text-transform: uppercase; }
+    .boundary-key i { display: inline-block; width: 24px; height: 8px; flex: 0 0 auto; }
+    .boundary-key .key-normal { border: 1px solid #ff2ea6; background: rgba(255,46,166,.34); }
+    .boundary-key .key-anarcho { border: 1px solid #727b8b; background: rgba(89,97,110,.48); }
+    .boundary-key .key-status-corporate { border: 1px solid #f5f06a; background: rgba(245,240,106,.34); }
+    .boundary-key .key-corporate { border: 2px solid #f5f06a; background: rgba(245,240,106,.18); }
+    .boundary-key .key-district { height: 0; border-top: 2px solid var(--violet); }
+    .boundary-key .key-outskirts { height: 0; border-top: 2px dashed var(--amber); }
+    .boundary-key .key-neighborhood { height: 0; border-top: 2px dotted var(--cyan); }
+    .leaflet-container { font-family: inherit; }
+    .cyber-tiles { filter: grayscale(.78) invert(.92) sepia(.58) hue-rotate(116deg) saturate(1.25) brightness(.72) contrast(1.48); }
+    .official-tiles { filter: grayscale(.76) invert(.9) sepia(.56) hue-rotate(120deg) saturate(1.2) brightness(.7) contrast(1.42); }
+    .offline-overview { backface-visibility: hidden; }
+    .street-label-tiles { filter: brightness(1.18) contrast(1.24) drop-shadow(0 0 1px rgba(0,0,0,.92)); }
+    .sr-point { filter: drop-shadow(0 0 4px #40f8dd); }
+    .sr-city-boundary { filter: drop-shadow(0 0 5px rgba(64,248,221,.68)); }
+    .sr-corporate-zone { filter: drop-shadow(0 0 5px rgba(245,240,106,.32)); }
+    .sr-area-status { filter: saturate(1.08); }
+    .sr-district-boundary { filter: drop-shadow(0 0 4px rgba(168,120,255,.24)); }
+    .sr-outskirts-boundary { filter: drop-shadow(0 0 5px rgba(255,173,49,.28)); }
+    .sr-district-point { filter: drop-shadow(0 0 6px rgba(168,120,255,.78)); }
+    .lore-label { pointer-events: none !important; overflow: visible !important; }
+    .lore-label.district, .lore-label.outskirts { pointer-events: auto !important; cursor: pointer; }
+    .lore-label span { position: absolute; transform: translate(-50%,-50%); white-space: nowrap; padding: 3px 7px; border-left: 2px solid var(--pink); border-right: 2px solid var(--cyan); background: linear-gradient(90deg, rgba(5,9,15,.84), rgba(20,4,18,.76)); color: #f7ffff; font: 700 11px/1 ui-monospace, monospace; letter-spacing: .11em; text-transform: uppercase; text-shadow: -1px 0 rgba(255,46,166,.9), 1px 0 rgba(64,248,221,.82), 0 0 8px rgba(255,255,255,.35); box-shadow: 0 0 12px rgba(255,46,166,.14); clip-path: polygon(5px 0,100% 0,calc(100% - 5px) 100%,0 100%); }
+    .lore-label.corporate span { color: #fff0be; border-left-color: var(--amber); text-shadow: 0 0 7px rgba(255,173,49,.75); }
+    .lore-label.district span { border-left-color: var(--violet); border-right-color: var(--violet); text-shadow: -1px 0 rgba(168,120,255,.9), 1px 0 rgba(64,248,221,.62), 0 0 8px rgba(168,120,255,.42); }
+    .lore-label.outskirts span { color: #fff0be; border-left-color: var(--amber); border-right-color: var(--cyan); border-style: dashed; text-shadow: -1px 0 rgba(255,173,49,.9), 1px 0 rgba(64,248,221,.62), 0 0 8px rgba(255,173,49,.42); }
+    .lore-label.special span { color: #bafff5; border-left-color: var(--cyan); border-right-color: var(--violet); border-style: dashed; }
+    .lore-label.minor { opacity: 0; transition: opacity .15s; }
+    .zoom-detail .lore-label.minor { opacity: 1; }
+    .leaflet-control-layers, .leaflet-bar a { color: var(--text); background: rgba(8,12,18,.94); border-color: var(--line) !important; }
+    .leaflet-bar a:hover { color: var(--cyan); background: #111a22; }
+    .leaflet-control-layers-expanded { padding: 10px 12px; }
+    .leaflet-control-attribution { color: #879c99; background: rgba(5,8,12,.82) !important; }
+    .leaflet-control-attribution a { color: var(--cyan); }
+    .leaflet-tooltip.sr-label { color: var(--text); background: rgba(5,8,12,.93); border: 1px solid var(--pink); border-radius: 3px; box-shadow: none; font-size: 11px; }
+    .leaflet-tooltip.sr-label::before { border-top-color: var(--pink); }
+    .leaflet-tooltip .tooltip-basis { color: var(--muted); }
+    .map-error { position: absolute; inset: 50% auto auto 50%; transform: translate(-50%,-50%); z-index: 1000; padding: 18px; border: 1px solid var(--danger); background: #120b0e; color: #ffdce0; }
+    :root[data-theme="light"] {
+      color-scheme: light;
+      --bg: #e7e8e6;
+      --panel: rgba(247,247,244,.97);
+      --panel-2: #e2e3e1;
+      --line: rgba(177,18,103,.28);
+      --text: #20272c;
+      --muted: #657078;
+      --cyan: #0b8f9b;
+      --pink: #b11267;
+      --amber: #d98908;
+      --violet: #6f4ca1;
+      --green: #287448;
+      --danger: #b62f43;
+      --shadow: 0 16px 44px rgba(34,43,48,.2), 0 0 0 1px rgba(177,18,103,.04);
+    }
+    :root[data-theme="light"] body { background-image: linear-gradient(rgba(177,18,103,.035) 1px, transparent 1px), linear-gradient(90deg, rgba(11,143,155,.035) 1px, transparent 1px); }
+    :root[data-theme="light"] .topbar { border-bottom-color: rgba(177,18,103,.55); background: linear-gradient(100deg, rgba(250,250,247,.99), rgba(235,236,233,.99) 62%, rgba(239,225,233,.99)); box-shadow: 0 8px 24px rgba(41,48,52,.16); }
+    :root[data-theme="light"] .eyebrow { text-shadow: none; }
+    :root[data-theme="light"] h1 { color: #25292b; text-shadow: -1px 0 rgba(177,18,103,.68), 1px 0 rgba(11,143,155,.45); }
+    :root[data-theme="light"] .stat,
+    :root[data-theme="light"] .theme-toggle,
+    :root[data-theme="light"] .map-mode-toggle { background: rgba(255,255,255,.54); }
+    :root[data-theme="light"] .install-button { background: rgba(255,255,255,.48); color: #287448; }
+    :root[data-theme="light"] .pwa-panel,
+    :root[data-theme="light"] .update-banner { background: #f7f7f3; color: var(--text); box-shadow: 0 18px 55px rgba(41,48,52,.22); }
+    :root[data-theme="light"] .atlas-open,
+    :root[data-theme="light"] .detail-plan-btn { border-color: rgba(177,18,103,.48); background: linear-gradient(90deg, rgba(177,18,103,.09), rgba(11,143,155,.06)); }
+    :root[data-theme="light"] .sidebar { border-right-color: rgba(177,18,103,.35); background: linear-gradient(180deg, rgba(248,248,245,.99), rgba(231,232,229,.98)); }
+    :root[data-theme="light"] #search,
+    :root[data-theme="light"] #category,
+    :root[data-theme="light"] .ghost-btn,
+    :root[data-theme="light"] .mobile-toggle,
+    :root[data-theme="light"] .atlas-tool { background: #fafaf7; }
+    :root[data-theme="light"] .result-list,
+    :root[data-theme="light"] .detail-body,
+    :root[data-theme="light"] .atlas-viewport { scrollbar-color: #a9b1b1 #ececea; }
+    :root[data-theme="light"] .result:hover,
+    :root[data-theme="light"] .result.active { border-color: rgba(11,143,155,.42); background: linear-gradient(90deg, rgba(11,143,155,.1), rgba(177,18,103,.055)); }
+    :root[data-theme="light"] .content-mode.active { background: linear-gradient(90deg, rgba(177,18,103,.1), rgba(11,143,155,.05)); }
+    :root[data-theme="light"] .related-link:hover { background: rgba(177,18,103,.05); }
+    :root[data-theme="light"] .map-wrap { background: #d8dcda; }
+    :root[data-theme="light"] #map { background: radial-gradient(circle at 50% 42%, #edf0ed, #cfd4d2 72%); }
+    :root[data-theme="light"] #map::after { background: repeating-linear-gradient(0deg, transparent 0 4px, rgba(11,143,155,.012) 4px 5px); mix-blend-mode: multiply; }
+    :root[data-theme="light"] .map-wrap::before { background: radial-gradient(circle at center, transparent 68%, rgba(32,39,44,.07) 100%), linear-gradient(90deg, rgba(177,18,103,.05), transparent 1.5%, transparent 98.5%, rgba(11,143,155,.05)); }
+    :root[data-theme="light"] .map-wrap::after { background: linear-gradient(90deg, transparent, rgba(11,143,155,.45), rgba(177,18,103,.5), transparent); box-shadow: 0 0 12px rgba(177,18,103,.18); }
+    :root[data-theme="light"] .detail-card { border-color: rgba(177,18,103,.42); background: rgba(249,249,246,.97); }
+    :root[data-theme="light"] .detail-head { background: linear-gradient(90deg, rgba(177,18,103,.1), transparent); }
+    :root[data-theme="light"] .badge { background: rgba(11,143,155,.06); }
+    :root[data-theme="light"] .source-copy { background: linear-gradient(90deg, rgba(177,18,103,.075), rgba(11,143,155,.025)); }
+    :root[data-theme="light"] .source-copy p { color: #273238; }
+    :root[data-theme="light"] .atlas-dialog { background: rgba(211,215,213,.88); }
+    :root[data-theme="light"] .atlas-panel { border-color: rgba(177,18,103,.42); background: #f4f4f1; box-shadow: 0 24px 80px rgba(32,39,44,.28); }
+    :root[data-theme="light"] .atlas-head { background: linear-gradient(90deg, rgba(177,18,103,.1), rgba(11,143,155,.04)); }
+    :root[data-theme="light"] .atlas-nav { background: linear-gradient(180deg, #eeeeeb, #e5e6e3); }
+    :root[data-theme="light"] .atlas-item:hover,
+    :root[data-theme="light"] .atlas-item.active { border-color: rgba(11,143,155,.4); background: rgba(11,143,155,.07); }
+    :root[data-theme="light"] .atlas-meta { background: rgba(242,243,240,.96); }
+    :root[data-theme="light"] .atlas-meta p { color: #2d373c; }
+    :root[data-theme="light"] .atlas-viewport { background: #d9dcda; }
+    :root[data-theme="light"] .boundary-key { background: rgba(248,248,245,.93); }
+    :root[data-theme="light"] .boundary-key .key-normal { border-color: #b11267; background: rgba(177,18,103,.3); }
+    :root[data-theme="light"] .boundary-key .key-anarcho { border-color: #505154; background: rgba(80,81,84,.34); }
+    :root[data-theme="light"] .boundary-key .key-status-corporate { border-color: #e49b0f; background: rgba(228,155,15,.34); }
+    :root[data-theme="light"] .boundary-key .key-corporate { border-color: #d99600; background: rgba(217,150,0,.16); }
+    :root[data-theme="light"] .cyber-tiles { filter: grayscale(.84) sepia(.08) saturate(.72) brightness(1.07) contrast(.9); }
+    :root[data-theme="light"] .official-tiles { filter: grayscale(.55) saturate(.72) brightness(1.04) contrast(.92); }
+    :root[data-theme="light"] .street-label-tiles { filter: contrast(1.14) drop-shadow(0 0 1px rgba(255,255,255,.92)); }
+    :root[data-theme="light"] .sr-point { filter: drop-shadow(0 0 2px rgba(20,38,44,.45)); }
+    :root[data-theme="light"] .sr-city-boundary,
+    :root[data-theme="light"] .sr-corporate-zone,
+    :root[data-theme="light"] .sr-district-boundary,
+    :root[data-theme="light"] .sr-outskirts-boundary,
+    :root[data-theme="light"] .sr-district-point { filter: none; }
+    :root[data-theme="light"] .lore-label span { background: rgba(248,248,244,.88); color: #263036; text-shadow: 0 1px rgba(255,255,255,.9); box-shadow: 0 2px 8px rgba(41,48,52,.14); }
+    :root[data-theme="light"] .lore-label.corporate span,
+    :root[data-theme="light"] .lore-label.outskirts span { color: #8d5700; text-shadow: 0 1px rgba(255,255,255,.9); }
+    :root[data-theme="light"] .lore-label.district span { color: #5e3e8a; text-shadow: 0 1px rgba(255,255,255,.9); }
+    :root[data-theme="light"] .lore-label.special span { color: #087987; }
+    :root[data-theme="light"] .leaflet-control-layers,
+    :root[data-theme="light"] .leaflet-bar a { color: var(--text); background: rgba(249,249,246,.96); }
+    :root[data-theme="light"] .leaflet-bar a:hover { background: #eceeeb; }
+    :root[data-theme="light"] .leaflet-control-attribution { color: #5d696f; background: rgba(247,247,244,.86) !important; }
+    :root[data-theme="light"] .leaflet-tooltip.sr-label { background: rgba(250,250,247,.96); }
+    :root[data-theme="light"] .map-error { background: #fff1f2; color: #8e1f31; }
+    @media (prefers-reduced-motion: reduce) { .map-wrap::after { animation: none; display: none; } }
+    @media (max-width: 800px) {
+      .topbar { min-height: 54px; gap: 8px; padding: 8px 10px; }
+      .brand { min-width: 0; }
+      .eyebrow { display: none; }
+      h1 { margin-top: 0; white-space: nowrap; }
+      .top-stats { display: none; }
+      .workspace { grid-template-columns: 1fr; }
+      .sidebar { position: absolute; top: 54px; bottom: 0; left: 0; width: min(330px, 90vw); transform: translateX(-100%); transition: transform .2s; }
+      .sidebar.open { transform: translateX(0); }
+      .mobile-toggle { display: inline-flex !important; }
+      .boundary-key { left: 54px; }
+      .atlas-open { margin-left: auto; padding: 7px 9px; font-size: 0; }
+      .atlas-open::after { content: "▦ Karten"; font-size: 10px; }
+      .theme-toggle { gap: 4px; padding: 7px 8px; }
+      .top-actions { gap: 5px; }
+      .city-picker { min-width: 116px; }
+      .map-mode-button { padding: 7px 7px; }
+      .install-button { padding: 7px 8px; }
+      .update-banner { top: 8px; max-width: calc(100% - 90px); }
+      .atlas-dialog { padding: 0; }
+      .atlas-panel { width: 100%; height: 100%; border: 0; border-radius: 0; }
+      .atlas-main { grid-template-columns: 1fr; grid-template-rows: 150px minmax(0,1fr); }
+      .atlas-nav { display: flex; gap: 6px; overflow-x: auto; overflow-y: hidden; border-right: 0; border-bottom: 1px solid var(--line); }
+      .atlas-intro { min-width: 190px; margin: 0; }
+      .atlas-item { min-width: 180px; margin: 0; }
+    }
+    @media (max-width: 560px) {
+      h1 { font-size: 15px; letter-spacing: .04em; }
+      .topbar { gap: 5px; padding-inline: 6px; }
+      .top-actions { gap: 3px; }
+      .atlas-open { width: 34px; min-width: 34px; padding-inline: 0; }
+      .atlas-open::after { content: "▦"; }
+      .map-mode-button { gap: 3px; padding-inline: 5px; font-size: 9px; letter-spacing: 0; }
+      .mode-dot { width: 5px; height: 5px; }
+      .install-button { width: 34px; min-width: 34px; padding-inline: 0; font-size: 0; }
+      .install-button::after { content: "⇩"; font-size: 14px; }
+      .theme-toggle { padding-inline: 5px; font-size: 9px; letter-spacing: 0; }
+      .city-picker { min-width: 88px; padding-inline: 5px; }
+      .city-picker span { display: none; }
+      .boundary-key { display: none; }
+      .pwa-dialog { padding: 10px; }
+      .update-banner { left: 8px; right: 8px; max-width: none; transform: none; }
+    }
+    .mobile-toggle { display: none; align-items: center; justify-content: center; width: 38px; height: 38px; border: 1px solid var(--line); border-radius: 4px; background: #0c1119; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <button class="mobile-toggle" id="mobile-toggle" aria-label="Ortsliste öffnen">☰</button>
+      <div class="brand">
+        <div class="eyebrow">Schattennetz // Geo-Interface</div>
+        <h1 id="city-title">Berlin 2080</h1>
+      </div>
+      <div class="top-stats">
+        <div class="stat"><b id="placed-count">0</b> Karteneinträge</div>
+        <div class="stat"><b id="person-count">0</b> Personen</div>
+        <div class="stat">Straßenzug-Zoom <b>bis 19</b></div>
+        <div class="stat"><span id="city-scope-label">Berlin + Umland</span> <b>aktiv</b></div>
+      </div>
+      <div class="top-actions">
+        <label class="city-picker" for="city-select"><span>Stadt</span><select id="city-select" aria-label="Stadt auswählen"></select></label>
+        <div class="map-mode-toggle" id="map-mode-toggle" role="group" aria-label="Kartenmodus Online oder Offline">
+          <button class="map-mode-button" id="map-mode-online" type="button" data-map-mode="online" aria-pressed="true"><span class="mode-dot" aria-hidden="true"></span>Online</button>
+          <button class="map-mode-button" id="map-mode-offline" type="button" data-map-mode="offline" aria-pressed="false"><span class="mode-dot" aria-hidden="true"></span>Offline</button>
+        </div>
+        <button class="atlas-open" id="atlas-open" type="button">▦ 14 Detailkarten</button>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Farbschema wechseln" aria-pressed="false"><span data-theme-choice="light">Light</span><span aria-hidden="true">/</span><span data-theme-choice="dark">Dark</span></button>
+        <button class="install-button" id="install-app" type="button" aria-label="Shadowrun Berlin 2080 als App installieren">⇩ App installieren</button>
+      </div>
+      <span class="visually-hidden" id="connection-status" role="status" aria-live="polite"></span>
+    </header>
+    <main class="workspace">
+      <aside class="sidebar" id="sidebar" aria-label="Orts- und Personenkatalog">
+        <div class="filters">
+          <div class="content-toggle" role="group" aria-label="Katalogansicht">
+            <button class="content-mode active" id="mode-places" type="button" data-mode="places" aria-pressed="true">Orte</button>
+            <button class="content-mode" id="mode-persons" type="button" data-mode="persons" aria-pressed="false">Personen</button>
+          </div>
+          <div class="search-wrap"><input id="search" type="search" placeholder="Ort, Person, Alias, ID oder Quelle suchen …" autocomplete="off"></div>
+          <div class="filter-row">
+            <select id="category" aria-label="Kategorie"><option value="">Alle Kategorien</option></select>
+            <button class="ghost-btn" id="reset" title="Filter zurücksetzen">↺</button>
+          </div>
+          <div class="result-line"><span><strong id="visible-count">0</strong> Treffer</span><span id="zoom-state">Zoom 10</span></div>
+        </div>
+        <div class="result-list" id="result-list"></div>
+      </aside>
+      <section class="map-wrap" aria-label="Zoombare Karte von Berlin 2080 und seinem Lore-Umland">
+        <div id="map"></div>
+        <div class="update-banner" id="update-banner" role="status" hidden><span>Eine neue Kartenversion ist verfügbar.</span><button id="update-app" type="button">Aktualisieren</button></div>
+        <div class="boundary-key" aria-label="Legende der Grenzarten">
+          <span class="key-title">Gebietsstatus</span>
+          <span><i class="key-normal"></i>Normales Gebiet</span>
+          <span><i class="key-anarcho"></i>Anarcho-Gebiet</span>
+          <span><i class="key-status-corporate"></i>Konzerngebiet</span>
+          <span class="key-title">Grenzen</span>
+          <span><i class="key-corporate"></i>Exterritoriales Konzerngebiet</span>
+          <span><i class="key-district"></i>Bezirk</span>
+          <span><i class="key-outskirts"></i>Lore-Umland Brandenburg</span>
+          <span><i class="key-neighborhood"></i>Stadtteil</span>
+        </div>
+        <article class="detail-card" id="detail-card" aria-live="polite">
+          <div class="detail-head"><span class="detail-id" id="detail-id"></span><h2 class="detail-title" id="detail-title"></h2><button class="close" id="detail-close" aria-label="Details schließen">×</button></div>
+          <div class="detail-body">
+            <div class="badges" id="detail-badges"></div>
+            <button class="detail-plan-btn" id="detail-plan-open" type="button" hidden>▦ Zugehörige Detailkarte öffnen</button>
+            <section class="source-copy" aria-label="Beschreibung aus den Quellenbüchern">
+              <div class="source-kicker"><span id="description-kind">Quellenauszug</span><span id="description-source"></span></div>
+              <p id="description-preview"></p>
+              <details class="source-more" id="description-more"><summary>mehr</summary><p id="description-full"></p><button type="button" class="source-less" id="description-less">weniger</button></details>
+            </section>
+            <section class="related-block" id="related-block" hidden>
+              <div class="related-title" id="related-title"></div>
+              <div class="related-list" id="related-list"></div>
+            </section>
+            <dl class="detail-grid" id="detail-grid"></dl>
+          </div>
+        </article>
+        <div class="atlas-dialog" id="atlas-dialog" role="dialog" aria-modal="true" aria-labelledby="atlas-title" hidden>
+          <section class="atlas-panel">
+            <header class="atlas-head">
+              <div class="atlas-head-copy"><small id="atlas-kind">Detailkarte</small><h2 id="atlas-title">Kartenarchiv</h2></div>
+              <div class="atlas-tools" aria-label="Zoom der Detailkarte">
+                <button class="atlas-tool" id="atlas-zoom-out" type="button" title="Verkleinern">−</button>
+                <span class="atlas-zoom-readout" id="atlas-zoom-readout">100%</span>
+                <button class="atlas-tool" id="atlas-zoom-in" type="button" title="Vergrößern">+</button>
+                <button class="atlas-tool" id="atlas-zoom-fit" type="button" title="An Breite anpassen">↔</button>
+              </div>
+              <button class="close" id="atlas-close" type="button" aria-label="Kartenarchiv schließen">×</button>
+            </header>
+            <div class="atlas-main">
+              <nav class="atlas-nav" id="atlas-nav" aria-label="Verfügbare Detailkarten">
+                <p class="atlas-intro">Die v04-Übersicht und ihre Gebietsfarben sind bereits als geografische Ebene der Hauptkarte verarbeitet. Hier liegen die zusätzlichen Orts-, Bezirks- und Netzpläne.</p>
+              </nav>
+              <section class="atlas-content">
+                <div class="atlas-meta"><p id="atlas-summary"></p><div class="atlas-source" id="atlas-source"></div></div>
+                <div class="atlas-viewport" id="atlas-viewport"><img class="atlas-image" id="atlas-image" alt=""></div>
+              </section>
+            </div>
+          </section>
+        </div>
+      </section>
+    </main>
+    <div class="pwa-dialog" id="pwa-dialog" role="dialog" aria-modal="true" aria-labelledby="pwa-dialog-title" hidden>
+      <section class="pwa-panel">
+        <header class="pwa-head"><h2 id="pwa-dialog-title">Berlin 2080 installieren</h2><button class="close" id="pwa-dialog-close" type="button" aria-label="Hinweis schließen">×</button></header>
+        <div class="pwa-body"><p id="pwa-dialog-message"></p><button class="pwa-dialog-action" id="pwa-dialog-action" type="button" hidden></button></div>
+      </section>
+    </div>
+  </div>
+  <script src="output/map/vendor/leaflet.js"></script>
+  <script src="app/city-loader.js"></script>
+  <script>
+    (async () => {
+      const EMBEDDED_DATA = __MAP_DATA__;
+      const EMBEDDED_CITY_REGISTRY = __CITY_REGISTRY__;
+      const EMBEDDED_OFFLINE_BASE = __OFFLINE_BASE_URL__;
+      const HYBRID_APP = __HYBRID_APP__;
+      const urlParameters = new URLSearchParams(window.location.search);
+      const cityStorageKey = 'sr6-active-city';
+      let requestedCityId = urlParameters.get('city');
+      if (!requestedCityId) {
+        try { requestedCityId = window.localStorage.getItem(cityStorageKey); } catch (error) {}
+      }
+      const cityContext = await window.SR6CityLoader.load({
+        embeddedData: EMBEDDED_DATA,
+        embeddedRegistry: EMBEDDED_CITY_REGISTRY,
+        embeddedOfflineBase: EMBEDDED_OFFLINE_BASE,
+        requestedCityId,
+      });
+      const DATA = cityContext.data;
+      const globalSearchIndex = EMBEDDED_DATA
+        ? { items: [] }
+        : await window.SR6CityLoader.loadSearchIndex().catch(() => ({ items: [] }));
+      const OFFLINE_BASE = EMBEDDED_OFFLINE_BASE || cityContext.offlineBase;
+      const cityLabel = `${cityContext.manifest.name || cityContext.city.name}${cityContext.manifest.year ? ` ${cityContext.manifest.year}` : ''}`;
+      const citySelect = document.getElementById('city-select');
+      (cityContext.registry.cities || []).forEach(city => {
+        const option = document.createElement('option');
+        option.value = city.id;
+        option.textContent = `${city.name}${city.year ? ` ${city.year}` : ''}`;
+        option.selected = city.id === cityContext.city.id;
+        citySelect.appendChild(option);
+      });
+      citySelect.disabled = citySelect.options.length < 2 || Boolean(EMBEDDED_DATA);
+      citySelect.addEventListener('change', () => {
+        try { window.localStorage.setItem(cityStorageKey, citySelect.value); } catch (error) {}
+        const target = new URL(window.location.href);
+        target.searchParams.set('city', citySelect.value);
+        target.searchParams.delete('marker');
+        target.searchParams.delete('person');
+        target.searchParams.delete('atlas');
+        window.location.assign(target.href);
+      });
+      try { window.localStorage.setItem(cityStorageKey, cityContext.city.id); } catch (error) {}
+      document.getElementById('city-title').textContent = cityLabel;
+      document.getElementById('city-scope-label').textContent = `${cityContext.manifest.name || cityContext.city.name} + Umland`;
+      document.querySelector('.map-wrap').setAttribute('aria-label', `Zoombare Karte von ${cityLabel} und seinem Lore-Umland`);
+      document.title = `Shadowrun ${cityLabel} – Straßenkarte`;
+      document.querySelector('meta[name="description"]').setAttribute('content', `Interaktive Shadowrun-Karte von ${cityLabel} mit Orten, Personen, Bezirken und Detailkarten.`);
+      const HAS_OFFLINE_BASE = Boolean(OFFLINE_BASE);
+      const PERFORMANCE_MODE = HAS_OFFLINE_BASE && !HYBRID_APP;
+      const atlasItems = Array.isArray(DATA.atlas) ? DATA.atlas : [];
+      const atlasByKey = new Map(atlasItems.map(plan => [plan.key, plan]));
+      const persons = Array.isArray(DATA.persons) ? DATA.persons : [];
+      const personById = new Map(persons.map(person => [person.id, person]));
+      const personsByLocation = new Map();
+      persons.forEach(person => (person.locations || []).forEach(link => {
+        if (!personsByLocation.has(link.id)) personsByLocation.set(link.id, []);
+        personsByLocation.get(link.id).push({ person, relation: link.relation });
+      }));
+      const requestedAtlasKey = urlParameters.get('atlas');
+      const requestedMarkerId = Number(urlParameters.get('marker'));
+      const requestedPersonId = urlParameters.get('person');
+      let atlasZoom = 1;
+      let activeAtlasKey = atlasItems.length ? atlasItems[0].key : '';
+      const themeStorageKey = 'sr6-map-theme';
+      const mapModeStorageKey = 'sr6-map-mode';
+      const legacyThemeStorageKey = 'sr6-berlin-theme';
+      const legacyMapModeStorageKey = 'sr6-berlin-map-mode';
+      let requestedMapMode = 'online';
+      let activeMapMode = 'online';
+      try {
+        const storedMapMode = window.localStorage.getItem(mapModeStorageKey) || window.localStorage.getItem(legacyMapModeStorageKey);
+        if (storedMapMode === 'online' || storedMapMode === 'offline') requestedMapMode = storedMapMode;
+      } catch (error) {}
+      let currentTheme = document.documentElement.dataset.theme === 'light' ? 'light' : 'dark';
+      try {
+        const storedTheme = window.localStorage.getItem(themeStorageKey) || window.localStorage.getItem(legacyThemeStorageKey);
+        if (storedTheme === 'light' || storedTheme === 'dark') currentTheme = storedTheme;
+      } catch (error) {}
+      document.documentElement.dataset.theme = currentTheme;
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', currentTheme === 'light' ? '#f7f7f3' : '#071018');
+      const themePalettes = {
+        dark: {
+          categories: {
+            "Ausgehen":"#40f8dd", "Bars und Kneipen":"#ffad31", "Einkaufen":"#62ef8f",
+            "Freizeit":"#ff67bd", "Hotels":"#6eb7ff", "Konzerne":"#a878ff",
+            "Restaurants":"#ff7b5e", "Sichtseeing und Monumente":"#f5f06a",
+            "Sonstige Spots":"#d2dce8", "Verkehr":"#48c8ff", "Bezirke":"#a878ff",
+            "Umlandgebiete":"#ffad31"
+          },
+          fallback: '#d2dce8', activeStroke: '#ffffff', personAccent: '#ff2ea6', district: '#a878ff', neighborhood: '#40f8dd',
+          outskirts: '#ffad31', corporate: '#f5f06a', city: '#40f8dd', mask: '#010308', maskOpacity: .72,
+          status: { magenta: '#ff16a4', grau: '#4b515d', orange: '#ffa326' },
+          statusOpacity: { magenta: .09, grau: .14, orange: .09 }, labels: 'dark_only_labels'
+        },
+        light: {
+          categories: {
+            "Ausgehen":"#087b82", "Bars und Kneipen":"#ad5e00", "Einkaufen":"#287448",
+            "Freizeit":"#aa1769", "Hotels":"#236ca5", "Konzerne":"#6f4ca1",
+            "Restaurants":"#bd472e", "Sichtseeing und Monumente":"#967600",
+            "Sonstige Spots":"#59636b", "Verkehr":"#08769d", "Bezirke":"#6f4ca1",
+            "Umlandgebiete":"#ad5e00"
+          },
+          fallback: '#59636b', activeStroke: '#17262d', personAccent: '#b11267', district: '#6f4ca1', neighborhood: '#0b8f9b',
+          outskirts: '#ce6e16', corporate: '#d99600', city: '#174b5f', mask: '#d8ddda', maskOpacity: .58,
+          status: { magenta: '#b11267', grau: '#505154', orange: '#efa51a' },
+          statusOpacity: { magenta: .2, grau: .18, orange: .24 }, labels: 'light_only_labels'
+        }
+      };
+      const themePalette = () => themePalettes[currentTheme];
+      const categoryColor = category => themePalette().categories[category] || themePalette().fallback;
+      const syncThemeButton = () => {
+        const button = document.getElementById('theme-toggle');
+        button.setAttribute('aria-pressed', currentTheme === 'light' ? 'true' : 'false');
+        button.setAttribute('aria-label', `Farbschema wechseln. Aktiv: ${currentTheme === 'light' ? 'Light' : 'Dark'}`);
+      };
+      syncThemeButton();
+      const escapeHtml = value => String(value || '').replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
+      const installButton = document.getElementById('install-app');
+      const pwaDialog = document.getElementById('pwa-dialog');
+      const pwaDialogTitle = document.getElementById('pwa-dialog-title');
+      const pwaDialogMessage = document.getElementById('pwa-dialog-message');
+      const pwaDialogAction = document.getElementById('pwa-dialog-action');
+      let deferredInstallPrompt = null;
+      let dialogActionHandler = null;
+      const installedDisplayMode = () => window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true;
+      const syncInstallButton = () => {
+        const installed = installedDisplayMode();
+        installButton.dataset.installed = installed ? 'true' : 'false';
+        installButton.setAttribute('aria-label', installed ? `Shadowrun ${cityLabel} ist als App installiert` : `Shadowrun ${cityLabel} als App installieren`);
+        installButton.textContent = installed ? '✓ Installiert' : '⇩ App installieren';
+      };
+      const closePwaDialog = () => {
+        pwaDialog.hidden = true;
+        dialogActionHandler = null;
+        pwaDialogAction.hidden = true;
+      };
+      const showPwaDialog = (title, message, actionLabel = '', action = null) => {
+        pwaDialogTitle.textContent = title;
+        pwaDialogMessage.textContent = message;
+        dialogActionHandler = typeof action === 'function' ? action : null;
+        pwaDialogAction.textContent = actionLabel;
+        pwaDialogAction.hidden = !dialogActionHandler;
+        pwaDialog.hidden = false;
+      };
+      const requestAppInstallation = async () => {
+        if (installedDisplayMode()) {
+          showPwaDialog(`${cityLabel} ist installiert`, 'Die Karte läuft bereits als installierte App. Updates werden automatisch beim nächsten Onlinebesuch bereitgestellt.');
+          return;
+        }
+        if (deferredInstallPrompt) {
+          const promptEvent = deferredInstallPrompt;
+          deferredInstallPrompt = null;
+          await promptEvent.prompt();
+          const choice = await promptEvent.userChoice;
+          if (choice.outcome !== 'accepted') showPwaDialog('Installation abgebrochen', 'Du kannst die Installation jederzeit erneut über diesen Button oder das Browsermenü starten.');
+          return;
+        }
+        if (window.location.protocol === 'file:') {
+          showPwaDialog('Installation über die Webadresse', `Die lokale HTML-Datei bleibt direkt nutzbar. Als installierbare App steht ${cityLabel} über die GitHub-Pages-Adresse mit HTTPS bereit.`);
+          return;
+        }
+        if (/iphone|ipad|ipod/i.test(navigator.userAgent)) {
+          showPwaDialog('Auf iPhone oder iPad installieren', `Öffne das Teilen-Menü in Safari und wähle „Zum Home-Bildschirm“. Danach startet ${cityLabel} wie eine App.`);
+          return;
+        }
+        showPwaDialog('Über das Browsermenü installieren', 'Dieser Browser stellt keinen direkten Installationsdialog bereit. Nutze im Browsermenü „App installieren“ oder „Zum Startbildschirm hinzufügen“.');
+      };
+      window.addEventListener('beforeinstallprompt', event => {
+        event.preventDefault();
+        deferredInstallPrompt = event;
+        installButton.dataset.ready = 'true';
+      });
+      window.addEventListener('appinstalled', () => {
+        deferredInstallPrompt = null;
+        syncInstallButton();
+      });
+      syncInstallButton();
+      const mapEl = document.getElementById('map');
+      if (!window.L) {
+        mapEl.innerHTML = '<div class="map-error">Die lokale Kartenbibliothek konnte nicht geladen werden.</div>';
+        return;
+      }
+
+      const map = L.map('map', {
+        preferCanvas: PERFORMANCE_MODE,
+        zoomAnimation: !PERFORMANCE_MODE,
+        fadeAnimation: !PERFORMANCE_MODE,
+        markerZoomAnimation: !PERFORMANCE_MODE,
+        zoomControl: false,
+        minZoom: 8,
+        maxZoom: 19,
+        maxBounds: DATA.regionBounds,
+        maxBoundsViscosity: 1
+      });
+      L.control.zoom({ position: 'topright' }).addTo(map);
+      map.createPane('offlineBasePane'); map.getPane('offlineBasePane').style.zIndex = 150;
+      map.createPane('streetLabelPane'); map.getPane('streetLabelPane').style.zIndex = 397; map.getPane('streetLabelPane').style.pointerEvents = 'none';
+      const offlineOverview = OFFLINE_BASE ? L.imageOverlay(OFFLINE_BASE, DATA.overlayBounds, {
+        pane: 'offlineBasePane', opacity: .9, interactive: false, className: 'offline-overview'
+      }) : null;
+      const street = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19, detectRetina: true, className: 'cyber-tiles',
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>-Mitwirkende'
+      });
+      const official = L.tileLayer.wms('https://gdi.berlin.de/services/wms/uek50', {
+        layers: 'a_uek50_10', format: 'image/png', transparent: false, version: '1.3.0',
+        maxZoom: 17, className: 'official-tiles', attribution: 'ÜK50 &copy; Senatsverwaltung für Stadtentwicklung, Bauen und Wohnen Berlin'
+      });
+      const streetLabels = L.tileLayer(`https://{s}.basemaps.cartocdn.com/${themePalette().labels}/{z}/{x}/{y}{r}.png`, {
+        pane: 'streetLabelPane', subdomains: 'abcd', maxZoom: 20, className: 'street-label-tiles',
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>-Mitwirkende &copy; <a href="https://carto.com/attributions">CARTO</a>'
+      });
+      map.createPane('statusPane'); map.getPane('statusPane').style.zIndex = 370;
+      map.createPane('neighborhoodPane'); map.getPane('neighborhoodPane').style.zIndex = 380;
+      map.createPane('outskirtsPane'); map.getPane('outskirtsPane').style.zIndex = 383;
+      map.createPane('districtPane'); map.getPane('districtPane').style.zIndex = 385;
+      map.createPane('corporatePane'); map.getPane('corporatePane').style.zIndex = 390;
+      map.createPane('maskPane'); map.getPane('maskPane').style.zIndex = 395;
+      const areaStatusStyle = feature => {
+        const zoneType = feature.properties.zone_type;
+        const palette = themePalette();
+        const color = palette.status[zoneType] || feature.properties.color;
+        return {
+          className: 'sr-area-status', color, fillColor: color, weight: currentTheme === 'light' ? 1 : .8,
+          opacity: currentTheme === 'light' ? .58 : .44,
+          fillOpacity: Object.prototype.hasOwnProperty.call(palette.statusOpacity, zoneType) ? palette.statusOpacity[zoneType] : .1
+        };
+      };
+      const neighborhoodStyle = () => ({ color: themePalette().neighborhood, weight: 1.15, opacity: currentTheme === 'light' ? .74 : .58, fillOpacity: 0, dashArray: '1 7', lineCap: 'round' });
+      const districtStyle = () => ({ className: 'sr-district-boundary', color: themePalette().district, weight: 2.4, opacity: .94, fillOpacity: 0 });
+      const outskirtsStyle = () => ({ className: 'sr-outskirts-boundary', color: themePalette().outskirts, fillColor: themePalette().outskirts, weight: 2.2, opacity: .9, fillOpacity: currentTheme === 'light' ? .065 : .045, dashArray: '9 6' });
+      const corporateStyle = () => ({ className: 'sr-corporate-zone', color: themePalette().corporate, fillColor: themePalette().corporate, weight: 2.6, opacity: .98, fillOpacity: currentTheme === 'light' ? .16 : .11 });
+      const cityBoundaryStyle = () => ({ className: 'sr-city-boundary', color: themePalette().city, weight: 2, opacity: .82, fillOpacity: 0, dashArray: '8 8' });
+      const areaStatus = L.geoJSON(DATA.areaStatus, {
+        pane: 'statusPane',
+        style: areaStatusStyle,
+        onEachFeature: (feature, layer) => layer.bindTooltip(feature.properties.label, { className: 'sr-label', sticky: true })
+      });
+      const neighborhoodBoundaries = L.geoJSON(DATA.neighborhoodBoundaries, {
+        pane: 'neighborhoodPane',
+        style: neighborhoodStyle,
+        onEachFeature: (feature, layer) => layer.bindTooltip(`Stadtteil · ${escapeHtml(feature.properties.name)}`, { className: 'sr-label', sticky: true })
+      });
+      const districtBoundaries = L.geoJSON(DATA.districtBoundaries, {
+        pane: 'districtPane',
+        style: districtStyle,
+        onEachFeature: (feature, layer) => layer.bindTooltip(`Bezirk · ${escapeHtml(feature.properties.name)}<br><span class="tooltip-basis">Basis: ${escapeHtml(feature.properties.basis)}</span>`, { className: 'sr-label', sticky: true })
+      });
+      const umlandBoundaries = L.geoJSON(DATA.umlandBoundaries, {
+        pane: 'outskirtsPane',
+        style: outskirtsStyle,
+        onEachFeature: (feature, layer) => layer.bindTooltip(`Lore-Umland · ${escapeHtml(feature.properties.name)}<br><span class="tooltip-basis">Gemeindebasis: ${escapeHtml(feature.properties.basis)}</span>`, { className: 'sr-label', sticky: true })
+      });
+      const corporateAreas = L.geoJSON(DATA.corporateAreas, {
+        pane: 'corporatePane',
+        style: corporateStyle,
+        onEachFeature: (feature, layer) => layer.bindTooltip(`Exterritorial · ${escapeHtml(feature.properties.label)}`, { className: 'sr-label', sticky: true })
+      });
+      const cityBoundary = L.geoJSON(DATA.boundary, { style: cityBoundaryStyle });
+      const outerRings = feature => {
+        const geometry = feature.geometry;
+        const polygons = geometry.type === 'MultiPolygon' ? geometry.coordinates : [geometry.coordinates];
+        return polygons.map(polygon => polygon[0].map(([lon, lat]) => [lat, lon]));
+      };
+      const scopeRings = DATA.scope.features.flatMap(outerRings);
+      const cityMask = L.polygon(
+        [[[-85,-180],[-85,180],[85,180],[85,-180]], ...scopeRings],
+        { pane: 'maskPane', stroke: false, fillColor: themePalette().mask, fillOpacity: themePalette().maskOpacity, fillRule: 'evenodd', interactive: false }
+      );
+      const loreLabels = L.layerGroup();
+      DATA.loreLabels.forEach(label => {
+        const minor = label.type === 'special' ? ' minor' : '';
+        const clickable = label.type === 'district' || label.type === 'outskirts';
+        const marker = L.marker([label.lat, label.lon], { interactive: clickable, icon: L.divIcon({ className: `lore-label ${label.type}${minor}`, html: `<span>${label.name}</span>`, iconSize: [0,0], iconAnchor: [0,0] }) });
+        if (clickable) {
+          marker.on('click', () => {
+            const category = label.type === 'district' ? 'Bezirke' : 'Umlandgebiete';
+            const feature = DATA.geojson.features.find(item => item.properties.category === category && item.properties.name === label.name);
+            if (feature) selectFeature(feature);
+          });
+        }
+        marker.addTo(loreLabels);
+      });
+      areaStatus.addTo(map);
+      neighborhoodBoundaries.addTo(map);
+      umlandBoundaries.addTo(map);
+      districtBoundaries.addTo(map);
+      corporateAreas.addTo(map);
+      cityMask.addTo(map);
+      cityBoundary.addTo(map);
+      loreLabels.addTo(map);
+      map.attributionControl.addAttribution('Grenzen: Geoportal Berlin / ALKIS, dl-de-zero-2.0 · GeoBasis-DE/LGB, dl-de/by-2-0');
+      const personRelationMarkers = [];
+      const personRelationLayer = L.layerGroup();
+      [...personsByLocation.keys()].forEach(locationId => {
+        const feature = DATA.geojson.features.find(item => item.properties.id === locationId);
+        if (!feature) return;
+        const [lon, lat] = feature.geometry.coordinates;
+        const ring = L.circleMarker([lat, lon], {
+          radius: 10, color: themePalette().personAccent, weight: 2, opacity: .9,
+          fillOpacity: 0, dashArray: '3 3', interactive: false
+        });
+        ring.addTo(personRelationLayer);
+        personRelationMarkers.push(ring);
+      });
+      const overlays = {
+        'Straßennamen verstärkt': streetLabels,
+        'Gebietsstatus: Konzern / Normal / Anarcho': areaStatus,
+        'Exterritoriale Konzerngebiete': corporateAreas,
+        'Personenbezüge': personRelationLayer,
+        'Lore-Umland Brandenburg': umlandBoundaries,
+        'Bezirksgrenzen': districtBoundaries,
+        'Stadtteilgrenzen': neighborhoodBoundaries,
+        'Shadowrun-Bezirksnamen': loreLabels,
+        'Berliner Stadtgrenze': cityBoundary
+      };
+      const layerControl = L.control.layers(
+        { 'Straßenkarte (OSM)': street, 'Amtliche Berlin-Karte ÜK50': official },
+        overlays,
+        { position: 'topright', collapsed: true }
+      ).addTo(map);
+      let activeOnlineBase = street;
+      let labelsWanted = true;
+      let switchingMapMode = false;
+
+      function syncNetworkLayerControls() {
+        const disabled = activeMapMode === 'offline';
+        window.requestAnimationFrame(() => {
+          layerControl.getContainer().querySelectorAll('label').forEach(label => {
+            const networkLayer = /Straßenkarte \(OSM\)|Amtliche Berlin-Karte ÜK50|Straßennamen verstärkt/.test(label.textContent || '');
+            if (!networkLayer) return;
+            label.classList.toggle('network-layer-disabled', disabled);
+            const input = label.querySelector('input');
+            if (input) input.disabled = disabled;
+          });
+        });
+      }
+
+      function syncMapModeButtons(reason = '') {
+        document.documentElement.dataset.mapMode = activeMapMode;
+        mapEl.classList.toggle('map-mode-offline', activeMapMode === 'offline');
+        document.querySelectorAll('.map-mode-button').forEach(button => {
+          button.setAttribute('aria-pressed', button.dataset.mapMode === activeMapMode ? 'true' : 'false');
+        });
+        const forcedOffline = requestedMapMode === 'online' && activeMapMode === 'offline';
+        const status = forcedOffline ? 'Offline – keine Netzwerkverbindung' : activeMapMode === 'offline' ? 'Offline-Kartenbasis aktiv' : 'Online-Karten aktiv';
+        document.getElementById('connection-status').textContent = reason || status;
+        document.getElementById('map-mode-toggle').title = reason || status;
+        syncNetworkLayerControls();
+      }
+
+      function setMapMode(mode, { persist = true, automatic = false } = {}) {
+        const desiredMode = mode === 'offline' ? 'offline' : 'online';
+        if (desiredMode === 'offline' && !offlineOverview) {
+          requestedMapMode = 'online';
+          activeMapMode = 'online';
+          syncMapModeButtons('Diese Ausgabe enthält keine eingebettete Offline-Kartenbasis.');
+          if (!automatic) showPwaDialog('Offlinebasis nicht enthalten', 'Nutze für den Hybridbetrieb die index.html der PWA oder die vollständige Offlineausgabe.');
+          return;
+        }
+        requestedMapMode = desiredMode;
+        if (persist) {
+          try { window.localStorage.setItem(mapModeStorageKey, requestedMapMode); } catch (error) {}
+        }
+        const hasConnection = navigator.onLine !== false;
+        activeMapMode = offlineOverview && (requestedMapMode === 'offline' || !hasConnection) ? 'offline' : 'online';
+        switchingMapMode = true;
+        map.removeLayer(street);
+        map.removeLayer(official);
+        map.removeLayer(streetLabels);
+        if (offlineOverview) map.removeLayer(offlineOverview);
+        if (activeMapMode === 'offline') {
+          offlineOverview.addTo(map);
+        } else {
+          activeOnlineBase.addTo(map);
+          if (labelsWanted) streetLabels.addTo(map);
+        }
+        switchingMapMode = false;
+        syncMapModeButtons(activeMapMode === 'offline' && requestedMapMode === 'online' ? 'Offline – Verbindung unterbrochen; Online wird automatisch wiederhergestellt.' : '');
+      }
+
+      map.on('baselayerchange', event => {
+        if (event.layer !== street && event.layer !== official) return;
+        activeOnlineBase = event.layer;
+        if (activeMapMode === 'offline') map.removeLayer(event.layer);
+      });
+      map.on('overlayadd', event => {
+        if (event.layer === streetLabels && !switchingMapMode) labelsWanted = true;
+      });
+      map.on('overlayremove', event => {
+        if (event.layer === streetLabels && !switchingMapMode) labelsWanted = false;
+      });
+      document.getElementById('map-mode-offline').disabled = !HAS_OFFLINE_BASE;
+      setMapMode(requestedMapMode, { persist: false, automatic: true });
+      map.fitBounds(DATA.regionBounds, { padding: [18, 18] });
+
+      const entities = new Map(DATA.entities.map(item => [item.id, item]));
+      const featureById = new Map(DATA.geojson.features.map(feature => [feature.properties.id, feature]));
+      const markerById = new Map();
+      const markerLayer = L.layerGroup().addTo(map);
+      let selected = null;
+      let selectedPerson = null;
+      let browseMode = 'places';
+      let filtered = DATA.geojson.features.slice();
+      let placeResults = DATA.geojson.features.slice();
+      let personResults = persons.slice();
+      let crossCityResults = [];
+
+      const markerIsActive = id => selected === id || Boolean(
+        selectedPerson && (selectedPerson.locations || []).some(link => link.id === id)
+      );
+
+      function applyTheme(theme, persist = true) {
+        currentTheme = theme === 'light' ? 'light' : 'dark';
+        document.documentElement.dataset.theme = currentTheme;
+        document.querySelector('meta[name="theme-color"]').setAttribute('content', currentTheme === 'light' ? '#f7f7f3' : '#071018');
+        if (persist) {
+          try { window.localStorage.setItem(themeStorageKey, currentTheme); } catch (error) {}
+        }
+        syncThemeButton();
+        streetLabels.setUrl(`https://{s}.basemaps.cartocdn.com/${themePalette().labels}/{z}/{x}/{y}{r}.png`);
+        areaStatus.setStyle(areaStatusStyle);
+        neighborhoodBoundaries.setStyle(neighborhoodStyle);
+        districtBoundaries.setStyle(districtStyle);
+        umlandBoundaries.setStyle(outskirtsStyle);
+        corporateAreas.setStyle(corporateStyle);
+        cityBoundary.setStyle(cityBoundaryStyle);
+        cityMask.setStyle({ fillColor: themePalette().mask, fillOpacity: themePalette().maskOpacity });
+        if (offlineOverview) offlineOverview.setOpacity(currentTheme === 'light' ? .94 : .9);
+        personRelationMarkers.forEach(marker => marker.setStyle({ color: themePalette().personAccent }));
+        markerById.forEach((markers, id) => markers.forEach(marker => marker.setStyle(markerStyle(featureById.get(id), markerIsActive(id)))));
+        renderList();
+      }
+
+      const category = document.getElementById('category');
+      document.getElementById('placed-count').textContent = DATA.geojson.features.length;
+      document.getElementById('person-count').textContent = persons.length;
+
+      const fold = value => (value || '').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLocaleLowerCase('de');
+      const pad = value => String(value).padStart(3, '0');
+
+      function populateCategories() {
+        const currentValue = category.value;
+        const source = browseMode === 'persons' ? persons : DATA.entities;
+        const values = [...new Set(source.map(item => item.category))].sort((a,b) => a.localeCompare(b,'de'));
+        category.replaceChildren();
+        const all = document.createElement('option');
+        all.value = '';
+        all.textContent = browseMode === 'persons' ? 'Alle Personengruppen' : 'Alle Kategorien';
+        category.appendChild(all);
+        values.forEach(value => {
+          const option = document.createElement('option'); option.value = value; option.textContent = value; category.appendChild(option);
+        });
+        category.value = values.includes(currentValue) ? currentValue : '';
+      }
+
+      function setBrowseMode(mode) {
+        browseMode = mode === 'persons' ? 'persons' : 'places';
+        document.querySelectorAll('.content-mode').forEach(button => {
+          const active = button.dataset.mode === browseMode;
+          button.classList.toggle('active', active);
+          button.setAttribute('aria-pressed', active ? 'true' : 'false');
+        });
+        populateCategories();
+        applyFilters();
+      }
+
+      function personSearchText(person) {
+        const linkedPlaces = (person.locations || []).map(link => {
+          const feature = featureById.get(link.id);
+          return `${feature ? feature.properties.name : ''} ${link.relation}`;
+        }).join(' ');
+        return fold(`${person.name} ${(person.aliases || []).join(' ')} ${person.category} ${person.role} ${person.affiliation} ${person.status} ${person.metatype || ''} ${person.summary} ${person.description} ${person.source} ${person.scope || ''} ${linkedPlaces}`);
+      }
+
+      function placeSearchText(feature) {
+        const p = feature.properties;
+        const planText = (p.detail_plans || []).map(key => {
+          const plan = atlasByKey.get(key);
+          return plan ? `${plan.title} ${plan.summary}` : '';
+        }).join(' ');
+        const relatedPeople = (personsByLocation.get(p.id) || []).map(item =>
+          `${item.person.name} ${(item.person.aliases || []).join(' ')} ${item.person.source} ${item.relation}`
+        ).join(' ');
+        return fold(`${p.id} ${pad(p.id)} ${p.name} ${p.category} ${p.source_pages} ${p.map_source} ${p.description_preview} ${p.description_full || ''} ${planText} ${relatedPeople}`);
+      }
+
+      function markerStyle(feature, active = false) {
+        const color = categoryColor(feature.properties.category);
+        const district = feature.properties.category === 'Bezirke' || feature.properties.category === 'Umlandgebiete';
+        return {
+          className: district ? 'sr-point sr-district-point' : 'sr-point',
+          radius: active ? (district ? 11 : 9) : (district ? (map.getZoom() >= 14 ? 9 : 7) : (map.getZoom() >= 14 ? 6 : 4.5)),
+          color: active ? themePalette().activeStroke : color,
+          weight: active ? 3 : (district ? 2.4 : 1.6),
+          fillColor: color,
+          fillOpacity: active ? 1 : (district ? .34 : .86),
+          dashArray: district && !active ? '3 2' : null
+        };
+      }
+
+      function buildMarkers() {
+        markerLayer.clearLayers(); markerById.clear();
+        filtered.forEach(feature => {
+          const coordinates = [feature.geometry.coordinates, ...(feature.properties.alternate_locations || [])];
+          const markers = coordinates.map(([lon, lat], index) => {
+            const marker = L.circleMarker([lat, lon], markerStyle(feature, markerIsActive(feature.properties.id)));
+            const instance = coordinates.length > 1 ? ` · Standort ${index + 1}/${coordinates.length}` : '';
+            marker.bindTooltip(`${pad(feature.properties.id)} · ${escapeHtml(feature.properties.name)}${instance}`, { className: 'sr-label', direction: 'top', offset: [0,-5] });
+            marker.on('click', () => selectFeature(feature, false));
+            marker.addTo(markerLayer);
+            return marker;
+          });
+          markerById.set(feature.properties.id, markers);
+        });
+      }
+
+      function setAtlasZoom(value) {
+        atlasZoom = Math.max(.5, Math.min(2.5, value));
+        const image = document.getElementById('atlas-image');
+        image.style.width = `${Math.round(atlasZoom * 100)}%`;
+        document.getElementById('atlas-zoom-readout').textContent = `${Math.round(atlasZoom * 100)}%`;
+      }
+
+      function openAtlas(key = activeAtlasKey) {
+        const plan = atlasByKey.get(key) || atlasItems[0];
+        if (!plan) return;
+        activeAtlasKey = plan.key;
+        document.getElementById('atlas-kind').textContent = plan.kind;
+        document.getElementById('atlas-title').textContent = plan.title;
+        document.getElementById('atlas-summary').textContent = plan.summary;
+        document.getElementById('atlas-source').textContent = `Quelle: ${plan.source} · eingebettet ${plan.width} × ${plan.height} px`;
+        const image = document.getElementById('atlas-image');
+        image.alt = `${plan.title} – ${plan.kind}`;
+        if (image.dataset.key !== plan.key) {
+          image.src = plan.image;
+          image.dataset.key = plan.key;
+        }
+        document.querySelectorAll('.atlas-item').forEach(node => node.classList.toggle('active', node.dataset.key === plan.key));
+        document.getElementById('atlas-dialog').hidden = false;
+        document.getElementById('atlas-viewport').scrollTo(0, 0);
+        setAtlasZoom(1);
+        document.getElementById('atlas-close').focus();
+      }
+
+      function closeAtlas() {
+        document.getElementById('atlas-dialog').hidden = true;
+      }
+
+      function buildAtlasNavigation() {
+        const nav = document.getElementById('atlas-nav');
+        atlasItems.forEach(plan => {
+          const button = document.createElement('button');
+          button.type = 'button';
+          button.className = 'atlas-item';
+          button.dataset.key = plan.key;
+          button.innerHTML = `<small>${escapeHtml(plan.kind)}</small><span>${escapeHtml(plan.title)}</span>`;
+          button.addEventListener('click', () => openAtlas(plan.key));
+          nav.appendChild(button);
+        });
+        const openButton = document.getElementById('atlas-open');
+        openButton.textContent = `▦ ${atlasItems.length} Detailkarten`;
+        openButton.hidden = atlasItems.length === 0;
+      }
+
+      function setDescription(kind, source, preview, full, forceMore = false) {
+        document.getElementById('description-kind').textContent = kind;
+        document.getElementById('description-source').textContent = source;
+        document.getElementById('description-preview').textContent = preview;
+        const more = document.getElementById('description-more');
+        const previewStem = preview.endsWith('…') ? preview.slice(0, -1) : preview;
+        const remainder = full.startsWith(previewStem) ? full.slice(previewStem.length).trim() : full;
+        more.hidden = !(forceMore || full !== preview) || !remainder;
+        more.open = false;
+        document.getElementById('description-full').textContent = remainder;
+      }
+
+      function renderRelated(title, entries) {
+        const block = document.getElementById('related-block');
+        const list = document.getElementById('related-list');
+        document.getElementById('related-title').textContent = title;
+        list.replaceChildren();
+        block.hidden = entries.length === 0;
+        entries.forEach(entry => {
+          const button = document.createElement('button');
+          button.type = 'button';
+          button.className = 'related-link';
+          button.innerHTML = `<span><strong>${escapeHtml(entry.label)}</strong><br><span>${escapeHtml(entry.meta)}</span></span><span class="related-arrow" aria-hidden="true">›</span>`;
+          button.addEventListener('click', entry.action);
+          list.appendChild(button);
+        });
+      }
+
+      function showDetails(feature) {
+        const p = feature.properties;
+        const detailPlans = (p.detail_plans || []).map(key => atlasByKey.get(key)).filter(Boolean);
+        document.getElementById('detail-id').textContent = pad(p.id);
+        document.getElementById('detail-title').textContent = p.name;
+        document.getElementById('detail-badges').innerHTML = `<span class="badge">${escapeHtml(p.category)}</span><span class="badge">${escapeHtml(p.accuracy)}</span>${p.detail_map ? `<span class="badge">Detail ${escapeHtml(p.detail_map)}</span>` : ''}${detailPlans.length ? '<span class="badge">Ortsplan vorhanden</span>' : ''}`;
+        const detailPlanButton = document.getElementById('detail-plan-open');
+        detailPlanButton.hidden = detailPlans.length === 0;
+        detailPlanButton.dataset.key = detailPlans.length ? detailPlans[0].key : '';
+        detailPlanButton.textContent = detailPlans.length ? `▦ ${detailPlans[0].title} öffnen` : '';
+        setDescription(p.description_kind, p.description_source, p.description_preview, p.description_full, p.description_has_more);
+        const relatedPeople = personsByLocation.get(p.id) || [];
+        renderRelated('Personen von Interesse', relatedPeople.map(item => ({
+          label: item.person.name,
+          meta: `${item.relation} · ${item.person.category}`,
+          action: () => selectPerson(item.person),
+        })));
+        const locationCount = 1 + (p.alternate_locations || []).length;
+        document.getElementById('detail-grid').innerHTML = `
+          <dt>Quellen</dt><dd>${escapeHtml(p.source_pages || 'Berlin 2080 Karte v04')}</dd>
+          <dt>Kartenquelle</dt><dd>${escapeHtml(p.map_source || 'Berlin 2080 Karte v04')}</dd>
+          <dt>Position</dt><dd>${escapeHtml(p.placement_note || p.accuracy)}</dd>
+          ${locationCount > 1 ? `<dt>Standorte</dt><dd>${locationCount} auf der Einzelkarte</dd>` : ''}
+          <dt>Koordinaten</dt><dd>${feature.geometry.coordinates[1].toFixed(5)}, ${feature.geometry.coordinates[0].toFixed(5)}</dd>`;
+        document.getElementById('detail-card').classList.add('open');
+      }
+
+      function showPersonDetails(person) {
+        document.getElementById('detail-id').textContent = 'POI';
+        document.getElementById('detail-title').textContent = person.name;
+        document.getElementById('detail-badges').innerHTML = `<span class="badge">${escapeHtml(person.category)}</span><span class="badge">${escapeHtml(person.status)}</span>${person.metatype ? `<span class="badge">${escapeHtml(person.metatype)}</span>` : ''}`;
+        const detailPlanButton = document.getElementById('detail-plan-open');
+        detailPlanButton.hidden = true;
+        detailPlanButton.dataset.key = '';
+        setDescription('Personendossier', person.source, person.summary, person.description, true);
+        const linkedLocations = (person.locations || []).map(link => {
+          const feature = featureById.get(link.id);
+          return feature ? {
+            label: `${pad(link.id)} · ${feature.properties.name}`,
+            meta: link.relation,
+            action: () => selectFeature(feature),
+          } : null;
+        }).filter(Boolean);
+        renderRelated('Zugeordnete Orte', linkedLocations);
+        const aliases = (person.aliases || []).length ? person.aliases.join(', ') : '–';
+        const mapReference = linkedLocations.length ? `${linkedLocations.length} belegte Zuordnung${linkedLocations.length === 1 ? '' : 'en'}` : (person.scope || 'Ohne festen Kartenbezug');
+        document.getElementById('detail-grid').innerHTML = `
+          <dt>Aliasse</dt><dd>${escapeHtml(aliases)}</dd>
+          <dt>Rolle</dt><dd>${escapeHtml(person.role)}</dd>
+          <dt>Zugehörigkeit</dt><dd>${escapeHtml(person.affiliation)}</dd>
+          <dt>Kartenbezug</dt><dd>${escapeHtml(mapReference)}</dd>
+          <dt>Quelle</dt><dd>${escapeHtml(person.source)}</dd>`;
+        document.getElementById('detail-card').classList.add('open');
+      }
+
+      function refreshMarkerStyles() {
+        markerById.forEach((markers, id) => markers.forEach(marker => {
+          marker.setStyle(markerStyle(featureById.get(id), markerIsActive(id)));
+          if (markerIsActive(id)) marker.bringToFront();
+        }));
+      }
+
+      function selectFeature(feature, fly = true) {
+        if (!markerById.has(feature.properties.id)) {
+          filtered = [...filtered, feature];
+          buildMarkers();
+        }
+        selectedPerson = null;
+        selected = feature.properties.id;
+        refreshMarkerStyles();
+        if (markerById.has(selected)) markerById.get(selected)[0].openTooltip();
+        document.querySelectorAll('.result').forEach(node => node.classList.toggle('active', node.dataset.type === 'place' && Number(node.dataset.id) === selected));
+        if (fly) {
+          const locations = [feature.geometry.coordinates, ...(feature.properties.alternate_locations || [])];
+          if (locations.length > 1) {
+            map.fitBounds(locations.map(([lon, lat]) => [lat, lon]), { padding: [60, 60], maxZoom: 14 });
+          } else {
+            map.flyTo([feature.geometry.coordinates[1], feature.geometry.coordinates[0]], Math.max(map.getZoom(), feature.properties.accuracy.includes('Detailkarte') ? 16 : 14), { duration: .75 });
+          }
+        }
+        showDetails(feature);
+        if (window.innerWidth <= 800) document.getElementById('sidebar').classList.remove('open');
+      }
+
+      function selectPerson(person, fly = true) {
+        const linkedFeatures = (person.locations || []).map(link => featureById.get(link.id)).filter(Boolean);
+        const existing = new Set(filtered.map(feature => feature.properties.id));
+        const missing = linkedFeatures.filter(feature => !existing.has(feature.properties.id));
+        if (missing.length) {
+          filtered = [...filtered, ...missing];
+          buildMarkers();
+        }
+        selected = null;
+        selectedPerson = person;
+        refreshMarkerStyles();
+        document.querySelectorAll('.result').forEach(node => node.classList.toggle('active', node.dataset.type === 'person' && node.dataset.personId === person.id));
+        if (fly && linkedFeatures.length) {
+          const coordinates = linkedFeatures.map(feature => feature.geometry.coordinates);
+          if (coordinates.length === 1) {
+            map.flyTo([coordinates[0][1], coordinates[0][0]], Math.max(map.getZoom(), 14), { duration: .75 });
+          } else {
+            map.fitBounds(coordinates.map(([lon, lat]) => [lat, lon]), { padding: [60, 60], maxZoom: 14 });
+          }
+        }
+        showPersonDetails(person);
+        if (window.innerWidth <= 800) document.getElementById('sidebar').classList.remove('open');
+      }
+
+      function appendGroup(list, label) {
+        const heading = document.createElement('div');
+        heading.className = 'result-group';
+        heading.textContent = label;
+        list.appendChild(heading);
+      }
+
+      function appendPlaceResults(list, features) {
+        features.slice().sort((first, second) => first.properties.name.localeCompare(second.properties.name, 'de', { sensitivity: 'base', numeric: true })).forEach(feature => {
+          const p = feature.properties;
+          const button = document.createElement('button');
+          button.type = 'button'; button.className = `result${p.id === selected ? ' active' : ''}`; button.dataset.type = 'place'; button.dataset.id = p.id;
+          button.innerHTML = `<span class="num">${pad(p.id)}</span><span><span class="result-name">${escapeHtml(p.name)}</span><br><span class="result-cat">${escapeHtml(p.category)}</span></span><span class="pin" style="color:${categoryColor(p.category)};background:currentColor"></span>`;
+          button.addEventListener('click', () => selectFeature(feature)); list.appendChild(button);
+        });
+      }
+
+      function appendPersonResults(list, entries) {
+        entries.slice().sort((first, second) => first.name.localeCompare(second.name, 'de', { sensitivity: 'base' })).forEach(person => {
+          const button = document.createElement('button');
+          button.type = 'button'; button.className = `result${selectedPerson && person.id === selectedPerson.id ? ' active' : ''}`; button.dataset.type = 'person'; button.dataset.personId = person.id;
+          button.innerHTML = `<span class="person-glyph" aria-hidden="true">P</span><span><span class="result-name">${escapeHtml(person.name)}</span><br><span class="result-cat">${escapeHtml(person.category)}</span></span><span class="pin" style="color:${themePalette().personAccent};background:currentColor"></span>`;
+          button.addEventListener('click', () => selectPerson(person)); list.appendChild(button);
+        });
+      }
+
+      function appendCrossCityResults(list, entries) {
+        entries.forEach(item => {
+          const button = document.createElement('button');
+          button.type = 'button';
+          button.className = 'result';
+          button.dataset.type = 'cross-city';
+          button.innerHTML = `<span class="num">${escapeHtml((item.cityName || item.cityId).slice(0, 3).toUpperCase())}</span><span><span class="result-name">${escapeHtml(item.name)}</span><br><span class="result-cat">${escapeHtml(item.cityLabel)} · ${escapeHtml(item.category)}</span></span><span class="pin" style="color:${categoryColor(item.category)};background:currentColor"></span>`;
+          button.addEventListener('click', () => {
+            const target = new URL(window.location.href);
+            target.search = '';
+            target.searchParams.set('city', item.cityId);
+            target.searchParams.set(item.type === 'person' ? 'person' : 'marker', item.id);
+            window.location.assign(target.href);
+          });
+          list.appendChild(button);
+        });
+      }
+
+      function renderList() {
+        const list = document.getElementById('result-list');
+        list.replaceChildren();
+        const globalSearch = Boolean(document.getElementById('search').value.trim());
+        if (globalSearch) {
+          if (placeResults.length) { appendGroup(list, `Orte · ${placeResults.length}`); appendPlaceResults(list, placeResults); }
+          if (personResults.length) { appendGroup(list, `Personen · ${personResults.length}`); appendPersonResults(list, personResults); }
+          if (crossCityResults.length) { appendGroup(list, `Weitere Städte · ${crossCityResults.length}`); appendCrossCityResults(list, crossCityResults); }
+          if (!placeResults.length && !personResults.length && !crossCityResults.length) appendGroup(list, 'Keine Treffer');
+        } else if (browseMode === 'persons') {
+          appendPersonResults(list, personResults);
+        } else {
+          appendPlaceResults(list, placeResults);
+        }
+      }
+
+      function applyFilters() {
+        const query = fold(document.getElementById('search').value.trim());
+        category.disabled = Boolean(query);
+        if (query) {
+          placeResults = DATA.geojson.features.filter(feature => placeSearchText(feature).includes(query));
+          personResults = persons.filter(person => personSearchText(person).includes(query));
+          crossCityResults = (globalSearchIndex.items || [])
+            .filter(item => item.cityId !== cityContext.city.id && String(item.search || '').includes(query))
+            .slice(0, 60);
+          const mapIds = new Set(placeResults.map(feature => feature.properties.id));
+          personResults.forEach(person => (person.locations || []).forEach(link => mapIds.add(link.id)));
+          filtered = DATA.geojson.features.filter(feature => mapIds.has(feature.properties.id));
+        } else if (browseMode === 'persons') {
+          crossCityResults = [];
+          personResults = persons.filter(person => !category.value || person.category === category.value);
+          placeResults = [];
+          filtered = DATA.geojson.features.slice();
+        } else {
+          crossCityResults = [];
+          placeResults = DATA.geojson.features.filter(feature => !category.value || feature.properties.category === category.value);
+          personResults = [];
+          filtered = placeResults.slice();
+        }
+        document.getElementById('visible-count').textContent = query ? placeResults.length + personResults.length + crossCityResults.length : (browseMode === 'persons' ? personResults.length : placeResults.length);
+        buildMarkers(); renderList();
+      }
+
+      document.getElementById('search').addEventListener('input', applyFilters);
+      category.addEventListener('change', applyFilters);
+      document.querySelectorAll('.content-mode').forEach(button => button.addEventListener('click', () => setBrowseMode(button.dataset.mode)));
+      document.getElementById('reset').addEventListener('click', () => { document.getElementById('search').value = ''; category.value = ''; applyFilters(); map.fitBounds(DATA.regionBounds); });
+      document.getElementById('detail-close').addEventListener('click', () => document.getElementById('detail-card').classList.remove('open'));
+      document.getElementById('detail-plan-open').addEventListener('click', event => openAtlas(event.currentTarget.dataset.key));
+      document.getElementById('atlas-open').addEventListener('click', () => openAtlas());
+      document.getElementById('atlas-close').addEventListener('click', closeAtlas);
+      document.getElementById('atlas-zoom-out').addEventListener('click', () => setAtlasZoom(atlasZoom - .25));
+      document.getElementById('atlas-zoom-in').addEventListener('click', () => setAtlasZoom(atlasZoom + .25));
+      document.getElementById('atlas-zoom-fit').addEventListener('click', () => setAtlasZoom(1));
+      document.getElementById('atlas-dialog').addEventListener('click', event => { if (event.target.id === 'atlas-dialog') closeAtlas(); });
+      document.addEventListener('keydown', event => {
+        if (event.key !== 'Escape') return;
+        if (!document.getElementById('atlas-dialog').hidden) closeAtlas();
+        if (!pwaDialog.hidden) closePwaDialog();
+      });
+      document.getElementById('description-less').addEventListener('click', () => {
+        const more = document.getElementById('description-more');
+        more.open = false;
+        more.querySelector('summary').focus();
+      });
+      document.getElementById('theme-toggle').addEventListener('click', () => applyTheme(currentTheme === 'dark' ? 'light' : 'dark'));
+      document.querySelectorAll('.map-mode-button').forEach(button => button.addEventListener('click', () => setMapMode(button.dataset.mapMode)));
+      window.addEventListener('offline', () => setMapMode(requestedMapMode, { persist: false, automatic: true }));
+      window.addEventListener('online', () => setMapMode(requestedMapMode, { persist: false, automatic: true }));
+      installButton.addEventListener('click', requestAppInstallation);
+      document.getElementById('pwa-dialog-close').addEventListener('click', closePwaDialog);
+      pwaDialog.addEventListener('click', event => { if (event.target === pwaDialog) closePwaDialog(); });
+      pwaDialogAction.addEventListener('click', () => {
+        const action = dialogActionHandler;
+        closePwaDialog();
+        if (action) action();
+      });
+      document.getElementById('mobile-toggle').addEventListener('click', () => document.getElementById('sidebar').classList.toggle('open'));
+      map.on('zoomend', () => {
+        document.getElementById('zoom-state').textContent = `Zoom ${map.getZoom()}`;
+        mapEl.classList.toggle('zoom-detail', map.getZoom() >= 12);
+        markerById.forEach((markers, id) => markers.forEach(marker => marker.setStyle(markerStyle(featureById.get(id), markerIsActive(id)))));
+      });
+      buildAtlasNavigation();
+      populateCategories();
+      applyFilters();
+      if (requestedMarkerId && featureById.has(requestedMarkerId)) selectFeature(featureById.get(requestedMarkerId));
+      if (requestedPersonId && personById.has(requestedPersonId)) selectPerson(personById.get(requestedPersonId));
+      if (requestedAtlasKey && atlasByKey.has(requestedAtlasKey)) openAtlas(requestedAtlasKey);
+
+      if ('serviceWorker' in navigator && /^https?:$/.test(window.location.protocol)) {
+        const hadController = Boolean(navigator.serviceWorker.controller);
+        let updateAccepted = false;
+        let waitingWorker = null;
+        const updateBanner = document.getElementById('update-banner');
+        const offerUpdate = worker => {
+          waitingWorker = worker;
+          updateBanner.hidden = false;
+        };
+        const registerServiceWorker = async () => {
+          try {
+            const registration = await navigator.serviceWorker.register('./service-worker.js');
+            if (cityContext.manifestUrl) {
+              const readyRegistration = await navigator.serviceWorker.ready;
+              if (readyRegistration.active) {
+                readyRegistration.active.postMessage({ type: 'CACHE_CITY', manifestUrl: cityContext.manifestUrl });
+              }
+            }
+            if (registration.waiting) offerUpdate(registration.waiting);
+            registration.addEventListener('updatefound', () => {
+              const worker = registration.installing;
+              if (!worker) return;
+              worker.addEventListener('statechange', () => {
+                if (worker.state === 'installed' && navigator.serviceWorker.controller) offerUpdate(worker);
+              });
+            });
+          } catch (error) {
+            console.warn('Service Worker konnte nicht registriert werden.', error);
+          }
+        };
+        if (document.readyState === 'complete') registerServiceWorker();
+        else window.addEventListener('load', registerServiceWorker, { once: true });
+        document.getElementById('update-app').addEventListener('click', () => {
+          if (!waitingWorker) return;
+          updateAccepted = true;
+          waitingWorker.postMessage({ type: 'SKIP_WAITING' });
+        });
+        navigator.serviceWorker.addEventListener('controllerchange', () => {
+          if (hadController || updateAccepted) window.location.reload();
+        });
+      }
+    })().catch(error => {
+      console.error(error);
+      const app = document.querySelector('.app');
+      if (app) {
+        const main = document.createElement('main');
+        main.className = 'map-error';
+        main.style.cssText = 'margin:auto;max-width:720px;padding:24px';
+        const heading = document.createElement('h1');
+        heading.textContent = 'Karte konnte nicht geladen werden';
+        const message = document.createElement('p');
+        message.textContent = String(error.message || error);
+        const help = document.createElement('p');
+        help.textContent = 'Die portable Offline-Datei bleibt ohne Webserver nutzbar.';
+        main.append(heading, message, help);
+        app.replaceChildren(main);
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,176 @@
+[
+  {
+    "key": "babylon",
+    "title": "Das Babylon",
+    "kind": "Gebäudeplan",
+    "source": "SR6_Berlin2080_Disko-Babylon.pdf",
+    "summary": "Mehrgeschossiger Plan der Diskothek an der Sokarenallee 23A mit Foyer, Ballsaal, Lounge, Tanzfläche, Bühne, DJ-Bereich, Büros und Parkdeck. Die Legende unterscheidet 17 Funktionsbereiche.",
+    "markerIds": [
+      6
+    ],
+    "width": 1123,
+    "height": 1595,
+    "image": "../../assets/cities/berlin-2080/detail-maps/babylon.webp"
+  },
+  {
+    "key": "hauergasse",
+    "title": "Kneipenkiez Hauergasse",
+    "kind": "Kiezplan",
+    "source": "SR6_Berlin2080_Hauergasse.pdf",
+    "summary": "Innenplan des verzweigten Kneipenkiezes mit Zugängen aus Q-Mall und Lietzenburger Straße. 63 nummerierte Bars, Imbisse, Cafés, Clubs und Kleinstbetriebe sind in der Legende verortet.",
+    "markerIds": [
+      17
+    ],
+    "width": 1425,
+    "height": 1049,
+    "image": "../../assets/cities/berlin-2080/detail-maps/hauergasse.webp"
+  },
+  {
+    "key": "kasbah",
+    "title": "Kasbah Teehaus",
+    "kind": "Gebäudeplan",
+    "source": "SR6_Berlin2080_Kasbah-Teehaus.pdf",
+    "summary": "Grundriss des Teehauses am Fatima-Al-Masuma-Park mit Erdgeschoss, Dachterrasse, Eckturm und Hamam. Eingezeichnet sind außerdem Sicherheitskomponenten und ein geheimer Kellerzugang.",
+    "markerIds": [
+      80
+    ],
+    "width": 1123,
+    "height": 1063,
+    "image": "../../assets/cities/berlin-2080/detail-maps/kasbah.webp"
+  },
+  {
+    "key": "kellerclubs",
+    "title": "Berliner Kellerclubs",
+    "kind": "Schauplatzmodule",
+    "source": "SR6_Berlin2080_Kellerclubs.pdf",
+    "summary": "Zwölf schematische Kellerclub-Bausteine von A bis L mit Treppen, Mieterkellern, Zugängen, Rampen und einem mobilen DJ-Truck. Als universeller Schauplatz keinem einzelnen Marker zugeordnet.",
+    "markerIds": [],
+    "width": 1425,
+    "height": 1049,
+    "image": "../../assets/cities/berlin-2080/detail-maps/kellerclubs.webp"
+  },
+  {
+    "key": "osramhoefe",
+    "title": "Schattenmarkt Osramhöfe",
+    "kind": "Arealplan",
+    "source": "SR6_Berlin2080_Osramhofe.pdf",
+    "summary": "Arealplan des Schattenmarktes an der Oudenarder Straße mit sechs Höfen, Fabrik, Zitadelle, Schloss, Bastion, Zugängen und nummerierten Marktbereichen.",
+    "markerIds": [
+      116
+    ],
+    "width": 1425,
+    "height": 1049,
+    "image": "../../assets/cities/berlin-2080/detail-maps/osramhoefe.webp"
+  },
+  {
+    "key": "schrapnell",
+    "title": "Schattendestille Schrapnell",
+    "kind": "Gebäudeplan",
+    "source": "SR6_Berlin2080_Schrapnell.pdf",
+    "summary": "Grundriss der Schattendestille mit Wohnung, Barbereich, Billardtisch, Warenlager, Mieterkellerzugang und geschütztem Meeting-Raum einschließlich der eingezeichneten Sicherungen.",
+    "markerIds": [
+      44
+    ],
+    "width": 1425,
+    "height": 1049,
+    "image": "../../assets/cities/berlin-2080/detail-maps/schrapnell.webp"
+  },
+  {
+    "key": "schulkiez",
+    "title": "Schulkiez Emma Goldman",
+    "kind": "Kiezplan",
+    "source": "SR6_Berlin2080_Schulkiez.pdf",
+    "summary": "Lageplan des Schulkiezes zwischen Rathenower, Krupp- und Noam-Chomsky-Straße. Er verortet Grund- und Hauptstufe, Kita, Wohn- und Hilfseinrichtungen, Jugendclub, Sportflächen und das Sternschutz-Revier.",
+    "markerIds": [
+      324
+    ],
+    "width": 1425,
+    "height": 1049,
+    "image": "../../assets/cities/berlin-2080/detail-maps/schulkiez.webp"
+  },
+  {
+    "key": "spreeland",
+    "title": "Spreeland Funpark",
+    "kind": "Arealplan",
+    "source": "SR6_Berlin2080_Spreeland-Funpark.pdf",
+    "summary": "Plan des Vergnügungsparks an der Müller-Breslau-Straße 14 mit 15 nummerierten Attraktionen und Zugängen sowie den angrenzenden Zoo-, Universitäts- und M-Bahn-Anlagen.",
+    "markerIds": [
+      151
+    ],
+    "width": 1123,
+    "height": 1063,
+    "image": "../../assets/cities/berlin-2080/detail-maps/spreeland.webp"
+  },
+  {
+    "key": "blauer-engel",
+    "title": "Varieté Blauer Engel",
+    "kind": "Gebäudeplan",
+    "source": "SR6_Berlin2080_Variete-BlauerEngel.pdf",
+    "summary": "Erd- und Untergeschoss des Varieté-Theaters in der Oranienburger Straße 7 mit Bühne, Bar, Fundus, Büros, Garderobe, Hintereingang und separat erschlossenen Wohnungen.",
+    "markerIds": [
+      8
+    ],
+    "width": 1123,
+    "height": 1595,
+    "image": "../../assets/cities/berlin-2080/detail-maps/blauer-engel.webp"
+  },
+  {
+    "key": "vesuv",
+    "title": "Vesuv-Automatencasino",
+    "kind": "Gebäudeplan",
+    "source": "SR6_Berlin2080_VesuvCasino.pdf",
+    "summary": "Vier Ebenen des Vesuv in Gropiusstadt: Automatencasino, Nachtclub, Büros und Tresor. Die Legende verzeichnet 20 Funktionsbereiche sowie die umliegenden Geschäfte.",
+    "markerIds": [
+      158
+    ],
+    "width": 1123,
+    "height": 1595,
+    "image": "../../assets/cities/berlin-2080/detail-maps/vesuv.webp"
+  },
+  {
+    "key": "renrakusan",
+    "title": "Renrakusan – Bezirksplan",
+    "kind": "Bezirksplan",
+    "source": "renrakusan-01-final.png",
+    "summary": "Detailplan des Renraku-Bezirks mit 42 verzeichneten Referenzen aus Nachtleben, Einkauf, Hotels, Freizeit, Konzernen, Gastronomie und sonstigen Orten sowie dem internen Bezirksverlauf.",
+    "markerIds": [
+      451
+    ],
+    "width": 2400,
+    "height": 1697,
+    "image": "../../assets/cities/berlin-2080/detail-maps/renrakusan.webp"
+  },
+  {
+    "key": "netzspinne",
+    "title": "Liniennetz der Berliner Magnetschwebebahnen",
+    "kind": "Verkehrsnetz",
+    "source": "netzspinne_2080.png",
+    "summary": "Schematischer Liniennetzplan der M-Bahn-Linien M1 bis M19 mit Innenstadt-Knoten, Flughäfen und Verbindungen in das Berliner Lore-Umland.",
+    "markerIds": [],
+    "width": 2400,
+    "height": 1701,
+    "image": "../../assets/cities/berlin-2080/detail-maps/netzspinne.webp"
+  },
+  {
+    "key": "berlin-v06-uebersicht",
+    "title": "Berlin 2080 – Übersicht v06",
+    "kind": "Referenzkarte",
+    "source": "berlin_karte_v06_Seite_1.png",
+    "summary": "Hochauflösende Übersicht von Berlin und dem Lore-Umland mit Gebietsstatus, Arkologien, Verkehrsachsen und dem nummerierten Gesamtkatalog. Sie dient der Gegenprüfung der geografischen Hauptkarte.",
+    "markerIds": [],
+    "width": 2400,
+    "height": 1805,
+    "image": "../../assets/cities/berlin-2080/detail-maps/berlin-v06-uebersicht.webp"
+  },
+  {
+    "key": "berlin-v06-details",
+    "title": "Berlin 2080 – Detailkarten v06",
+    "kind": "Referenzkarte",
+    "source": "berlin_karte_v06_Seite_2.png",
+    "summary": "Detailansichten von Berlin-Mitte und Dreamland mit Straßenzügen, Bezirks- und Kiezbezeichnungen, M-Bahn-Stationen und den präziser gesetzten Ortsnummern.",
+    "markerIds": [],
+    "width": 2400,
+    "height": 1805,
+    "image": "../../assets/cities/berlin-2080/detail-maps/berlin-v06-details.webp"
+  }
+]

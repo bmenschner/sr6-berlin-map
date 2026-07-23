@@ -1,8 +1,8 @@
 {
   "id": "./",
-  "name": "Shadowrun Berlin 2080",
-  "short_name": "Berlin 2080",
-  "description": "Interaktive Shadowrun-Karte von Berlin 2080 mit Orten, Personen, Bezirken und Detailkarten.",
+  "name": "Shadowrun Stadtkarten",
+  "short_name": "SR Stadtkarten",
+  "description": "Interaktive Shadowrun-Stadtkarten mit Orten, Personen, Bezirken, Quellen und Detailkarten.",
   "lang": "de-DE",
   "dir": "ltr",
   "start_url": "./",

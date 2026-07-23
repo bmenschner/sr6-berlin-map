@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "id": "berlin-2080",
+  "name": "Berlin",
+  "year": 2080,
+  "dataVersion": 1,
+  "center": [
+    52.5200066,
+    13.404954
+  ],
+  "zoom": 10,
+  "overlayBounds": [
+    [
+      52.2608,
+      12.8583
+    ],
+    [
+      52.8103,
+      13.9786
+    ]
+  ],
+  "cityBounds": [
+    [
+      52.3382448,
+      13.088345
+    ],
+    [
+      52.6755087,
+      13.7611609
+    ]
+  ],
+  "regionBounds": [
+    [
+      52.2608,
+      12.8583
+    ],
+    [
+      52.8103,
+      13.9786
+    ]
+  ],
+  "summary": {
+    "entities": 439,
+    "marker_instances": 457,
+    "overview_marker_instances": 292,
+    "detail_marker_instances": 133,
+    "gangs": 65,
+    "corporations": 20
+  },
+  "files": {
+    "places": "places.geojson",
+    "people": "people.json",
+    "atlas": "atlas.json",
+    "zones": "zones.geojson",
+    "districts": "districts.geojson",
+    "neighborhoods": "neighborhoods.geojson",
+    "outskirts": "outskirts.geojson",
+    "boundary": "city-boundary.geojson",
+    "labels": "labels.json",
+    "sources": "sources.json"
+  },
+  "assets": {
+    "offlineBase": "../../assets/cities/berlin-2080/offline-base.webp"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "cities": [
+    {
+      "id": "berlin-2080",
+      "name": "Berlin",
+      "year": 2080,
+      "manifest": "data/berlin-2080/manifest.json",
+      "default": true
+    }
+  ]
+}
