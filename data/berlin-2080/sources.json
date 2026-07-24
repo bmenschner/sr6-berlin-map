@@ -2,6 +2,26 @@
   "schemaVersion": 1,
   "books": [
     {
+      "id": "deutschland-in-den-schatten",
+      "title": "Deutschland in den Schatten (Ausgabe 1992)",
+      "edition": "SR1"
+    },
+    {
+      "id": "deutschland-in-den-schatten-1993",
+      "title": "Deutschland in den Schatten (Ausgabe 1993)",
+      "edition": "SR2"
+    },
+    {
+      "id": "brennpunkt-adl",
+      "title": "Brennpunkt ADL",
+      "edition": "SR3"
+    },
+    {
+      "id": "deutschland-in-den-schatten-ii",
+      "title": "Deutschland in den Schatten II",
+      "edition": "SR3"
+    },
+    {
       "id": "berlin-4d",
       "title": "Berlin 4D",
       "edition": "SR4"
@@ -24,6 +44,11 @@
     {
       "id": "berlin-2080",
       "title": "Berlin 2080",
+      "edition": "SR6"
+    },
+    {
+      "id": "netzgewitter",
+      "title": "Netzgewitter",
       "edition": "SR6"
     },
     {
@@ -68,6 +93,25 @@
     }
   ],
   "citations": [
+    "Deutschland in den Schatten, S. 50–55",
+    "Deutschland in den Schatten, S. 58–59",
+    "Deutschland in den Schatten (Ausgabe 1993), S. 50",
+    "Deutschland in den Schatten (Ausgabe 1993), S. 51",
+    "Deutschland in den Schatten (Ausgabe 1993), S. 53",
+    "Deutschland in den Schatten (Ausgabe 1993), S. 53–54",
+    "Deutschland in den Schatten (Ausgabe 1993), S. 54",
+    "Deutschland in den Schatten (Ausgabe 1993), S. 55",
+    "Deutschland in den Schatten (Ausgabe 1993), S. 58–59",
+    "Deutschland in den Schatten II, S. 79",
+    "Deutschland in den Schatten II, S. 80",
+    "Deutschland in den Schatten II, S. 81",
+    "Deutschland in den Schatten II, S. 81–82",
+    "Deutschland in den Schatten II, S. 82",
+    "Brennpunkt ADL, S. 115",
+    "Brennpunkt ADL, S. 121",
+    "Brennpunkt ADL, S. 121–122",
+    "Datapuls: Berlin, S. 9",
+    "Datapuls: Berlin, S. 11",
     "Auswurfschock, S. 180–183",
     "Auswurfschock: 180–183",
     "Berlin 2080 Karte v04",
@@ -75,6 +119,8 @@
     "Berlin 2080 Karte v04 – Lore-Umland",
     "Berlin 2080 Karte v06 – Detailkarten",
     "Berlin 2080 Karte v06 – Übersicht",
+    "Berlin 2080, S. 75–77",
+    "Netzgewitter, S. 18-19",
     "Berlin 2080, S. 10 und 141; Datapuls: Berlin, S. 4",
     "Berlin 2080, S. 100",
     "Berlin 2080, S. 106",
@@ -534,6 +580,8 @@
     "Schattenload 12/2020: 2–3",
     "Schattenload Dezember 2019, S. 4",
     "Schlagschatten, S. 145",
-    "Shadowrun-6D-Quellenkorpus"
+    "Shadowrun-6D-Quellenkorpus",
+    "ÜK50 Berlin; Straßen- und Gewässerabgleich",
+    "OpenStreetMap, abgerufen 2026-07-24 (geografische Grenzleitlinien)"
   ]
 }

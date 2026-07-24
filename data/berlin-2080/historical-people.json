@@ -1,0 +1,923 @@
+[
+  {
+    "id": "matthias-garau",
+    "name": "Matthias Garau",
+    "aliases": [],
+    "category": "Konzerne",
+    "role": "Leiter der EMC-Niederlassung Berlin",
+    "affiliation": "European Motor Company",
+    "status": "Historisch belegt (2053)",
+    "summary": "Garau leitete die Berliner EMC-Vertriebsfiliale in einem konzernintern als schwierig geltenden Umfeld.",
+    "description": "Der Niederlassungsleiter hielt sich ungewöhnlich lange an einem Standort, der häufig mit Personal besetzt wurde, das andernorts nicht mehr erwünscht war. Die Quelle beschreibt ihn als skrupellos und gut an das gesetzlose Berlin angepasst.",
+    "source": "Deutschland in den Schatten, S. 53",
+    "locations": [
+      {
+        "id": 488,
+        "relation": "Leitete die Niederlassung",
+        "global_id": "berlin-2080:place:488-emc-niederlassung-berlin"
+      }
+    ],
+    "sources": [
+      {
+        "bookId": "deutschland-in-den-schatten",
+        "title": "Deutschland in den Schatten (Ausgabe 1992)",
+        "edition": "SR1",
+        "citation": "Deutschland in den Schatten, S. 53",
+        "purpose": "description"
+      },
+      {
+        "bookId": "deutschland-in-den-schatten-1993",
+        "title": "Deutschland in den Schatten (Ausgabe 1993)",
+        "edition": "SR2",
+        "citation": "Deutschland in den Schatten (Ausgabe 1993), S. 53",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR1",
+      "SR2"
+    ],
+    "edition_descriptions": {
+      "SR1": {
+        "kind": "Personendossier",
+        "preview": "Garau leitete die Berliner EMC-Vertriebsfiliale in einem konzernintern als schwierig geltenden Umfeld.",
+        "full": "Der Niederlassungsleiter hielt sich ungewöhnlich lange an einem Standort, der häufig mit Personal besetzt wurde, das andernorts nicht mehr erwünscht war. Die Quelle beschreibt ihn als skrupellos und gut an das gesetzlose Berlin angepasst.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "deutschland-in-den-schatten",
+            "title": "Deutschland in den Schatten (Ausgabe 1992)",
+            "edition": "SR1",
+            "citation": "Deutschland in den Schatten, S. 53",
+            "purpose": "description"
+          }
+        ]
+      },
+      "SR2": {
+        "kind": "Personendossier",
+        "preview": "Garau leitete die Berliner EMC-Vertriebsfiliale in einem konzernintern als schwierig geltenden Umfeld.",
+        "full": "Der Niederlassungsleiter hielt sich ungewöhnlich lange an einem Standort, der häufig mit Personal besetzt wurde, das andernorts nicht mehr erwünscht war. Die Quelle beschreibt ihn als skrupellos und gut an das gesetzlose Berlin angepasst.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "deutschland-in-den-schatten-1993",
+            "title": "Deutschland in den Schatten (Ausgabe 1993)",
+            "edition": "SR2",
+            "citation": "Deutschland in den Schatten (Ausgabe 1993), S. 53",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
+    "global_id": "berlin-2080:person:matthias-garau"
+  },
+  {
+    "id": "marika-garejewitsch",
+    "name": "Marika Garejewitsch",
+    "aliases": [],
+    "category": "Konzerne",
+    "role": "Geschäftsführerin der TelTech Holding",
+    "affiliation": "TelTech Holding",
+    "status": "Historisch belegt (2053)",
+    "summary": "Garejewitsch führte TelTechs Berliner Hardware- und Cyberwaregeschäft mit starker Hand.",
+    "description": "Unter ihrer Leitung produzierte TelTech Rechnertechnik, SimSinn-Chips und Bodyware. Gerüchte stellten Garejewitsch selbst als stark vercyberte Verkörperung des Unternehmens dar.",
+    "source": "Deutschland in den Schatten, S. 53–54",
+    "locations": [
+      {
+        "id": 489,
+        "relation": "Leitete die Holding",
+        "global_id": "berlin-2080:place:489-teltech-holding-berlin"
+      }
+    ],
+    "sources": [
+      {
+        "bookId": "deutschland-in-den-schatten",
+        "title": "Deutschland in den Schatten (Ausgabe 1992)",
+        "edition": "SR1",
+        "citation": "Deutschland in den Schatten, S. 53–54",
+        "purpose": "description"
+      },
+      {
+        "bookId": "deutschland-in-den-schatten-1993",
+        "title": "Deutschland in den Schatten (Ausgabe 1993)",
+        "edition": "SR2",
+        "citation": "Deutschland in den Schatten (Ausgabe 1993), S. 53–54",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR1",
+      "SR2"
+    ],
+    "edition_descriptions": {
+      "SR1": {
+        "kind": "Personendossier",
+        "preview": "Garejewitsch führte TelTechs Berliner Hardware- und Cyberwaregeschäft mit starker Hand.",
+        "full": "Unter ihrer Leitung produzierte TelTech Rechnertechnik, SimSinn-Chips und Bodyware. Gerüchte stellten Garejewitsch selbst als stark vercyberte Verkörperung des Unternehmens dar.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "deutschland-in-den-schatten",
+            "title": "Deutschland in den Schatten (Ausgabe 1992)",
+            "edition": "SR1",
+            "citation": "Deutschland in den Schatten, S. 53–54",
+            "purpose": "description"
+          }
+        ]
+      },
+      "SR2": {
+        "kind": "Personendossier",
+        "preview": "Garejewitsch führte TelTechs Berliner Hardware- und Cyberwaregeschäft mit starker Hand.",
+        "full": "Unter ihrer Leitung produzierte TelTech Rechnertechnik, SimSinn-Chips und Bodyware. Gerüchte stellten Garejewitsch selbst als stark vercyberte Verkörperung des Unternehmens dar.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "deutschland-in-den-schatten-1993",
+            "title": "Deutschland in den Schatten (Ausgabe 1993)",
+            "edition": "SR2",
+            "citation": "Deutschland in den Schatten (Ausgabe 1993), S. 53–54",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
+    "global_id": "berlin-2080:person:marika-garejewitsch"
+  },
+  {
+    "id": "inoshiro-mueler",
+    "name": "Inoshiro Müler",
+    "aliases": [
+      "Inoshiro Müller"
+    ],
+    "category": "Konzerne",
+    "role": "Geschäftsführer von Fuchi Berlin",
+    "affiliation": "Fuchi",
+    "status": "Historisch belegt (2053)",
+    "summary": "Müler sanierte Fuchi Berlin durch aggressive und marktnahe Softwareentwicklung.",
+    "description": "Der Geschäftsführer richtete die angeschlagene Zentrale auf medizinische Simulation, Unterhaltung und teure Sonderanfertigungen für wohlhabende Berliner aus.",
+    "source": "Deutschland in den Schatten, S. 54",
+    "locations": [
+      {
+        "id": 490,
+        "relation": "Leitete die Berliner Zentrale",
+        "global_id": "berlin-2080:place:490-fuchi-berlin"
+      }
+    ],
+    "sources": [
+      {
+        "bookId": "deutschland-in-den-schatten",
+        "title": "Deutschland in den Schatten (Ausgabe 1992)",
+        "edition": "SR1",
+        "citation": "Deutschland in den Schatten, S. 54",
+        "purpose": "description"
+      },
+      {
+        "bookId": "deutschland-in-den-schatten-1993",
+        "title": "Deutschland in den Schatten (Ausgabe 1993)",
+        "edition": "SR2",
+        "citation": "Deutschland in den Schatten (Ausgabe 1993), S. 54",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR1",
+      "SR2"
+    ],
+    "edition_descriptions": {
+      "SR1": {
+        "kind": "Personendossier",
+        "preview": "Müler sanierte Fuchi Berlin durch aggressive und marktnahe Softwareentwicklung.",
+        "full": "Der Geschäftsführer richtete die angeschlagene Zentrale auf medizinische Simulation, Unterhaltung und teure Sonderanfertigungen für wohlhabende Berliner aus.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "deutschland-in-den-schatten",
+            "title": "Deutschland in den Schatten (Ausgabe 1992)",
+            "edition": "SR1",
+            "citation": "Deutschland in den Schatten, S. 54",
+            "purpose": "description"
+          }
+        ]
+      },
+      "SR2": {
+        "kind": "Personendossier",
+        "preview": "Müler sanierte Fuchi Berlin durch aggressive und marktnahe Softwareentwicklung.",
+        "full": "Der Geschäftsführer richtete die angeschlagene Zentrale auf medizinische Simulation, Unterhaltung und teure Sonderanfertigungen für wohlhabende Berliner aus.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "deutschland-in-den-schatten-1993",
+            "title": "Deutschland in den Schatten (Ausgabe 1993)",
+            "edition": "SR2",
+            "citation": "Deutschland in den Schatten (Ausgabe 1993), S. 54",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
+    "global_id": "berlin-2080:person:inoshiro-mueler"
+  },
+  {
+    "id": "akator-meriande",
+    "name": "Akator Meriande",
+    "aliases": [],
+    "category": "Konzerne",
+    "role": "Leiter der Berliner Messerschmitt-Kawasaki-Vertretung",
+    "affiliation": "Messerschmitt-Kawasaki, IFMU",
+    "status": "Historisch belegt (2053)",
+    "summary": "Meriande drängte innerhalb der IFMU auf eigenständige Berliner Luftgleiterentwicklung.",
+    "description": "Der unbequeme Zweigstellenleiter wollte magisch unterstützte Sicherheitssysteme in neue Luftgleiter integrieren. Gegenüber Personal und Kundschaft galt sein Führungsstil zugleich als ungewöhnlich fair.",
+    "source": "Deutschland in den Schatten, S. 54",
+    "locations": [
+      {
+        "id": 204,
+        "relation": "Leitete die Berliner Vertretung",
+        "global_id": "berlin-2080:place:204-messerschmitt-kawasaki-die-fabrik"
+      }
+    ],
+    "sources": [
+      {
+        "bookId": "deutschland-in-den-schatten",
+        "title": "Deutschland in den Schatten (Ausgabe 1992)",
+        "edition": "SR1",
+        "citation": "Deutschland in den Schatten, S. 54",
+        "purpose": "description"
+      },
+      {
+        "bookId": "deutschland-in-den-schatten-1993",
+        "title": "Deutschland in den Schatten (Ausgabe 1993)",
+        "edition": "SR2",
+        "citation": "Deutschland in den Schatten (Ausgabe 1993), S. 54",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR1",
+      "SR2"
+    ],
+    "edition_descriptions": {
+      "SR1": {
+        "kind": "Personendossier",
+        "preview": "Meriande drängte innerhalb der IFMU auf eigenständige Berliner Luftgleiterentwicklung.",
+        "full": "Der unbequeme Zweigstellenleiter wollte magisch unterstützte Sicherheitssysteme in neue Luftgleiter integrieren. Gegenüber Personal und Kundschaft galt sein Führungsstil zugleich als ungewöhnlich fair.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "deutschland-in-den-schatten",
+            "title": "Deutschland in den Schatten (Ausgabe 1992)",
+            "edition": "SR1",
+            "citation": "Deutschland in den Schatten, S. 54",
+            "purpose": "description"
+          }
+        ]
+      },
+      "SR2": {
+        "kind": "Personendossier",
+        "preview": "Meriande drängte innerhalb der IFMU auf eigenständige Berliner Luftgleiterentwicklung.",
+        "full": "Der unbequeme Zweigstellenleiter wollte magisch unterstützte Sicherheitssysteme in neue Luftgleiter integrieren. Gegenüber Personal und Kundschaft galt sein Führungsstil zugleich als ungewöhnlich fair.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "deutschland-in-den-schatten-1993",
+            "title": "Deutschland in den Schatten (Ausgabe 1993)",
+            "edition": "SR2",
+            "citation": "Deutschland in den Schatten (Ausgabe 1993), S. 54",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
+    "global_id": "berlin-2080:person:akator-meriande"
+  },
+  {
+    "id": "marcus-frederico",
+    "name": "Marcus Frederico",
+    "aliases": [],
+    "category": "Konzerne",
+    "role": "Geschäftsführer der Aztechnology-Niederlassung Berlin",
+    "affiliation": "Aztechnology",
+    "status": "Historisch belegt (2053)",
+    "summary": "Frederico leitete Aztechnologys geheime Magie- und Cybertechnologieforschung in der Zitadelle Spandau.",
+    "description": "Unter Frederico verfolgte der Konzern ein stark abgeschirmtes Forschungsprogramm, dessen Erfolgsaussichten nach außen unbekannt blieben.",
+    "source": "Deutschland in den Schatten, S. 55",
+    "locations": [
+      {
+        "id": 292,
+        "relation": "Leitete die historische Niederlassung",
+        "global_id": "berlin-2080:place:292-zitadelle-spandau-psiaid"
+      }
+    ],
+    "sources": [
+      {
+        "bookId": "deutschland-in-den-schatten",
+        "title": "Deutschland in den Schatten (Ausgabe 1992)",
+        "edition": "SR1",
+        "citation": "Deutschland in den Schatten, S. 55",
+        "purpose": "description"
+      },
+      {
+        "bookId": "deutschland-in-den-schatten-1993",
+        "title": "Deutschland in den Schatten (Ausgabe 1993)",
+        "edition": "SR2",
+        "citation": "Deutschland in den Schatten (Ausgabe 1993), S. 55",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR1",
+      "SR2"
+    ],
+    "edition_descriptions": {
+      "SR1": {
+        "kind": "Personendossier",
+        "preview": "Frederico leitete Aztechnologys geheime Magie- und Cybertechnologieforschung in der Zitadelle Spandau.",
+        "full": "Unter Frederico verfolgte der Konzern ein stark abgeschirmtes Forschungsprogramm, dessen Erfolgsaussichten nach außen unbekannt blieben.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "deutschland-in-den-schatten",
+            "title": "Deutschland in den Schatten (Ausgabe 1992)",
+            "edition": "SR1",
+            "citation": "Deutschland in den Schatten, S. 55",
+            "purpose": "description"
+          }
+        ]
+      },
+      "SR2": {
+        "kind": "Personendossier",
+        "preview": "Frederico leitete Aztechnologys geheime Magie- und Cybertechnologieforschung in der Zitadelle Spandau.",
+        "full": "Unter Frederico verfolgte der Konzern ein stark abgeschirmtes Forschungsprogramm, dessen Erfolgsaussichten nach außen unbekannt blieben.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "deutschland-in-den-schatten-1993",
+            "title": "Deutschland in den Schatten (Ausgabe 1993)",
+            "edition": "SR2",
+            "citation": "Deutschland in den Schatten (Ausgabe 1993), S. 55",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
+    "global_id": "berlin-2080:person:marcus-frederico"
+  },
+  {
+    "id": "shigei-kanazuri",
+    "name": "Shigei Kanazuri",
+    "aliases": [],
+    "category": "Konzerne",
+    "role": "Leiter von Renraku Berlin und Europa",
+    "affiliation": "Renraku",
+    "status": "Historisch belegt (2053)",
+    "summary": "Kanazuri führte Renrakus europäisches Geschäft vom historischen Standort am Alexanderplatz.",
+    "description": "Er verfolgte im schwierigen deutschen Markt eine zurückhaltende, aber bestimmte Strategie und verteidigte die Berliner Hard- und Softwarestellung gegen Fuchi und TelTech.",
+    "source": "Deutschland in den Schatten, S. 55",
+    "locations": [
+      {
+        "id": 246,
+        "relation": "Historischer Renraku-Hauptsitz",
+        "global_id": "berlin-2080:place:246-alexanderplatz"
+      }
+    ],
+    "sources": [
+      {
+        "bookId": "deutschland-in-den-schatten",
+        "title": "Deutschland in den Schatten (Ausgabe 1992)",
+        "edition": "SR1",
+        "citation": "Deutschland in den Schatten, S. 55",
+        "purpose": "description"
+      },
+      {
+        "bookId": "deutschland-in-den-schatten-1993",
+        "title": "Deutschland in den Schatten (Ausgabe 1993)",
+        "edition": "SR2",
+        "citation": "Deutschland in den Schatten (Ausgabe 1993), S. 55",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR1",
+      "SR2"
+    ],
+    "edition_descriptions": {
+      "SR1": {
+        "kind": "Personendossier",
+        "preview": "Kanazuri führte Renrakus europäisches Geschäft vom historischen Standort am Alexanderplatz.",
+        "full": "Er verfolgte im schwierigen deutschen Markt eine zurückhaltende, aber bestimmte Strategie und verteidigte die Berliner Hard- und Softwarestellung gegen Fuchi und TelTech.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "deutschland-in-den-schatten",
+            "title": "Deutschland in den Schatten (Ausgabe 1992)",
+            "edition": "SR1",
+            "citation": "Deutschland in den Schatten, S. 55",
+            "purpose": "description"
+          }
+        ]
+      },
+      "SR2": {
+        "kind": "Personendossier",
+        "preview": "Kanazuri führte Renrakus europäisches Geschäft vom historischen Standort am Alexanderplatz.",
+        "full": "Er verfolgte im schwierigen deutschen Markt eine zurückhaltende, aber bestimmte Strategie und verteidigte die Berliner Hard- und Softwarestellung gegen Fuchi und TelTech.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "deutschland-in-den-schatten-1993",
+            "title": "Deutschland in den Schatten (Ausgabe 1993)",
+            "edition": "SR2",
+            "citation": "Deutschland in den Schatten (Ausgabe 1993), S. 55",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
+    "global_id": "berlin-2080:person:shigei-kanazuri"
+  },
+  {
+    "id": "wolfgang-osterwald",
+    "name": "Wolfgang Osterwald",
+    "aliases": [],
+    "category": "Konzerne",
+    "role": "Geschäftsführer der Berliner DeMeKo-Werke",
+    "affiliation": "DeMeKo",
+    "status": "Historisch belegt (2053)",
+    "summary": "Osterwald verantwortete DeMeKos Berliner Druck-, Trideo- und SimSinn-Produktion.",
+    "description": "Der Geschäftsführer musste den wichtigen Medienstandort gegen Fans, Chipper, Decker und Raubkopierer absichern, während lokale Publikationen erheblichen Einfluss auf die Stadt ausübten.",
+    "source": "Deutschland in den Schatten, S. 55",
+    "locations": [
+      {
+        "id": 276,
+        "relation": "Historischer DeMeKo-Produktionsstandort",
+        "global_id": "berlin-2080:place:276-metropolis-arkologie-demeko"
+      }
+    ],
+    "sources": [
+      {
+        "bookId": "deutschland-in-den-schatten",
+        "title": "Deutschland in den Schatten (Ausgabe 1992)",
+        "edition": "SR1",
+        "citation": "Deutschland in den Schatten, S. 55",
+        "purpose": "description"
+      },
+      {
+        "bookId": "deutschland-in-den-schatten-1993",
+        "title": "Deutschland in den Schatten (Ausgabe 1993)",
+        "edition": "SR2",
+        "citation": "Deutschland in den Schatten (Ausgabe 1993), S. 55",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR1",
+      "SR2"
+    ],
+    "edition_descriptions": {
+      "SR1": {
+        "kind": "Personendossier",
+        "preview": "Osterwald verantwortete DeMeKos Berliner Druck-, Trideo- und SimSinn-Produktion.",
+        "full": "Der Geschäftsführer musste den wichtigen Medienstandort gegen Fans, Chipper, Decker und Raubkopierer absichern, während lokale Publikationen erheblichen Einfluss auf die Stadt ausübten.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "deutschland-in-den-schatten",
+            "title": "Deutschland in den Schatten (Ausgabe 1992)",
+            "edition": "SR1",
+            "citation": "Deutschland in den Schatten, S. 55",
+            "purpose": "description"
+          }
+        ]
+      },
+      "SR2": {
+        "kind": "Personendossier",
+        "preview": "Osterwald verantwortete DeMeKos Berliner Druck-, Trideo- und SimSinn-Produktion.",
+        "full": "Der Geschäftsführer musste den wichtigen Medienstandort gegen Fans, Chipper, Decker und Raubkopierer absichern, während lokale Publikationen erheblichen Einfluss auf die Stadt ausübten.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "deutschland-in-den-schatten-1993",
+            "title": "Deutschland in den Schatten (Ausgabe 1993)",
+            "edition": "SR2",
+            "citation": "Deutschland in den Schatten (Ausgabe 1993), S. 55",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
+    "global_id": "berlin-2080:person:wolfgang-osterwald"
+  },
+  {
+    "id": "hermes-areo",
+    "name": "Hermes Areo",
+    "aliases": [],
+    "category": "Schatten und Szene",
+    "role": "Vermittler und Informationshändler",
+    "affiliation": "Berliner Informationsszene",
+    "status": "Historisch belegt (2053)",
+    "summary": "Hermes Areo trat als schneller und selbstbewusster Anbieter Berliner Insiderinformationen auf.",
+    "description": "Der Vermittler behauptete, mit seinem Netzwerk schneller als die lokalen Medien zu sein und Nachrichten sogar an Sender zu verkaufen. Andere Stimmen zweifelten an Qualität und Loyalität solcher Informationshändler.",
+    "source": "Deutschland in den Schatten, S. 51",
+    "locations": [],
+    "scope": "Berlinweit; kein fester Standort belegt",
+    "sources": [
+      {
+        "bookId": "deutschland-in-den-schatten",
+        "title": "Deutschland in den Schatten (Ausgabe 1992)",
+        "edition": "SR1",
+        "citation": "Deutschland in den Schatten, S. 51",
+        "purpose": "description"
+      },
+      {
+        "bookId": "deutschland-in-den-schatten-1993",
+        "title": "Deutschland in den Schatten (Ausgabe 1993)",
+        "edition": "SR2",
+        "citation": "Deutschland in den Schatten (Ausgabe 1993), S. 51",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR1",
+      "SR2"
+    ],
+    "edition_descriptions": {
+      "SR1": {
+        "kind": "Personendossier",
+        "preview": "Hermes Areo trat als schneller und selbstbewusster Anbieter Berliner Insiderinformationen auf.",
+        "full": "Der Vermittler behauptete, mit seinem Netzwerk schneller als die lokalen Medien zu sein und Nachrichten sogar an Sender zu verkaufen. Andere Stimmen zweifelten an Qualität und Loyalität solcher Informationshändler.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "deutschland-in-den-schatten",
+            "title": "Deutschland in den Schatten (Ausgabe 1992)",
+            "edition": "SR1",
+            "citation": "Deutschland in den Schatten, S. 51",
+            "purpose": "description"
+          }
+        ]
+      },
+      "SR2": {
+        "kind": "Personendossier",
+        "preview": "Hermes Areo trat als schneller und selbstbewusster Anbieter Berliner Insiderinformationen auf.",
+        "full": "Der Vermittler behauptete, mit seinem Netzwerk schneller als die lokalen Medien zu sein und Nachrichten sogar an Sender zu verkaufen. Andere Stimmen zweifelten an Qualität und Loyalität solcher Informationshändler.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "deutschland-in-den-schatten-1993",
+            "title": "Deutschland in den Schatten (Ausgabe 1993)",
+            "edition": "SR2",
+            "citation": "Deutschland in den Schatten (Ausgabe 1993), S. 51",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
+    "global_id": "berlin-2080:person:hermes-areo"
+  },
+  {
+    "id": "manni-limes",
+    "name": "Manni",
+    "aliases": [
+      "Manni vom Limes"
+    ],
+    "category": "Schatten und Szene",
+    "role": "Besitzer und Barkeeper des Limes",
+    "affiliation": "Limes",
+    "status": "Historisch belegt",
+    "summary": "Manni betrieb das Limes und vermittelte dessen Hinterzimmer für diskrete Treffen.",
+    "description": "Der Barkeeper war zugleich Besitzer der Dahlemer Jazzbar. Über ihn konnten Schmidts und Schattenleute das Hinterzimmer für Gespräche und Auftragsanbahnungen nutzen.",
+    "source": "Deutschland in den Schatten II, S. 80",
+    "locations": [
+      {
+        "id": 491,
+        "relation": "Besitzer und Barkeeper",
+        "global_id": "berlin-2080:place:491-limes"
+      }
+    ],
+    "sources": [
+      {
+        "bookId": "deutschland-in-den-schatten-ii",
+        "title": "Deutschland in den Schatten II",
+        "edition": "SR3",
+        "citation": "Deutschland in den Schatten II, S. 80",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR3"
+    ],
+    "edition_descriptions": {
+      "SR3": {
+        "kind": "Personendossier",
+        "preview": "Manni betrieb das Limes und vermittelte dessen Hinterzimmer für diskrete Treffen.",
+        "full": "Der Barkeeper war zugleich Besitzer der Dahlemer Jazzbar. Über ihn konnten Schmidts und Schattenleute das Hinterzimmer für Gespräche und Auftragsanbahnungen nutzen.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "deutschland-in-den-schatten-ii",
+            "title": "Deutschland in den Schatten II",
+            "edition": "SR3",
+            "citation": "Deutschland in den Schatten II, S. 80",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
+    "global_id": "berlin-2080:person:manni-limes"
+  },
+  {
+    "id": "sharisade",
+    "name": "Sharisade",
+    "aliases": [],
+    "category": "Schatten und Szene",
+    "role": "Betreiberin und Informationshändlerin",
+    "affiliation": "Al’Mukhar",
+    "status": "Historisch belegt",
+    "summary": "Sharisade leitete das Al’Mukhar und galt als gut vernetzte Berliner Informationsquelle.",
+    "description": "Die Betreiberin des Frauen vorbehaltenen Teehauses handelte mit Kontakten und Nachrichten. Ihr Lokal machte sie zu einer wichtigen Ansprechpartnerin innerhalb der damaligen Szene.",
+    "source": "Deutschland in den Schatten II, S. 80",
+    "locations": [
+      {
+        "id": 493,
+        "relation": "Betreiberin und Informationshändlerin",
+        "global_id": "berlin-2080:place:493-al-mukhar"
+      }
+    ],
+    "sources": [
+      {
+        "bookId": "deutschland-in-den-schatten-ii",
+        "title": "Deutschland in den Schatten II",
+        "edition": "SR3",
+        "citation": "Deutschland in den Schatten II, S. 80",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR3"
+    ],
+    "edition_descriptions": {
+      "SR3": {
+        "kind": "Personendossier",
+        "preview": "Sharisade leitete das Al’Mukhar und galt als gut vernetzte Berliner Informationsquelle.",
+        "full": "Die Betreiberin des Frauen vorbehaltenen Teehauses handelte mit Kontakten und Nachrichten. Ihr Lokal machte sie zu einer wichtigen Ansprechpartnerin innerhalb der damaligen Szene.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "deutschland-in-den-schatten-ii",
+            "title": "Deutschland in den Schatten II",
+            "edition": "SR3",
+            "citation": "Deutschland in den Schatten II, S. 80",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
+    "global_id": "berlin-2080:person:sharisade"
+  },
+  {
+    "id": "pavel-hrdlicka",
+    "name": "Pavel Hrdlicka",
+    "aliases": [],
+    "category": "Unterwelt",
+    "role": "Besitzer des Pipeline",
+    "affiliation": "Pipeline; mutmaßlich tschechische Mafia",
+    "status": "Historisch belegt",
+    "summary": "Hrdlicka führte das Pipeline in Gatow und wurde mit der tschechischen Mafia in Verbindung gebracht.",
+    "description": "Der Kneipenbesitzer galt als gut informierter Szenekontakt. Seine genaue Rolle in der Unterwelt blieb unklar, doch die Quelle nennt entsprechende Gerüchte ausdrücklich.",
+    "source": "Deutschland in den Schatten II, S. 80",
+    "locations": [
+      {
+        "id": 494,
+        "relation": "Besitzer",
+        "global_id": "berlin-2080:place:494-pipeline"
+      }
+    ],
+    "sources": [
+      {
+        "bookId": "deutschland-in-den-schatten-ii",
+        "title": "Deutschland in den Schatten II",
+        "edition": "SR3",
+        "citation": "Deutschland in den Schatten II, S. 80",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR3"
+    ],
+    "edition_descriptions": {
+      "SR3": {
+        "kind": "Personendossier",
+        "preview": "Hrdlicka führte das Pipeline in Gatow und wurde mit der tschechischen Mafia in Verbindung gebracht.",
+        "full": "Der Kneipenbesitzer galt als gut informierter Szenekontakt. Seine genaue Rolle in der Unterwelt blieb unklar, doch die Quelle nennt entsprechende Gerüchte ausdrücklich.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "deutschland-in-den-schatten-ii",
+            "title": "Deutschland in den Schatten II",
+            "edition": "SR3",
+            "citation": "Deutschland in den Schatten II, S. 80",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
+    "global_id": "berlin-2080:person:pavel-hrdlicka"
+  },
+  {
+    "id": "karzer",
+    "name": "Karzer",
+    "aliases": [],
+    "category": "Schatten und Szene",
+    "role": "Orkischer Schattenskontakt",
+    "affiliation": "Berliner Schatten",
+    "status": "Historisch belegt",
+    "summary": "Karzer war ein erfahrener Berliner Kontakt mit ausgezeichnetem Gespür für Menschen und Situationen.",
+    "description": "Der ältere Ork vermittelte Kontakte und Informationen, ohne sich von Äußerlichkeiten täuschen zu lassen. Häufig war er gemeinsam mit Rodrigo in einer Kneipe beim Krankenhaus Lindenhof anzutreffen.",
+    "source": "Deutschland in den Schatten II, S. 82; Brennpunkt ADL, S. 115",
+    "locations": [
+      {
+        "id": 497,
+        "relation": "Regelmäßiger Kontaktpunkt",
+        "global_id": "berlin-2080:place:497-krankenhaus-lindenhof"
+      }
+    ],
+    "sources": [
+      {
+        "bookId": "deutschland-in-den-schatten-ii",
+        "title": "Deutschland in den Schatten II",
+        "edition": "SR3",
+        "citation": "Deutschland in den Schatten II, S. 82",
+        "purpose": "description"
+      },
+      {
+        "bookId": "brennpunkt-adl",
+        "title": "Brennpunkt ADL",
+        "edition": "SR3",
+        "citation": "Brennpunkt ADL, S. 115",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR3"
+    ],
+    "edition_descriptions": {
+      "SR3": {
+        "kind": "Personendossier",
+        "preview": "Karzer war ein erfahrener Berliner Kontakt mit ausgezeichnetem Gespür für Menschen und Situationen.",
+        "full": "Der ältere Ork vermittelte Kontakte und Informationen, ohne sich von Äußerlichkeiten täuschen zu lassen. Häufig war er gemeinsam mit Rodrigo in einer Kneipe beim Krankenhaus Lindenhof anzutreffen.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "deutschland-in-den-schatten-ii",
+            "title": "Deutschland in den Schatten II",
+            "edition": "SR3",
+            "citation": "Deutschland in den Schatten II, S. 82",
+            "purpose": "description"
+          },
+          {
+            "bookId": "brennpunkt-adl",
+            "title": "Brennpunkt ADL",
+            "edition": "SR3",
+            "citation": "Brennpunkt ADL, S. 115",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
+    "global_id": "berlin-2080:person:karzer"
+  },
+  {
+    "id": "rodrigo-hundeschamane",
+    "name": "Rodrigo",
+    "aliases": [
+      "Rodrigo der Hundeschamane"
+    ],
+    "category": "Magie und Erwachte",
+    "role": "Hundeschamane und Begleiter Karzers",
+    "affiliation": "Berliner Schatten",
+    "status": "Historisch belegt",
+    "summary": "Rodrigo war ein menschlicher Hundeschamane und Karzers ständiger Begleiter.",
+    "description": "Der Schamane trat eng an der Seite Karzers auf und gehörte damit zu dessen erkennbarem Umfeld. Beide wurden regelmäßig beim Krankenhaus Lindenhof verortet.",
+    "source": "Deutschland in den Schatten II, S. 82; Brennpunkt ADL, S. 115",
+    "locations": [
+      {
+        "id": 497,
+        "relation": "Regelmäßiger Kontaktpunkt",
+        "global_id": "berlin-2080:place:497-krankenhaus-lindenhof"
+      }
+    ],
+    "sources": [
+      {
+        "bookId": "deutschland-in-den-schatten-ii",
+        "title": "Deutschland in den Schatten II",
+        "edition": "SR3",
+        "citation": "Deutschland in den Schatten II, S. 82",
+        "purpose": "description"
+      },
+      {
+        "bookId": "brennpunkt-adl",
+        "title": "Brennpunkt ADL",
+        "edition": "SR3",
+        "citation": "Brennpunkt ADL, S. 115",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR3"
+    ],
+    "edition_descriptions": {
+      "SR3": {
+        "kind": "Personendossier",
+        "preview": "Rodrigo war ein menschlicher Hundeschamane und Karzers ständiger Begleiter.",
+        "full": "Der Schamane trat eng an der Seite Karzers auf und gehörte damit zu dessen erkennbarem Umfeld. Beide wurden regelmäßig beim Krankenhaus Lindenhof verortet.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "deutschland-in-den-schatten-ii",
+            "title": "Deutschland in den Schatten II",
+            "edition": "SR3",
+            "citation": "Deutschland in den Schatten II, S. 82",
+            "purpose": "description"
+          },
+          {
+            "bookId": "brennpunkt-adl",
+            "title": "Brennpunkt ADL",
+            "edition": "SR3",
+            "citation": "Brennpunkt ADL, S. 115",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
+    "global_id": "berlin-2080:person:rodrigo-hundeschamane"
+  },
+  {
+    "id": "uhlmann-komitee-211",
+    "name": "Uhlmann",
+    "aliases": [],
+    "category": "Aktivisten und Widerstand",
+    "role": "Führungsfigur des Komitee 211",
+    "affiliation": "Komitee 211",
+    "status": "Historisch belegt",
+    "summary": "Uhlmann führte das ostberliner Komitee 211 im Widerstand gegen den Berliner Rat.",
+    "description": "Die Quelle ordnet Uhlmann einer Gruppierung zu, die den politischen Kurs des damaligen Berlin bekämpfte. Ein fester Einzelstandort ist nicht belegt; der Wirkungsraum lag im Osten der Stadt.",
+    "source": "Brennpunkt ADL, S. 115",
+    "locations": [
+      {
+        "id": 442,
+        "relation": "Historischer Wirkungsraum im Berliner Osten",
+        "global_id": "berlin-2080:place:442-lichtenberg"
+      }
+    ],
+    "sources": [
+      {
+        "bookId": "brennpunkt-adl",
+        "title": "Brennpunkt ADL",
+        "edition": "SR3",
+        "citation": "Brennpunkt ADL, S. 115",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR3"
+    ],
+    "edition_descriptions": {
+      "SR3": {
+        "kind": "Personendossier",
+        "preview": "Uhlmann führte das ostberliner Komitee 211 im Widerstand gegen den Berliner Rat.",
+        "full": "Die Quelle ordnet Uhlmann einer Gruppierung zu, die den politischen Kurs des damaligen Berlin bekämpfte. Ein fester Einzelstandort ist nicht belegt; der Wirkungsraum lag im Osten der Stadt.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "brennpunkt-adl",
+            "title": "Brennpunkt ADL",
+            "edition": "SR3",
+            "citation": "Brennpunkt ADL, S. 115",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
+    "global_id": "berlin-2080:person:uhlmann-komitee-211"
+  }
+]

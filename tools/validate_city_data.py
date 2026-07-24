@@ -13,6 +13,45 @@ REGISTRY_PATH = ROOT / "data/cities.json"
 VALID_EDITIONS = {f"SR{number}" for number in range(1, 7)}
 
 
+def merge_unique(first, second, key=lambda value: json.dumps(value, sort_keys=True, ensure_ascii=False)):
+    result = []
+    seen = set()
+    for value in [*(first or []), *(second or [])]:
+        signature = key(value)
+        if signature in seen:
+            continue
+        seen.add(signature)
+        result.append(value)
+    return result
+
+
+def apply_augmentations(entries: list, augmentations: list, *, properties: bool = False) -> None:
+    by_id = {entry["id"]: entry for entry in augmentations}
+    found = set()
+    for entry in entries:
+        target = entry.get("properties", {}) if properties else entry
+        augmentation = by_id.get(target.get("id"))
+        if not augmentation:
+            continue
+        found.add(target["id"])
+        for key, value in augmentation.items():
+            if key in {"id", "global_id"}:
+                continue
+            if key in {"aliases", "editions", "sources", "map_sources", "locations"}:
+                target[key] = merge_unique(
+                    target.get(key),
+                    value,
+                    key=(lambda item: item if isinstance(item, str) else json.dumps(item, sort_keys=True, ensure_ascii=False)),
+                )
+            elif key == "edition_descriptions":
+                target[key] = {**target.get(key, {}), **value}
+            else:
+                target[key] = value
+    missing = sorted(set(by_id) - found, key=str)
+    if missing:
+        raise ValueError(f"Erweiterungen verweisen auf unbekannte IDs: {', '.join(map(str, missing))}")
+
+
 def read_json(path: Path):
     try:
         return json.loads(path.read_text(encoding="utf-8"))
@@ -34,11 +73,36 @@ def validate_coordinates(coordinates, label: str) -> None:
         validate_coordinates(item, label)
 
 
-def validate_feature_collection(payload: dict, label: str) -> None:
+def point_in_ring(point: tuple[float, float], ring: list[list[float]]) -> bool:
+    x, y = point
+    inside = False
+    for first, second in zip(ring, ring[1:]):
+        x1, y1 = first[:2]
+        x2, y2 = second[:2]
+        if (y1 > y) != (y2 > y):
+            crossing_x = (x2 - x1) * (y - y1) / (y2 - y1) + x1
+            if x < crossing_x:
+                inside = not inside
+    return inside
+
+
+def point_in_geometry(point: tuple[float, float], geometry: dict) -> bool:
+    polygons = geometry["coordinates"] if geometry["type"] == "MultiPolygon" else [geometry["coordinates"]]
+    return any(
+        point_in_ring(point, polygon[0])
+        and not any(point_in_ring(point, hole) for hole in polygon[1:])
+        for polygon in polygons
+    )
+
+
+def validate_feature_collection(payload: dict, label: str, *, allow_null_geometry: bool = False) -> None:
     if payload.get("type") != "FeatureCollection" or not isinstance(payload.get("features"), list):
         raise ValueError(f"{label}: keine gültige FeatureCollection")
     for index, feature in enumerate(payload["features"]):
-        geometry = feature.get("geometry") or {}
+        geometry = feature.get("geometry")
+        if geometry is None and allow_null_geometry:
+            continue
+        geometry = geometry or {}
         validate_coordinates(geometry.get("coordinates"), f"{label}, Feature {index + 1}")
 
 
@@ -93,7 +157,20 @@ def validate_city(city: dict, global_ids: set[str]) -> tuple[int, int]:
             raise ValueError(f"{city['id']}: Datei fehlt: {path}")
 
     places = read_json(city_dir / manifest["files"]["places"])
-    validate_feature_collection(places, f"{city['id']} Orte")
+    validate_feature_collection(places, f"{city['id']} Orte", allow_null_geometry=True)
+    for key, label in (("virtualPlaces", "virtuelle Orte"), ("historicalPlaces", "historische Orte")):
+        supplemental_path = manifest.get("files", {}).get(key)
+        if supplemental_path:
+            supplemental = read_json(city_dir / supplemental_path)
+            validate_feature_collection(supplemental, f"{city['id']} {label}", allow_null_geometry=True)
+            places["features"].extend(supplemental["features"])
+    place_augmentations_path = manifest.get("files", {}).get("placeAugmentations")
+    if place_augmentations_path:
+        apply_augmentations(
+            places["features"],
+            read_json(city_dir / place_augmentations_path),
+            properties=True,
+        )
     place_ids: set[object] = set()
     city_editions: set[str] = set()
     for feature in places["features"]:
@@ -111,6 +188,12 @@ def validate_city(city: dict, global_ids: set[str]) -> tuple[int, int]:
         city_editions.update(validate_edition_data(properties, f"{city['id']}: Ort {place_id}"))
 
     people = read_json(city_dir / manifest["files"]["people"])
+    historical_people_path = manifest.get("files", {}).get("historicalPeople")
+    if historical_people_path:
+        people.extend(read_json(city_dir / historical_people_path))
+    person_augmentations_path = manifest.get("files", {}).get("personAugmentations")
+    if person_augmentations_path:
+        apply_augmentations(people, read_json(city_dir / person_augmentations_path))
     person_ids: set[object] = set()
     for person in people:
         person_id = person.get("id")
@@ -126,8 +209,53 @@ def validate_city(city: dict, global_ids: set[str]) -> tuple[int, int]:
             if link.get("id") not in place_ids:
                 raise ValueError(f"{city['id']}: {person.get('name')} verweist auf unbekannten Ort {link.get('id')}")
 
-    for key in ("zones", "districts", "neighborhoods", "outskirts", "boundary"):
-        validate_feature_collection(read_json(city_dir / manifest["files"][key]), f"{city['id']} {key}")
+    for key in ("zones", "exterritorial", "districts", "neighborhoods", "outskirts", "boundary"):
+        payload = read_json(city_dir / manifest["files"][key])
+        validate_feature_collection(payload, f"{city['id']} {key}")
+        if key == "zones":
+            topology = payload.get("topology", {})
+            if topology.get("model") != "exclusive-partition":
+                raise ValueError(f"{city['id']}: Gebietsstatus ist keine exklusive Flächenpartition")
+            unresolved = topology.get("unresolved_overlap_area_degrees_squared")
+            if not isinstance(unresolved, (int, float)) or unresolved > 1e-9:
+                raise ValueError(f"{city['id']}: ungeklärte Gebietsüberlappung {unresolved}")
+            if any(feature.get("properties", {}).get("topology") != "disjoint" for feature in payload["features"]):
+                raise ValueError(f"{city['id']}: mindestens eine Gebietsfläche ist nicht als disjunkt markiert")
+            if city["id"] == "berlin-2080":
+                labels = {feature.get("properties", {}).get("label") for feature in payload["features"]}
+                required_corporate = {
+                    "Exterritoriales Konzerngebiet · AZT Schönwalde",
+                    "Exterritoriales Konzerngebiet · Z-IC Tegel",
+                    "Exterritoriales Konzerngebiet · AGC Siemensstadt",
+                    "Exterritoriales Konzerngebiet · Renrakusan",
+                    "Exterritoriales Konzerngebiet · S-K Tempelhof",
+                }
+                if missing := required_corporate - labels:
+                    raise ValueError(
+                        f"{city['id']}: getrennte Konzerngebiete fehlen: {', '.join(sorted(missing))}"
+                    )
+                anarcho = next(
+                    feature
+                    for feature in payload["features"]
+                    if feature.get("properties", {}).get("status") == "anarcho"
+                )
+                renrakusan_neighbors = {
+                    "Caligariplatz/Pankower Dreamland": (13.453143, 52.550202),
+                    "Nordostrand Renrakusan": (13.465, 52.557),
+                    "Ostrand Renrakusan": (13.474, 52.54),
+                    "Südostrand/Kreuzhain": (13.474, 52.515),
+                }
+                for name, point in renrakusan_neighbors.items():
+                    if not point_in_geometry(point, anarcho["geometry"]):
+                        raise ValueError(f"{city['id']}: {name} ist nicht dem Anarchogebiet zugeordnet")
+        if key == "exterritorial" and city["id"] == "berlin-2080":
+            reviewed = {
+                feature.get("properties", {}).get("label")
+                for feature in payload["features"]
+                if feature.get("properties", {}).get("boundary_review_status") == "reviewed"
+            }
+            if "Exterritoriales Konzerngebiet · Renrakusan" not in reviewed:
+                raise ValueError(f"{city['id']}: Renrakusan ist nicht als geprüfte EXTER-Fläche markiert")
 
     atlas = read_json(city_dir / manifest["files"]["atlas"])
     atlas_ids = set()

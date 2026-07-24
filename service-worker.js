@@ -1,5 +1,5 @@
-const APP_CACHE = 'sr6-app-v5';
-const RUNTIME_CACHE = 'sr6-runtime-v5';
+const APP_CACHE = 'sr6-app-v16';
+const RUNTIME_CACHE = 'sr6-runtime-v16';
 const APP_ENTRY = new URL('./index.html', self.registration.scope).href;
 const APP_SHELL = [
   './index.html',
@@ -78,6 +78,18 @@ self.addEventListener('fetch', event => {
   }
 
   if (url.origin !== self.location.origin || request.method !== 'GET') return;
+
+  if (url.pathname.includes('/data/')) {
+    event.respondWith(
+      fetch(request)
+        .then(response => {
+          if (response.ok) caches.open(RUNTIME_CACHE).then(cache => cache.put(request, response.clone()));
+          return response;
+        })
+        .catch(() => caches.match(request))
+    );
+    return;
+  }
 
   event.respondWith(
     caches.match(request).then(cached => {
