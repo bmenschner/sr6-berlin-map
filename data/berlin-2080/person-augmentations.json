@@ -1,0 +1,510 @@
+[
+  {
+    "id": "nakaira",
+    "sources": [
+      {
+        "bookId": "deutschland-in-den-schatten",
+        "title": "Deutschland in den Schatten (Ausgabe 1992)",
+        "edition": "SR1",
+        "citation": "Deutschland in den Schatten, S. 51",
+        "purpose": "description"
+      },
+      {
+        "bookId": "deutschland-in-den-schatten-1993",
+        "title": "Deutschland in den Schatten (Ausgabe 1993)",
+        "edition": "SR2",
+        "citation": "Deutschland in den Schatten (Ausgabe 1993), S. 51",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR1",
+      "SR2"
+    ],
+    "edition_descriptions": {
+      "SR1": {
+        "kind": "Historischer Bezug",
+        "preview": "Nakaira tritt bereits 2053 als kritische Stimme der Berliner Informationsszene auf.",
+        "full": "In der frühen Berliner Schattenmatrix stellt sie Geschwindigkeit und Verlässlichkeit kommerzieller Vermittler infrage und warnt vor Informanten, die ihre Kontakte für den nächsten Verkauf verraten.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "deutschland-in-den-schatten",
+            "title": "Deutschland in den Schatten (Ausgabe 1992)",
+            "edition": "SR1",
+            "citation": "Deutschland in den Schatten, S. 51",
+            "purpose": "description"
+          }
+        ]
+      },
+      "SR2": {
+        "kind": "Historischer Bezug",
+        "preview": "Nakaira tritt bereits 2053 als kritische Stimme der Berliner Informationsszene auf.",
+        "full": "In der frühen Berliner Schattenmatrix stellt sie Geschwindigkeit und Verlässlichkeit kommerzieller Vermittler infrage und warnt vor Informanten, die ihre Kontakte für den nächsten Verkauf verraten.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "deutschland-in-den-schatten-1993",
+            "title": "Deutschland in den Schatten (Ausgabe 1993)",
+            "edition": "SR2",
+            "citation": "Deutschland in den Schatten (Ausgabe 1993), S. 51",
+            "purpose": "description"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "arndt-wilhelm-koerting",
+    "aliases": [
+      "Arndt-Wilhelm Koerting"
+    ],
+    "locations": [
+      {
+        "id": 212,
+        "relation": "Leitete 2053 Schering Pharma Berlin",
+        "global_id": "berlin-2080:place:212-schering-hauptquartier"
+      }
+    ],
+    "sources": [
+      {
+        "bookId": "deutschland-in-den-schatten",
+        "title": "Deutschland in den Schatten (Ausgabe 1992)",
+        "edition": "SR1",
+        "citation": "Deutschland in den Schatten, S. 54",
+        "purpose": "description"
+      },
+      {
+        "bookId": "deutschland-in-den-schatten-1993",
+        "title": "Deutschland in den Schatten (Ausgabe 1993)",
+        "edition": "SR2",
+        "citation": "Deutschland in den Schatten (Ausgabe 1993), S. 54",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR1",
+      "SR2"
+    ],
+    "edition_descriptions": {
+      "SR1": {
+        "kind": "Personendossier",
+        "preview": "Koerting verband bei Schering wirtschaftliche Führung, Pharmachemie und hermetische Magie.",
+        "full": "Der graduierte Pharmachemiker und Magier leitete Scherings Berliner Gen-, Viren- und Magieforschung und investierte hohe Gewinne in neue Medikamente.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "deutschland-in-den-schatten",
+            "title": "Deutschland in den Schatten (Ausgabe 1992)",
+            "edition": "SR1",
+            "citation": "Deutschland in den Schatten, S. 54",
+            "purpose": "description"
+          }
+        ]
+      },
+      "SR2": {
+        "kind": "Personendossier",
+        "preview": "Koerting verband bei Schering wirtschaftliche Führung, Pharmachemie und hermetische Magie.",
+        "full": "Der graduierte Pharmachemiker und Magier leitete Scherings Berliner Gen-, Viren- und Magieforschung und investierte hohe Gewinne in neue Medikamente.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "deutschland-in-den-schatten-1993",
+            "title": "Deutschland in den Schatten (Ausgabe 1993)",
+            "edition": "SR2",
+            "citation": "Deutschland in den Schatten (Ausgabe 1993), S. 54",
+            "purpose": "description"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "blitzkrieg-berlin",
+    "sources": [
+      {
+        "bookId": "datapuls-berlin",
+        "title": "Datapuls: Berlin",
+        "edition": "SR5",
+        "citation": "Datapuls: Berlin, S. 11",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR5"
+    ],
+    "edition_descriptions": {
+      "SR5": {
+        "kind": "Gruppendossier",
+        "preview": "Blitzkrieg Berlin war eine innenstadtweit aktive Bikergang mit Vorliebe für schwere Maschinen.",
+        "full": "Die Gang bot Runnern gegen Bezahlung Geleitschutz und bewaffnete Rückendeckung. Ein engeres Revier als der damalige Innenring ist in der Quelle nicht belegt.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "datapuls-berlin",
+            "title": "Datapuls: Berlin",
+            "edition": "SR5",
+            "citation": "Datapuls: Berlin, S. 11",
+            "purpose": "description"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "cerberus",
+    "locations": [
+      {
+        "id": 448,
+        "relation": "SR5-Revier Neukölln",
+        "global_id": "berlin-2080:place:448-gropiusstadt"
+      }
+    ],
+    "sources": [
+      {
+        "bookId": "datapuls-berlin",
+        "title": "Datapuls: Berlin",
+        "edition": "SR5",
+        "citation": "Datapuls: Berlin, S. 11",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR5"
+    ],
+    "edition_descriptions": {
+      "SR5": {
+        "kind": "Gruppendossier",
+        "preview": "Cerberus patrouillierte als motorisierte Beschützergang nachts durch Neukölln.",
+        "full": "Die Gang setzte Harley Scorpions ein und konzentrierte sich auf das Gebiet zwischen Hermannstraße, Grenzallee und Sonnenallee. Ihre spätere Zuordnung zu S-K Tempelhof wird im SR6-Dossier getrennt gezeigt.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "datapuls-berlin",
+            "title": "Datapuls: Berlin",
+            "edition": "SR5",
+            "citation": "Datapuls: Berlin, S. 11",
+            "purpose": "description"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "dikote-devils",
+    "locations": [
+      {
+        "id": 451,
+        "relation": "SR5-Revier Pankow am Übergang zu Renrakusan",
+        "global_id": "berlin-2080:place:451-renrakusan"
+      }
+    ],
+    "sources": [
+      {
+        "bookId": "datapuls-berlin",
+        "title": "Datapuls: Berlin",
+        "edition": "SR5",
+        "citation": "Datapuls: Berlin, S. 11",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR5"
+    ],
+    "edition_descriptions": {
+      "SR5": {
+        "kind": "Gruppendossier",
+        "preview": "Die Dikote Devils operierten als Parkourgang über den Dächern Pankows und Renrakusans.",
+        "full": "Geckogrips, Klingenimplantate und Cybersamurai-Stil prägten die Gang um den Hobgoblin Monkey King. Ihr historisches Revier lag vor allem oberhalb der Straßen.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "datapuls-berlin",
+            "title": "Datapuls: Berlin",
+            "edition": "SR5",
+            "citation": "Datapuls: Berlin, S. 11",
+            "purpose": "description"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "fine-young-capitalists",
+    "locations": [
+      {
+        "id": 449,
+        "relation": "SR5-Ursprung an der Berlin Business School",
+        "global_id": "berlin-2080:place:449-mitte"
+      }
+    ],
+    "sources": [
+      {
+        "bookId": "datapuls-berlin",
+        "title": "Datapuls: Berlin",
+        "edition": "SR5",
+        "citation": "Datapuls: Berlin, S. 11",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR5"
+    ],
+    "edition_descriptions": {
+      "SR5": {
+        "kind": "Gruppendossier",
+        "preview": "Die Fine Young Capitalists entstanden im Umfeld der Berlin Business School in Mitte.",
+        "full": "Wohlhabende Vorzeigestudierende verbanden Drogenhandel, nächtliche Gewaltfahrten und beste gesellschaftliche Kontakte. Das spätere SR6-Revier wird getrennt im selben Dossier geführt.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "datapuls-berlin",
+            "title": "Datapuls: Berlin",
+            "edition": "SR5",
+            "citation": "Datapuls: Berlin, S. 11",
+            "purpose": "description"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "f-tribe",
+    "sources": [
+      {
+        "bookId": "datapuls-berlin",
+        "title": "Datapuls: Berlin",
+        "edition": "SR5",
+        "citation": "Datapuls: Berlin, S. 11",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR5"
+    ],
+    "edition_descriptions": {
+      "SR5": {
+        "kind": "Gruppendossier",
+        "preview": "F*Tribe war ein wachsendes Marzahn-Hellersdorfer Bündnis kleiner Gangs und Kiezwehren.",
+        "full": "Rund ein Dutzend Gruppen bildeten das Konglomerat. In der SR5-Zeit versuchte Axis F, Einfluss auf den Zusammenschluss zu gewinnen.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "datapuls-berlin",
+            "title": "Datapuls: Berlin",
+            "edition": "SR5",
+            "citation": "Datapuls: Berlin, S. 11",
+            "purpose": "description"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "kladow-kombat-krew",
+    "sources": [
+      {
+        "bookId": "datapuls-berlin",
+        "title": "Datapuls: Berlin",
+        "edition": "SR5",
+        "citation": "Datapuls: Berlin, S. 11",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR5"
+    ],
+    "edition_descriptions": {
+      "SR5": {
+        "kind": "Gruppendossier",
+        "preview": "Die Kladow Kombat Krew bestand aus gelangweilten Jugendlichen wohlhabender Familien.",
+        "full": "Die Gang verkaufte Zugänge zur Kladower Villenenklave, etwa als scheinbar harmlose Mitfahrgelegenheit in Familienfahrzeugen.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "datapuls-berlin",
+            "title": "Datapuls: Berlin",
+            "edition": "SR5",
+            "citation": "Datapuls: Berlin, S. 11",
+            "purpose": "description"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "leet-legion",
+    "sources": [
+      {
+        "bookId": "datapuls-berlin",
+        "title": "Datapuls: Berlin",
+        "edition": "SR5",
+        "citation": "Datapuls: Berlin, S. 11",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR5"
+    ],
+    "edition_descriptions": {
+      "SR5": {
+        "kind": "Gruppendossier",
+        "preview": "Die Leet Legion gab sich als stadtweite Riesengang, war aber ein digitales Netzwerk vieler Kleingruppen.",
+        "full": "Gemeinsame Tags und Onlinekontakte hielten das lose Geflecht zusammen. Gerade deshalb konnte es nahezu überall in Berlin punktuelle Kontakte bereitstellen.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "datapuls-berlin",
+            "title": "Datapuls: Berlin",
+            "edition": "SR5",
+            "citation": "Datapuls: Berlin, S. 11",
+            "purpose": "description"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "punkgrafen",
+    "sources": [
+      {
+        "bookId": "datapuls-berlin",
+        "title": "Datapuls: Berlin",
+        "edition": "SR5",
+        "citation": "Datapuls: Berlin, S. 11",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR5"
+    ],
+    "edition_descriptions": {
+      "SR5": {
+        "kind": "Gruppendossier",
+        "preview": "Die Punkgrafen waren eine finanzierte Beschützergang am Luisenbad im Wedding.",
+        "full": "Anwohner und Investoren trugen die Gang, die sich gegen stärkere Konkurrenten aus dem Soldiner Kiez behaupten musste. Daraus entstanden regelmäßig Ermittlungs-, Rückhol- und Vollstreckungsaufträge für Runner.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "datapuls-berlin",
+            "title": "Datapuls: Berlin",
+            "edition": "SR5",
+            "citation": "Datapuls: Berlin, S. 11",
+            "purpose": "description"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "schluchtenschatten",
+    "sources": [
+      {
+        "bookId": "datapuls-berlin",
+        "title": "Datapuls: Berlin",
+        "edition": "SR5",
+        "citation": "Datapuls: Berlin, S. 11",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR5"
+    ],
+    "edition_descriptions": {
+      "SR5": {
+        "kind": "Gruppendossier",
+        "preview": "Die Schluchtenschatten operierten verborgen im Charlottenburger Schattennest-Kiez.",
+        "full": "Die Terrorgang verfügte über moderne Tarntechnik und bot Schleuserdienste in geschützte Wohnenklaven des Bezirks an.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "datapuls-berlin",
+            "title": "Datapuls: Berlin",
+            "edition": "SR5",
+            "citation": "Datapuls: Berlin, S. 11",
+            "purpose": "description"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "seven-nights-barghests",
+    "sources": [
+      {
+        "bookId": "datapuls-berlin",
+        "title": "Datapuls: Berlin",
+        "edition": "SR5",
+        "citation": "Datapuls: Berlin, S. 11",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR5"
+    ],
+    "edition_descriptions": {
+      "SR5": {
+        "kind": "Gruppendossier",
+        "preview": "Die Seven Nights Barghests jagten nachts zwischen Alexanderplatz und Monbijoupark.",
+        "full": "Die eruptiv auftretende Terrorgang setzte echte Barghests gegen Nachtschwärmer ein. Gerüchte sahen hinter den Masken frustrierte Wachleute.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "datapuls-berlin",
+            "title": "Datapuls: Berlin",
+            "edition": "SR5",
+            "citation": "Datapuls: Berlin, S. 11",
+            "purpose": "description"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "wakizashi-warriors",
+    "sources": [
+      {
+        "bookId": "datapuls-berlin",
+        "title": "Datapuls: Berlin",
+        "edition": "SR5",
+        "citation": "Datapuls: Berlin, S. 11",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR5"
+    ],
+    "edition_descriptions": {
+      "SR5": {
+        "kind": "Gruppendossier",
+        "preview": "Die Wakizashi Warriors lebten in Renrakusans Kanalisation und kannten dessen Untergrundwege.",
+        "full": "Martial-Arts-Chips und Klingenimplantate prägten die Posergang. Ihr Wissen um Verbindungstunnel und Zugänge zur Miyako-Arkologie machte sie zu gefährlichen Ortskundigen.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "datapuls-berlin",
+            "title": "Datapuls: Berlin",
+            "edition": "SR5",
+            "citation": "Datapuls: Berlin, S. 11",
+            "purpose": "description"
+          }
+        ]
+      }
+    }
+  }
+]

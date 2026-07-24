@@ -1,0 +1,758 @@
+{
+  "type": "FeatureCollection",
+  "name": "Berlin – historische Orte ohne bestätigte Kartenposition",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": 488,
+        "name": "EMC-Niederlassung Berlin",
+        "aliases": [
+          "European Motor Company Berlin"
+        ],
+        "category": "Konzerne",
+        "accuracy": "Historisch; nicht georeferenziert",
+        "placement_note": "Die SR1-Quelle nennt Berlin, aber keine belastbare Adresse.",
+        "source_pages": "Deutschland in den Schatten, S. 53",
+        "map_source": "Kein bestätigter Einzelstandort",
+        "description_kind": "Historischer Ort",
+        "description_preview": "Die Berliner EMC-Niederlassung war eine reine Vertriebsfiliale für schnelle Kleinstfahrzeuge.",
+        "description_full": "Die European Motor Company produzierte in Berlin nicht selbst, nutzte die hohe Verkehrsdichte der Stadt aber als Absatzmarkt. Innerhalb des Konzerns galt die Filiale als schwieriger Personalstandort.",
+        "description_source": "Deutschland in den Schatten, S. 53",
+        "description_has_more": true,
+        "detail_plans": [],
+        "alternate_locations": [],
+        "sources": [
+          {
+            "bookId": "deutschland-in-den-schatten",
+            "title": "Deutschland in den Schatten (Ausgabe 1992)",
+            "edition": "SR1",
+            "citation": "Deutschland in den Schatten, S. 53",
+            "purpose": "description"
+          },
+          {
+            "bookId": "deutschland-in-den-schatten-1993",
+            "title": "Deutschland in den Schatten (Ausgabe 1993)",
+            "edition": "SR2",
+            "citation": "Deutschland in den Schatten (Ausgabe 1993), S. 53",
+            "purpose": "description"
+          }
+        ],
+        "map_sources": [],
+        "editions": [
+          "SR1",
+          "SR2"
+        ],
+        "edition_descriptions": {
+          "SR1": {
+            "kind": "Historischer Ort",
+            "preview": "Die Berliner EMC-Niederlassung war eine reine Vertriebsfiliale für schnelle Kleinstfahrzeuge.",
+            "full": "Die European Motor Company produzierte in Berlin nicht selbst, nutzte die hohe Verkehrsdichte der Stadt aber als Absatzmarkt. Innerhalb des Konzerns galt die Filiale als schwieriger Personalstandort.",
+            "hasMore": true,
+            "hasExcerpt": true,
+            "sources": [
+              {
+                "bookId": "deutschland-in-den-schatten",
+                "title": "Deutschland in den Schatten (Ausgabe 1992)",
+                "edition": "SR1",
+                "citation": "Deutschland in den Schatten, S. 53",
+                "purpose": "description"
+              }
+            ]
+          },
+          "SR2": {
+            "kind": "Historischer Ort",
+            "preview": "Die Berliner EMC-Niederlassung war eine reine Vertriebsfiliale für schnelle Kleinstfahrzeuge.",
+            "full": "Die European Motor Company produzierte in Berlin nicht selbst, nutzte die hohe Verkehrsdichte der Stadt aber als Absatzmarkt. Innerhalb des Konzerns galt die Filiale als schwieriger Personalstandort.",
+            "hasMore": true,
+            "hasExcerpt": true,
+            "sources": [
+              {
+                "bookId": "deutschland-in-den-schatten-1993",
+                "title": "Deutschland in den Schatten (Ausgabe 1993)",
+                "edition": "SR2",
+                "citation": "Deutschland in den Schatten (Ausgabe 1993), S. 53",
+                "purpose": "description"
+              }
+            ]
+          }
+        },
+        "global_id": "berlin-2080:place:488-emc-niederlassung-berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": 489,
+        "name": "TelTech Holding Berlin",
+        "aliases": [
+          "TelTech"
+        ],
+        "category": "Konzerne",
+        "accuracy": "Historisch; nicht georeferenziert",
+        "placement_note": "Die SR1-Quelle nennt Berlin als Hauptstandort, aber keine belastbare Adresse.",
+        "source_pages": "Deutschland in den Schatten, S. 53–54",
+        "map_source": "Kein bestätigter Einzelstandort",
+        "description_kind": "Historischer Ort",
+        "description_preview": "TelTech produzierte in Berlin hochentwickelte Hardware, SimSinn-Chips und Cyberware.",
+        "description_full": "Die aus Berliner Firmen hervorgegangene Holding war für besonders leistungsfähige Rechnerchips bekannt. Zum Portfolio gehörten außerdem SimSinn-Produkte, medizinische und kosmetische Bodyware sowie implantierte Mikrowaffen.",
+        "description_source": "Deutschland in den Schatten, S. 53–54",
+        "description_has_more": true,
+        "detail_plans": [],
+        "alternate_locations": [],
+        "sources": [
+          {
+            "bookId": "deutschland-in-den-schatten",
+            "title": "Deutschland in den Schatten (Ausgabe 1992)",
+            "edition": "SR1",
+            "citation": "Deutschland in den Schatten, S. 53–54",
+            "purpose": "description"
+          },
+          {
+            "bookId": "deutschland-in-den-schatten-1993",
+            "title": "Deutschland in den Schatten (Ausgabe 1993)",
+            "edition": "SR2",
+            "citation": "Deutschland in den Schatten (Ausgabe 1993), S. 53–54",
+            "purpose": "description"
+          }
+        ],
+        "map_sources": [],
+        "editions": [
+          "SR1",
+          "SR2"
+        ],
+        "edition_descriptions": {
+          "SR1": {
+            "kind": "Historischer Ort",
+            "preview": "TelTech produzierte in Berlin hochentwickelte Hardware, SimSinn-Chips und Cyberware.",
+            "full": "Die aus Berliner Firmen hervorgegangene Holding war für besonders leistungsfähige Rechnerchips bekannt. Zum Portfolio gehörten außerdem SimSinn-Produkte, medizinische und kosmetische Bodyware sowie implantierte Mikrowaffen.",
+            "hasMore": true,
+            "hasExcerpt": true,
+            "sources": [
+              {
+                "bookId": "deutschland-in-den-schatten",
+                "title": "Deutschland in den Schatten (Ausgabe 1992)",
+                "edition": "SR1",
+                "citation": "Deutschland in den Schatten, S. 53–54",
+                "purpose": "description"
+              }
+            ]
+          },
+          "SR2": {
+            "kind": "Historischer Ort",
+            "preview": "TelTech produzierte in Berlin hochentwickelte Hardware, SimSinn-Chips und Cyberware.",
+            "full": "Die aus Berliner Firmen hervorgegangene Holding war für besonders leistungsfähige Rechnerchips bekannt. Zum Portfolio gehörten außerdem SimSinn-Produkte, medizinische und kosmetische Bodyware sowie implantierte Mikrowaffen.",
+            "hasMore": true,
+            "hasExcerpt": true,
+            "sources": [
+              {
+                "bookId": "deutschland-in-den-schatten-1993",
+                "title": "Deutschland in den Schatten (Ausgabe 1993)",
+                "edition": "SR2",
+                "citation": "Deutschland in den Schatten (Ausgabe 1993), S. 53–54",
+                "purpose": "description"
+              }
+            ]
+          }
+        },
+        "global_id": "berlin-2080:place:489-teltech-holding-berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": 490,
+        "name": "Fuchi Berlin",
+        "aliases": [
+          "Fuchi-Zentrale Berlin"
+        ],
+        "category": "Konzerne",
+        "accuracy": "Historisch; nicht georeferenziert",
+        "placement_note": "Die SR1-Quelle nennt eine Berliner Zentrale, aber keine belastbare Adresse.",
+        "source_pages": "Deutschland in den Schatten, S. 54",
+        "map_source": "Kein bestätigter Einzelstandort",
+        "description_kind": "Historischer Ort",
+        "description_preview": "Fuchi Berlin entwickelte Matrix-Hilfsprogramme, SimSinn-Produktionen und teure Spezialsoftware.",
+        "description_full": "Die Berliner Zentrale bediente vor allem wohlhabende Kundschaft mit medizinischer Simulationssoftware und Unterhaltung. Ihre zahlreichen unveröffentlichten Projekte machten sie zugleich zu einem attraktiven, stark geschützten Ziel für Decker.",
+        "description_source": "Deutschland in den Schatten, S. 54",
+        "description_has_more": true,
+        "detail_plans": [],
+        "alternate_locations": [],
+        "sources": [
+          {
+            "bookId": "deutschland-in-den-schatten",
+            "title": "Deutschland in den Schatten (Ausgabe 1992)",
+            "edition": "SR1",
+            "citation": "Deutschland in den Schatten, S. 54",
+            "purpose": "description"
+          },
+          {
+            "bookId": "deutschland-in-den-schatten-1993",
+            "title": "Deutschland in den Schatten (Ausgabe 1993)",
+            "edition": "SR2",
+            "citation": "Deutschland in den Schatten (Ausgabe 1993), S. 54",
+            "purpose": "description"
+          }
+        ],
+        "map_sources": [],
+        "editions": [
+          "SR1",
+          "SR2"
+        ],
+        "edition_descriptions": {
+          "SR1": {
+            "kind": "Historischer Ort",
+            "preview": "Fuchi Berlin entwickelte Matrix-Hilfsprogramme, SimSinn-Produktionen und teure Spezialsoftware.",
+            "full": "Die Berliner Zentrale bediente vor allem wohlhabende Kundschaft mit medizinischer Simulationssoftware und Unterhaltung. Ihre zahlreichen unveröffentlichten Projekte machten sie zugleich zu einem attraktiven, stark geschützten Ziel für Decker.",
+            "hasMore": true,
+            "hasExcerpt": true,
+            "sources": [
+              {
+                "bookId": "deutschland-in-den-schatten",
+                "title": "Deutschland in den Schatten (Ausgabe 1992)",
+                "edition": "SR1",
+                "citation": "Deutschland in den Schatten, S. 54",
+                "purpose": "description"
+              }
+            ]
+          },
+          "SR2": {
+            "kind": "Historischer Ort",
+            "preview": "Fuchi Berlin entwickelte Matrix-Hilfsprogramme, SimSinn-Produktionen und teure Spezialsoftware.",
+            "full": "Die Berliner Zentrale bediente vor allem wohlhabende Kundschaft mit medizinischer Simulationssoftware und Unterhaltung. Ihre zahlreichen unveröffentlichten Projekte machten sie zugleich zu einem attraktiven, stark geschützten Ziel für Decker.",
+            "hasMore": true,
+            "hasExcerpt": true,
+            "sources": [
+              {
+                "bookId": "deutschland-in-den-schatten-1993",
+                "title": "Deutschland in den Schatten (Ausgabe 1993)",
+                "edition": "SR2",
+                "citation": "Deutschland in den Schatten (Ausgabe 1993), S. 54",
+                "purpose": "description"
+              }
+            ]
+          }
+        },
+        "global_id": "berlin-2080:place:490-fuchi-berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": 491,
+        "name": "Limes",
+        "aliases": [],
+        "category": "Bars und Kneipen",
+        "accuracy": "Historisch; nicht georeferenziert",
+        "placement_note": "Die SR3-Quelle nennt Dahlem, aber keine belastbare Adresse.",
+        "related_place_ids": [
+          447
+        ],
+        "source_pages": "Deutschland in den Schatten II, S. 80",
+        "map_source": "Kein bestätigter Einzelstandort",
+        "description_kind": "Historischer Ort",
+        "description_preview": "Das Limes war eine Dahlemer Jazzbar mit einem diskreten Hinterzimmer für Schattengeschäfte.",
+        "description_full": "Die Bar richtete sich an ein ruhigeres Publikum. Im Hinterzimmer vermittelte der Barkeeper und Besitzer Manni Begegnungen mit Schmidts und andere diskrete Gespräche.",
+        "description_source": "Deutschland in den Schatten II, S. 80",
+        "description_has_more": true,
+        "detail_plans": [],
+        "alternate_locations": [],
+        "sources": [
+          {
+            "bookId": "deutschland-in-den-schatten-ii",
+            "title": "Deutschland in den Schatten II",
+            "edition": "SR3",
+            "citation": "Deutschland in den Schatten II, S. 80",
+            "purpose": "description"
+          }
+        ],
+        "map_sources": [],
+        "editions": [
+          "SR3"
+        ],
+        "edition_descriptions": {
+          "SR3": {
+            "kind": "Historischer Ort",
+            "preview": "Das Limes war eine Dahlemer Jazzbar mit einem diskreten Hinterzimmer für Schattengeschäfte.",
+            "full": "Die Bar richtete sich an ein ruhigeres Publikum. Im Hinterzimmer vermittelte der Barkeeper und Besitzer Manni Begegnungen mit Schmidts und andere diskrete Gespräche.",
+            "hasMore": true,
+            "hasExcerpt": true,
+            "sources": [
+              {
+                "bookId": "deutschland-in-den-schatten-ii",
+                "title": "Deutschland in den Schatten II",
+                "edition": "SR3",
+                "citation": "Deutschland in den Schatten II, S. 80",
+                "purpose": "description"
+              }
+            ]
+          }
+        },
+        "global_id": "berlin-2080:place:491-limes"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": 492,
+        "name": "Boomtschacka",
+        "aliases": [],
+        "category": "Ausgehen",
+        "accuracy": "Historisch; nicht georeferenziert",
+        "placement_note": "Die SR3-Quelle nennt Dahlem, aber keine belastbare Adresse.",
+        "related_place_ids": [
+          447
+        ],
+        "source_pages": "Deutschland in den Schatten II, S. 80",
+        "map_source": "Kein bestätigter Einzelstandort",
+        "description_kind": "Historischer Ort",
+        "description_preview": "Das Boomtschacka war eine große Dahlemer Diskothek mit wechselnden Musik- und Szeneschwerpunkten.",
+        "description_full": "Die Diskothek bediente mehrere Tanzflächen und ein entsprechend gemischtes Publikum. Sie gehörte zu den bekannten Ausgehorten im historischen Dahlem.",
+        "description_source": "Deutschland in den Schatten II, S. 80",
+        "description_has_more": true,
+        "detail_plans": [],
+        "alternate_locations": [],
+        "sources": [
+          {
+            "bookId": "deutschland-in-den-schatten-ii",
+            "title": "Deutschland in den Schatten II",
+            "edition": "SR3",
+            "citation": "Deutschland in den Schatten II, S. 80",
+            "purpose": "description"
+          }
+        ],
+        "map_sources": [],
+        "editions": [
+          "SR3"
+        ],
+        "edition_descriptions": {
+          "SR3": {
+            "kind": "Historischer Ort",
+            "preview": "Das Boomtschacka war eine große Dahlemer Diskothek mit wechselnden Musik- und Szeneschwerpunkten.",
+            "full": "Die Diskothek bediente mehrere Tanzflächen und ein entsprechend gemischtes Publikum. Sie gehörte zu den bekannten Ausgehorten im historischen Dahlem.",
+            "hasMore": true,
+            "hasExcerpt": true,
+            "sources": [
+              {
+                "bookId": "deutschland-in-den-schatten-ii",
+                "title": "Deutschland in den Schatten II",
+                "edition": "SR3",
+                "citation": "Deutschland in den Schatten II, S. 80",
+                "purpose": "description"
+              }
+            ]
+          }
+        },
+        "global_id": "berlin-2080:place:492-boomtschacka"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": 493,
+        "name": "Al’Mukhar",
+        "aliases": [
+          "Al'Mukhar"
+        ],
+        "category": "Bars und Kneipen",
+        "accuracy": "Historisch; straßenbezogen",
+        "placement_note": "Die SR3-Quelle verortet das Teehaus an der Kochstraße, nennt aber keine Hausnummer.",
+        "related_place_ids": [
+          450
+        ],
+        "source_pages": "Deutschland in den Schatten II, S. 80",
+        "map_source": "Kochstraße, historische Bezirkszuordnung",
+        "description_kind": "Historischer Ort",
+        "description_preview": "Das Al’Mukhar war ein Frauen vorbehaltenes Teehaus und eine wichtige Informationsbörse.",
+        "description_full": "Im Teehaus an der Kochstraße wurden Kontakte und Nachrichten ausgetauscht. Die Betreiberin Sharisade galt als gut vernetzte Informationshändlerin; männliche Gäste erhielten keinen Zutritt.",
+        "description_source": "Deutschland in den Schatten II, S. 80",
+        "description_has_more": true,
+        "detail_plans": [],
+        "alternate_locations": [],
+        "sources": [
+          {
+            "bookId": "deutschland-in-den-schatten-ii",
+            "title": "Deutschland in den Schatten II",
+            "edition": "SR3",
+            "citation": "Deutschland in den Schatten II, S. 80",
+            "purpose": "description"
+          }
+        ],
+        "map_sources": [],
+        "editions": [
+          "SR3"
+        ],
+        "edition_descriptions": {
+          "SR3": {
+            "kind": "Historischer Ort",
+            "preview": "Das Al’Mukhar war ein Frauen vorbehaltenes Teehaus und eine wichtige Informationsbörse.",
+            "full": "Im Teehaus an der Kochstraße wurden Kontakte und Nachrichten ausgetauscht. Die Betreiberin Sharisade galt als gut vernetzte Informationshändlerin; männliche Gäste erhielten keinen Zutritt.",
+            "hasMore": true,
+            "hasExcerpt": true,
+            "sources": [
+              {
+                "bookId": "deutschland-in-den-schatten-ii",
+                "title": "Deutschland in den Schatten II",
+                "edition": "SR3",
+                "citation": "Deutschland in den Schatten II, S. 80",
+                "purpose": "description"
+              }
+            ]
+          }
+        },
+        "global_id": "berlin-2080:place:493-al-mukhar"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": 494,
+        "name": "Pipeline",
+        "aliases": [],
+        "category": "Bars und Kneipen",
+        "accuracy": "Historisch; nicht georeferenziert",
+        "placement_note": "Die SR3-Quelle nennt Gatow, aber keine belastbare Adresse.",
+        "related_place_ids": [
+          333,
+          445
+        ],
+        "source_pages": "Deutschland in den Schatten II, S. 80",
+        "map_source": "Gatow",
+        "description_kind": "Historischer Ort",
+        "description_preview": "Das Pipeline war eine Gatower Kneipe mit Verbindungen in die tschechische Unterwelt.",
+        "description_full": "Der von Pavel Hrdlicka geführte Treffpunkt galt als Kontaktstelle für Geschäfte und Gerüchte. In der Szene wurden Verbindungen des Besitzers zur tschechischen Mafia vermutet.",
+        "description_source": "Deutschland in den Schatten II, S. 80",
+        "description_has_more": true,
+        "detail_plans": [],
+        "alternate_locations": [],
+        "sources": [
+          {
+            "bookId": "deutschland-in-den-schatten-ii",
+            "title": "Deutschland in den Schatten II",
+            "edition": "SR3",
+            "citation": "Deutschland in den Schatten II, S. 80",
+            "purpose": "description"
+          }
+        ],
+        "map_sources": [],
+        "editions": [
+          "SR3"
+        ],
+        "edition_descriptions": {
+          "SR3": {
+            "kind": "Historischer Ort",
+            "preview": "Das Pipeline war eine Gatower Kneipe mit Verbindungen in die tschechische Unterwelt.",
+            "full": "Der von Pavel Hrdlicka geführte Treffpunkt galt als Kontaktstelle für Geschäfte und Gerüchte. In der Szene wurden Verbindungen des Besitzers zur tschechischen Mafia vermutet.",
+            "hasMore": true,
+            "hasExcerpt": true,
+            "sources": [
+              {
+                "bookId": "deutschland-in-den-schatten-ii",
+                "title": "Deutschland in den Schatten II",
+                "edition": "SR3",
+                "citation": "Deutschland in den Schatten II, S. 80",
+                "purpose": "description"
+              }
+            ]
+          }
+        },
+        "global_id": "berlin-2080:place:494-pipeline"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": 495,
+        "name": "Bruchstein",
+        "aliases": [],
+        "category": "Bars und Kneipen",
+        "accuracy": "Historisch; nicht georeferenziert",
+        "placement_note": "Die SR3-Quelle nennt Wilmersdorf, aber keine belastbare Adresse.",
+        "related_place_ids": [
+          446
+        ],
+        "source_pages": "Deutschland in den Schatten II, S. 81–82",
+        "map_source": "Wilmersdorf",
+        "description_kind": "Historischer Ort",
+        "description_preview": "Das Bruchstein verband Erlebnisgastronomie mit einem bekannten Treffpunkt für Schmidts.",
+        "description_full": "Die Wilmersdorfer Bar inszenierte wechselnde Umgebungen und Effekte für ihre Gäste. Zugleich nutzten Auftraggeber den Ort, um Runner für Jobs anzusprechen.",
+        "description_source": "Deutschland in den Schatten II, S. 81–82",
+        "description_has_more": true,
+        "detail_plans": [],
+        "alternate_locations": [],
+        "sources": [
+          {
+            "bookId": "deutschland-in-den-schatten-ii",
+            "title": "Deutschland in den Schatten II",
+            "edition": "SR3",
+            "citation": "Deutschland in den Schatten II, S. 81–82",
+            "purpose": "description"
+          }
+        ],
+        "map_sources": [],
+        "editions": [
+          "SR3"
+        ],
+        "edition_descriptions": {
+          "SR3": {
+            "kind": "Historischer Ort",
+            "preview": "Das Bruchstein verband Erlebnisgastronomie mit einem bekannten Treffpunkt für Schmidts.",
+            "full": "Die Wilmersdorfer Bar inszenierte wechselnde Umgebungen und Effekte für ihre Gäste. Zugleich nutzten Auftraggeber den Ort, um Runner für Jobs anzusprechen.",
+            "hasMore": true,
+            "hasExcerpt": true,
+            "sources": [
+              {
+                "bookId": "deutschland-in-den-schatten-ii",
+                "title": "Deutschland in den Schatten II",
+                "edition": "SR3",
+                "citation": "Deutschland in den Schatten II, S. 81–82",
+                "purpose": "description"
+              }
+            ]
+          }
+        },
+        "global_id": "berlin-2080:place:495-bruchstein"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": 496,
+        "name": "Gore",
+        "aliases": [
+          "Gore-Ruine"
+        ],
+        "category": "Sonstige Spots",
+        "accuracy": "Historisch; nicht georeferenziert",
+        "placement_note": "Die SR3-Quelle nennt Reinickendorf, aber keine belastbare Adresse.",
+        "related_place_ids": [
+          440
+        ],
+        "source_pages": "Deutschland in den Schatten II, S. 81",
+        "map_source": "Reinickendorf",
+        "description_kind": "Historischer Ort",
+        "description_preview": "Das Gore war die verrufene Ruine eines ehemaligen Kannibalenrestaurants in Reinickendorf.",
+        "description_full": "Nach einem Bombenanschlag blieb von dem Restaurant eine unheimliche Ruine zurück. Geschichten über den Besitzer und über Erscheinungen machten den Ort weiterhin zu einem düsteren Szenepunkt.",
+        "description_source": "Deutschland in den Schatten II, S. 81",
+        "description_has_more": true,
+        "detail_plans": [],
+        "alternate_locations": [],
+        "sources": [
+          {
+            "bookId": "deutschland-in-den-schatten-ii",
+            "title": "Deutschland in den Schatten II",
+            "edition": "SR3",
+            "citation": "Deutschland in den Schatten II, S. 81",
+            "purpose": "description"
+          }
+        ],
+        "map_sources": [],
+        "editions": [
+          "SR3"
+        ],
+        "edition_descriptions": {
+          "SR3": {
+            "kind": "Historischer Ort",
+            "preview": "Das Gore war die verrufene Ruine eines ehemaligen Kannibalenrestaurants in Reinickendorf.",
+            "full": "Nach einem Bombenanschlag blieb von dem Restaurant eine unheimliche Ruine zurück. Geschichten über den Besitzer und über Erscheinungen machten den Ort weiterhin zu einem düsteren Szenepunkt.",
+            "hasMore": true,
+            "hasExcerpt": true,
+            "sources": [
+              {
+                "bookId": "deutschland-in-den-schatten-ii",
+                "title": "Deutschland in den Schatten II",
+                "edition": "SR3",
+                "citation": "Deutschland in den Schatten II, S. 81",
+                "purpose": "description"
+              }
+            ]
+          }
+        },
+        "global_id": "berlin-2080:place:496-gore"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": 497,
+        "name": "Krankenhaus Lindenhof",
+        "aliases": [
+          "Lindenhof-Krankenhaus"
+        ],
+        "category": "Sonstige Spots",
+        "accuracy": "Historisch; nicht georeferenziert",
+        "placement_note": "Die SR3-Quelle nennt Lichtenberg, aber keine belastbare Adresse.",
+        "related_place_ids": [
+          442
+        ],
+        "source_pages": "Deutschland in den Schatten II, S. 82",
+        "map_source": "Lichtenberg",
+        "description_kind": "Historischer Ort",
+        "description_preview": "Das Krankenhaus Lindenhof war ein Lichtenberger Bezugspunkt der älteren Berliner Schattenszene.",
+        "description_full": "In einer Kneipe beim Krankenhaus war der Ork Karzer häufig zusammen mit seinem Begleiter Rodrigo anzutreffen. Dadurch diente der Ort als indirekter Kontaktpunkt für Informationen und Aufträge.",
+        "description_source": "Deutschland in den Schatten II, S. 82",
+        "description_has_more": true,
+        "detail_plans": [],
+        "alternate_locations": [],
+        "sources": [
+          {
+            "bookId": "deutschland-in-den-schatten-ii",
+            "title": "Deutschland in den Schatten II",
+            "edition": "SR3",
+            "citation": "Deutschland in den Schatten II, S. 82",
+            "purpose": "description"
+          }
+        ],
+        "map_sources": [],
+        "editions": [
+          "SR3"
+        ],
+        "edition_descriptions": {
+          "SR3": {
+            "kind": "Historischer Ort",
+            "preview": "Das Krankenhaus Lindenhof war ein Lichtenberger Bezugspunkt der älteren Berliner Schattenszene.",
+            "full": "In einer Kneipe beim Krankenhaus war der Ork Karzer häufig zusammen mit seinem Begleiter Rodrigo anzutreffen. Dadurch diente der Ort als indirekter Kontaktpunkt für Informationen und Aufträge.",
+            "hasMore": true,
+            "hasExcerpt": true,
+            "sources": [
+              {
+                "bookId": "deutschland-in-den-schatten-ii",
+                "title": "Deutschland in den Schatten II",
+                "edition": "SR3",
+                "citation": "Deutschland in den Schatten II, S. 82",
+                "purpose": "description"
+              }
+            ]
+          }
+        },
+        "global_id": "berlin-2080:place:497-krankenhaus-lindenhof"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": 498,
+        "name": "Berlin Hilton",
+        "aliases": [
+          "Hilton Berlin"
+        ],
+        "category": "Hotels",
+        "accuracy": "Historisch; nicht georeferenziert",
+        "placement_note": "Die SR3-Quelle ordnet das Hotel Nikolassee zu, nennt aber keine belastbare Adresse.",
+        "related_place_ids": [
+          447
+        ],
+        "source_pages": "Deutschland in den Schatten II, S. 79",
+        "map_source": "Nikolassee",
+        "description_kind": "Historischer Ort",
+        "description_preview": "Das Berlin Hilton galt als erstes Haus am Platz und als ausgesprochen exklusives Nobelhotel.",
+        "description_full": "Das Haus verband gehobene Gastronomie und luxuriöse Übernachtungen mit einer strengen Auswahl seiner Gäste. Selbst zahlungskräftige Besucher mussten dem erwarteten Erscheinungsbild entsprechen.",
+        "description_source": "Deutschland in den Schatten II, S. 79",
+        "description_has_more": true,
+        "detail_plans": [],
+        "alternate_locations": [],
+        "sources": [
+          {
+            "bookId": "deutschland-in-den-schatten-ii",
+            "title": "Deutschland in den Schatten II",
+            "edition": "SR3",
+            "citation": "Deutschland in den Schatten II, S. 79",
+            "purpose": "description"
+          }
+        ],
+        "map_sources": [],
+        "editions": [
+          "SR3"
+        ],
+        "edition_descriptions": {
+          "SR3": {
+            "kind": "Historischer Ort",
+            "preview": "Das Berlin Hilton galt als erstes Haus am Platz und als ausgesprochen exklusives Nobelhotel.",
+            "full": "Das Haus verband gehobene Gastronomie und luxuriöse Übernachtungen mit einer strengen Auswahl seiner Gäste. Selbst zahlungskräftige Besucher mussten dem erwarteten Erscheinungsbild entsprechen.",
+            "hasMore": true,
+            "hasExcerpt": true,
+            "sources": [
+              {
+                "bookId": "deutschland-in-den-schatten-ii",
+                "title": "Deutschland in den Schatten II",
+                "edition": "SR3",
+                "citation": "Deutschland in den Schatten II, S. 79",
+                "purpose": "description"
+              }
+            ]
+          }
+        },
+        "global_id": "berlin-2080:place:498-berlin-hilton"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": 499,
+        "name": "Berlin Charlton",
+        "aliases": [
+          "Turm des Berlin Charlton"
+        ],
+        "category": "Hotels",
+        "accuracy": "Historisch; nicht georeferenziert",
+        "placement_note": "Die SR3-Quelle ordnet den Turm Nikolassee zu, nennt aber keine belastbare Adresse.",
+        "related_place_ids": [
+          447
+        ],
+        "source_pages": "Deutschland in den Schatten II, S. 79",
+        "map_source": "Nikolassee",
+        "description_kind": "Historischer Ort",
+        "description_preview": "Der Turm des Berlin Charlton bot einen markanten Blick über Wannsee und Grunewald.",
+        "description_full": "Das Hochhaus gehörte zur exklusiven Hotel- und Vergnügungslandschaft Nikolassees. Hervorgehoben wird vor allem die Aussicht über den abgeschirmten Wannsee und den Grunewald.",
+        "description_source": "Deutschland in den Schatten II, S. 79",
+        "description_has_more": true,
+        "detail_plans": [],
+        "alternate_locations": [],
+        "sources": [
+          {
+            "bookId": "deutschland-in-den-schatten-ii",
+            "title": "Deutschland in den Schatten II",
+            "edition": "SR3",
+            "citation": "Deutschland in den Schatten II, S. 79",
+            "purpose": "description"
+          }
+        ],
+        "map_sources": [],
+        "editions": [
+          "SR3"
+        ],
+        "edition_descriptions": {
+          "SR3": {
+            "kind": "Historischer Ort",
+            "preview": "Der Turm des Berlin Charlton bot einen markanten Blick über Wannsee und Grunewald.",
+            "full": "Das Hochhaus gehörte zur exklusiven Hotel- und Vergnügungslandschaft Nikolassees. Hervorgehoben wird vor allem die Aussicht über den abgeschirmten Wannsee und den Grunewald.",
+            "hasMore": true,
+            "hasExcerpt": true,
+            "sources": [
+              {
+                "bookId": "deutschland-in-den-schatten-ii",
+                "title": "Deutschland in den Schatten II",
+                "edition": "SR3",
+                "citation": "Deutschland in den Schatten II, S. 79",
+                "purpose": "description"
+              }
+            ]
+          }
+        },
+        "global_id": "berlin-2080:place:499-berlin-charlton"
+      }
+    }
+  ]
+}

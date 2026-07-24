@@ -1,0 +1,462 @@
+{
+  "type": "FeatureCollection",
+  "name": "Berlin – virtuelle Orte",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": 476,
+        "name": "Abyss",
+        "aliases": ["Der Abgrund"],
+        "category": "Matrix und virtuelle Orte",
+        "accuracy": "Virtuell",
+        "placement_note": "Verborgener Zugang zur Berliner Kabelmatrix; wechselnde physische Ports sind nicht öffentlich bekannt.",
+        "source_pages": "Berlin 4D, S. 56; Berlin 2080, S. 140",
+        "map_source": "Kein physischer Einzelstandort",
+        "description_kind": "Matrixort",
+        "description_preview": "Abyss ist der verborgene Zugang zum Schwarzen Netz und zur alten kabelgebundenen Matrix Berlins.",
+        "description_full": "Abyss erscheint als schwarzer Schlund und ist nur über alte Leitungen, physische Ports und passende Emulatoren erreichbar. Die geheim gehaltenen Zugangsknoten wechseln; einzelne isolierte Netzabschnitte dienen dem sicheren Datentransfer und der anonymen Kommunikation.",
+        "description_source": "Berlin 4D, S. 56; Berlin 2080, S. 140",
+        "description_has_more": true,
+        "detail_plans": [],
+        "alternate_locations": [],
+        "sources": [
+          {"bookId": "berlin-4d", "title": "Berlin 4D", "edition": "SR4", "citation": "Berlin 4D, S. 56", "purpose": "description"},
+          {"bookId": "berlin-2080", "title": "Berlin 2080", "edition": "SR6", "citation": "Berlin 2080, S. 140", "purpose": "description"}
+        ],
+        "map_sources": [],
+        "editions": ["SR4", "SR6"],
+        "edition_descriptions": {
+          "SR4": {
+            "kind": "Matrixort",
+            "preview": "Abyss ist ein abgeschottetes, tiefschwarzes Kabelnetz in den alten Matrixleitungen Berlins.",
+            "full": "Nach dem Crash wurden isolierte Kabelabschnitte zu einer verborgenen Miniaturmatrix verbunden. Die Zugänge werden geheim gehalten und können sich hinter alten Infoports oder öffentlichen Terminals verbergen.",
+            "hasMore": true,
+            "hasExcerpt": true,
+            "sources": [{"bookId": "berlin-4d", "title": "Berlin 4D", "edition": "SR4", "citation": "Berlin 4D, S. 56", "purpose": "description"}]
+          },
+          "SR6": {
+            "kind": "Matrixort",
+            "preview": "Abyss bildet den kabelgebundenen Zugang zum Schwarzen Netz Berlins.",
+            "full": "Der schwarze Schlund ist nur über einen physischen Kabelport erreichbar und startet die Verbindung zur alternativen Berliner Kabelmatrix.",
+            "hasMore": true,
+            "hasExcerpt": true,
+            "sources": [{"bookId": "berlin-2080", "title": "Berlin 2080", "edition": "SR6", "citation": "Berlin 2080, S. 140", "purpose": "description"}]
+          }
+        },
+        "legacy_id": 476,
+        "global_id": "berlin-2080:place:476-abyss"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": 477,
+        "name": "AdMinMax",
+        "aliases": ["AMX"],
+        "category": "Matrix und virtuelle Orte",
+        "accuracy": "Virtuell",
+        "placement_note": "VR-Club ohne belegte physische Adresse",
+        "source_pages": "Berlin 2080, S. 140",
+        "map_source": "Kein physischer Einzelstandort",
+        "description_kind": "Matrixort",
+        "description_preview": "AdMinMax ist ein ständig neu gestalteter VR-Club für rebellische Jungdecker.",
+        "description_full": "Im AMX tauschen junge Nutzer Passwörter, Umgehungen von Alterskontrollen und nicht jugendfreie Spiele aus. Betreiber Max verbindet den Club mit anarchistischer Indoktrination und immer gewagteren Akten digitalen Ungehorsams.",
+        "description_source": "Berlin 2080, S. 140",
+        "description_has_more": true,
+        "detail_plans": [],
+        "alternate_locations": [],
+        "sources": [{"bookId": "berlin-2080", "title": "Berlin 2080", "edition": "SR6", "citation": "Berlin 2080, S. 140", "purpose": "description"}],
+        "map_sources": [],
+        "editions": ["SR6"],
+        "edition_descriptions": {
+          "SR6": {
+            "kind": "Matrixort",
+            "preview": "AdMinMax ist ein ständig neu gestalteter VR-Club für rebellische Jungdecker.",
+            "full": "Im AMX werden Zugangsdaten, Kontrollumgehungen und verbotene Unterhaltung gehandelt. Gastgeber Max lenkt seine Gäste zugleich in eine immer radikalere anarchistische Richtung.",
+            "hasMore": true,
+            "hasExcerpt": true,
+            "sources": [{"bookId": "berlin-2080", "title": "Berlin 2080", "edition": "SR6", "citation": "Berlin 2080, S. 140", "purpose": "description"}]
+          }
+        },
+        "legacy_id": 477,
+        "global_id": "berlin-2080:place:477-adminmax"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": 478,
+        "name": "Arachnet",
+        "aliases": [],
+        "category": "Matrix und virtuelle Orte",
+        "accuracy": "Virtuell",
+        "placement_note": "Geheimhost im Schwarzen Netz",
+        "source_pages": "Berlin 2080, S. 140",
+        "map_source": "Kein physischer Einzelstandort",
+        "description_kind": "Matrixort",
+        "description_preview": "Arachnet ist Berlins Geheimhost für Neo-Anarchisten und erfahrene Decker.",
+        "description_full": "Der Host wird von fahlem Licht, Spinnen und Netzen geprägt. Nutzer sind erst aus nächster Nähe wahrnehmbar; verschlüsselte Nachrichten liegen in Kokons, die sich nur mit passenden Schlüsseln öffnen lassen.",
+        "description_source": "Berlin 2080, S. 140",
+        "description_has_more": true,
+        "detail_plans": [],
+        "alternate_locations": [],
+        "sources": [{"bookId": "berlin-2080", "title": "Berlin 2080", "edition": "SR6", "citation": "Berlin 2080, S. 140", "purpose": "description"}],
+        "map_sources": [],
+        "editions": ["SR6"],
+        "edition_descriptions": {
+          "SR6": {
+            "kind": "Matrixort",
+            "preview": "Arachnet ist Berlins Geheimhost für Neo-Anarchisten und erfahrene Decker.",
+            "full": "Die dunkle Spinnen-VR schützt Begegnungen und verschlüsselte Datenpakete durch schlechte Sicht, Kokons und individuelle Spinnenschlüssel.",
+            "hasMore": true,
+            "hasExcerpt": true,
+            "sources": [{"bookId": "berlin-2080", "title": "Berlin 2080", "edition": "SR6", "citation": "Berlin 2080, S. 140", "purpose": "description"}]
+          }
+        },
+        "legacy_id": 478,
+        "global_id": "berlin-2080:place:478-arachnet"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": 479,
+        "name": "Caldera",
+        "aliases": ["Probability"],
+        "category": "Matrix und virtuelle Orte",
+        "accuracy": "Virtuell",
+        "placement_note": "VR-Wettknoten der Vesuv-Casinokette",
+        "source_pages": "Berlin 2080, S. 140–141",
+        "map_source": "Mit dem Vesuv-Automatencasino verknüpft",
+        "description_kind": "Matrixort",
+        "description_preview": "Caldera ist der zentrale Online-Wettknoten der Vesuv-Casinokette.",
+        "description_full": "Der frühere Host Probability wurde als glühende Vulkanlandschaft neu gestaltet. Hier wird auf Kämpfe, Wahlen, Rennen, Wettessen und Sport gesetzt; Einsätze lassen sich auch über die Berliner Chiptelefone platzieren.",
+        "description_source": "Berlin 2080, S. 140–141",
+        "description_has_more": true,
+        "related_place_ids": [158],
+        "detail_plans": [],
+        "alternate_locations": [],
+        "sources": [{"bookId": "berlin-2080", "title": "Berlin 2080", "edition": "SR6", "citation": "Berlin 2080, S. 140–141", "purpose": "description"}],
+        "map_sources": [],
+        "editions": ["SR6"],
+        "edition_descriptions": {
+          "SR6": {
+            "kind": "Matrixort",
+            "preview": "Caldera ist der zentrale Online-Wettknoten der Vesuv-Casinokette.",
+            "full": "Die vulkanische VR bündelt ein breites, teils sehr lokales Berliner Wettangebot und ist mit den physischen Vesuv-Casinos verbunden.",
+            "hasMore": true,
+            "hasExcerpt": true,
+            "sources": [{"bookId": "berlin-2080", "title": "Berlin 2080", "edition": "SR6", "citation": "Berlin 2080, S. 140–141", "purpose": "description"}]
+          }
+        },
+        "legacy_id": 479,
+        "global_id": "berlin-2080:place:479-caldera"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": 480,
+        "name": "NeverCore",
+        "aliases": [],
+        "category": "Matrix und virtuelle Orte",
+        "accuracy": "Virtuell",
+        "placement_note": "Heimathost der Hackbirdz",
+        "source_pages": "Berlin 2080, S. 141",
+        "map_source": "Kein physischer Einzelstandort",
+        "description_kind": "Matrixort",
+        "description_preview": "NeverCore ist der neblige Friedhofshost der Berliner Matrixgang Hackbirdz.",
+        "description_full": "Über dem Friedhof ragt der schwarze Krähenturm. Nichtmitglieder können echte Hackbirdz kaum von dekorativen Krähen unterscheiden; Nachrichten und Antworten erscheinen als Inschriften auf Grabsteinen.",
+        "description_source": "Berlin 2080, S. 141",
+        "description_has_more": true,
+        "detail_plans": [],
+        "alternate_locations": [],
+        "sources": [{"bookId": "berlin-2080", "title": "Berlin 2080", "edition": "SR6", "citation": "Berlin 2080, S. 141", "purpose": "description"}],
+        "map_sources": [],
+        "editions": ["SR6"],
+        "edition_descriptions": {
+          "SR6": {
+            "kind": "Matrixort",
+            "preview": "NeverCore ist der neblige Friedhofshost der Berliner Matrixgang Hackbirdz.",
+            "full": "Krähenturm, Gräber und Galgen bilden einen abgeschotteten Heimathost, dessen Nutzer und Nachrichten sich in der Friedhofskulisse verbergen.",
+            "hasMore": true,
+            "hasExcerpt": true,
+            "sources": [{"bookId": "berlin-2080", "title": "Berlin 2080", "edition": "SR6", "citation": "Berlin 2080, S. 141", "purpose": "description"}]
+          }
+        },
+        "legacy_id": 480,
+        "global_id": "berlin-2080:place:480-nevercore"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": 481,
+        "name": "Nexus B",
+        "aliases": [],
+        "category": "Matrix und virtuelle Orte",
+        "accuracy": "Virtuell",
+        "placement_note": "Dezentrales Netzwerk privater Chatrooms",
+        "source_pages": "Berlin 2080, S. 141",
+        "map_source": "Kein physischer Einzelstandort",
+        "description_kind": "Matrixort",
+        "description_preview": "Nexus B ist ein amorphes Netzwerk privater, miteinander verschmelzender Chatrooms.",
+        "description_full": "Jeder Nutzer bestimmt Aussehen, Physik und Darstellungsregeln des eigenen Nex. Werden mehrere Räume verbunden, morphen ihre unterschiedlichen Welten ineinander und können ausgesprochen verstörend wirken.",
+        "description_source": "Berlin 2080, S. 141",
+        "description_has_more": true,
+        "detail_plans": [],
+        "alternate_locations": [],
+        "sources": [{"bookId": "berlin-2080", "title": "Berlin 2080", "edition": "SR6", "citation": "Berlin 2080, S. 141", "purpose": "description"}],
+        "map_sources": [],
+        "editions": ["SR6"],
+        "edition_descriptions": {
+          "SR6": {
+            "kind": "Matrixort",
+            "preview": "Nexus B ist ein amorphes Netzwerk privater, miteinander verschmelzender Chatrooms.",
+            "full": "Die Nutzer gestalten ihre Nexe selbst; beim Verbinden überlagern und verändern sich deren Regeln und Darstellungen.",
+            "hasMore": true,
+            "hasExcerpt": true,
+            "sources": [{"bookId": "berlin-2080", "title": "Berlin 2080", "edition": "SR6", "citation": "Berlin 2080, S. 141", "purpose": "description"}]
+          }
+        },
+        "legacy_id": 481,
+        "global_id": "berlin-2080:place:481-nexus-b"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": 482,
+        "name": "Q-Club",
+        "aliases": [],
+        "category": "Matrix und virtuelle Orte",
+        "accuracy": "Virtuell",
+        "placement_note": "Temporärer Matrix-Rave mit wechselnden Adressen",
+        "source_pages": "Berlin 2080, S. 141",
+        "map_source": "Kein dauerhafter physischer Einzelstandort",
+        "description_kind": "Matrixort",
+        "description_preview": "Der Q-Club ist ein temporärer Matrix-Rave, der immer wieder unter neuen Adressen erscheint.",
+        "description_full": "Neben Partygästen treffen sich im Q-Club Daten- und BTL-Dealer aus den Anarchozonen mit ihrer Konzernkundschaft. Der Host wird von EriQ betrieben und bewusst ohne festen Standort erzeugt.",
+        "description_source": "Berlin 2080, S. 141",
+        "description_has_more": true,
+        "detail_plans": [],
+        "alternate_locations": [],
+        "sources": [{"bookId": "berlin-2080", "title": "Berlin 2080", "edition": "SR6", "citation": "Berlin 2080, S. 141", "purpose": "description"}],
+        "map_sources": [],
+        "editions": ["SR6"],
+        "edition_descriptions": {
+          "SR6": {
+            "kind": "Matrixort",
+            "preview": "Der Q-Club ist ein temporärer Matrix-Rave, der immer wieder unter neuen Adressen erscheint.",
+            "full": "Der wechselnde Hangout verbindet Partybetrieb und Geschäfte zwischen Anarchozonen und Konzernkundschaft. EriQ betreibt den Ravehost.",
+            "hasMore": true,
+            "hasExcerpt": true,
+            "sources": [{"bookId": "berlin-2080", "title": "Berlin 2080", "edition": "SR6", "citation": "Berlin 2080, S. 141", "purpose": "description"}]
+          }
+        },
+        "legacy_id": 482,
+        "global_id": "berlin-2080:place:482-q-club"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": 483,
+        "name": "Schattenland Berlin",
+        "aliases": ["Berliner Schattenland-Knoten", "SLB"],
+        "category": "Matrix und virtuelle Orte",
+        "accuracy": "Virtuell",
+        "placement_note": "Historischer Berliner Matrixknoten und späterer Nachbau im Schwarzen Netz",
+        "source_pages": "Brennpunkt ADL, S. 120–122 und 135; Berlin 2080, S. 141",
+        "map_source": "Kein physischer Einzelstandort",
+        "description_kind": "Matrixort",
+        "description_preview": "Schattenland Berlin bewahrt das digitale Erbe des alten Ostberliner Schattenland-Knotens.",
+        "description_full": "Der Knoten war ein zentraler Informations- und Kontaktpunkt der deutschen Schatten. In den 2080ern existiert im Schwarzen Netz ein Nachbau, der historische Archive mit aktuellen Dateien aus Panoptikum, Arachnet und privaten Quellen verbindet.",
+        "description_source": "Brennpunkt ADL, S. 120–122 und 135; Berlin 2080, S. 141",
+        "description_has_more": true,
+        "detail_plans": [],
+        "alternate_locations": [],
+        "sources": [
+          {"bookId": "brennpunkt-adl", "title": "Brennpunkt ADL", "edition": "SR3", "citation": "Brennpunkt ADL, S. 120–122 und 135", "purpose": "description"},
+          {"bookId": "berlin-2080", "title": "Berlin 2080", "edition": "SR6", "citation": "Berlin 2080, S. 141", "purpose": "description"}
+        ],
+        "map_sources": [],
+        "editions": ["SR3", "SR6"],
+        "edition_descriptions": {
+          "SR3": {
+            "kind": "Matrixort",
+            "preview": "Der Berliner Schattenland-Knoten ist ein zentraler Treffpunkt politischer Aktivisten und deutscher Schattenläufer.",
+            "full": "Nach dem Ausfall des Frankfurter Knotens ging Berlin 2063 online. Seine SysOps beteiligen sich aktiv an Diskussionen, Recherchen und der Pflege der Archive.",
+            "hasMore": true,
+            "hasExcerpt": true,
+            "sources": [{"bookId": "brennpunkt-adl", "title": "Brennpunkt ADL", "edition": "SR3", "citation": "Brennpunkt ADL, S. 120–122 und 135", "purpose": "description"}]
+          },
+          "SR6": {
+            "kind": "Matrixort",
+            "preview": "Im Schwarzen Netz existiert ein Nachbau des alten Ostberliner Schattenland-Knotens.",
+            "full": "Anne Archiste bewahrt das digitale Erbe und ergänzt die historischen Bestände um aktuelle Schatteninformationen aus mehreren Berliner Quellen.",
+            "hasMore": true,
+            "hasExcerpt": true,
+            "sources": [{"bookId": "berlin-2080", "title": "Berlin 2080", "edition": "SR6", "citation": "Berlin 2080, S. 141", "purpose": "description"}]
+          }
+        },
+        "legacy_id": 483,
+        "global_id": "berlin-2080:place:483-schattenland-berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": 484,
+        "name": "Die Schöne Welt",
+        "aliases": [],
+        "category": "Matrix und virtuelle Orte",
+        "accuracy": "Virtuell",
+        "placement_note": "Matrixhost der Schöner Leben Body Mall",
+        "source_pages": "Berlin 2080, S. 141",
+        "map_source": "Mit der Schöner Leben Body Mall verknüpft",
+        "description_kind": "Matrixort",
+        "description_preview": "Die Schöne Welt ist der aufwendig gestaltete Erholungshost der Schöner Leben Body Mall.",
+        "description_full": "Strände, Riffe und Buchten beschäftigen Kunden während langer Körperbehandlungen. Obwohl die VR für die Body Mall geschaffen wurde, ist sie extern erreichbar und bietet einen vergleichsweise leichten Zugang zu wohlhabenden Zielpersonen.",
+        "description_source": "Berlin 2080, S. 141",
+        "description_has_more": true,
+        "related_place_ids": [126],
+        "detail_plans": [],
+        "alternate_locations": [],
+        "sources": [{"bookId": "berlin-2080", "title": "Berlin 2080", "edition": "SR6", "citation": "Berlin 2080, S. 141", "purpose": "description"}],
+        "map_sources": [],
+        "editions": ["SR6"],
+        "edition_descriptions": {
+          "SR6": {
+            "kind": "Matrixort",
+            "preview": "Die Schöne Welt ist der aufwendig gestaltete Erholungshost der Schöner Leben Body Mall.",
+            "full": "Die extern erreichbare Strand-VR dient Body-Mall-Kunden als Zeitvertreib und kann zugleich Zugang zu zahlungskräftigen Zielpersonen eröffnen.",
+            "hasMore": true,
+            "hasExcerpt": true,
+            "sources": [{"bookId": "berlin-2080", "title": "Berlin 2080", "edition": "SR6", "citation": "Berlin 2080, S. 141", "purpose": "description"}]
+          }
+        },
+        "legacy_id": 484,
+        "global_id": "berlin-2080:place:484-die-schone-welt"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": 485,
+        "name": "The Void",
+        "aliases": [],
+        "category": "Matrix und virtuelle Orte",
+        "accuracy": "Virtuell",
+        "placement_note": "Cracker-Host im Schwarzen Netz",
+        "source_pages": "Berlin 2080, S. 141",
+        "map_source": "Kein physischer Einzelstandort",
+        "description_kind": "Matrixort",
+        "description_preview": "The Void ist der wichtigste Host des Berliner Cracker-Untergrunds.",
+        "description_full": "Das Berliner Cracker-Syndikat betreibt eine schwarze Leere voller Polygonasteroiden, in denen große Archive geknackter Spiele, Bücher, Magazine und Filme lagern. Krypt ist dort gelegentlich erreichbar.",
+        "description_source": "Berlin 2080, S. 141",
+        "description_has_more": true,
+        "detail_plans": [],
+        "alternate_locations": [],
+        "sources": [{"bookId": "berlin-2080", "title": "Berlin 2080", "edition": "SR6", "citation": "Berlin 2080, S. 141", "purpose": "description"}],
+        "map_sources": [],
+        "editions": ["SR6"],
+        "edition_descriptions": {
+          "SR6": {
+            "kind": "Matrixort",
+            "preview": "The Void ist der wichtigste Host des Berliner Cracker-Untergrunds.",
+            "full": "Der vom Berliner Cracker-Syndikat betriebene Host lagert seine umfangreichen Archive in frei treibenden Polygonasteroiden.",
+            "hasMore": true,
+            "hasExcerpt": true,
+            "sources": [{"bookId": "berlin-2080", "title": "Berlin 2080", "edition": "SR6", "citation": "Berlin 2080, S. 141", "purpose": "description"}]
+          }
+        },
+        "legacy_id": 485,
+        "global_id": "berlin-2080:place:485-the-void"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": 486,
+        "name": "Trog of War Online",
+        "aliases": [],
+        "category": "Matrix und virtuelle Orte",
+        "accuracy": "Virtuell",
+        "placement_note": "Online-Spiel und taktische Planungslobby",
+        "source_pages": "Berlin 2080, S. 142",
+        "map_source": "Kein physischer Einzelstandort",
+        "description_kind": "Matrixort",
+        "description_preview": "Trog of War Online verbindet Online-Metzelei mit einer kurzlebigen taktischen Planungslobby.",
+        "description_full": "Mitglieder desselben KillSquads können sich vor dem Spiel absprechen. Der ständig überschriebene Puffer macht die Lobby auch für mobile Run-Planungen interessant.",
+        "description_source": "Berlin 2080, S. 142",
+        "description_has_more": true,
+        "detail_plans": [],
+        "alternate_locations": [],
+        "sources": [{"bookId": "berlin-2080", "title": "Berlin 2080", "edition": "SR6", "citation": "Berlin 2080, S. 142", "purpose": "description"}],
+        "map_sources": [],
+        "editions": ["SR6"],
+        "edition_descriptions": {
+          "SR6": {
+            "kind": "Matrixort",
+            "preview": "Trog of War Online verbindet Online-Metzelei mit einer kurzlebigen taktischen Planungslobby.",
+            "full": "Die automatisch überschriebenen Lobbydaten bieten KillSquads und Runnergruppen einen flüchtigen Raum für taktische Absprachen.",
+            "hasMore": true,
+            "hasExcerpt": true,
+            "sources": [{"bookId": "berlin-2080", "title": "Berlin 2080", "edition": "SR6", "citation": "Berlin 2080, S. 142", "purpose": "description"}]
+          }
+        },
+        "legacy_id": 486,
+        "global_id": "berlin-2080:place:486-trog-of-war-online"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": 487,
+        "name": "Vision Berlin",
+        "aliases": ["VB", "Netzwerk Berlin"],
+        "category": "Matrix und virtuelle Orte",
+        "accuracy": "Virtuell",
+        "placement_note": "Stadtweite Nutzeroberfläche des Netzwerks Berlin",
+        "source_pages": "Berlin 2080, S. 120",
+        "map_source": "Stadtweiter Matrixraum ohne physischen Einzelstandort",
+        "description_kind": "Matrixort",
+        "description_preview": "Vision Berlin ist die idealisierte, spielbare VR-Oberfläche des Netzwerks Berlin.",
+        "description_full": "Die virtuelle Stadt zeigt ein sauberes, fertiggebautes Berlin, in dessen Gebäuden Hosts verortet sind, ohne zwingend deren reale Lage abzubilden. VolksKOMM-Nutzer starten in einem persönlichen Appartement; die Straßenebene funktioniert zugleich als VR-Spiel.",
+        "description_source": "Berlin 2080, S. 120",
+        "description_has_more": true,
+        "detail_plans": [],
+        "alternate_locations": [],
+        "sources": [{"bookId": "berlin-2080", "title": "Berlin 2080", "edition": "SR6", "citation": "Berlin 2080, S. 120", "purpose": "description"}],
+        "map_sources": [],
+        "editions": ["SR6"],
+        "edition_descriptions": {
+          "SR6": {
+            "kind": "Matrixort",
+            "preview": "Vision Berlin ist die idealisierte, spielbare VR-Oberfläche des Netzwerks Berlin.",
+            "full": "Die VR bildet eine makellose Version der Stadt ab, verortet Hosts in virtuellen Gebäuden und gibt VolksKOMM-Nutzern eigene Appartements als Startoberfläche.",
+            "hasMore": true,
+            "hasExcerpt": true,
+            "sources": [{"bookId": "berlin-2080", "title": "Berlin 2080", "edition": "SR6", "citation": "Berlin 2080, S. 120", "purpose": "description"}]
+          }
+        },
+        "legacy_id": 487,
+        "global_id": "berlin-2080:place:487-vision-berlin"
+      }
+    }
+  ]
+}

@@ -12,6 +12,10 @@ import unicodedata
 from pathlib import Path
 
 from PIL import Image, ImageEnhance, ImageFilter
+try:
+    from tools.reconcile_zone_topology import reconcile as reconcile_zone_topology
+except ModuleNotFoundError:
+    from reconcile_zone_topology import reconcile as reconcile_zone_topology
 
 
 ROOT = Path("/mnt/c/Users/Privat/Documents/Shadowrun/Chatgpt")
@@ -23,11 +27,16 @@ CITY_DETAIL_PLAN_DIR = CITY_ASSET_DIR / "detail-maps"
 CITY_OFFLINE_BASE = CITY_ASSET_DIR / "offline-base.webp"
 EDITION_ORDER = ["SR1", "SR2", "SR3", "SR4", "SR5", "SR6"]
 SOURCE_BOOKS = [
+    {"id": "deutschland-in-den-schatten", "title": "Deutschland in den Schatten (Ausgabe 1992)", "edition": "SR1", "patterns": ["Deutschland in den Schatten"]},
+    {"id": "deutschland-in-den-schatten-1993", "title": "Deutschland in den Schatten (Ausgabe 1993)", "edition": "SR2", "patterns": ["Deutschland in den Schatten (Ausgabe 1993)"]},
+    {"id": "brennpunkt-adl", "title": "Brennpunkt ADL", "edition": "SR3", "patterns": ["Brennpunkt ADL"]},
+    {"id": "deutschland-in-den-schatten-ii", "title": "Deutschland in den Schatten II", "edition": "SR3", "patterns": ["Deutschland in den Schatten II"]},
     {"id": "berlin-4d", "title": "Berlin 4D", "edition": "SR4", "patterns": ["Berlin 4D"]},
     {"id": "datapuls-berlin", "title": "Datapuls: Berlin", "edition": "SR5", "patterns": ["Datapuls Berlin", "Datapuls: Berlin"]},
     {"id": "datapuls-kunstraub", "title": "Datapuls: Kunstraub", "edition": "SR5", "patterns": ["Datapuls: Kunstraub"]},
     {"id": "datapuls-10-konzerne", "title": "Datapuls: 10 Konzerne", "edition": "SR5", "patterns": ["Datapuls: 10 Konzerne"]},
     {"id": "berlin-2080", "title": "Berlin 2080", "edition": "SR6", "patterns": ["Berlin 2080"]},
+    {"id": "netzgewitter", "title": "Netzgewitter", "edition": "SR6", "patterns": ["Netzgewitter"]},
     {"id": "schattenleben-berlin", "title": "Schattenleben: Berlin", "edition": "SR6", "patterns": ["Schattenleben Berlin", "Schattenleben: Berlin"]},
     {"id": "renrakusan", "title": "Renrakusan-Bezirksplan", "edition": "SR6", "patterns": ["Renrakusan-"]},
     {"id": "sr6-quellenkorpus", "title": "Shadowrun-6D-Quellenkorpus", "edition": "SR6", "patterns": ["Shadowrun-6D-Quellenkorpus"]},
@@ -1192,7 +1201,7 @@ PERSONS = [
         "id": "bal-balrog-kovac",
         "name": "Bal „Balrog“ Kovac",
         "aliases": ["Balrog"],
-        "category": "Gangs",
+        "category": "Unterwelt",
         "role": "Troll-Boss der Horde und Herrscher Gropiusstadts",
         "affiliation": "Die Horde",
         "status": "Aktiv",
@@ -1212,7 +1221,7 @@ PERSONS = [
         "id": "ioanna-tsantidis",
         "name": "Ioanna Tsantidis",
         "aliases": [],
-        "category": "Gangs",
+        "category": "Unterwelt",
         "role": "Ork-Hexe und Führungskraft der Horde",
         "affiliation": "Die Horde",
         "status": "Aktiv",
@@ -2652,7 +2661,7 @@ ZONE_RULES = {
     "orange": {
         "label": "Shadowrun-Enklave Orange",
         "color": "#ffa326",
-        "minimum": 1500,
+        "minimum": 800,
         "test": lambda r, g, b: r > 145 and 65 < g < 190 and b < 125 and r - g > 28 and g - b > 25,
     },
     "tuerkis": {
@@ -2885,6 +2894,36 @@ def update_city_registry() -> dict:
     return registry
 
 
+def merge_unique(first, second):
+    result = []
+    seen = set()
+    for value in [*(first or []), *(second or [])]:
+        signature = json.dumps(value, sort_keys=True, ensure_ascii=False)
+        if signature in seen:
+            continue
+        seen.add(signature)
+        result.append(value)
+    return result
+
+
+def apply_augmentations(entries: list, augmentations: list, *, properties: bool = False) -> None:
+    by_id = {entry["id"]: entry for entry in augmentations}
+    for entry in entries:
+        target = entry.get("properties", {}) if properties else entry
+        augmentation = by_id.get(target.get("id"))
+        if not augmentation:
+            continue
+        for key, value in augmentation.items():
+            if key in {"id", "global_id"}:
+                continue
+            if key in {"aliases", "editions", "sources", "map_sources", "locations"}:
+                target[key] = merge_unique(target.get(key), value)
+            elif key == "edition_descriptions":
+                target[key] = {**target.get(key, {}), **value}
+            else:
+                target[key] = value
+
+
 def build_global_search_index(registry: dict) -> dict:
     items = []
     for city in registry.get("cities", []):
@@ -2894,7 +2933,28 @@ def build_global_search_index(registry: dict) -> dict:
         manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
         city_dir = manifest_path.parent
         places = json.loads((city_dir / manifest["files"]["places"]).read_text(encoding="utf-8"))
+        for key in ("virtualPlaces", "historicalPlaces"):
+            supplemental_path = manifest.get("files", {}).get(key)
+            if supplemental_path:
+                supplemental = json.loads((city_dir / supplemental_path).read_text(encoding="utf-8"))
+                places["features"].extend(supplemental.get("features", []))
+        place_augmentations_path = manifest.get("files", {}).get("placeAugmentations")
+        if place_augmentations_path:
+            apply_augmentations(
+                places["features"],
+                json.loads((city_dir / place_augmentations_path).read_text(encoding="utf-8")),
+                properties=True,
+            )
         people = json.loads((city_dir / manifest["files"]["people"]).read_text(encoding="utf-8"))
+        historical_people_path = manifest.get("files", {}).get("historicalPeople")
+        if historical_people_path:
+            people.extend(json.loads((city_dir / historical_people_path).read_text(encoding="utf-8")))
+        person_augmentations_path = manifest.get("files", {}).get("personAugmentations")
+        if person_augmentations_path:
+            apply_augmentations(
+                people,
+                json.loads((city_dir / person_augmentations_path).read_text(encoding="utf-8")),
+            )
         city_label = f"{city['name']} {city.get('year', '')}".strip()
         for feature in places.get("features", []):
             properties = feature["properties"]
@@ -2927,11 +2987,12 @@ def build_global_search_index(registry: dict) -> dict:
                     "globalId": person.get("global_id"),
                     "name": person["name"],
                     "category": person.get("category", "Person"),
+                    "entityType": person.get("entity_type", "person"),
                     "editions": person.get("editions", []),
                     "search": search_text(
                         person.get("name"), person.get("aliases"), person.get("category"), person.get("role"),
                         person.get("affiliation"), person.get("summary"), person.get("description"), person.get("source"),
-                        person.get("editions"), person.get("edition_descriptions"),
+                        person.get("members"), person.get("danger"), person.get("editions"), person.get("edition_descriptions"),
                     ),
                 }
             )
@@ -2968,11 +3029,34 @@ def write_city_package(payload: dict, registry: dict) -> dict:
         )
 
     zones = json.loads(json.dumps(payload["areaStatus"], ensure_ascii=False))
+    exterritorial = {
+        "type": "FeatureCollection",
+        "name": "Shadowrun Berlin 2080 - EXTER",
+        "topology": {
+            "model": "independent-hard-layer",
+            "priority": 1,
+            "policy": (
+                "Verkehrs- und Bahnkorridore vollständig beansprucht; "
+                "im Zweifel bis zur nächsten verteidigbaren Außengrenze."
+            ),
+        },
+        "features": [
+            feature
+            for feature in zones["features"]
+            if feature.get("properties", {}).get("status") == "corporate"
+        ],
+    }
     files = {
         "places": "places.geojson",
+        "virtualPlaces": "virtual-places.geojson",
+        "historicalPlaces": "historical-places.geojson",
+        "placeAugmentations": "place-augmentations.json",
         "people": "people.json",
+        "historicalPeople": "historical-people.json",
+        "personAugmentations": "person-augmentations.json",
         "atlas": "atlas.json",
         "zones": "zones.geojson",
+        "exterritorial": "exterritorial.geojson",
         "districts": "districts.geojson",
         "neighborhoods": "neighborhoods.geojson",
         "outskirts": "outskirts.geojson",
@@ -2992,13 +3076,14 @@ def write_city_package(payload: dict, registry: dict) -> dict:
             if value
         }
         | {person["source"] for person in people if person.get("source")}
+        | {"Netzgewitter, S. 18-19"}
     )
     manifest = {
         "schemaVersion": 1,
         "id": CITY_ID,
         "name": "Berlin",
         "year": 2080,
-        "dataVersion": 2,
+        "dataVersion": 13,
         "availableEditions": payload["availableEditions"],
         "center": [52.5200066, 13.404954],
         "zoom": 10,
@@ -3013,6 +3098,7 @@ def write_city_package(payload: dict, registry: dict) -> dict:
     write_json(CITY_DATA_DIR / files["people"], people, readable=True)
     write_json(CITY_DATA_DIR / files["atlas"], atlas, readable=True)
     write_json(CITY_DATA_DIR / files["zones"], zones)
+    write_json(CITY_DATA_DIR / files["exterritorial"], exterritorial)
     write_json(CITY_DATA_DIR / files["districts"], payload["districtBoundaries"])
     write_json(CITY_DATA_DIR / files["neighborhoods"], payload["neighborhoodBoundaries"])
     write_json(CITY_DATA_DIR / files["outskirts"], payload["umlandBoundaries"])
@@ -3120,6 +3206,9 @@ def build_zone_geojson(boundary_geometry: dict) -> dict:
     source = Image.open(SOURCE_RENDER).convert("RGB")
     left = int(source.width * 0.203)
     source = source.crop((left, 0, source.width, source.height))
+    # Keep enough source-map resolution for street-scale status borders. The
+    # former 1100 px working copy and broad morphology shifted visible edges by
+    # several hundred metres at Berlin scale.
     source.thumbnail((1100, 1000), Image.LANCZOS)
     width, height = source.size
     source_pixels = source.load()
@@ -3131,23 +3220,34 @@ def build_zone_geojson(boundary_geometry: dict) -> dict:
             for x in range(width):
                 if rule["test"](*source_pixels[x, y]):
                     mask_pixels[x, y] = 255
-        mask = (
-            mask.filter(ImageFilter.MaxFilter(9))
-            .filter(ImageFilter.MinFilter(9))
-            .filter(ImageFilter.MaxFilter(5))
-            .filter(ImageFilter.MinFilter(5))
-        )
+        if zone_type == "orange":
+            # Preserve the street-scale outline of the small corporate zones.
+            mask = (
+                mask.filter(ImageFilter.MaxFilter(3))
+                .filter(ImageFilter.MinFilter(3))
+                .filter(ImageFilter.MaxFilter(3))
+                .filter(ImageFilter.MinFilter(3))
+            )
+        else:
+            # The city-wide fills contain many labels and road cut-outs that
+            # must be closed before their outer edge can be traced.
+            mask = (
+                mask.filter(ImageFilter.MaxFilter(9))
+                .filter(ImageFilter.MinFilter(9))
+                .filter(ImageFilter.MaxFilter(5))
+                .filter(ImageFilter.MinFilter(5))
+            )
         allowed_components = {
             "magenta": {1},
             "grau": {2, 3},
-            "orange": {2, 3, 4},
+            "orange": {1, 2, 3, 4},
             "tuerkis": set(),
         }
         for component_index, component in enumerate(connected_components(mask, rule["minimum"]), 1):
             if component_index not in allowed_components[zone_type]:
                 continue
             outline = trace_component(component, width, height)
-            outline = simplify(outline + [outline[0]], 2.0)
+            outline = simplify(outline + [outline[0]], 1.0)
             coordinates = []
             for x, y in outline:
                 x_percent = 20.3 + x / (width - 1) * 79.7
@@ -3250,6 +3350,12 @@ def main() -> None:
     GEOJSON.write_text(json.dumps(geojson, ensure_ascii=False, indent=2), encoding="utf-8")
     zones = build_zone_geojson(boundary_feature["geometry"])
     ZONES_GEOJSON.write_text(json.dumps(zones, ensure_ascii=False, indent=2), encoding="utf-8")
+    area_status = reconcile_zone_topology(
+        build_area_status(zones),
+        district_boundaries,
+        neighborhood_boundaries,
+        umland_boundaries,
+    )
     build_cropped_overlay()
     build_offline_base()
     detail_atlas = build_detail_atlas()
@@ -3265,7 +3371,7 @@ def main() -> None:
     payload = {
         "geojson": geojson,
         "zones": zones,
-        "areaStatus": build_area_status(zones),
+        "areaStatus": area_status,
         "corporateAreas": {
             "type": "FeatureCollection",
             "name": "Exterritoriale Konzerngebiete",
@@ -3280,7 +3386,7 @@ def main() -> None:
                         "color": "#f5f06a",
                     },
                 }
-                for feature in zones["features"]
+                for feature in area_status["features"]
                 if feature["properties"]["zone_type"] == "orange"
             ],
         },

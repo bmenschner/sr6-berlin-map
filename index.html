@@ -371,7 +371,7 @@
       </div>
       <div class="top-stats">
         <div class="stat"><b id="placed-count">0</b> Karteneinträge</div>
-        <div class="stat"><b id="person-count">0</b> Personen</div>
+        <div class="stat"><b id="person-count">0</b> Personen &amp; Gruppen</div>
         <div class="stat">Straßenzug-Zoom <b>bis 19</b></div>
         <div class="stat"><span id="city-scope-label">Berlin + Umland</span> <b>aktiv</b></div>
       </div>
@@ -408,11 +408,10 @@
         <div class="update-banner" id="update-banner" role="status" hidden><span>Eine neue Kartenversion ist verfügbar.</span><button id="update-app" type="button">Aktualisieren</button></div>
         <div class="boundary-key" aria-label="Legende der Grenzarten">
           <span class="key-title">Gebietsstatus</span>
-          <span><i class="key-normal"></i>Normales Gebiet</span>
           <span><i class="key-anarcho"></i>Anarcho-Gebiet</span>
-          <span><i class="key-status-corporate"></i>Konzerngebiet</span>
-          <span class="key-title">Grenzen</span>
-          <span><i class="key-corporate"></i>Exterritoriales Konzerngebiet</span>
+          <span><i class="key-corporate"></i>Konzerngebiet (EXTER)</span>
+          <span><i class="key-normal"></i>Normales Gebiet</span>
+          <span class="key-title">Weitere Grenzen</span>
           <span><i class="key-district"></i>Bezirk</span>
           <span><i class="key-outskirts"></i>Lore-Umland Brandenburg</span>
           <span><i class="key-neighborhood"></i>Stadtteil</span>
@@ -476,6 +475,18 @@
       const EMBEDDED_OFFLINE_BASE = "";
       const HYBRID_APP = true;
       const urlParameters = new URLSearchParams(window.location.search);
+      const LOCAL_DEVELOPMENT = urlParameters.get('dev') === '1'
+        && ['127.0.0.1', 'localhost'].includes(window.location.hostname);
+      if (LOCAL_DEVELOPMENT) {
+        if ('serviceWorker' in navigator) {
+          const registrations = await navigator.serviceWorker.getRegistrations();
+          await Promise.all(registrations.map(registration => registration.unregister()));
+        }
+        if ('caches' in window) {
+          const cacheNames = await caches.keys();
+          await Promise.all(cacheNames.filter(name => name.startsWith('sr6-')).map(name => caches.delete(name)));
+        }
+      }
       const cityStorageKey = 'sr6-active-city';
       let requestedCityId = urlParameters.get('city');
       if (!requestedCityId) {
@@ -571,7 +582,7 @@
             "Freizeit":"#ff67bd", "Hotels":"#6eb7ff", "Konzerne":"#a878ff",
             "Restaurants":"#ff7b5e", "Sichtseeing und Monumente":"#f5f06a",
             "Sonstige Spots":"#d2dce8", "Verkehr":"#48c8ff", "Bezirke":"#a878ff",
-            "Umlandgebiete":"#ffad31"
+            "Umlandgebiete":"#ffad31", "Matrix und virtuelle Orte":"#40f8dd"
           },
           fallback: '#d2dce8', activeStroke: '#ffffff', personAccent: '#ff2ea6', district: '#a878ff', neighborhood: '#40f8dd',
           outskirts: '#ffad31', corporate: '#f5f06a', city: '#40f8dd', mask: '#010308', maskOpacity: .72,
@@ -584,7 +595,7 @@
             "Freizeit":"#aa1769", "Hotels":"#236ca5", "Konzerne":"#6f4ca1",
             "Restaurants":"#bd472e", "Sichtseeing und Monumente":"#967600",
             "Sonstige Spots":"#59636b", "Verkehr":"#08769d", "Bezirke":"#6f4ca1",
-            "Umlandgebiete":"#ad5e00"
+            "Umlandgebiete":"#ad5e00", "Matrix und virtuelle Orte":"#087b82"
           },
           fallback: '#59636b', activeStroke: '#17262d', personAccent: '#b11267', district: '#6f4ca1', neighborhood: '#0b8f9b',
           outskirts: '#ce6e16', corporate: '#d99600', city: '#174b5f', mask: '#d8ddda', maskOpacity: .58,
@@ -594,6 +605,13 @@
       };
       const themePalette = () => themePalettes[currentTheme];
       const categoryColor = category => themePalette().categories[category] || themePalette().fallback;
+      const hasMapCoordinates = feature => Boolean(
+        feature
+        && feature.geometry
+        && feature.geometry.type === 'Point'
+        && Array.isArray(feature.geometry.coordinates)
+        && feature.geometry.coordinates.length >= 2
+      );
       const syncThemeButton = () => {
         const button = document.getElementById('theme-toggle');
         button.setAttribute('aria-pressed', currentTheme === 'light' ? 'true' : 'false');
@@ -717,11 +735,20 @@
       const outskirtsStyle = () => ({ className: 'sr-outskirts-boundary', color: themePalette().outskirts, fillColor: themePalette().outskirts, weight: 2.2, opacity: .9, fillOpacity: currentTheme === 'light' ? .065 : .045, dashArray: '9 6' });
       const corporateStyle = () => ({ className: 'sr-corporate-zone', color: themePalette().corporate, fillColor: themePalette().corporate, weight: 2.6, opacity: .98, fillOpacity: currentTheme === 'light' ? .16 : .11 });
       const cityBoundaryStyle = () => ({ className: 'sr-city-boundary', color: themePalette().city, weight: 2, opacity: .82, fillOpacity: 0, dashArray: '8 8' });
-      const areaStatus = L.geoJSON(DATA.areaStatus, {
-        pane: 'statusPane',
-        style: areaStatusStyle,
-        onEachFeature: (feature, layer) => layer.bindTooltip(feature.properties.label, { className: 'sr-label', sticky: true })
+      const areaStatusCollection = status => ({
+        type: 'FeatureCollection',
+        features: DATA.areaStatus.features.filter(feature => feature.properties.status === status)
       });
+      const createAreaStatusLayer = status => L.geoJSON(areaStatusCollection(status), {
+          pane: 'statusPane',
+          style: areaStatusStyle,
+          onEachFeature: (feature, layer) => layer.bindTooltip(
+            `${escapeHtml(feature.properties.label)}${feature.properties.basis ? `<br><span class="tooltip-basis">Grenzbasis: ${escapeHtml(feature.properties.basis)}</span>` : ''}`,
+            { className: 'sr-label', sticky: true }
+          )
+        });
+      const anarchoAreas = createAreaStatusLayer('anarcho');
+      const normalAreas = createAreaStatusLayer('normal');
       const neighborhoodBoundaries = L.geoJSON(DATA.neighborhoodBoundaries, {
         pane: 'neighborhoodPane',
         style: neighborhoodStyle,
@@ -740,7 +767,10 @@
       const corporateAreas = L.geoJSON(DATA.corporateAreas, {
         pane: 'corporatePane',
         style: corporateStyle,
-        onEachFeature: (feature, layer) => layer.bindTooltip(`Exterritorial · ${escapeHtml(feature.properties.label)}`, { className: 'sr-label', sticky: true })
+        onEachFeature: (feature, layer) => layer.bindTooltip(
+          `Exterritorial · ${escapeHtml(feature.properties.label)}${feature.properties.boundary_review_label ? `<br><span class="tooltip-basis">Grenzprüfung: ${escapeHtml(feature.properties.boundary_review_label)}</span>` : ''}${feature.properties.basis ? `<br><span class="tooltip-basis">Grenzbasis: ${escapeHtml(feature.properties.basis)}</span>` : ''}`,
+          { className: 'sr-label', sticky: true }
+        )
       });
       const cityBoundary = L.geoJSON(DATA.boundary, { style: cityBoundaryStyle });
       const outerRings = feature => {
@@ -767,9 +797,10 @@
         }
         marker.addTo(loreLabels);
       });
-      areaStatus.addTo(map);
       neighborhoodBoundaries.addTo(map);
       umlandBoundaries.addTo(map);
+      normalAreas.addTo(map);
+      anarchoAreas.addTo(map);
       districtBoundaries.addTo(map);
       corporateAreas.addTo(map);
       cityMask.addTo(map);
@@ -787,7 +818,7 @@
         });
         visibleLocations.forEach(locationId => {
           const feature = DATA.geojson.features.find(item => item.properties.id === locationId);
-          if (!feature) return;
+          if (!hasMapCoordinates(feature)) return;
           const [lon, lat] = feature.geometry.coordinates;
           const ring = L.circleMarker([lat, lon], {
             radius: 10, color: themePalette().personAccent, weight: 2, opacity: .9,
@@ -808,9 +839,10 @@
         if (activeEditions.has(edition)) layer.addTo(map);
       });
       const overlays = {
+        'Gebietsstatus · Anarcho': anarchoAreas,
+        'Gebietsstatus · Konzern (EXTER)': corporateAreas,
+        'Gebietsstatus · Normal': normalAreas,
         'Straßennamen verstärkt': streetLabels,
-        'Gebietsstatus: Konzern / Normal / Anarcho': areaStatus,
-        'Exterritoriale Konzerngebiete': corporateAreas,
         'Personenbezüge': personRelationLayer,
         'Lore-Umland Brandenburg': umlandBoundaries,
         'Bezirksgrenzen': districtBoundaries,
@@ -943,7 +975,8 @@
         }
         syncThemeButton();
         streetLabels.setUrl(`https://{s}.basemaps.cartocdn.com/${themePalette().labels}/{z}/{x}/{y}{r}.png`);
-        areaStatus.setStyle(areaStatusStyle);
+        anarchoAreas.setStyle(areaStatusStyle);
+        normalAreas.setStyle(areaStatusStyle);
         neighborhoodBoundaries.setStyle(neighborhoodStyle);
         districtBoundaries.setStyle(districtStyle);
         umlandBoundaries.setStyle(outskirtsStyle);
@@ -998,7 +1031,7 @@
           const feature = featureById.get(link.id);
           return `${feature ? feature.properties.name : ''} ${link.relation}`;
         }).join(' ');
-        return fold(`${person.name} ${(person.aliases || []).join(' ')} ${person.category} ${person.role} ${person.affiliation} ${person.status} ${person.metatype || ''} ${person.summary} ${person.description} ${person.source} ${(person.editions || []).join(' ')} ${JSON.stringify(person.edition_descriptions || {})} ${person.scope || ''} ${linkedPlaces}`);
+        return fold(`${person.name} ${(person.aliases || []).join(' ')} ${person.category} ${person.role} ${person.affiliation} ${person.status} ${person.metatype || ''} ${person.members || ''} ${person.danger || ''} ${person.summary} ${person.description} ${person.source} ${(person.editions || []).join(' ')} ${JSON.stringify(person.edition_descriptions || {})} ${person.scope || ''} ${linkedPlaces}`);
       }
 
       function placeSearchText(feature) {
@@ -1030,6 +1063,7 @@
       function buildMarkers() {
         markerLayer.clearLayers(); markerById.clear();
         filtered.forEach(feature => {
+          if (!hasMapCoordinates(feature)) return;
           const coordinates = [feature.geometry.coordinates, ...(feature.properties.alternate_locations || [])];
           const markers = coordinates.map(([lon, lat], index) => {
             const marker = L.circleMarker([lat, lon], markerStyle(feature, markerIsActive(feature.properties.id)));
@@ -1173,18 +1207,31 @@
         detailPlanButton.textContent = detailPlans.length ? `▦ ${detailPlans[0].title} öffnen` : '';
         renderEditionDescriptions(p, { kind: p.description_kind, source: p.description_source, preview: p.description_preview, full: p.description_full, hasMore: p.description_has_more });
         const relatedPeople = personsByLocation.get(p.id) || [];
-        renderRelated('Personen von Interesse', relatedPeople.map(item => ({
+        const relatedPlaces = (p.related_place_ids || []).map(id => featureById.get(id)).filter(Boolean);
+        renderRelated('Verknüpfte Orte und Personen', [
+          ...relatedPlaces.map(relatedFeature => ({
+            label: `${pad(relatedFeature.properties.id)} · ${relatedFeature.properties.name}`,
+            meta: relatedFeature.properties.category,
+            action: () => selectFeature(relatedFeature),
+          })),
+          ...relatedPeople.map(item => ({
           label: item.person.name,
           meta: `${item.relation} · ${item.person.category}`,
           action: () => selectPerson(item.person),
-        })));
+          })),
+        ]);
         const locationCount = 1 + (p.alternate_locations || []).length;
+        const coordinateRow = hasMapCoordinates(feature)
+          ? `<dt>Koordinaten</dt><dd>${feature.geometry.coordinates[1].toFixed(5)}, ${feature.geometry.coordinates[0].toFixed(5)}</dd>`
+          : p.accuracy === 'Virtuell'
+            ? '<dt>Kartenanzeige</dt><dd>Virtueller Ort – kein physischer Einzelstandort</dd>'
+            : '<dt>Kartenanzeige</dt><dd>Nur im Katalog – keine belastbare Kartenposition belegt</dd>';
         document.getElementById('detail-grid').innerHTML = `
           <dt>Quellen</dt><dd>${(p.sources || []).map(reference => escapeHtml(sourceLabel(reference))).join('<br>') || escapeHtml(p.source_pages || 'Berlin 2080 Karte v04')}</dd>
           <dt>Kartenquelle</dt><dd>${(p.map_sources || []).map(reference => escapeHtml(sourceLabel(reference))).join('<br>') || escapeHtml(p.map_source || 'Berlin 2080 Karte v04')}</dd>
           <dt>Position</dt><dd>${escapeHtml(p.placement_note || p.accuracy)}</dd>
           ${locationCount > 1 ? `<dt>Standorte</dt><dd>${locationCount} auf der Einzelkarte</dd>` : ''}
-          <dt>Koordinaten</dt><dd>${feature.geometry.coordinates[1].toFixed(5)}, ${feature.geometry.coordinates[0].toFixed(5)}</dd>`;
+          ${coordinateRow}`;
         document.getElementById('detail-card').classList.add('open');
       }
 
@@ -1195,7 +1242,7 @@
         const detailPlanButton = document.getElementById('detail-plan-open');
         detailPlanButton.hidden = true;
         detailPlanButton.dataset.key = '';
-        renderEditionDescriptions(person, { kind: 'Personendossier', source: person.source, preview: person.summary, full: person.description, hasMore: true });
+        renderEditionDescriptions(person, { kind: person.entity_type === 'group' ? 'Gruppendossier' : 'Personendossier', source: person.source, preview: person.summary, full: person.description, hasMore: true });
         const linkedLocations = (person.locations || []).map(link => {
           const feature = featureById.get(link.id);
           return feature ? {
@@ -1209,8 +1256,9 @@
         const mapReference = linkedLocations.length ? `${linkedLocations.length} belegte Zuordnung${linkedLocations.length === 1 ? '' : 'en'}` : (person.scope || 'Ohne festen Kartenbezug');
         document.getElementById('detail-grid').innerHTML = `
           <dt>Aliasse</dt><dd>${escapeHtml(aliases)}</dd>
-          <dt>Rolle</dt><dd>${escapeHtml(person.role)}</dd>
+          <dt>${person.entity_type === 'group' ? 'Typ' : 'Rolle'}</dt><dd>${escapeHtml(person.role)}</dd>
           <dt>Zugehörigkeit</dt><dd>${escapeHtml(person.affiliation)}</dd>
+          ${person.entity_type === 'group' ? `<dt>Mitglieder</dt><dd>${escapeHtml(person.members || 'Unbekannt')}</dd><dt>Gefahrenstufe</dt><dd>${escapeHtml(person.danger || '–')} / 5</dd>` : ''}
           <dt>Kartenbezug</dt><dd>${escapeHtml(mapReference)}</dd>
           <dt>Quellen</dt><dd>${(person.sources || []).map(reference => escapeHtml(sourceLabel(reference))).join('<br>') || escapeHtml(person.source)}</dd>`;
         document.getElementById('detail-card').classList.add('open');
@@ -1233,7 +1281,7 @@
         refreshMarkerStyles();
         if (markerById.has(selected)) markerById.get(selected)[0].openTooltip();
         document.querySelectorAll('.result').forEach(node => node.classList.toggle('active', node.dataset.type === 'place' && Number(node.dataset.id) === selected));
-        if (fly) {
+        if (fly && hasMapCoordinates(feature)) {
           const locations = [feature.geometry.coordinates, ...(feature.properties.alternate_locations || [])];
           if (locations.length > 1) {
             map.fitBounds(locations.map(([lon, lat]) => [lat, lon]), { padding: [60, 60], maxZoom: 14 });
@@ -1247,6 +1295,7 @@
 
       function selectPerson(person, fly = true) {
         const linkedFeatures = (person.locations || []).map(link => featureById.get(link.id)).filter(Boolean);
+        const mappedLinkedFeatures = linkedFeatures.filter(hasMapCoordinates);
         const existing = new Set(filtered.map(feature => feature.properties.id));
         const missing = linkedFeatures.filter(feature => !existing.has(feature.properties.id));
         if (missing.length) {
@@ -1257,8 +1306,8 @@
         selectedPerson = person;
         refreshMarkerStyles();
         document.querySelectorAll('.result').forEach(node => node.classList.toggle('active', node.dataset.type === 'person' && node.dataset.personId === person.id));
-        if (fly && linkedFeatures.length) {
-          const coordinates = linkedFeatures.map(feature => feature.geometry.coordinates);
+        if (fly && mappedLinkedFeatures.length) {
+          const coordinates = mappedLinkedFeatures.map(feature => feature.geometry.coordinates);
           if (coordinates.length === 1) {
             map.flyTo([coordinates[0][1], coordinates[0][0]], Math.max(map.getZoom(), 14), { duration: .75 });
           } else {
@@ -1281,7 +1330,10 @@
           const p = feature.properties;
           const button = document.createElement('button');
           button.type = 'button'; button.className = `result${p.id === selected ? ' active' : ''}`; button.dataset.type = 'place'; button.dataset.id = p.id;
-          button.innerHTML = `<span class="num">${pad(p.id)}</span><span><span class="result-name">${escapeHtml(p.name)}</span><br><span class="result-cat">${escapeHtml(p.category)} · ${escapeHtml(editionBadgeText(p))}</span></span><span class="pin" style="color:${categoryColor(p.category)};background:currentColor"></span>`;
+          const locationLabel = hasMapCoordinates(feature)
+            ? ''
+            : p.accuracy === 'Virtuell' ? ' · virtuell' : ' · ohne Kartenposition';
+          button.innerHTML = `<span class="num">${pad(p.id)}</span><span><span class="result-name">${escapeHtml(p.name)}</span><br><span class="result-cat">${escapeHtml(p.category)}${locationLabel} · ${escapeHtml(editionBadgeText(p))}</span></span><span class="pin" style="color:${categoryColor(p.category)};background:currentColor"></span>`;
           button.addEventListener('click', () => selectFeature(feature)); list.appendChild(button);
         });
       }
@@ -1290,7 +1342,8 @@
         entries.slice().sort((first, second) => first.name.localeCompare(second.name, 'de', { sensitivity: 'base' })).forEach(person => {
           const button = document.createElement('button');
           button.type = 'button'; button.className = `result${selectedPerson && person.id === selectedPerson.id ? ' active' : ''}`; button.dataset.type = 'person'; button.dataset.personId = person.id;
-          button.innerHTML = `<span class="person-glyph" aria-hidden="true">P</span><span><span class="result-name">${escapeHtml(person.name)}</span><br><span class="result-cat">${escapeHtml(person.category)} · ${escapeHtml(editionBadgeText(person))}</span></span><span class="pin" style="color:${themePalette().personAccent};background:currentColor"></span>`;
+          const glyph = person.entity_type === 'group' ? 'G' : 'P';
+          button.innerHTML = `<span class="person-glyph" aria-hidden="true">${glyph}</span><span><span class="result-name">${escapeHtml(person.name)}</span><br><span class="result-cat">${escapeHtml(person.category)} · ${escapeHtml(editionBadgeText(person))}</span></span><span class="pin" style="color:${themePalette().personAccent};background:currentColor"></span>`;
           button.addEventListener('click', () => selectPerson(person)); list.appendChild(button);
         });
       }
@@ -1320,7 +1373,7 @@
         const globalSearch = Boolean(document.getElementById('search').value.trim());
         if (globalSearch) {
           if (placeResults.length) { appendGroup(list, `Orte · ${placeResults.length}`); appendPlaceResults(list, placeResults); }
-          if (personResults.length) { appendGroup(list, `Personen · ${personResults.length}`); appendPersonResults(list, personResults); }
+          if (personResults.length) { appendGroup(list, `Personen & Gruppen · ${personResults.length}`); appendPersonResults(list, personResults); }
           if (crossCityResults.length) { appendGroup(list, `Weitere Städte · ${crossCityResults.length}`); appendCrossCityResults(list, crossCityResults); }
           if (!placeResults.length && !personResults.length && !crossCityResults.length) appendGroup(list, 'Keine Treffer');
         } else if (browseMode === 'persons') {
@@ -1405,7 +1458,7 @@
       if (requestedPersonId && personById.has(requestedPersonId)) selectPerson(personById.get(requestedPersonId));
       if (requestedAtlasKey && atlasByKey.has(requestedAtlasKey)) openAtlas(requestedAtlasKey);
 
-      if ('serviceWorker' in navigator && /^https?:$/.test(window.location.protocol)) {
+      if (!LOCAL_DEVELOPMENT && 'serviceWorker' in navigator && /^https?:$/.test(window.location.protocol)) {
         const hadController = Boolean(navigator.serviceWorker.controller);
         let updateAccepted = false;
         let waitingWorker = null;

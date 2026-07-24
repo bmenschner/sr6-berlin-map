@@ -1,0 +1,527 @@
+[
+  {
+    "id": 204,
+    "aliases": [
+      "Messerschmitt-Kawasaki-Vertretung Berlin"
+    ],
+    "sources": [
+      {
+        "bookId": "deutschland-in-den-schatten",
+        "title": "Deutschland in den Schatten (Ausgabe 1992)",
+        "edition": "SR1",
+        "citation": "Deutschland in den Schatten, S. 54",
+        "purpose": "description"
+      },
+      {
+        "bookId": "deutschland-in-den-schatten-1993",
+        "title": "Deutschland in den Schatten (Ausgabe 1993)",
+        "edition": "SR2",
+        "citation": "Deutschland in den Schatten (Ausgabe 1993), S. 54",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR1",
+      "SR2"
+    ],
+    "edition_descriptions": {
+      "SR1": {
+        "kind": "Historischer Bezug",
+        "preview": "Messerschmitt-Kawasaki unterhielt bereits 2053 eine Berliner Vertretung für Fahrzeuge und Luftfahrttechnik.",
+        "full": "Die IFMU-Tochter vertrieb ein breites Spektrum von Kleinfahrzeugen bis zu bewaffneten Mittelstreckenmaschinen. Der Berliner Leiter drängte auf eigenständige Luftgleiterprojekte mit magischer Sicherheitstechnik.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "deutschland-in-den-schatten",
+            "title": "Deutschland in den Schatten (Ausgabe 1992)",
+            "edition": "SR1",
+            "citation": "Deutschland in den Schatten, S. 54",
+            "purpose": "description"
+          }
+        ]
+      },
+      "SR2": {
+        "kind": "Historischer Bezug",
+        "preview": "Messerschmitt-Kawasaki unterhielt bereits 2053 eine Berliner Vertretung für Fahrzeuge und Luftfahrttechnik.",
+        "full": "Die IFMU-Tochter vertrieb ein breites Spektrum von Kleinfahrzeugen bis zu bewaffneten Mittelstreckenmaschinen. Der Berliner Leiter drängte auf eigenständige Luftgleiterprojekte mit magischer Sicherheitstechnik.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "deutschland-in-den-schatten-1993",
+            "title": "Deutschland in den Schatten (Ausgabe 1993)",
+            "edition": "SR2",
+            "citation": "Deutschland in den Schatten (Ausgabe 1993), S. 54",
+            "purpose": "description"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": 212,
+    "aliases": [
+      "Schering Pharma AG Berlin"
+    ],
+    "sources": [
+      {
+        "bookId": "deutschland-in-den-schatten",
+        "title": "Deutschland in den Schatten (Ausgabe 1992)",
+        "edition": "SR1",
+        "citation": "Deutschland in den Schatten, S. 54",
+        "purpose": "description"
+      },
+      {
+        "bookId": "deutschland-in-den-schatten-1993",
+        "title": "Deutschland in den Schatten (Ausgabe 1993)",
+        "edition": "SR2",
+        "citation": "Deutschland in den Schatten (Ausgabe 1993), S. 54",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR1",
+      "SR2"
+    ],
+    "edition_descriptions": {
+      "SR1": {
+        "kind": "Historischer Bezug",
+        "preview": "Schering forschte in Berlin an Genetik, Viren und der Verbindung von Magie und Pharmazie.",
+        "full": "Die Berliner Schering Pharma AG betrieb neben klassischer Gen- und Virenforschung ein gemeinsames Projekt mit Aztechnology. Ziel waren magisch unterstützte Medikamente und weitere Anwendungen unter den lockeren Bedingungen des Status F.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "deutschland-in-den-schatten",
+            "title": "Deutschland in den Schatten (Ausgabe 1992)",
+            "edition": "SR1",
+            "citation": "Deutschland in den Schatten, S. 54",
+            "purpose": "description"
+          }
+        ]
+      },
+      "SR2": {
+        "kind": "Historischer Bezug",
+        "preview": "Schering forschte in Berlin an Genetik, Viren und der Verbindung von Magie und Pharmazie.",
+        "full": "Die Berliner Schering Pharma AG betrieb neben klassischer Gen- und Virenforschung ein gemeinsames Projekt mit Aztechnology. Ziel waren magisch unterstützte Medikamente und weitere Anwendungen unter den lockeren Bedingungen des Status F.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "deutschland-in-den-schatten-1993",
+            "title": "Deutschland in den Schatten (Ausgabe 1993)",
+            "edition": "SR2",
+            "citation": "Deutschland in den Schatten (Ausgabe 1993), S. 54",
+            "purpose": "description"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": 246,
+    "aliases": [
+      "Renraku-Niederlassung Alexanderplatz"
+    ],
+    "sources": [
+      {
+        "bookId": "deutschland-in-den-schatten",
+        "title": "Deutschland in den Schatten (Ausgabe 1992)",
+        "edition": "SR1",
+        "citation": "Deutschland in den Schatten, S. 55",
+        "purpose": "description"
+      },
+      {
+        "bookId": "deutschland-in-den-schatten-1993",
+        "title": "Deutschland in den Schatten (Ausgabe 1993)",
+        "edition": "SR2",
+        "citation": "Deutschland in den Schatten (Ausgabe 1993), S. 55",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR1",
+      "SR2"
+    ],
+    "edition_descriptions": {
+      "SR1": {
+        "kind": "Historischer Bezug",
+        "preview": "Am Alexanderplatz befand sich 2053 Renrakus Berliner Niederlassung und europäischer Hauptsitz.",
+        "full": "Renraku konkurrierte von seinem markanten Gebäude am früheren Alexanderplatz mit Fuchi und TelTech um den Berliner Hard- und Softwaremarkt. Starke IC-Systeme und häufige Kontrollen schützten die dortigen Mainframes.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "deutschland-in-den-schatten",
+            "title": "Deutschland in den Schatten (Ausgabe 1992)",
+            "edition": "SR1",
+            "citation": "Deutschland in den Schatten, S. 55",
+            "purpose": "description"
+          }
+        ]
+      },
+      "SR2": {
+        "kind": "Historischer Bezug",
+        "preview": "Am Alexanderplatz befand sich 2053 Renrakus Berliner Niederlassung und europäischer Hauptsitz.",
+        "full": "Renraku konkurrierte von seinem markanten Gebäude am früheren Alexanderplatz mit Fuchi und TelTech um den Berliner Hard- und Softwaremarkt. Starke IC-Systeme und häufige Kontrollen schützten die dortigen Mainframes.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "deutschland-in-den-schatten-1993",
+            "title": "Deutschland in den Schatten (Ausgabe 1993)",
+            "edition": "SR2",
+            "citation": "Deutschland in den Schatten (Ausgabe 1993), S. 55",
+            "purpose": "description"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": 276,
+    "aliases": [
+      "DeMeKo Medienwerke Berlin"
+    ],
+    "sources": [
+      {
+        "bookId": "deutschland-in-den-schatten",
+        "title": "Deutschland in den Schatten (Ausgabe 1992)",
+        "edition": "SR1",
+        "citation": "Deutschland in den Schatten, S. 55",
+        "purpose": "description"
+      },
+      {
+        "bookId": "deutschland-in-den-schatten-1993",
+        "title": "Deutschland in den Schatten (Ausgabe 1993)",
+        "edition": "SR2",
+        "citation": "Deutschland in den Schatten (Ausgabe 1993), S. 55",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR1",
+      "SR2"
+    ],
+    "edition_descriptions": {
+      "SR1": {
+        "kind": "Historischer Bezug",
+        "preview": "Die DeMeKo betrieb in Berlin große Druck-, Trideo- und SimSinn-Werke.",
+        "full": "Berlin war für die Deutsche Medien- und Kommunikations AG zugleich Absatzmarkt und Produktionsstandort. Zu den prägenden Angeboten gehörten lokale Nachrichten- und Stadtmedien; das Hauptgebäude orientierte sich gestalterisch an einem übergroßen Computerchip.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "deutschland-in-den-schatten",
+            "title": "Deutschland in den Schatten (Ausgabe 1992)",
+            "edition": "SR1",
+            "citation": "Deutschland in den Schatten, S. 55",
+            "purpose": "description"
+          }
+        ]
+      },
+      "SR2": {
+        "kind": "Historischer Bezug",
+        "preview": "Die DeMeKo betrieb in Berlin große Druck-, Trideo- und SimSinn-Werke.",
+        "full": "Berlin war für die Deutsche Medien- und Kommunikations AG zugleich Absatzmarkt und Produktionsstandort. Zu den prägenden Angeboten gehörten lokale Nachrichten- und Stadtmedien; das Hauptgebäude orientierte sich gestalterisch an einem übergroßen Computerchip.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "deutschland-in-den-schatten-1993",
+            "title": "Deutschland in den Schatten (Ausgabe 1993)",
+            "edition": "SR2",
+            "citation": "Deutschland in den Schatten (Ausgabe 1993), S. 55",
+            "purpose": "description"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": 292,
+    "aliases": [
+      "Aztechnology-Niederlassung Zitadelle Spandau"
+    ],
+    "sources": [
+      {
+        "bookId": "deutschland-in-den-schatten",
+        "title": "Deutschland in den Schatten (Ausgabe 1992)",
+        "edition": "SR1",
+        "citation": "Deutschland in den Schatten, S. 55",
+        "purpose": "description"
+      },
+      {
+        "bookId": "deutschland-in-den-schatten-1993",
+        "title": "Deutschland in den Schatten (Ausgabe 1993)",
+        "edition": "SR2",
+        "citation": "Deutschland in den Schatten (Ausgabe 1993), S. 55",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR1",
+      "SR2"
+    ],
+    "edition_descriptions": {
+      "SR1": {
+        "kind": "Historischer Bezug",
+        "preview": "Aztechnology betrieb 2053 eine stark gesicherte Forschungsniederlassung in der Zitadelle Spandau.",
+        "full": "Die kleine Anlage untersuchte die Verbindung von Magie und Cybertechnologie. Magier, Schamanen, Decker und Konzerntruppen bildeten einen außergewöhnlich starken Schutzring innerhalb der historischen Festung.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "deutschland-in-den-schatten",
+            "title": "Deutschland in den Schatten (Ausgabe 1992)",
+            "edition": "SR1",
+            "citation": "Deutschland in den Schatten, S. 55",
+            "purpose": "description"
+          }
+        ]
+      },
+      "SR2": {
+        "kind": "Historischer Bezug",
+        "preview": "Aztechnology betrieb 2053 eine stark gesicherte Forschungsniederlassung in der Zitadelle Spandau.",
+        "full": "Die kleine Anlage untersuchte die Verbindung von Magie und Cybertechnologie. Magier, Schamanen, Decker und Konzerntruppen bildeten einen außergewöhnlich starken Schutzring innerhalb der historischen Festung.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "deutschland-in-den-schatten-1993",
+            "title": "Deutschland in den Schatten (Ausgabe 1993)",
+            "edition": "SR2",
+            "citation": "Deutschland in den Schatten (Ausgabe 1993), S. 55",
+            "purpose": "description"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": 301,
+    "aliases": [
+      "Rat des Status F"
+    ],
+    "sources": [
+      {
+        "bookId": "deutschland-in-den-schatten",
+        "title": "Deutschland in den Schatten (Ausgabe 1992)",
+        "edition": "SR1",
+        "citation": "Deutschland in den Schatten, S. 50",
+        "purpose": "description"
+      },
+      {
+        "bookId": "deutschland-in-den-schatten-1993",
+        "title": "Deutschland in den Schatten (Ausgabe 1993)",
+        "edition": "SR2",
+        "citation": "Deutschland in den Schatten (Ausgabe 1993), S. 50",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR1",
+      "SR2"
+    ],
+    "edition_descriptions": {
+      "SR1": {
+        "kind": "Historischer Bezug",
+        "preview": "Der Berliner Rat war das einzige formelle politische Organ des frühen Status F.",
+        "full": "Der Rat durfte nur den Austausch der Berliner Gruppen koordinieren und sollte keine dauerhafte Regierungsstruktur entwickeln. Aufgaben wechselten regelmäßig; Verwaltungsgebäude und große Versammlungshalle besaßen keinen öffentlichen Sicherheitsapparat.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "deutschland-in-den-schatten",
+            "title": "Deutschland in den Schatten (Ausgabe 1992)",
+            "edition": "SR1",
+            "citation": "Deutschland in den Schatten, S. 50",
+            "purpose": "description"
+          }
+        ]
+      },
+      "SR2": {
+        "kind": "Historischer Bezug",
+        "preview": "Der Berliner Rat war das einzige formelle politische Organ des frühen Status F.",
+        "full": "Der Rat durfte nur den Austausch der Berliner Gruppen koordinieren und sollte keine dauerhafte Regierungsstruktur entwickeln. Aufgaben wechselten regelmäßig; Verwaltungsgebäude und große Versammlungshalle besaßen keinen öffentlichen Sicherheitsapparat.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "deutschland-in-den-schatten-1993",
+            "title": "Deutschland in den Schatten (Ausgabe 1993)",
+            "edition": "SR2",
+            "citation": "Deutschland in den Schatten (Ausgabe 1993), S. 50",
+            "purpose": "description"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": 44,
+    "sources": [
+      {
+        "bookId": "deutschland-in-den-schatten-ii",
+        "title": "Deutschland in den Schatten II",
+        "edition": "SR3",
+        "citation": "Deutschland in den Schatten II, S. 81",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR3"
+    ],
+    "edition_descriptions": {
+      "SR3": {
+        "kind": "Historischer Bezug",
+        "preview": "Das Schrapnell war bereits in den 2050ern eine feste Adresse der harten Berliner Clubszene.",
+        "full": "Die historische Beschreibung zeichnet den Club als lauten, rauen Treffpunkt mit Konzerten, Tanzfläche und einem Publikum, das Auseinandersetzungen nicht aus dem Weg ging.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "deutschland-in-den-schatten-ii",
+            "title": "Deutschland in den Schatten II",
+            "edition": "SR3",
+            "citation": "Deutschland in den Schatten II, S. 81",
+            "purpose": "description"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": 80,
+    "sources": [
+      {
+        "bookId": "deutschland-in-den-schatten-ii",
+        "title": "Deutschland in den Schatten II",
+        "edition": "SR3",
+        "citation": "Deutschland in den Schatten II, S. 80",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR3"
+    ],
+    "edition_descriptions": {
+      "SR3": {
+        "kind": "Historischer Bezug",
+        "preview": "Die Kasbah war schon in der SR3-Zeit ein orientalisch geprägter Treffpunkt mit Markt- und Teestubenatmosphäre.",
+        "full": "Der historische Szenetreff verband Gastronomie, Handel und ein vielsprachiges Publikum. Hinter der offenen Atmosphäre boten sich zahlreiche Gelegenheiten für Kontakte und diskrete Geschäfte.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "deutschland-in-den-schatten-ii",
+            "title": "Deutschland in den Schatten II",
+            "edition": "SR3",
+            "citation": "Deutschland in den Schatten II, S. 80",
+            "purpose": "description"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": 284,
+    "sources": [
+      {
+        "bookId": "deutschland-in-den-schatten-ii",
+        "title": "Deutschland in den Schatten II",
+        "edition": "SR3",
+        "citation": "Deutschland in den Schatten II, S. 79",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR3"
+    ],
+    "edition_descriptions": {
+      "SR3": {
+        "kind": "Historischer Bezug",
+        "preview": "Schloss Sanssouci wurde in der SR3-Zeit als mögliche Sommerresidenz Lofwyrs beschrieben.",
+        "full": "Ein Schattenkommentar nennt das restaurierte Schloss als zeitweilige Residenz des Großdrachen und als mögliche Belohnungsunterkunft für verdiente Saeder-Krupp-Beschäftigte. Die Angabe bleibt innerhalb der Quelle ein Gerücht.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "deutschland-in-den-schatten-ii",
+            "title": "Deutschland in den Schatten II",
+            "edition": "SR3",
+            "citation": "Deutschland in den Schatten II, S. 79",
+            "purpose": "description"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": 291,
+    "sources": [
+      {
+        "bookId": "deutschland-in-den-schatten-ii",
+        "title": "Deutschland in den Schatten II",
+        "edition": "SR3",
+        "citation": "Deutschland in den Schatten II, S. 80",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR3"
+    ],
+    "edition_descriptions": {
+      "SR3": {
+        "kind": "Historischer Bezug",
+        "preview": "Unter dem Zoologischen Garten lebten Nachkommen freigelassener Critter im alten U-Bahnnetz.",
+        "full": "Die Tunnel galten zugleich als gefährliches Jagdgebiet und als inoffizielles Wegenetz durch Berlin. Ortskundige konnten über nicht vollständig versiegelte Schächte selbst Konzerngebiete umgehen.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "deutschland-in-den-schatten-ii",
+            "title": "Deutschland in den Schatten II",
+            "edition": "SR3",
+            "citation": "Deutschland in den Schatten II, S. 80",
+            "purpose": "description"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": 302,
+    "sources": [
+      {
+        "bookId": "deutschland-in-den-schatten-ii",
+        "title": "Deutschland in den Schatten II",
+        "edition": "SR3",
+        "citation": "Deutschland in den Schatten II, S. 79",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR3"
+    ],
+    "edition_descriptions": {
+      "SR3": {
+        "kind": "Historischer Bezug",
+        "preview": "Die Oranienburger BGS-Kaserne war eines der größten Ausbildungszentren des Bundesgrenzschutzes.",
+        "full": "Nachdem Konzerne die Berliner Polizeiarbeit übernommen hatten, wurde der Standort weitgehend zum Ausbildungslager ausgebaut. Nur ein Teil blieb für aktive Dienste von BGS und BKA reserviert.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "deutschland-in-den-schatten-ii",
+            "title": "Deutschland in den Schatten II",
+            "edition": "SR3",
+            "citation": "Deutschland in den Schatten II, S. 79",
+            "purpose": "description"
+          }
+        ]
+      }
+    }
+  }
+]

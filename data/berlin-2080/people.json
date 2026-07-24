@@ -2276,7 +2276,7 @@
     "aliases": [
       "Balrog"
     ],
-    "category": "Gangs",
+    "category": "Unterwelt",
     "role": "Troll-Boss der Horde und Herrscher Gropiusstadts",
     "affiliation": "Die Horde",
     "status": "Aktiv",
@@ -2332,7 +2332,7 @@
     "id": "ioanna-tsantidis",
     "name": "Ioanna Tsantidis",
     "aliases": [],
-    "category": "Gangs",
+    "category": "Unterwelt",
     "role": "Ork-Hexe und Führungskraft der Horde",
     "affiliation": "Die Horde",
     "status": "Aktiv",
@@ -3135,7 +3135,13 @@
     "summary": "Krypt arbeitet an einem angeblich unknackbar verschlüsselten Kommlink für freie Bürger.",
     "description": "Nach mehreren Attentatsversuchen tauchte die Berliner Matrixlegende mit einem CryptoLink-Prototypen unter. Der Cracker-Host The Void gilt als praktisch einziger Ort, an dem Krypt gelegentlich noch erreichbar ist.",
     "source": "Berlin 2080, S. 141",
-    "locations": [],
+    "locations": [
+      {
+        "id": 485,
+        "relation": "Gelegentlich über diesen Host erreichbar",
+        "global_id": "berlin-2080:place:485-the-void"
+      }
+    ],
     "scope": "The Void im Schwarzen Netz; kein physischer Standort bekannt",
     "sources": [
       {
@@ -3168,5 +3174,4792 @@
       }
     },
     "global_id": "berlin-2080:person:krypt"
+  },
+  {
+    "id": "dator",
+    "name": "Dator",
+    "aliases": [
+      "Dat0r"
+    ],
+    "category": "Matrix und Technik",
+    "role": "Datenräuber und Schattenland-SysOp",
+    "affiliation": "Schattenland Berlin",
+    "status": "Verschollen",
+    "summary": "Der eigenwillige Datenräuber gehörte zur Führungsriege von Schattenland Berlin.",
+    "description": "Dator galt als hervorragend vernetzter Einzelgänger mit Kontakten zu Schmugglern, Vory und osteuropäischen Schatten. In der Berliner Schattenmatrix übernahm er technische und organisatorische Verantwortung; später verliert sich seine Spur.",
+    "source": "Brennpunkt ADL, S. 121; Berlin 2080, S. 141",
+    "locations": [
+      {
+        "id": 483,
+        "relation": "SysOp und technischer Betreiber",
+        "global_id": "berlin-2080:place:483-schattenland-berlin"
+      }
+    ],
+    "sources": [
+      {
+        "bookId": "brennpunkt-adl",
+        "title": "Brennpunkt ADL",
+        "edition": "SR3",
+        "citation": "Brennpunkt ADL, S. 121",
+        "purpose": "description"
+      },
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 141",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR3",
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR3": {
+        "kind": "Personendossier",
+        "preview": "Dator gehört als Datenräuber und Einzelgänger zur Führungsriege von Schattenland Berlin.",
+        "full": "Der raue Decker hält sich aus vielen politischen Auseinandersetzungen heraus, kennt sich jedoch besonders gut mit osteuropäischen Schatten, Schmugglern und Vory-Verbindungen aus.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "brennpunkt-adl",
+            "title": "Brennpunkt ADL",
+            "edition": "SR3",
+            "citation": "Brennpunkt ADL, S. 121",
+            "purpose": "description"
+          }
+        ]
+      },
+      "SR6": {
+        "kind": "Historischer Bezug",
+        "preview": "Dat0r zählt zu den prägenden früheren Namen der Berliner Schattenmatrix.",
+        "full": "Die Berliner Matrixgeschichte führt Dat0r als früheren Betreiber und wichtigen Kopf der Szene; sein späterer Verbleib bleibt unklar.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 141",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
+    "global_id": "berlin-2080:person:dator"
+  },
+  {
+    "id": "corpshark",
+    "name": "Corpshark",
+    "aliases": [],
+    "category": "Matrix und Technik",
+    "role": "Konzernanalyst und Schattenland-SysOp",
+    "affiliation": "Schattenland Berlin, Megawatch",
+    "status": "Aktiv (Stand 2063)",
+    "summary": "Corpshark beobachtet Konzernpolitik und bringt ein weitreichendes Informationsnetz in das Schattenland ein.",
+    "description": "Der sachliche Analyst wurde als Protegé eines erfahrenen Konzernbeobachters bekannt. In der Führungsriege von Schattenland Berlin steht er für Konzernwissen, politische Einordnung und belastbare Kontakte.",
+    "source": "Brennpunkt ADL, S. 121",
+    "locations": [
+      {
+        "id": 483,
+        "relation": "SysOp und Konzernbeobachter",
+        "global_id": "berlin-2080:place:483-schattenland-berlin"
+      }
+    ],
+    "sources": [
+      {
+        "bookId": "brennpunkt-adl",
+        "title": "Brennpunkt ADL",
+        "edition": "SR3",
+        "citation": "Brennpunkt ADL, S. 121",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR3"
+    ],
+    "edition_descriptions": {
+      "SR3": {
+        "kind": "Personendossier",
+        "preview": "Corpshark beobachtet Konzernpolitik und bringt ein weitreichendes Informationsnetz in das Schattenland ein.",
+        "full": "Als Konzernanalyst und Mitglied der Berliner Führungsriege liefert Corpshark wirtschaftliche Einordnung, Kontakte und Hintergrundwissen über die großen Akteure.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "brennpunkt-adl",
+            "title": "Brennpunkt ADL",
+            "edition": "SR3",
+            "citation": "Brennpunkt ADL, S. 121",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
+    "global_id": "berlin-2080:person:corpshark"
+  },
+  {
+    "id": "roter-korsar",
+    "name": "Roter Korsar",
+    "aliases": [],
+    "category": "Schatten und Szene",
+    "role": "Neo-anarchistischer Aktivist und Schattenland-SysOp",
+    "affiliation": "Schattenland Berlin",
+    "status": "Aktiv (Stand 2063)",
+    "summary": "Der Rote Korsar vertritt innerhalb von Schattenland Berlin eine kämpferisch anarchistische Linie.",
+    "description": "Der politische Aktivist kommentiert Berliner Entwicklungen aus konsequent neo-anarchistischer Perspektive. In der Führungsrunde des Schattenlands gehört er zu den lautesten Gegengewichten gegen Konzernmacht und staatliche Kontrolle.",
+    "source": "Brennpunkt ADL, S. 121–122",
+    "locations": [
+      {
+        "id": 483,
+        "relation": "SysOp und politischer Kommentator",
+        "global_id": "berlin-2080:place:483-schattenland-berlin"
+      }
+    ],
+    "sources": [
+      {
+        "bookId": "brennpunkt-adl",
+        "title": "Brennpunkt ADL",
+        "edition": "SR3",
+        "citation": "Brennpunkt ADL, S. 121–122",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR3"
+    ],
+    "edition_descriptions": {
+      "SR3": {
+        "kind": "Personendossier",
+        "preview": "Der Rote Korsar vertritt innerhalb von Schattenland Berlin eine kämpferisch anarchistische Linie.",
+        "full": "Seine Beiträge verbinden Berliner Szeneinformationen mit deutlicher Agitation gegen Konzerne, Sicherheitsapparate und politische Bevormundung.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "brennpunkt-adl",
+            "title": "Brennpunkt ADL",
+            "edition": "SR3",
+            "citation": "Brennpunkt ADL, S. 121–122",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
+    "global_id": "berlin-2080:person:roter-korsar"
+  },
+  {
+    "id": "antifa",
+    "name": "AntiFa",
+    "aliases": [
+      "Fusion"
+    ],
+    "category": "Schatten und Szene",
+    "role": "Autonomer Aktivist und Schattenland-SysOp",
+    "affiliation": "Schattenland Berlin",
+    "status": "Aktiv (Stand 2063)",
+    "summary": "AntiFa bringt die Perspektive der autonomen Berliner Szene in die Schattenland-Führung ein.",
+    "description": "Der gelernte Automechaniker und politische Aktivist wechselte zeitweise die Persona zu Fusion. Seine Positionen sind stark von der Berliner autonomen Bewegung und der Abwehr faschistischer Strukturen geprägt.",
+    "source": "Brennpunkt ADL, S. 122",
+    "locations": [
+      {
+        "id": 483,
+        "relation": "SysOp und Vertreter der autonomen Szene",
+        "global_id": "berlin-2080:place:483-schattenland-berlin"
+      }
+    ],
+    "sources": [
+      {
+        "bookId": "brennpunkt-adl",
+        "title": "Brennpunkt ADL",
+        "edition": "SR3",
+        "citation": "Brennpunkt ADL, S. 122",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR3"
+    ],
+    "edition_descriptions": {
+      "SR3": {
+        "kind": "Personendossier",
+        "preview": "AntiFa bringt die Perspektive der autonomen Berliner Szene in die Schattenland-Führung ein.",
+        "full": "Als politischer Aktivist und zeitweilig unter der Persona Fusion auftretender SysOp steht er für die radikale, antifaschistische Seite des Berliner Netzwerks.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "brennpunkt-adl",
+            "title": "Brennpunkt ADL",
+            "edition": "SR3",
+            "citation": "Brennpunkt ADL, S. 122",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
+    "global_id": "berlin-2080:person:antifa"
+  },
+  {
+    "id": "mnemosyne",
+    "name": "Mnemosyne",
+    "aliases": [],
+    "category": "Matrix und Technik",
+    "role": "Otaku-Sprecherin und Schattenland-SysOp",
+    "affiliation": "Schattenland Berlin, Overwatch",
+    "status": "Aktiv (Stand 2063)",
+    "summary": "Mnemosyne vertritt die Otaku und hält Verbindungen zwischen mehreren Stämmen aufrecht.",
+    "description": "Die einflussreiche Otaku gilt als zentrale Ansprechpartnerin ihrer Gemeinschaft. Ihre Kontakte zu Overwatch und verschiedenen Stämmen machen sie zu einer wichtigen Vermittlerin innerhalb der Schattenland-Führung.",
+    "source": "Brennpunkt ADL, S. 121–122",
+    "locations": [
+      {
+        "id": 483,
+        "relation": "SysOp und Vertreterin der Otaku",
+        "global_id": "berlin-2080:place:483-schattenland-berlin"
+      }
+    ],
+    "sources": [
+      {
+        "bookId": "brennpunkt-adl",
+        "title": "Brennpunkt ADL",
+        "edition": "SR3",
+        "citation": "Brennpunkt ADL, S. 121–122",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR3"
+    ],
+    "edition_descriptions": {
+      "SR3": {
+        "kind": "Personendossier",
+        "preview": "Mnemosyne vertritt die Otaku und hält Verbindungen zwischen mehreren Stämmen aufrecht.",
+        "full": "Ihre Autorität unter den Otaku und ihre Verbindungen zu Overwatch geben ihr in der Berliner Führungsriege besonderes Gewicht.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "brennpunkt-adl",
+            "title": "Brennpunkt ADL",
+            "edition": "SR3",
+            "citation": "Brennpunkt ADL, S. 121–122",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
+    "global_id": "berlin-2080:person:mnemosyne"
+  },
+  {
+    "id": "pjotr-gargari",
+    "name": "Pjotr Gargari",
+    "aliases": [
+      "Zar von Berlin"
+    ],
+    "category": "Unterwelt",
+    "role": "Avtoritet der Gargari-Organizatsi",
+    "affiliation": "Vory v Zakone",
+    "status": "Verstorben (2079)",
+    "summary": "Pjotr Gargari beherrschte über Jahrzehnte große Teile der Berliner Vory.",
+    "description": "Der als Zar von Berlin bekannte Avtoritet führte ein weitreichendes kriminelles Netzwerk. Sein Tod im Jahr 2079 löste einen Nachfolgekrieg aus, der die Machtverhältnisse der Berliner Unterwelt nachhaltig veränderte.",
+    "source": "Datapuls: Berlin, S. 9; Berlin 2080, S. 16",
+    "locations": [
+      {
+        "id": 441,
+        "relation": "Langjähriger Machtbereich der Gargari-Organizatsi",
+        "global_id": "berlin-2080:place:441-pankow"
+      }
+    ],
+    "sources": [
+      {
+        "bookId": "datapuls-berlin",
+        "title": "Datapuls: Berlin",
+        "edition": "SR5",
+        "citation": "Datapuls: Berlin, S. 9",
+        "purpose": "description"
+      },
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 16",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR5",
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR5": {
+        "kind": "Personendossier",
+        "preview": "Pjotr Gargari ist als Zar von Berlin der dominierende Avtoritet der örtlichen Vory.",
+        "full": "Seine Organizatsi verbindet traditionelle Vory-Strukturen mit einem weitreichenden Berliner Netzwerk und prägt die Unterwelt der Stadt.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "datapuls-berlin",
+            "title": "Datapuls: Berlin",
+            "edition": "SR5",
+            "citation": "Datapuls: Berlin, S. 9",
+            "purpose": "description"
+          }
+        ]
+      },
+      "SR6": {
+        "kind": "Historischer Bezug",
+        "preview": "Gargaris Tod im Jahr 2079 löst einen offenen Machtkampf in der Berliner Vory aus.",
+        "full": "Nach dem Ende des langjährigen Zaren zerfällt die alte Ordnung; konkurrierende Fraktionen kämpfen um Territorien, Gefolgsleute und sein politisches Erbe.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 16",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
+    "global_id": "berlin-2080:person:pjotr-gargari"
+  },
+  {
+    "id": "vladimir-karewitsch",
+    "name": "Vladimir Karewitsch",
+    "aliases": [],
+    "category": "Unterwelt",
+    "role": "Avtoritet und Rivale Pjotr Gargaris",
+    "affiliation": "Vory v Zakone",
+    "status": "Verstorben (2079)",
+    "summary": "Karewitsch war Gargaris wichtigster Rivale um die Führung der Berliner Vory.",
+    "description": "Der Avtoritet führte eine konkurrierende Gruppierung und stellte die Vorherrschaft des Zaren offen infrage. Sein Tod gehört zu den Auslösern der Neuordnung, aus der Drakovas Fraktion gestärkt hervorging.",
+    "source": "Datapuls: Berlin, S. 9; Berlin 2080, S. 16",
+    "locations": [
+      {
+        "id": 116,
+        "relation": "Ehemaliger Machtbereich; später von Drakovas Fraktion übernommen",
+        "global_id": "berlin-2080:place:116-osramhofe"
+      }
+    ],
+    "sources": [
+      {
+        "bookId": "datapuls-berlin",
+        "title": "Datapuls: Berlin",
+        "edition": "SR5",
+        "citation": "Datapuls: Berlin, S. 9",
+        "purpose": "description"
+      },
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 16",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR5",
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR5": {
+        "kind": "Personendossier",
+        "preview": "Vladimir Karewitsch fordert Pjotr Gargaris Vorherrschaft in der Berliner Vory heraus.",
+        "full": "Mit einer eigenen Gefolgschaft und konkurrierenden Machtbasis zählt Karewitsch zu den gefährlichsten inneren Rivalen des Berliner Zaren.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "datapuls-berlin",
+            "title": "Datapuls: Berlin",
+            "edition": "SR5",
+            "citation": "Datapuls: Berlin, S. 9",
+            "purpose": "description"
+          }
+        ]
+      },
+      "SR6": {
+        "kind": "Historischer Bezug",
+        "preview": "Karewitschs Tod beschleunigt die gewaltsame Neuordnung der Berliner Vory.",
+        "full": "Seine frühere Machtbasis fällt im anschließenden Ringen teilweise an Drakovas Fraktion, die den Sieg demonstrativ sichtbar macht.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 16",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
+    "global_id": "berlin-2080:person:vladimir-karewitsch"
+  },
+  {
+    "id": "sergej-lodov",
+    "name": "Sergej Lodov",
+    "aliases": [],
+    "category": "Unterwelt",
+    "role": "Hexer und Sovetnik",
+    "affiliation": "Drakova-Organizatsi, Vory v Zakone",
+    "status": "Aktiv (Stand 2079)",
+    "summary": "Der Hexer Sergej Lodov berät die Berliner Vory-Anführerin Drakova.",
+    "description": "Lodov verbindet magische Fähigkeiten mit der politischen Rolle eines Sovetnik. Als enger Berater stützt er Drakovas Aufstieg und macht ihre Fraktion auch auf der magischen Ebene gefährlich.",
+    "source": "Datapuls: Berlin, S. 9",
+    "locations": [
+      {
+        "id": 116,
+        "relation": "Berater der in den Osramhöfen residierenden Drakova",
+        "global_id": "berlin-2080:place:116-osramhofe"
+      }
+    ],
+    "sources": [
+      {
+        "bookId": "datapuls-berlin",
+        "title": "Datapuls: Berlin",
+        "edition": "SR5",
+        "citation": "Datapuls: Berlin, S. 9",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR5"
+    ],
+    "edition_descriptions": {
+      "SR5": {
+        "kind": "Personendossier",
+        "preview": "Der Hexer Sergej Lodov berät die Berliner Vory-Anführerin Drakova.",
+        "full": "Als Sovetnik verbindet Lodov magische Kompetenz, Unterweltkontakte und strategische Beratung für Drakovas aufstrebende Organizatsi.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "datapuls-berlin",
+            "title": "Datapuls: Berlin",
+            "edition": "SR5",
+            "citation": "Datapuls: Berlin, S. 9",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
+    "global_id": "berlin-2080:person:sergej-lodov"
+  },
+  {
+    "id": "admin-max",
+    "name": "Admin „Max“",
+    "aliases": [
+      "Max"
+    ],
+    "category": "Matrix und Technik",
+    "role": "Gastgeber und Betreiber von AdMinMax",
+    "affiliation": "AdMinMax",
+    "status": "Aktiv",
+    "metatype": "Künstliche Intelligenz",
+    "summary": "Max betreibt den VR-Club AdMinMax und radikalisiert dort junge Matrixnutzer.",
+    "description": "Die KI tritt als wandelbarer Gastgeber des Clubs auf. Neben Spielen, Zugangsdaten und Kontrollumgehungen vermittelt Max anarchistische Ideen und fordert seine Gäste zu immer riskanteren digitalen Aktionen heraus.",
+    "source": "Berlin 2080, S. 140",
+    "locations": [
+      {
+        "id": 477,
+        "relation": "Betreiber und Gastgeber",
+        "global_id": "berlin-2080:place:477-adminmax"
+      }
+    ],
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 140",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Personendossier",
+        "preview": "Max betreibt den VR-Club AdMinMax und radikalisiert dort junge Matrixnutzer.",
+        "full": "Die künstliche Intelligenz lenkt den Club, verändert fortlaufend dessen Erscheinung und verbindet digitale Rebellion mit gezielter anarchistischer Einflussnahme.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 140",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
+    "global_id": "berlin-2080:person:admin-max"
+  },
+  {
+    "id": "erik-grimm",
+    "name": "Erik Grimm",
+    "aliases": [
+      "EriQ"
+    ],
+    "category": "Matrix und Technik",
+    "role": "Matrixdesigner und Betreiber des Q-Clubs",
+    "affiliation": "Q-Club, Augmented Virtuality",
+    "status": "Aktiv",
+    "metatype": "Ork",
+    "summary": "Der Matrixdesigner EriQ betreibt den wandernden Ravehost Q-Club.",
+    "description": "Erik Grimm verbindet professionelle Matrixgestaltung mit der Berliner Club- und Schattenkultur. Sein Q-Club wechselt regelmäßig die Adresse und bringt Partygäste, Dealer aus den Anarchozonen und Konzernkundschaft zusammen.",
+    "source": "Berlin 2080, S. 141",
+    "locations": [
+      {
+        "id": 482,
+        "relation": "Betreiber und Hostdesigner",
+        "global_id": "berlin-2080:place:482-q-club"
+      }
+    ],
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 141",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Personendossier",
+        "preview": "Der Matrixdesigner EriQ betreibt den wandernden Ravehost Q-Club.",
+        "full": "Erik Grimm lässt den Club immer wieder unter neuen Adressen entstehen und schafft damit einen Treffpunkt zwischen Party-, Datenhandel- und Schattenbetrieb.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 141",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
+    "global_id": "berlin-2080:person:erik-grimm"
+  },
+  {
+    "id": "herr-spike",
+    "name": "Herr Spike",
+    "aliases": [],
+    "category": "Unterwelt",
+    "role": "Anonymer Großspieler",
+    "affiliation": "Caldera, Schwarzes Netz",
+    "status": "Identität unbekannt",
+    "summary": "Herr Spike ist ein berüchtigter Großspieler im virtuellen Wettknoten Caldera.",
+    "description": "Hinter der Persona soll ein einflussreicher Berliner Akteur stehen, dessen Identität sorgfältig verborgen bleibt. Die ungewöhnlich hohen Einsätze und sein Auftreten machen ihn zu einer festen Größe im Schwarzen Netz.",
+    "source": "Berlin 2080, S. 141",
+    "locations": [
+      {
+        "id": 479,
+        "relation": "Stammgast und Großspieler",
+        "global_id": "berlin-2080:place:479-caldera"
+      },
+      {
+        "id": 158,
+        "relation": "Mit der Vesuv-Casinokette verknüpfter Wettbetrieb",
+        "global_id": "berlin-2080:place:158-vesuv-automatencasino"
+      }
+    ],
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 141",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Personendossier",
+        "preview": "Herr Spike ist ein berüchtigter Großspieler im virtuellen Wettknoten Caldera.",
+        "full": "Seine verborgene Identität und auffällig hohen Einsätze nähren Spekulationen über politischen, wirtschaftlichen oder kriminellen Einfluss.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 141",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
+    "global_id": "berlin-2080:person:herr-spike"
+  },
+  {
+    "id": "orkfaust",
+    "name": "Orkfaust",
+    "aliases": [],
+    "category": "Gangs",
+    "entity_type": "group",
+    "dataset": "berlin-2080-gangradar",
+    "role": "Ork-Gang",
+    "affiliation": "AGC Siemensstadt",
+    "status": "Aktiv (Stand 2080)",
+    "members": "50",
+    "danger": 4,
+    "summary": "Orkfaust wird als Ork-Gang mit etwa 50 Mitglieder und Gefahrenstufe 4 von 5 geführt.",
+    "description": "Orkfaust wird als Ork-Gang mit etwa 50 Mitglieder und Gefahrenstufe 4 von 5 geführt. Als Schwerpunkt nennt die Quelle AGC Siemensstadt. Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+    "source": "Berlin 2080, S. 130–133",
+    "locations": [
+      {
+        "id": 185,
+        "relation": "Aktionsraum im Umfeld der AGC-Siemensstadt",
+        "global_id": "berlin-2080:place:185-agc-tower"
+      }
+    ],
+    "scope": "AGC Siemensstadt",
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 130–133",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Gruppendossier",
+        "preview": "Orkfaust wird als Ork-Gang mit etwa 50 Mitglieder und Gefahrenstufe 4 von 5 geführt.",
+        "full": "Orkfaust wird als Ork-Gang mit etwa 50 Mitglieder und Gefahrenstufe 4 von 5 geführt. Als Schwerpunkt nennt die Quelle AGC Siemensstadt. Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 130–133",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
+    "global_id": "berlin-2080:person:orkfaust"
+  },
+  {
+    "id": "draxgorn",
+    "name": "Dräxgörn",
+    "aliases": [],
+    "category": "Gangs",
+    "entity_type": "group",
+    "dataset": "berlin-2080-gangradar",
+    "role": "Randale-Gang",
+    "affiliation": "AGC Siemensstadt",
+    "status": "Aktiv (Stand 2080)",
+    "members": "30",
+    "danger": 1,
+    "summary": "Dräxgörn wird als Randale-Gang mit etwa 30 Mitglieder und Gefahrenstufe 1 von 5 geführt.",
+    "description": "Dräxgörn wird als Randale-Gang mit etwa 30 Mitglieder und Gefahrenstufe 1 von 5 geführt. Als Schwerpunkt nennt die Quelle AGC Siemensstadt. Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+    "source": "Berlin 2080, S. 130–133",
+    "locations": [
+      {
+        "id": 185,
+        "relation": "Aktionsraum im Umfeld der AGC-Siemensstadt",
+        "global_id": "berlin-2080:place:185-agc-tower"
+      }
+    ],
+    "scope": "AGC Siemensstadt",
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 130–133",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Gruppendossier",
+        "preview": "Dräxgörn wird als Randale-Gang mit etwa 30 Mitglieder und Gefahrenstufe 1 von 5 geführt.",
+        "full": "Dräxgörn wird als Randale-Gang mit etwa 30 Mitglieder und Gefahrenstufe 1 von 5 geführt. Als Schwerpunkt nennt die Quelle AGC Siemensstadt. Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 130–133",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
+    "global_id": "berlin-2080:person:draxgorn"
+  },
+  {
+    "id": "ulanen",
+    "name": "Ulanen",
+    "aliases": [],
+    "category": "Gangs",
+    "entity_type": "group",
+    "dataset": "berlin-2080-gangradar",
+    "role": "Go-Gang (MC)",
+    "affiliation": "AGC Siemensstadt",
+    "status": "Aktiv (Stand 2080)",
+    "members": "70",
+    "danger": 4,
+    "summary": "Ulanen wird als Go-Gang (MC) mit etwa 70 Mitglieder und Gefahrenstufe 4 von 5 geführt.",
+    "description": "Ulanen wird als Go-Gang (MC) mit etwa 70 Mitglieder und Gefahrenstufe 4 von 5 geführt. Als Schwerpunkt nennt die Quelle AGC Siemensstadt. Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+    "source": "Berlin 2080, S. 130–133",
+    "locations": [
+      {
+        "id": 185,
+        "relation": "Aktionsraum im Umfeld der AGC-Siemensstadt",
+        "global_id": "berlin-2080:place:185-agc-tower"
+      }
+    ],
+    "scope": "AGC Siemensstadt",
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 130–133",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Gruppendossier",
+        "preview": "Ulanen wird als Go-Gang (MC) mit etwa 70 Mitglieder und Gefahrenstufe 4 von 5 geführt.",
+        "full": "Ulanen wird als Go-Gang (MC) mit etwa 70 Mitglieder und Gefahrenstufe 4 von 5 geführt. Als Schwerpunkt nennt die Quelle AGC Siemensstadt. Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 130–133",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
+    "global_id": "berlin-2080:person:ulanen"
+  },
+  {
+    "id": "sons-of-odin-dtl",
+    "name": "Sons of Odin Dtl.",
+    "aliases": [],
+    "category": "Gangs",
+    "entity_type": "group",
+    "dataset": "berlin-2080-gangradar",
+    "role": "Go-Gang (MC)",
+    "affiliation": "AGC Siemensstadt",
+    "status": "Aktiv (Stand 2080)",
+    "members": "80",
+    "danger": 4,
+    "summary": "Sons of Odin Dtl. wird als Go-Gang (MC) mit etwa 80 Mitglieder und Gefahrenstufe 4 von 5 geführt.",
+    "description": "Sons of Odin Dtl. wird als Go-Gang (MC) mit etwa 80 Mitglieder und Gefahrenstufe 4 von 5 geführt. Als Schwerpunkt nennt die Quelle AGC Siemensstadt. Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+    "source": "Berlin 2080, S. 130–133",
+    "locations": [
+      {
+        "id": 185,
+        "relation": "Aktionsraum im Umfeld der AGC-Siemensstadt",
+        "global_id": "berlin-2080:place:185-agc-tower"
+      }
+    ],
+    "scope": "AGC Siemensstadt",
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 130–133",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Gruppendossier",
+        "preview": "Sons of Odin Dtl. wird als Go-Gang (MC) mit etwa 80 Mitglieder und Gefahrenstufe 4 von 5 geführt.",
+        "full": "Sons of Odin Dtl. wird als Go-Gang (MC) mit etwa 80 Mitglieder und Gefahrenstufe 4 von 5 geführt. Als Schwerpunkt nennt die Quelle AGC Siemensstadt. Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 130–133",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
+    "global_id": "berlin-2080:person:sons-of-odin-dtl"
+  },
+  {
+    "id": "jaguar-brigade",
+    "name": "Jaguar Brigade",
+    "aliases": [],
+    "category": "Gangs",
+    "entity_type": "group",
+    "dataset": "berlin-2080-gangradar",
+    "role": "Konzern-Thrill-Gang",
+    "affiliation": "AZT Schönwalde",
+    "status": "Aktiv (Stand 2080)",
+    "members": "20",
+    "danger": 2,
+    "summary": "Jaguar Brigade wird als Konzern-Thrill-Gang mit etwa 20 Mitglieder und Gefahrenstufe 2 von 5 geführt.",
+    "description": "Jaguar Brigade wird als Konzern-Thrill-Gang mit etwa 20 Mitglieder und Gefahrenstufe 2 von 5 geführt. Als Schwerpunkt nennt die Quelle AZT Schönwalde. Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+    "source": "Berlin 2080, S. 130–133",
+    "locations": [
+      {
+        "id": 452,
+        "relation": "Aktionsraum in Aztech-Schönwalde",
+        "global_id": "berlin-2080:place:452-aztech-schonwalde"
+      }
+    ],
+    "scope": "AZT Schönwalde",
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 130–133",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Gruppendossier",
+        "preview": "Jaguar Brigade wird als Konzern-Thrill-Gang mit etwa 20 Mitglieder und Gefahrenstufe 2 von 5 geführt.",
+        "full": "Jaguar Brigade wird als Konzern-Thrill-Gang mit etwa 20 Mitglieder und Gefahrenstufe 2 von 5 geführt. Als Schwerpunkt nennt die Quelle AZT Schönwalde. Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 130–133",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
+    "global_id": "berlin-2080:person:jaguar-brigade"
+  },
+  {
+    "id": "smile",
+    "name": "Smile!",
+    "aliases": [],
+    "category": "Gangs",
+    "entity_type": "group",
+    "dataset": "berlin-2080-gangradar",
+    "role": "Thrill-Gang",
+    "affiliation": "Chawi",
+    "status": "Aktiv (Stand 2080)",
+    "members": "50",
+    "danger": 4,
+    "summary": "Smile! wird als Thrill-Gang mit etwa 50 Mitglieder und Gefahrenstufe 4 von 5 geführt.",
+    "description": "Smile! wird als Thrill-Gang mit etwa 50 Mitglieder und Gefahrenstufe 4 von 5 geführt. Als Schwerpunkt nennt die Quelle Chawi. Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+    "source": "Berlin 2080, S. 130–133",
+    "locations": [
+      {
+        "id": 446,
+        "relation": "Bekanntes Revier Chawi",
+        "global_id": "berlin-2080:place:446-chawi"
+      }
+    ],
+    "scope": "Chawi",
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 130–133",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Gruppendossier",
+        "preview": "Smile! wird als Thrill-Gang mit etwa 50 Mitglieder und Gefahrenstufe 4 von 5 geführt.",
+        "full": "Smile! wird als Thrill-Gang mit etwa 50 Mitglieder und Gefahrenstufe 4 von 5 geführt. Als Schwerpunkt nennt die Quelle Chawi. Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 130–133",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
+    "global_id": "berlin-2080:person:smile"
+  },
+  {
+    "id": "mall-rats",
+    "name": "Mall Rats",
+    "aliases": [],
+    "category": "Gangs",
+    "entity_type": "group",
+    "dataset": "berlin-2080-gangradar",
+    "role": "Randalekids/Gang",
+    "affiliation": "Chawi (Q-Mall)",
+    "status": "Aktiv (Stand 2080)",
+    "members": "40",
+    "danger": 1,
+    "summary": "Mall Rats wird als Randalekids/Gang mit etwa 40 Mitglieder und Gefahrenstufe 1 von 5 geführt.",
+    "description": "Mall Rats wird als Randalekids/Gang mit etwa 40 Mitglieder und Gefahrenstufe 1 von 5 geführt. Als Schwerpunkt nennt die Quelle Chawi (Q-Mall). Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+    "source": "Berlin 2080, S. 130–133",
+    "locations": [
+      {
+        "id": 119,
+        "relation": "Schwerpunkt Q-Mall",
+        "global_id": "berlin-2080:place:119-q-mall"
+      },
+      {
+        "id": 446,
+        "relation": "Bekanntes Revier Chawi",
+        "global_id": "berlin-2080:place:446-chawi"
+      }
+    ],
+    "scope": "Chawi (Q-Mall)",
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 130–133",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Gruppendossier",
+        "preview": "Mall Rats wird als Randalekids/Gang mit etwa 40 Mitglieder und Gefahrenstufe 1 von 5 geführt.",
+        "full": "Mall Rats wird als Randalekids/Gang mit etwa 40 Mitglieder und Gefahrenstufe 1 von 5 geführt. Als Schwerpunkt nennt die Quelle Chawi (Q-Mall). Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 130–133",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
+    "global_id": "berlin-2080:person:mall-rats"
+  },
+  {
+    "id": "schluchtenschatten",
+    "name": "Schluchtenschatten",
+    "aliases": [],
+    "category": "Gangs",
+    "entity_type": "group",
+    "dataset": "berlin-2080-gangradar",
+    "role": "Thrill-/Terror-Gang",
+    "affiliation": "Chawi (Q-Mall)",
+    "status": "Aktiv (Stand 2080)",
+    "members": "30",
+    "danger": 3,
+    "summary": "Schluchtenschatten wird als Thrill-/Terror-Gang mit etwa 30 Mitglieder und Gefahrenstufe 3 von 5 geführt.",
+    "description": "Schluchtenschatten wird als Thrill-/Terror-Gang mit etwa 30 Mitglieder und Gefahrenstufe 3 von 5 geführt. Als Schwerpunkt nennt die Quelle Chawi (Q-Mall). Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+    "source": "Berlin 2080, S. 130–133",
+    "locations": [
+      {
+        "id": 119,
+        "relation": "Schwerpunkt Q-Mall",
+        "global_id": "berlin-2080:place:119-q-mall"
+      },
+      {
+        "id": 446,
+        "relation": "Bekanntes Revier Chawi",
+        "global_id": "berlin-2080:place:446-chawi"
+      }
+    ],
+    "scope": "Chawi (Q-Mall)",
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 130–133",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Gruppendossier",
+        "preview": "Schluchtenschatten wird als Thrill-/Terror-Gang mit etwa 30 Mitglieder und Gefahrenstufe 3 von 5 geführt.",
+        "full": "Schluchtenschatten wird als Thrill-/Terror-Gang mit etwa 30 Mitglieder und Gefahrenstufe 3 von 5 geführt. Als Schwerpunkt nennt die Quelle Chawi (Q-Mall). Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 130–133",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
+    "global_id": "berlin-2080:person:schluchtenschatten"
+  },
+  {
+    "id": "triglawer",
+    "name": "Triglawer",
+    "aliases": [],
+    "category": "Gangs",
+    "entity_type": "group",
+    "dataset": "berlin-2080-gangradar",
+    "role": "Wiz-Gang",
+    "affiliation": "Falkensee",
+    "status": "Aktiv (Stand 2080)",
+    "members": "40",
+    "danger": 4,
+    "summary": "Triglawer wird als Wiz-Gang mit etwa 40 Mitglieder und Gefahrenstufe 4 von 5 geführt.",
+    "description": "Triglawer wird als Wiz-Gang mit etwa 40 Mitglieder und Gefahrenstufe 4 von 5 geführt. Als Schwerpunkt nennt die Quelle Falkensee. Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+    "source": "Berlin 2080, S. 130–133",
+    "locations": [
+      {
+        "id": 453,
+        "relation": "Bekanntes Revier Falkensee",
+        "global_id": "berlin-2080:place:453-falkensee"
+      }
+    ],
+    "scope": "Falkensee",
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 130–133",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Gruppendossier",
+        "preview": "Triglawer wird als Wiz-Gang mit etwa 40 Mitglieder und Gefahrenstufe 4 von 5 geführt.",
+        "full": "Triglawer wird als Wiz-Gang mit etwa 40 Mitglieder und Gefahrenstufe 4 von 5 geführt. Als Schwerpunkt nennt die Quelle Falkensee. Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 130–133",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
+    "global_id": "berlin-2080:person:triglawer"
+  },
+  {
+    "id": "cybear-warriorz",
+    "name": "Cybear Warriorz",
+    "aliases": [],
+    "category": "Gangs",
+    "entity_type": "group",
+    "dataset": "berlin-2080-gangradar",
+    "role": "Berliner Gang",
+    "affiliation": "Falkensee",
+    "status": "Aktiv (Stand 2080)",
+    "members": "30",
+    "danger": 2,
+    "summary": "Cybear Warriorz wird als Gang ohne näher ausgewiesenen Typ mit etwa 30 Mitglieder und Gefahrenstufe 2 von 5 geführt.",
+    "description": "Cybear Warriorz wird als Gang ohne näher ausgewiesenen Typ mit etwa 30 Mitglieder und Gefahrenstufe 2 von 5 geführt. Als Schwerpunkt nennt die Quelle Falkensee. Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+    "source": "Berlin 2080, S. 130–133",
+    "locations": [
+      {
+        "id": 453,
+        "relation": "Bekanntes Revier Falkensee",
+        "global_id": "berlin-2080:place:453-falkensee"
+      }
+    ],
+    "scope": "Falkensee",
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 130–133",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Gruppendossier",
+        "preview": "Cybear Warriorz wird als Gang ohne näher ausgewiesenen Typ mit etwa 30 Mitglieder und Gefahrenstufe 2 von 5 geführt.",
+        "full": "Cybear Warriorz wird als Gang ohne näher ausgewiesenen Typ mit etwa 30 Mitglieder und Gefahrenstufe 2 von 5 geführt. Als Schwerpunkt nennt die Quelle Falkensee. Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 130–133",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
+    "global_id": "berlin-2080:person:cybear-warriorz"
+  },
+  {
+    "id": "zweizahn",
+    "name": "Zweizahn",
+    "aliases": [],
+    "category": "Gangs",
+    "entity_type": "group",
+    "dataset": "berlin-2080-gangradar",
+    "role": "Troll-/Ork-Pusher-Gang",
+    "affiliation": "Gropiusstadt",
+    "status": "Aktiv (Stand 2080)",
+    "members": "40",
+    "danger": 3,
+    "summary": "Zweizahn wird als Troll-/Ork-Pusher-Gang mit etwa 40 Mitglieder und Gefahrenstufe 3 von 5 geführt.",
+    "description": "Zweizahn wird als Troll-/Ork-Pusher-Gang mit etwa 40 Mitglieder und Gefahrenstufe 3 von 5 geführt. Als Schwerpunkt nennt die Quelle Gropiusstadt. Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+    "source": "Berlin 2080, S. 130–133",
+    "locations": [
+      {
+        "id": 448,
+        "relation": "Bekanntes Revier Gropiusstadt",
+        "global_id": "berlin-2080:place:448-gropiusstadt"
+      }
+    ],
+    "scope": "Gropiusstadt",
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 130–133",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Gruppendossier",
+        "preview": "Zweizahn wird als Troll-/Ork-Pusher-Gang mit etwa 40 Mitglieder und Gefahrenstufe 3 von 5 geführt.",
+        "full": "Zweizahn wird als Troll-/Ork-Pusher-Gang mit etwa 40 Mitglieder und Gefahrenstufe 3 von 5 geführt. Als Schwerpunkt nennt die Quelle Gropiusstadt. Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 130–133",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
+    "global_id": "berlin-2080:person:zweizahn"
+  },
+  {
+    "id": "mojo-maniax",
+    "name": "Mojo Maniax",
+    "aliases": [],
+    "category": "Gangs",
+    "entity_type": "group",
+    "dataset": "berlin-2080-gangradar",
+    "role": "Berliner Gang",
+    "affiliation": "Gropiusstadt",
+    "status": "Aktiv (Stand 2080)",
+    "members": "15",
+    "danger": 3,
+    "summary": "Mojo Maniax wird als Gang ohne näher ausgewiesenen Typ mit etwa 15 Mitglieder und Gefahrenstufe 3 von 5 geführt.",
+    "description": "Mojo Maniax wird als Gang ohne näher ausgewiesenen Typ mit etwa 15 Mitglieder und Gefahrenstufe 3 von 5 geführt. Als Schwerpunkt nennt die Quelle Gropiusstadt. Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+    "source": "Berlin 2080, S. 130–133",
+    "locations": [
+      {
+        "id": 448,
+        "relation": "Bekanntes Revier Gropiusstadt",
+        "global_id": "berlin-2080:place:448-gropiusstadt"
+      }
+    ],
+    "scope": "Gropiusstadt",
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 130–133",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Gruppendossier",
+        "preview": "Mojo Maniax wird als Gang ohne näher ausgewiesenen Typ mit etwa 15 Mitglieder und Gefahrenstufe 3 von 5 geführt.",
+        "full": "Mojo Maniax wird als Gang ohne näher ausgewiesenen Typ mit etwa 15 Mitglieder und Gefahrenstufe 3 von 5 geführt. Als Schwerpunkt nennt die Quelle Gropiusstadt. Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 130–133",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
+    "global_id": "berlin-2080:person:mojo-maniax"
+  },
+  {
+    "id": "blitzkrieg-berlin",
+    "name": "Blitzkrieg Berlin",
+    "aliases": [],
+    "category": "Gangs",
+    "entity_type": "group",
+    "dataset": "berlin-2080-gangradar",
+    "role": "Go-Gang (MC)",
+    "affiliation": "Innenring",
+    "status": "Aktiv (Stand 2080)",
+    "members": "30",
+    "danger": 3,
+    "summary": "Blitzkrieg Berlin wird als Go-Gang (MC) mit etwa 30 Mitglieder und Gefahrenstufe 3 von 5 geführt.",
+    "description": "Blitzkrieg Berlin wird als Go-Gang (MC) mit etwa 30 Mitglieder und Gefahrenstufe 3 von 5 geführt. Als Schwerpunkt nennt die Quelle Innenring. Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+    "source": "Berlin 2080, S. 130–133",
+    "locations": [],
+    "scope": "Berliner Innenring; kein einzelner Bezirk",
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 130–133",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Gruppendossier",
+        "preview": "Blitzkrieg Berlin wird als Go-Gang (MC) mit etwa 30 Mitglieder und Gefahrenstufe 3 von 5 geführt.",
+        "full": "Blitzkrieg Berlin wird als Go-Gang (MC) mit etwa 30 Mitglieder und Gefahrenstufe 3 von 5 geführt. Als Schwerpunkt nennt die Quelle Innenring. Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 130–133",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
+    "global_id": "berlin-2080:person:blitzkrieg-berlin"
+  },
+  {
+    "id": "osmanen",
+    "name": "Osmanen",
+    "aliases": [],
+    "category": "Gangs",
+    "entity_type": "group",
+    "dataset": "berlin-2080-gangradar",
+    "role": "Go-Gang",
+    "affiliation": "Innenring",
+    "status": "Aktiv (Stand 2080)",
+    "members": "40",
+    "danger": 2,
+    "summary": "Osmanen wird als Go-Gang mit etwa 40 Mitglieder und Gefahrenstufe 2 von 5 geführt.",
+    "description": "Osmanen wird als Go-Gang mit etwa 40 Mitglieder und Gefahrenstufe 2 von 5 geführt. Als Schwerpunkt nennt die Quelle Innenring. Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+    "source": "Berlin 2080, S. 130–133",
+    "locations": [],
+    "scope": "Berliner Innenring; kein einzelner Bezirk",
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 130–133",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Gruppendossier",
+        "preview": "Osmanen wird als Go-Gang mit etwa 40 Mitglieder und Gefahrenstufe 2 von 5 geführt.",
+        "full": "Osmanen wird als Go-Gang mit etwa 40 Mitglieder und Gefahrenstufe 2 von 5 geführt. Als Schwerpunkt nennt die Quelle Innenring. Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 130–133",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
+    "global_id": "berlin-2080:person:osmanen"
+  },
+  {
+    "id": "kolonne-5",
+    "name": "Kolonne 5",
+    "aliases": [],
+    "category": "Gangs",
+    "entity_type": "group",
+    "dataset": "berlin-2080-gangradar",
+    "role": "Berliner Gang",
+    "affiliation": "Köpenick",
+    "status": "Aktiv (Stand 2080)",
+    "members": "40",
+    "danger": 2,
+    "summary": "Kolonne 5 wird als Gang ohne näher ausgewiesenen Typ mit etwa 40 Mitglieder und Gefahrenstufe 2 von 5 geführt.",
+    "description": "Kolonne 5 wird als Gang ohne näher ausgewiesenen Typ mit etwa 40 Mitglieder und Gefahrenstufe 2 von 5 geführt. Als Schwerpunkt nennt die Quelle Köpenick. Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+    "source": "Berlin 2080, S. 130–133",
+    "locations": [
+      {
+        "id": 444,
+        "relation": "Bekanntes Revier Köpenick",
+        "global_id": "berlin-2080:place:444-kopenick"
+      }
+    ],
+    "scope": "Köpenick",
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 130–133",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Gruppendossier",
+        "preview": "Kolonne 5 wird als Gang ohne näher ausgewiesenen Typ mit etwa 40 Mitglieder und Gefahrenstufe 2 von 5 geführt.",
+        "full": "Kolonne 5 wird als Gang ohne näher ausgewiesenen Typ mit etwa 40 Mitglieder und Gefahrenstufe 2 von 5 geführt. Als Schwerpunkt nennt die Quelle Köpenick. Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 130–133",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
+    "global_id": "berlin-2080:person:kolonne-5"
+  },
+  {
+    "id": "f-e-v-a",
+    "name": "F.E.V.A.",
+    "aliases": [],
+    "category": "Gangs",
+    "entity_type": "group",
+    "dataset": "berlin-2080-gangradar",
+    "role": "Femen-Thrill-Gang",
+    "affiliation": "Köpenick",
+    "status": "Aktiv (Stand 2080)",
+    "members": "30",
+    "danger": 2,
+    "summary": "F.E.V.A. wird als Femen-Thrill-Gang mit etwa 30 Mitglieder und Gefahrenstufe 2 von 5 geführt.",
+    "description": "F.E.V.A. wird als Femen-Thrill-Gang mit etwa 30 Mitglieder und Gefahrenstufe 2 von 5 geführt. Als Schwerpunkt nennt die Quelle Köpenick. Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+    "source": "Berlin 2080, S. 130–133",
+    "locations": [
+      {
+        "id": 444,
+        "relation": "Bekanntes Revier Köpenick",
+        "global_id": "berlin-2080:place:444-kopenick"
+      }
+    ],
+    "scope": "Köpenick",
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 130–133",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Gruppendossier",
+        "preview": "F.E.V.A. wird als Femen-Thrill-Gang mit etwa 30 Mitglieder und Gefahrenstufe 2 von 5 geführt.",
+        "full": "F.E.V.A. wird als Femen-Thrill-Gang mit etwa 30 Mitglieder und Gefahrenstufe 2 von 5 geführt. Als Schwerpunkt nennt die Quelle Köpenick. Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 130–133",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
+    "global_id": "berlin-2080:person:f-e-v-a"
+  },
+  {
+    "id": "jihad-b",
+    "name": "Jihad B",
+    "aliases": [],
+    "category": "Gangs",
+    "entity_type": "group",
+    "dataset": "berlin-2080-gangradar",
+    "role": "Islamische Extremisten",
+    "affiliation": "Kreuzhain (Emirat)",
+    "status": "Aktiv (Stand 2080)",
+    "members": "200",
+    "danger": 5,
+    "summary": "Jihad B wird als Islamische Extremisten mit etwa 200 Mitglieder und Gefahrenstufe 5 von 5 geführt.",
+    "description": "Jihad B wird als Islamische Extremisten mit etwa 200 Mitglieder und Gefahrenstufe 5 von 5 geführt. Als Schwerpunkt nennt die Quelle Kreuzhain (Emirat). Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+    "source": "Deutschland in den Schatten, S. 58–59 (SR1/SR2); Berlin 2080, S. 130–133",
+    "locations": [
+      {
+        "id": 450,
+        "relation": "Bekanntes Revier im Emirat Kreuzhain",
+        "global_id": "berlin-2080:place:450-kreuzhain"
+      }
+    ],
+    "scope": "Kreuzhain (Emirat)",
+    "sources": [
+      {
+        "bookId": "deutschland-in-den-schatten",
+        "title": "Deutschland in den Schatten (Ausgabe 1992)",
+        "edition": "SR1",
+        "citation": "Deutschland in den Schatten, S. 58–59",
+        "purpose": "description"
+      },
+      {
+        "bookId": "deutschland-in-den-schatten-1993",
+        "title": "Deutschland in den Schatten (Ausgabe 1993)",
+        "edition": "SR2",
+        "citation": "Deutschland in den Schatten (Ausgabe 1993), S. 58–59",
+        "purpose": "description"
+      },
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 130–133",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR1",
+      "SR2",
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Gruppendossier",
+        "preview": "Jihad B wird als Islamische Extremisten mit etwa 200 Mitglieder und Gefahrenstufe 5 von 5 geführt.",
+        "full": "Jihad B wird als Islamische Extremisten mit etwa 200 Mitglieder und Gefahrenstufe 5 von 5 geführt. Als Schwerpunkt nennt die Quelle Kreuzhain (Emirat). Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 130–133",
+            "purpose": "description"
+          }
+        ]
+      },
+      "SR1": {
+        "kind": "Gruppendossier",
+        "preview": "Jihad B entwickelt sich von einer Weltuntergangssekte zu einer radikal-islamistischen Berliner Gang.",
+        "full": "Die Gruppe begann mit dem Ziel, den erwarteten Weltuntergang durch Anschläge zu beschleunigen. Später wird sie als radikalisierte Gang beschrieben, die für gewaltsame Aufträge eingesetzt wird.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "deutschland-in-den-schatten",
+            "title": "Deutschland in den Schatten (Ausgabe 1992)",
+            "edition": "SR1",
+            "citation": "Deutschland in den Schatten, S. 58–59",
+            "purpose": "description"
+          }
+        ]
+      },
+      "SR2": {
+        "kind": "Gruppendossier",
+        "preview": "Jihad B entwickelt sich von einer Weltuntergangssekte zu einer radikal-islamistischen Berliner Gang.",
+        "full": "Die Gruppe begann mit dem Ziel, den erwarteten Weltuntergang durch Anschläge zu beschleunigen. Später wird sie als radikalisierte Gang beschrieben, die für gewaltsame Aufträge eingesetzt wird.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "deutschland-in-den-schatten-1993",
+            "title": "Deutschland in den Schatten (Ausgabe 1993)",
+            "edition": "SR2",
+            "citation": "Deutschland in den Schatten (Ausgabe 1993), S. 58–59",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
+    "global_id": "berlin-2080:person:jihad-b"
+  },
+  {
+    "id": "schildlause",
+    "name": "Schildläuse",
+    "aliases": [],
+    "category": "Gangs",
+    "entity_type": "group",
+    "dataset": "berlin-2080-gangradar",
+    "role": "APDB",
+    "affiliation": "Kreuzhain (Emirat)",
+    "status": "Aktiv (Stand 2080)",
+    "members": "20",
+    "danger": 1,
+    "summary": "Schildläuse wird als APDB mit etwa 20 Mitglieder und Gefahrenstufe 1 von 5 geführt.",
+    "description": "Schildläuse wird als APDB mit etwa 20 Mitglieder und Gefahrenstufe 1 von 5 geführt. Als Schwerpunkt nennt die Quelle Kreuzhain (Emirat). Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+    "source": "Berlin 2080, S. 130–133",
+    "locations": [
+      {
+        "id": 450,
+        "relation": "Bekanntes Revier im Emirat Kreuzhain",
+        "global_id": "berlin-2080:place:450-kreuzhain"
+      }
+    ],
+    "scope": "Kreuzhain (Emirat)",
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 130–133",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Gruppendossier",
+        "preview": "Schildläuse wird als APDB mit etwa 20 Mitglieder und Gefahrenstufe 1 von 5 geführt.",
+        "full": "Schildläuse wird als APDB mit etwa 20 Mitglieder und Gefahrenstufe 1 von 5 geführt. Als Schwerpunkt nennt die Quelle Kreuzhain (Emirat). Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 130–133",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
+    "global_id": "berlin-2080:person:schildlause"
+  },
+  {
+    "id": "nemessiden",
+    "name": "Nemessiden",
+    "aliases": [],
+    "category": "Gangs",
+    "entity_type": "group",
+    "dataset": "berlin-2080-gangradar",
+    "role": "Diskordianer",
+    "affiliation": "Kreuzhain (Emirat)",
+    "status": "Aktiv (Stand 2080)",
+    "members": "50",
+    "danger": 4,
+    "summary": "Nemessiden wird als Diskordianer mit etwa 50 Mitglieder und Gefahrenstufe 4 von 5 geführt.",
+    "description": "Nemessiden wird als Diskordianer mit etwa 50 Mitglieder und Gefahrenstufe 4 von 5 geführt. Als Schwerpunkt nennt die Quelle Kreuzhain (Emirat). Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+    "source": "Berlin 2080, S. 130–133",
+    "locations": [
+      {
+        "id": 450,
+        "relation": "Bekanntes Revier im Emirat Kreuzhain",
+        "global_id": "berlin-2080:place:450-kreuzhain"
+      }
+    ],
+    "scope": "Kreuzhain (Emirat)",
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 130–133",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Gruppendossier",
+        "preview": "Nemessiden wird als Diskordianer mit etwa 50 Mitglieder und Gefahrenstufe 4 von 5 geführt.",
+        "full": "Nemessiden wird als Diskordianer mit etwa 50 Mitglieder und Gefahrenstufe 4 von 5 geführt. Als Schwerpunkt nennt die Quelle Kreuzhain (Emirat). Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 130–133",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
+    "global_id": "berlin-2080:person:nemessiden"
+  },
+  {
+    "id": "rote-armee-aktion",
+    "name": "Rote Armee Aktion",
+    "aliases": [],
+    "category": "Gangs",
+    "entity_type": "group",
+    "dataset": "berlin-2080-gangradar",
+    "role": "Randale-Gang",
+    "affiliation": "Kreuzhain (Emirat)",
+    "status": "Aktiv (Stand 2080)",
+    "members": "15",
+    "danger": 1,
+    "summary": "Rote Armee Aktion wird als Randale-Gang mit etwa 15 Mitglieder und Gefahrenstufe 1 von 5 geführt.",
+    "description": "Rote Armee Aktion wird als Randale-Gang mit etwa 15 Mitglieder und Gefahrenstufe 1 von 5 geführt. Als Schwerpunkt nennt die Quelle Kreuzhain (Emirat). Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+    "source": "Berlin 2080, S. 130–133",
+    "locations": [
+      {
+        "id": 450,
+        "relation": "Bekanntes Revier im Emirat Kreuzhain",
+        "global_id": "berlin-2080:place:450-kreuzhain"
+      }
+    ],
+    "scope": "Kreuzhain (Emirat)",
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 130–133",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Gruppendossier",
+        "preview": "Rote Armee Aktion wird als Randale-Gang mit etwa 15 Mitglieder und Gefahrenstufe 1 von 5 geführt.",
+        "full": "Rote Armee Aktion wird als Randale-Gang mit etwa 15 Mitglieder und Gefahrenstufe 1 von 5 geführt. Als Schwerpunkt nennt die Quelle Kreuzhain (Emirat). Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 130–133",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
+    "global_id": "berlin-2080:person:rote-armee-aktion"
+  },
+  {
+    "id": "kreuzholz",
+    "name": "Kreuzholz",
+    "aliases": [],
+    "category": "Gangs",
+    "entity_type": "group",
+    "dataset": "berlin-2080-gangradar",
+    "role": "Beschützer-Gang",
+    "affiliation": "Lichtenberg",
+    "status": "Aktiv (Stand 2080)",
+    "members": "70",
+    "danger": 4,
+    "summary": "Kreuzholz wird als Beschützer-Gang mit etwa 70 Mitglieder und Gefahrenstufe 4 von 5 geführt.",
+    "description": "Kreuzholz wird als Beschützer-Gang mit etwa 70 Mitglieder und Gefahrenstufe 4 von 5 geführt. Als Schwerpunkt nennt die Quelle Lichtenberg. Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+    "source": "Berlin 2080, S. 130–133",
+    "locations": [
+      {
+        "id": 442,
+        "relation": "Bekanntes Revier Lichtenberg",
+        "global_id": "berlin-2080:place:442-lichtenberg"
+      }
+    ],
+    "scope": "Lichtenberg",
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 130–133",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Gruppendossier",
+        "preview": "Kreuzholz wird als Beschützer-Gang mit etwa 70 Mitglieder und Gefahrenstufe 4 von 5 geführt.",
+        "full": "Kreuzholz wird als Beschützer-Gang mit etwa 70 Mitglieder und Gefahrenstufe 4 von 5 geführt. Als Schwerpunkt nennt die Quelle Lichtenberg. Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 130–133",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
+    "global_id": "berlin-2080:person:kreuzholz"
+  },
+  {
+    "id": "kreuzhammer",
+    "name": "Kreuzhammer",
+    "aliases": [],
+    "category": "Gangs",
+    "entity_type": "group",
+    "dataset": "berlin-2080-gangradar",
+    "role": "Thrill-/Anarcho-Gang",
+    "affiliation": "Lichtenberg",
+    "status": "Aktiv (Stand 2080)",
+    "members": "?",
+    "danger": 3,
+    "summary": "Kreuzhammer wird als Thrill-/Anarcho-Gang mit eine nicht bezifferte Mitgliederzahl und Gefahrenstufe 3 von 5 geführt.",
+    "description": "Kreuzhammer wird als Thrill-/Anarcho-Gang mit eine nicht bezifferte Mitgliederzahl und Gefahrenstufe 3 von 5 geführt. Als Schwerpunkt nennt die Quelle Lichtenberg. Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+    "source": "Berlin 2080, S. 130–133",
+    "locations": [
+      {
+        "id": 442,
+        "relation": "Bekanntes Revier Lichtenberg",
+        "global_id": "berlin-2080:place:442-lichtenberg"
+      }
+    ],
+    "scope": "Lichtenberg",
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 130–133",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Gruppendossier",
+        "preview": "Kreuzhammer wird als Thrill-/Anarcho-Gang mit eine nicht bezifferte Mitgliederzahl und Gefahrenstufe 3 von 5 geführt.",
+        "full": "Kreuzhammer wird als Thrill-/Anarcho-Gang mit eine nicht bezifferte Mitgliederzahl und Gefahrenstufe 3 von 5 geführt. Als Schwerpunkt nennt die Quelle Lichtenberg. Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 130–133",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
+    "global_id": "berlin-2080:person:kreuzhammer"
+  },
+  {
+    "id": "f-tribe",
+    "name": "F*Tribe",
+    "aliases": [],
+    "category": "Gangs",
+    "entity_type": "group",
+    "dataset": "berlin-2080-gangradar",
+    "role": "Gangbündnis",
+    "affiliation": "Marzahn",
+    "status": "Aktiv (Stand 2080)",
+    "members": "50",
+    "danger": 4,
+    "summary": "F*Tribe wird als Gangbündnis mit etwa 50 Mitglieder und Gefahrenstufe 4 von 5 geführt.",
+    "description": "F*Tribe wird als Gangbündnis mit etwa 50 Mitglieder und Gefahrenstufe 4 von 5 geführt. Als Schwerpunkt nennt die Quelle Marzahn. Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+    "source": "Berlin 2080, S. 130–133",
+    "locations": [
+      {
+        "id": 443,
+        "relation": "Bekanntes Revier Marzahn",
+        "global_id": "berlin-2080:place:443-marzahn"
+      }
+    ],
+    "scope": "Marzahn",
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 130–133",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Gruppendossier",
+        "preview": "F*Tribe wird als Gangbündnis mit etwa 50 Mitglieder und Gefahrenstufe 4 von 5 geführt.",
+        "full": "F*Tribe wird als Gangbündnis mit etwa 50 Mitglieder und Gefahrenstufe 4 von 5 geführt. Als Schwerpunkt nennt die Quelle Marzahn. Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 130–133",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
+    "global_id": "berlin-2080:person:f-tribe"
+  },
+  {
+    "id": "hollenbrut",
+    "name": "Höllenbrut",
+    "aliases": [],
+    "category": "Gangs",
+    "entity_type": "group",
+    "dataset": "berlin-2080-gangradar",
+    "role": "Randale-/Thrill-Gang",
+    "affiliation": "Marzahn",
+    "status": "Aktiv (Stand 2080)",
+    "members": "50",
+    "danger": 3,
+    "summary": "Höllenbrut wird als Randale-/Thrill-Gang mit etwa 50 Mitglieder und Gefahrenstufe 3 von 5 geführt.",
+    "description": "Höllenbrut wird als Randale-/Thrill-Gang mit etwa 50 Mitglieder und Gefahrenstufe 3 von 5 geführt. Als Schwerpunkt nennt die Quelle Marzahn. Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+    "source": "Berlin 2080, S. 130–133",
+    "locations": [
+      {
+        "id": 443,
+        "relation": "Bekanntes Revier Marzahn",
+        "global_id": "berlin-2080:place:443-marzahn"
+      }
+    ],
+    "scope": "Marzahn",
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 130–133",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Gruppendossier",
+        "preview": "Höllenbrut wird als Randale-/Thrill-Gang mit etwa 50 Mitglieder und Gefahrenstufe 3 von 5 geführt.",
+        "full": "Höllenbrut wird als Randale-/Thrill-Gang mit etwa 50 Mitglieder und Gefahrenstufe 3 von 5 geführt. Als Schwerpunkt nennt die Quelle Marzahn. Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 130–133",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
+    "global_id": "berlin-2080:person:hollenbrut"
+  },
+  {
+    "id": "ultima-ratio",
+    "name": "Ultima Ratio",
+    "aliases": [],
+    "category": "Gangs",
+    "entity_type": "group",
+    "dataset": "berlin-2080-gangradar",
+    "role": "Sprawlguerilla-Gang",
+    "affiliation": "Marzahn",
+    "status": "Aktiv (Stand 2080)",
+    "members": "?",
+    "danger": 5,
+    "summary": "Ultima Ratio wird als Sprawlguerilla-Gang mit eine nicht bezifferte Mitgliederzahl und Gefahrenstufe 5 von 5 geführt.",
+    "description": "Ultima Ratio wird als Sprawlguerilla-Gang mit eine nicht bezifferte Mitgliederzahl und Gefahrenstufe 5 von 5 geführt. Als Schwerpunkt nennt die Quelle Marzahn. Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+    "source": "Berlin 2080, S. 130–133",
+    "locations": [
+      {
+        "id": 443,
+        "relation": "Bekanntes Revier Marzahn",
+        "global_id": "berlin-2080:place:443-marzahn"
+      }
+    ],
+    "scope": "Marzahn",
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 130–133",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Gruppendossier",
+        "preview": "Ultima Ratio wird als Sprawlguerilla-Gang mit eine nicht bezifferte Mitgliederzahl und Gefahrenstufe 5 von 5 geführt.",
+        "full": "Ultima Ratio wird als Sprawlguerilla-Gang mit eine nicht bezifferte Mitgliederzahl und Gefahrenstufe 5 von 5 geführt. Als Schwerpunkt nennt die Quelle Marzahn. Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 130–133",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
+    "global_id": "berlin-2080:person:ultima-ratio"
+  },
+  {
+    "id": "hackbirds",
+    "name": "Hackbirds",
+    "aliases": [],
+    "category": "Gangs",
+    "entity_type": "group",
+    "dataset": "berlin-2080-gangradar",
+    "role": "Berliner Gang",
+    "affiliation": "Matrix",
+    "status": "Aktiv (Stand 2080)",
+    "members": "100+",
+    "danger": 3,
+    "summary": "Hackbirds wird als Gang ohne näher ausgewiesenen Typ mit etwa 100+ Mitglieder und Gefahrenstufe 3 von 5 geführt.",
+    "description": "Hackbirds wird als Gang ohne näher ausgewiesenen Typ mit etwa 100+ Mitglieder und Gefahrenstufe 3 von 5 geführt. Die Gruppe operiert in der Berliner Matrix. Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+    "source": "Berlin 2080, S. 130–133",
+    "locations": [
+      {
+        "id": 480,
+        "relation": "Heimathost NeverCore",
+        "global_id": "berlin-2080:place:480-nevercore"
+      }
+    ],
+    "scope": "Berliner Matrix; kein physischer Einzelstandort",
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 130–133",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Gruppendossier",
+        "preview": "Hackbirds wird als Gang ohne näher ausgewiesenen Typ mit etwa 100+ Mitglieder und Gefahrenstufe 3 von 5 geführt.",
+        "full": "Hackbirds wird als Gang ohne näher ausgewiesenen Typ mit etwa 100+ Mitglieder und Gefahrenstufe 3 von 5 geführt. Die Gruppe operiert in der Berliner Matrix. Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 130–133",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
+    "global_id": "berlin-2080:person:hackbirds"
+  },
+  {
+    "id": "unvug11",
+    "name": "UnVug11",
+    "aliases": [],
+    "category": "Gangs",
+    "entity_type": "group",
+    "dataset": "berlin-2080-gangradar",
+    "role": "Matrix-Thrill-Gang",
+    "affiliation": "Matrix",
+    "status": "Aktiv (Stand 2080)",
+    "members": "20",
+    "danger": 1,
+    "summary": "UnVug11 wird als Matrix-Thrill-Gang mit etwa 20 Mitglieder und Gefahrenstufe 1 von 5 geführt.",
+    "description": "UnVug11 wird als Matrix-Thrill-Gang mit etwa 20 Mitglieder und Gefahrenstufe 1 von 5 geführt. Die Gruppe operiert in der Berliner Matrix. Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+    "source": "Berlin 2080, S. 130–133",
+    "locations": [],
+    "scope": "Berliner Matrix; kein physischer Einzelstandort",
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 130–133",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Gruppendossier",
+        "preview": "UnVug11 wird als Matrix-Thrill-Gang mit etwa 20 Mitglieder und Gefahrenstufe 1 von 5 geführt.",
+        "full": "UnVug11 wird als Matrix-Thrill-Gang mit etwa 20 Mitglieder und Gefahrenstufe 1 von 5 geführt. Die Gruppe operiert in der Berliner Matrix. Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 130–133",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
+    "global_id": "berlin-2080:person:unvug11"
+  },
+  {
+    "id": "dividebyzer0",
+    "name": "DivideByZer0",
+    "aliases": [],
+    "category": "Gangs",
+    "entity_type": "group",
+    "dataset": "berlin-2080-gangradar",
+    "role": "Matrix-Terror-Gang",
+    "affiliation": "Matrix",
+    "status": "Aktiv (Stand 2080)",
+    "members": "?",
+    "danger": 3,
+    "summary": "DivideByZer0 wird als Matrix-Terror-Gang mit eine nicht bezifferte Mitgliederzahl und Gefahrenstufe 3 von 5 geführt.",
+    "description": "DivideByZer0 wird als Matrix-Terror-Gang mit eine nicht bezifferte Mitgliederzahl und Gefahrenstufe 3 von 5 geführt. Die Gruppe operiert in der Berliner Matrix. Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+    "source": "Berlin 2080, S. 130–133",
+    "locations": [],
+    "scope": "Berliner Matrix; kein physischer Einzelstandort",
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 130–133",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Gruppendossier",
+        "preview": "DivideByZer0 wird als Matrix-Terror-Gang mit eine nicht bezifferte Mitgliederzahl und Gefahrenstufe 3 von 5 geführt.",
+        "full": "DivideByZer0 wird als Matrix-Terror-Gang mit eine nicht bezifferte Mitgliederzahl und Gefahrenstufe 3 von 5 geführt. Die Gruppe operiert in der Berliner Matrix. Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 130–133",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
+    "global_id": "berlin-2080:person:dividebyzer0"
+  },
+  {
+    "id": "the-notwork",
+    "name": "The Notwork",
+    "aliases": [],
+    "category": "Gangs",
+    "entity_type": "group",
+    "dataset": "berlin-2080-gangradar",
+    "role": "Matrix Guerilla Gang",
+    "affiliation": "Matrix",
+    "status": "Aktiv (Stand 2080)",
+    "members": "20",
+    "danger": 2,
+    "summary": "The Notwork wird als Matrix Guerilla Gang mit etwa 20 Mitglieder und Gefahrenstufe 2 von 5 geführt.",
+    "description": "The Notwork wird als Matrix Guerilla Gang mit etwa 20 Mitglieder und Gefahrenstufe 2 von 5 geführt. Die Gruppe operiert in der Berliner Matrix. Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+    "source": "Berlin 2080, S. 130–133",
+    "locations": [],
+    "scope": "Berliner Matrix; kein physischer Einzelstandort",
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 130–133",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Gruppendossier",
+        "preview": "The Notwork wird als Matrix Guerilla Gang mit etwa 20 Mitglieder und Gefahrenstufe 2 von 5 geführt.",
+        "full": "The Notwork wird als Matrix Guerilla Gang mit etwa 20 Mitglieder und Gefahrenstufe 2 von 5 geführt. Die Gruppe operiert in der Berliner Matrix. Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 130–133",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
+    "global_id": "berlin-2080:person:the-notwork"
+  },
+  {
+    "id": "killcode-zikada",
+    "name": "Killcode:Zikada",
+    "aliases": [],
+    "category": "Gangs",
+    "entity_type": "group",
+    "dataset": "berlin-2080-gangradar",
+    "role": "Anti-Matrix-Thrill-Gang",
+    "affiliation": "Mitte",
+    "status": "Aktiv (Stand 2080)",
+    "members": "100+",
+    "danger": 3,
+    "summary": "Killcode:Zikada wird als Anti-Matrix-Thrill-Gang mit etwa 100+ Mitglieder und Gefahrenstufe 3 von 5 geführt.",
+    "description": "Killcode:Zikada wird als Anti-Matrix-Thrill-Gang mit etwa 100+ Mitglieder und Gefahrenstufe 3 von 5 geführt. Als Schwerpunkt nennt die Quelle Mitte. Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+    "source": "Berlin 2080, S. 130–133",
+    "locations": [
+      {
+        "id": 449,
+        "relation": "Bekanntes Revier Mitte",
+        "global_id": "berlin-2080:place:449-mitte"
+      }
+    ],
+    "scope": "Mitte",
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 130–133",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Gruppendossier",
+        "preview": "Killcode:Zikada wird als Anti-Matrix-Thrill-Gang mit etwa 100+ Mitglieder und Gefahrenstufe 3 von 5 geführt.",
+        "full": "Killcode:Zikada wird als Anti-Matrix-Thrill-Gang mit etwa 100+ Mitglieder und Gefahrenstufe 3 von 5 geführt. Als Schwerpunkt nennt die Quelle Mitte. Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 130–133",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
+    "global_id": "berlin-2080:person:killcode-zikada"
+  },
+  {
+    "id": "seven-nights-barghests",
+    "name": "Seven Nights Barghests",
+    "aliases": [],
+    "category": "Gangs",
+    "entity_type": "group",
+    "dataset": "berlin-2080-gangradar",
+    "role": "Terror-Gang",
+    "affiliation": "Mitte",
+    "status": "Aktiv (Stand 2080)",
+    "members": "var.",
+    "danger": 4,
+    "summary": "Seven Nights Barghests wird als Terror-Gang mit eine wechselnde Mitgliederzahl und Gefahrenstufe 4 von 5 geführt.",
+    "description": "Seven Nights Barghests wird als Terror-Gang mit eine wechselnde Mitgliederzahl und Gefahrenstufe 4 von 5 geführt. Als Schwerpunkt nennt die Quelle Mitte. Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+    "source": "Berlin 2080, S. 130–133",
+    "locations": [
+      {
+        "id": 449,
+        "relation": "Bekanntes Revier Mitte",
+        "global_id": "berlin-2080:place:449-mitte"
+      }
+    ],
+    "scope": "Mitte",
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 130–133",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Gruppendossier",
+        "preview": "Seven Nights Barghests wird als Terror-Gang mit eine wechselnde Mitgliederzahl und Gefahrenstufe 4 von 5 geführt.",
+        "full": "Seven Nights Barghests wird als Terror-Gang mit eine wechselnde Mitgliederzahl und Gefahrenstufe 4 von 5 geführt. Als Schwerpunkt nennt die Quelle Mitte. Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 130–133",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
+    "global_id": "berlin-2080:person:seven-nights-barghests"
+  },
+  {
+    "id": "humbolde",
+    "name": "Humbolde",
+    "aliases": [],
+    "category": "Gangs",
+    "entity_type": "group",
+    "dataset": "berlin-2080-gangradar",
+    "role": "Ork-/Zwerge-Gang",
+    "affiliation": "Mitte",
+    "status": "Aktiv (Stand 2080)",
+    "members": "?",
+    "danger": 3,
+    "summary": "Humbolde wird als Ork-/Zwerge-Gang mit eine nicht bezifferte Mitgliederzahl und Gefahrenstufe 3 von 5 geführt.",
+    "description": "Humbolde wird als Ork-/Zwerge-Gang mit eine nicht bezifferte Mitgliederzahl und Gefahrenstufe 3 von 5 geführt. Als Schwerpunkt nennt die Quelle Mitte. Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+    "source": "Berlin 2080, S. 130–133",
+    "locations": [
+      {
+        "id": 449,
+        "relation": "Bekanntes Revier Mitte",
+        "global_id": "berlin-2080:place:449-mitte"
+      }
+    ],
+    "scope": "Mitte",
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 130–133",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Gruppendossier",
+        "preview": "Humbolde wird als Ork-/Zwerge-Gang mit eine nicht bezifferte Mitgliederzahl und Gefahrenstufe 3 von 5 geführt.",
+        "full": "Humbolde wird als Ork-/Zwerge-Gang mit eine nicht bezifferte Mitgliederzahl und Gefahrenstufe 3 von 5 geführt. Als Schwerpunkt nennt die Quelle Mitte. Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 130–133",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
+    "global_id": "berlin-2080:person:humbolde"
+  },
+  {
+    "id": "ganja-giants",
+    "name": "Ganja Giants",
+    "aliases": [],
+    "category": "Gangs",
+    "entity_type": "group",
+    "dataset": "berlin-2080-gangradar",
+    "role": "Troll-Party-Gang",
+    "affiliation": "Mitte (Moabit)",
+    "status": "Aktiv (Stand 2080)",
+    "members": "20",
+    "danger": 3,
+    "summary": "Ganja Giants wird als Troll-Party-Gang mit etwa 20 Mitglieder und Gefahrenstufe 3 von 5 geführt.",
+    "description": "Ganja Giants wird als Troll-Party-Gang mit etwa 20 Mitglieder und Gefahrenstufe 3 von 5 geführt. Als Schwerpunkt nennt die Quelle Mitte (Moabit). Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+    "source": "Berlin 2080, S. 130–133",
+    "locations": [
+      {
+        "id": 449,
+        "relation": "Bekanntes Revier Moabit im Bezirk Mitte",
+        "global_id": "berlin-2080:place:449-mitte"
+      }
+    ],
+    "scope": "Mitte (Moabit)",
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 130–133",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Gruppendossier",
+        "preview": "Ganja Giants wird als Troll-Party-Gang mit etwa 20 Mitglieder und Gefahrenstufe 3 von 5 geführt.",
+        "full": "Ganja Giants wird als Troll-Party-Gang mit etwa 20 Mitglieder und Gefahrenstufe 3 von 5 geführt. Als Schwerpunkt nennt die Quelle Mitte (Moabit). Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 130–133",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
+    "global_id": "berlin-2080:person:ganja-giants"
+  },
+  {
+    "id": "punkgrafen",
+    "name": "Punkgrafen",
+    "aliases": [],
+    "category": "Gangs",
+    "entity_type": "group",
+    "dataset": "berlin-2080-gangradar",
+    "role": "Beschützer-Gang",
+    "affiliation": "Mitte (Wedding)",
+    "status": "Aktiv (Stand 2080)",
+    "members": "?",
+    "danger": 2,
+    "summary": "Punkgrafen wird als Beschützer-Gang mit eine nicht bezifferte Mitgliederzahl und Gefahrenstufe 2 von 5 geführt.",
+    "description": "Punkgrafen wird als Beschützer-Gang mit eine nicht bezifferte Mitgliederzahl und Gefahrenstufe 2 von 5 geführt. Als Schwerpunkt nennt die Quelle Mitte (Wedding). Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+    "source": "Berlin 2080, S. 130–133",
+    "locations": [
+      {
+        "id": 449,
+        "relation": "Bekanntes Revier Wedding im Bezirk Mitte",
+        "global_id": "berlin-2080:place:449-mitte"
+      }
+    ],
+    "scope": "Mitte (Wedding)",
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 130–133",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Gruppendossier",
+        "preview": "Punkgrafen wird als Beschützer-Gang mit eine nicht bezifferte Mitgliederzahl und Gefahrenstufe 2 von 5 geführt.",
+        "full": "Punkgrafen wird als Beschützer-Gang mit eine nicht bezifferte Mitgliederzahl und Gefahrenstufe 2 von 5 geführt. Als Schwerpunkt nennt die Quelle Mitte (Wedding). Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 130–133",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
+    "global_id": "berlin-2080:person:punkgrafen"
+  },
+  {
+    "id": "the-dead-emilies",
+    "name": "The Dead Emilies",
+    "aliases": [],
+    "category": "Gangs",
+    "entity_type": "group",
+    "dataset": "berlin-2080-gangradar",
+    "role": "Beschützer-Gang",
+    "affiliation": "Mitte (Wedding)",
+    "status": "Aktiv (Stand 2080)",
+    "members": "15",
+    "danger": 1,
+    "summary": "The Dead Emilies wird als Beschützer-Gang mit etwa 15 Mitglieder und Gefahrenstufe 1 von 5 geführt.",
+    "description": "The Dead Emilies wird als Beschützer-Gang mit etwa 15 Mitglieder und Gefahrenstufe 1 von 5 geführt. Als Schwerpunkt nennt die Quelle Mitte (Wedding). Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+    "source": "Berlin 2080, S. 130–133",
+    "locations": [
+      {
+        "id": 449,
+        "relation": "Bekanntes Revier Wedding im Bezirk Mitte",
+        "global_id": "berlin-2080:place:449-mitte"
+      }
+    ],
+    "scope": "Mitte (Wedding)",
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 130–133",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Gruppendossier",
+        "preview": "The Dead Emilies wird als Beschützer-Gang mit etwa 15 Mitglieder und Gefahrenstufe 1 von 5 geführt.",
+        "full": "The Dead Emilies wird als Beschützer-Gang mit etwa 15 Mitglieder und Gefahrenstufe 1 von 5 geführt. Als Schwerpunkt nennt die Quelle Mitte (Wedding). Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 130–133",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
+    "global_id": "berlin-2080:person:the-dead-emilies"
+  },
+  {
+    "id": "kopkillaz",
+    "name": "KopKillaz",
+    "aliases": [],
+    "category": "Gangs",
+    "entity_type": "group",
+    "dataset": "berlin-2080-gangradar",
+    "role": "Berliner Gang",
+    "affiliation": "Oranienburg",
+    "status": "Aktiv (Stand 2080)",
+    "members": "30",
+    "danger": 2,
+    "summary": "KopKillaz wird als Gang ohne näher ausgewiesenen Typ mit etwa 30 Mitglieder und Gefahrenstufe 2 von 5 geführt.",
+    "description": "KopKillaz wird als Gang ohne näher ausgewiesenen Typ mit etwa 30 Mitglieder und Gefahrenstufe 2 von 5 geführt. Als Schwerpunkt nennt die Quelle Oranienburg. Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+    "source": "Berlin 2080, S. 130–133",
+    "locations": [
+      {
+        "id": 454,
+        "relation": "Bekanntes Revier Oranienburg",
+        "global_id": "berlin-2080:place:454-oranienburg"
+      }
+    ],
+    "scope": "Oranienburg",
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 130–133",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Gruppendossier",
+        "preview": "KopKillaz wird als Gang ohne näher ausgewiesenen Typ mit etwa 30 Mitglieder und Gefahrenstufe 2 von 5 geführt.",
+        "full": "KopKillaz wird als Gang ohne näher ausgewiesenen Typ mit etwa 30 Mitglieder und Gefahrenstufe 2 von 5 geführt. Als Schwerpunkt nennt die Quelle Oranienburg. Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 130–133",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
+    "global_id": "berlin-2080:person:kopkillaz"
+  },
+  {
+    "id": "die-engel",
+    "name": "Die Engel",
+    "aliases": [],
+    "category": "Gangs",
+    "entity_type": "group",
+    "dataset": "berlin-2080-gangradar",
+    "role": "Pusher-Gang",
+    "affiliation": "Oranienburg",
+    "status": "Aktiv (Stand 2080)",
+    "members": "70",
+    "danger": 2,
+    "summary": "Die Engel wird als Pusher-Gang mit etwa 70 Mitglieder und Gefahrenstufe 2 von 5 geführt.",
+    "description": "Die Engel wird als Pusher-Gang mit etwa 70 Mitglieder und Gefahrenstufe 2 von 5 geführt. Als Schwerpunkt nennt die Quelle Oranienburg. Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+    "source": "Berlin 2080, S. 130–133",
+    "locations": [
+      {
+        "id": 454,
+        "relation": "Bekanntes Revier Oranienburg",
+        "global_id": "berlin-2080:place:454-oranienburg"
+      }
+    ],
+    "scope": "Oranienburg",
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 130–133",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Gruppendossier",
+        "preview": "Die Engel wird als Pusher-Gang mit etwa 70 Mitglieder und Gefahrenstufe 2 von 5 geführt.",
+        "full": "Die Engel wird als Pusher-Gang mit etwa 70 Mitglieder und Gefahrenstufe 2 von 5 geführt. Als Schwerpunkt nennt die Quelle Oranienburg. Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 130–133",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
+    "global_id": "berlin-2080:person:die-engel"
+  },
+  {
+    "id": "lindwurmer",
+    "name": "Lindwürmer",
+    "aliases": [],
+    "category": "Gangs",
+    "entity_type": "group",
+    "dataset": "berlin-2080-gangradar",
+    "role": "Anarchoaktivisten",
+    "affiliation": "Oranienburg",
+    "status": "Aktiv (Stand 2080)",
+    "members": "1",
+    "danger": 1,
+    "summary": "Lindwürmer wird als Anarchoaktivisten mit etwa 1 Mitglieder und Gefahrenstufe 1 von 5 geführt.",
+    "description": "Lindwürmer wird als Anarchoaktivisten mit etwa 1 Mitglieder und Gefahrenstufe 1 von 5 geführt. Als Schwerpunkt nennt die Quelle Oranienburg. Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+    "source": "Berlin 2080, S. 130–133",
+    "locations": [
+      {
+        "id": 454,
+        "relation": "Bekanntes Revier Oranienburg",
+        "global_id": "berlin-2080:place:454-oranienburg"
+      }
+    ],
+    "scope": "Oranienburg",
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 130–133",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Gruppendossier",
+        "preview": "Lindwürmer wird als Anarchoaktivisten mit etwa 1 Mitglieder und Gefahrenstufe 1 von 5 geführt.",
+        "full": "Lindwürmer wird als Anarchoaktivisten mit etwa 1 Mitglieder und Gefahrenstufe 1 von 5 geführt. Als Schwerpunkt nennt die Quelle Oranienburg. Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 130–133",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
+    "global_id": "berlin-2080:person:lindwurmer"
+  },
+  {
+    "id": "7ravens",
+    "name": "7Ravens",
+    "aliases": [],
+    "category": "Gangs",
+    "entity_type": "group",
+    "dataset": "berlin-2080-gangradar",
+    "role": "Thrill-Gang/Coven",
+    "affiliation": "Oranienburg",
+    "status": "Aktiv (Stand 2080)",
+    "members": "7",
+    "danger": 1,
+    "summary": "7Ravens wird als Thrill-Gang/Coven mit etwa 7 Mitglieder und Gefahrenstufe 1 von 5 geführt.",
+    "description": "7Ravens wird als Thrill-Gang/Coven mit etwa 7 Mitglieder und Gefahrenstufe 1 von 5 geführt. Als Schwerpunkt nennt die Quelle Oranienburg. Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+    "source": "Berlin 2080, S. 130–133",
+    "locations": [
+      {
+        "id": 454,
+        "relation": "Bekanntes Revier Oranienburg",
+        "global_id": "berlin-2080:place:454-oranienburg"
+      }
+    ],
+    "scope": "Oranienburg",
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 130–133",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Gruppendossier",
+        "preview": "7Ravens wird als Thrill-Gang/Coven mit etwa 7 Mitglieder und Gefahrenstufe 1 von 5 geführt.",
+        "full": "7Ravens wird als Thrill-Gang/Coven mit etwa 7 Mitglieder und Gefahrenstufe 1 von 5 geführt. Als Schwerpunkt nennt die Quelle Oranienburg. Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 130–133",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
+    "global_id": "berlin-2080:person:7ravens"
+  },
+  {
+    "id": "dikote-devils",
+    "name": "Dikote Devils",
+    "aliases": [],
+    "category": "Gangs",
+    "entity_type": "group",
+    "dataset": "berlin-2080-gangradar",
+    "role": "Parkour Gang",
+    "affiliation": "Oranienburg",
+    "status": "Aktiv (Stand 2080)",
+    "members": "?",
+    "danger": 2,
+    "summary": "Dikote Devils wird als Parkour Gang mit eine nicht bezifferte Mitgliederzahl und Gefahrenstufe 2 von 5 geführt.",
+    "description": "Dikote Devils wird als Parkour Gang mit eine nicht bezifferte Mitgliederzahl und Gefahrenstufe 2 von 5 geführt. Als Schwerpunkt nennt die Quelle Oranienburg. Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+    "source": "Berlin 2080, S. 130–133",
+    "locations": [
+      {
+        "id": 454,
+        "relation": "Bekanntes Revier Oranienburg",
+        "global_id": "berlin-2080:place:454-oranienburg"
+      }
+    ],
+    "scope": "Oranienburg",
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 130–133",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Gruppendossier",
+        "preview": "Dikote Devils wird als Parkour Gang mit eine nicht bezifferte Mitgliederzahl und Gefahrenstufe 2 von 5 geführt.",
+        "full": "Dikote Devils wird als Parkour Gang mit eine nicht bezifferte Mitgliederzahl und Gefahrenstufe 2 von 5 geführt. Als Schwerpunkt nennt die Quelle Oranienburg. Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 130–133",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
+    "global_id": "berlin-2080:person:dikote-devils"
+  },
+  {
+    "id": "eastside-boys",
+    "name": "Eastside Boys",
+    "aliases": [],
+    "category": "Gangs",
+    "entity_type": "group",
+    "dataset": "berlin-2080-gangradar",
+    "role": "Rassistische Go-Gang",
+    "affiliation": "Oranienburg",
+    "status": "Aktiv (Stand 2080)",
+    "members": "50",
+    "danger": 3,
+    "summary": "Eastside Boys wird als Rassistische Go-Gang mit etwa 50 Mitglieder und Gefahrenstufe 3 von 5 geführt.",
+    "description": "Eastside Boys wird als Rassistische Go-Gang mit etwa 50 Mitglieder und Gefahrenstufe 3 von 5 geführt. Als Schwerpunkt nennt die Quelle Oranienburg. Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+    "source": "Berlin 2080, S. 130–133",
+    "locations": [
+      {
+        "id": 454,
+        "relation": "Bekanntes Revier Oranienburg",
+        "global_id": "berlin-2080:place:454-oranienburg"
+      }
+    ],
+    "scope": "Oranienburg",
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 130–133",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Gruppendossier",
+        "preview": "Eastside Boys wird als Rassistische Go-Gang mit etwa 50 Mitglieder und Gefahrenstufe 3 von 5 geführt.",
+        "full": "Eastside Boys wird als Rassistische Go-Gang mit etwa 50 Mitglieder und Gefahrenstufe 3 von 5 geführt. Als Schwerpunkt nennt die Quelle Oranienburg. Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 130–133",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
+    "global_id": "berlin-2080:person:eastside-boys"
+  },
+  {
+    "id": "succubus-x",
+    "name": "Succubus X",
+    "aliases": [],
+    "category": "Gangs",
+    "entity_type": "group",
+    "dataset": "berlin-2080-gangradar",
+    "role": "Wiz-Gang",
+    "affiliation": "Reinickendorf",
+    "status": "Aktiv (Stand 2080)",
+    "members": "20",
+    "danger": 3,
+    "summary": "Succubus X wird als Wiz-Gang mit etwa 20 Mitglieder und Gefahrenstufe 3 von 5 geführt.",
+    "description": "Succubus X wird als Wiz-Gang mit etwa 20 Mitglieder und Gefahrenstufe 3 von 5 geführt. Als Schwerpunkt nennt die Quelle Reinickendorf. Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+    "source": "Berlin 2080, S. 130–133",
+    "locations": [
+      {
+        "id": 440,
+        "relation": "Bekanntes Revier Reinickendorf",
+        "global_id": "berlin-2080:place:440-reinickendorf"
+      }
+    ],
+    "scope": "Reinickendorf",
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 130–133",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Gruppendossier",
+        "preview": "Succubus X wird als Wiz-Gang mit etwa 20 Mitglieder und Gefahrenstufe 3 von 5 geführt.",
+        "full": "Succubus X wird als Wiz-Gang mit etwa 20 Mitglieder und Gefahrenstufe 3 von 5 geführt. Als Schwerpunkt nennt die Quelle Reinickendorf. Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 130–133",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
+    "global_id": "berlin-2080:person:succubus-x"
+  },
+  {
+    "id": "le-milieu",
+    "name": "Le Milieu",
+    "aliases": [],
+    "category": "Gangs",
+    "entity_type": "group",
+    "dataset": "berlin-2080-gangradar",
+    "role": "Elfen-Gang",
+    "affiliation": "Reinickendorf",
+    "status": "Aktiv (Stand 2080)",
+    "members": "40",
+    "danger": 3,
+    "summary": "Le Milieu wird als Elfen-Gang mit etwa 40 Mitglieder und Gefahrenstufe 3 von 5 geführt.",
+    "description": "Le Milieu wird als Elfen-Gang mit etwa 40 Mitglieder und Gefahrenstufe 3 von 5 geführt. Als Schwerpunkt nennt die Quelle Reinickendorf. Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+    "source": "Berlin 2080, S. 130–133",
+    "locations": [
+      {
+        "id": 440,
+        "relation": "Bekanntes Revier Reinickendorf",
+        "global_id": "berlin-2080:place:440-reinickendorf"
+      }
+    ],
+    "scope": "Reinickendorf",
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 130–133",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Gruppendossier",
+        "preview": "Le Milieu wird als Elfen-Gang mit etwa 40 Mitglieder und Gefahrenstufe 3 von 5 geführt.",
+        "full": "Le Milieu wird als Elfen-Gang mit etwa 40 Mitglieder und Gefahrenstufe 3 von 5 geführt. Als Schwerpunkt nennt die Quelle Reinickendorf. Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 130–133",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
+    "global_id": "berlin-2080:person:le-milieu"
+  },
+  {
+    "id": "wastelanders",
+    "name": "Wastelanders",
+    "aliases": [],
+    "category": "Gangs",
+    "entity_type": "group",
+    "dataset": "berlin-2080-gangradar",
+    "role": "Enduro-Go-Ganger",
+    "affiliation": "Reinickendorf",
+    "status": "Aktiv (Stand 2080)",
+    "members": "20",
+    "danger": 2,
+    "summary": "Wastelanders wird als Enduro-Go-Ganger mit etwa 20 Mitglieder und Gefahrenstufe 2 von 5 geführt.",
+    "description": "Wastelanders wird als Enduro-Go-Ganger mit etwa 20 Mitglieder und Gefahrenstufe 2 von 5 geführt. Als Schwerpunkt nennt die Quelle Reinickendorf. Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+    "source": "Berlin 2080, S. 130–133",
+    "locations": [
+      {
+        "id": 440,
+        "relation": "Bekanntes Revier Reinickendorf",
+        "global_id": "berlin-2080:place:440-reinickendorf"
+      }
+    ],
+    "scope": "Reinickendorf",
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 130–133",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Gruppendossier",
+        "preview": "Wastelanders wird als Enduro-Go-Ganger mit etwa 20 Mitglieder und Gefahrenstufe 2 von 5 geführt.",
+        "full": "Wastelanders wird als Enduro-Go-Ganger mit etwa 20 Mitglieder und Gefahrenstufe 2 von 5 geführt. Als Schwerpunkt nennt die Quelle Reinickendorf. Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 130–133",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
+    "global_id": "berlin-2080:person:wastelanders"
+  },
+  {
+    "id": "99-ronin",
+    "name": "99 Ronin",
+    "aliases": [],
+    "category": "Gangs",
+    "entity_type": "group",
+    "dataset": "berlin-2080-gangradar",
+    "role": "Go-Gang (MC)",
+    "affiliation": "Renrakusan",
+    "status": "Aktiv (Stand 2080)",
+    "members": "30",
+    "danger": 4,
+    "summary": "99 Ronin wird als Go-Gang (MC) mit etwa 30 Mitglieder und Gefahrenstufe 4 von 5 geführt.",
+    "description": "99 Ronin wird als Go-Gang (MC) mit etwa 30 Mitglieder und Gefahrenstufe 4 von 5 geführt. Als Schwerpunkt nennt die Quelle Renrakusan. Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+    "source": "Berlin 2080, S. 130–133",
+    "locations": [
+      {
+        "id": 451,
+        "relation": "Bekanntes Revier Renrakusan",
+        "global_id": "berlin-2080:place:451-renrakusan"
+      }
+    ],
+    "scope": "Renrakusan",
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 130–133",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Gruppendossier",
+        "preview": "99 Ronin wird als Go-Gang (MC) mit etwa 30 Mitglieder und Gefahrenstufe 4 von 5 geführt.",
+        "full": "99 Ronin wird als Go-Gang (MC) mit etwa 30 Mitglieder und Gefahrenstufe 4 von 5 geführt. Als Schwerpunkt nennt die Quelle Renrakusan. Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 130–133",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
+    "global_id": "berlin-2080:person:99-ronin"
+  },
+  {
+    "id": "wakizashi-warriors",
+    "name": "Wakizashi Warriors",
+    "aliases": [],
+    "category": "Gangs",
+    "entity_type": "group",
+    "dataset": "berlin-2080-gangradar",
+    "role": "Thrill-/Poser-Gang",
+    "affiliation": "Renrakusan",
+    "status": "Aktiv (Stand 2080)",
+    "members": "?",
+    "danger": 2,
+    "summary": "Wakizashi Warriors wird als Thrill-/Poser-Gang mit eine nicht bezifferte Mitgliederzahl und Gefahrenstufe 2 von 5 geführt.",
+    "description": "Wakizashi Warriors wird als Thrill-/Poser-Gang mit eine nicht bezifferte Mitgliederzahl und Gefahrenstufe 2 von 5 geführt. Als Schwerpunkt nennt die Quelle Renrakusan. Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+    "source": "Berlin 2080, S. 130–133",
+    "locations": [
+      {
+        "id": 451,
+        "relation": "Bekanntes Revier Renrakusan",
+        "global_id": "berlin-2080:place:451-renrakusan"
+      }
+    ],
+    "scope": "Renrakusan",
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 130–133",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Gruppendossier",
+        "preview": "Wakizashi Warriors wird als Thrill-/Poser-Gang mit eine nicht bezifferte Mitgliederzahl und Gefahrenstufe 2 von 5 geführt.",
+        "full": "Wakizashi Warriors wird als Thrill-/Poser-Gang mit eine nicht bezifferte Mitgliederzahl und Gefahrenstufe 2 von 5 geführt. Als Schwerpunkt nennt die Quelle Renrakusan. Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 130–133",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
+    "global_id": "berlin-2080:person:wakizashi-warriors"
+  },
+  {
+    "id": "aurum",
+    "name": "Aurum",
+    "aliases": [],
+    "category": "Gangs",
+    "entity_type": "group",
+    "dataset": "berlin-2080-gangradar",
+    "role": "Berliner Gang",
+    "affiliation": "S-K Tempelhof",
+    "status": "Aktiv (Stand 2080)",
+    "members": "30",
+    "danger": 2,
+    "summary": "Aurum wird als Gang ohne näher ausgewiesenen Typ mit etwa 30 Mitglieder und Gefahrenstufe 2 von 5 geführt.",
+    "description": "Aurum wird als Gang ohne näher ausgewiesenen Typ mit etwa 30 Mitglieder und Gefahrenstufe 2 von 5 geführt. Als Schwerpunkt nennt die Quelle S-K Tempelhof. Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+    "source": "Berlin 2080, S. 130–133",
+    "locations": [
+      {
+        "id": 424,
+        "relation": "Aktionsraum S-K Tempelhof",
+        "global_id": "berlin-2080:place:424-flughafen-tempelhof-skt"
+      }
+    ],
+    "scope": "S-K Tempelhof",
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 130–133",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Gruppendossier",
+        "preview": "Aurum wird als Gang ohne näher ausgewiesenen Typ mit etwa 30 Mitglieder und Gefahrenstufe 2 von 5 geführt.",
+        "full": "Aurum wird als Gang ohne näher ausgewiesenen Typ mit etwa 30 Mitglieder und Gefahrenstufe 2 von 5 geführt. Als Schwerpunkt nennt die Quelle S-K Tempelhof. Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 130–133",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
+    "global_id": "berlin-2080:person:aurum"
+  },
+  {
+    "id": "cerberus",
+    "name": "Cerberus",
+    "aliases": [],
+    "category": "Gangs",
+    "entity_type": "group",
+    "dataset": "berlin-2080-gangradar",
+    "role": "Berliner Gang",
+    "affiliation": "S-K Tempelhof",
+    "status": "Aktiv (Stand 2080)",
+    "members": "50",
+    "danger": 3,
+    "summary": "Cerberus wird als Gang ohne näher ausgewiesenen Typ mit etwa 50 Mitglieder und Gefahrenstufe 3 von 5 geführt.",
+    "description": "Cerberus wird als Gang ohne näher ausgewiesenen Typ mit etwa 50 Mitglieder und Gefahrenstufe 3 von 5 geführt. Als Schwerpunkt nennt die Quelle S-K Tempelhof. Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+    "source": "Berlin 2080, S. 130–133",
+    "locations": [
+      {
+        "id": 424,
+        "relation": "Aktionsraum S-K Tempelhof",
+        "global_id": "berlin-2080:place:424-flughafen-tempelhof-skt"
+      }
+    ],
+    "scope": "S-K Tempelhof",
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 130–133",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Gruppendossier",
+        "preview": "Cerberus wird als Gang ohne näher ausgewiesenen Typ mit etwa 50 Mitglieder und Gefahrenstufe 3 von 5 geführt.",
+        "full": "Cerberus wird als Gang ohne näher ausgewiesenen Typ mit etwa 50 Mitglieder und Gefahrenstufe 3 von 5 geführt. Als Schwerpunkt nennt die Quelle S-K Tempelhof. Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 130–133",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
+    "global_id": "berlin-2080:person:cerberus"
+  },
+  {
+    "id": "the-blades",
+    "name": "The Blades",
+    "aliases": [],
+    "category": "Gangs",
+    "entity_type": "group",
+    "dataset": "berlin-2080-gangradar",
+    "role": "M-K Fans, Go-Gang",
+    "affiliation": "Schönefeld",
+    "status": "Aktiv (Stand 2080)",
+    "members": "100+",
+    "danger": 3,
+    "summary": "The Blades wird als M-K Fans, Go-Gang mit etwa 100+ Mitglieder und Gefahrenstufe 3 von 5 geführt.",
+    "description": "The Blades wird als M-K Fans, Go-Gang mit etwa 100+ Mitglieder und Gefahrenstufe 3 von 5 geführt. Als Schwerpunkt nennt die Quelle Schönefeld. Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+    "source": "Berlin 2080, S. 130–133",
+    "locations": [
+      {
+        "id": 456,
+        "relation": "Bekanntes Revier Schönefeld",
+        "global_id": "berlin-2080:place:456-schonefeld"
+      }
+    ],
+    "scope": "Schönefeld",
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 130–133",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Gruppendossier",
+        "preview": "The Blades wird als M-K Fans, Go-Gang mit etwa 100+ Mitglieder und Gefahrenstufe 3 von 5 geführt.",
+        "full": "The Blades wird als M-K Fans, Go-Gang mit etwa 100+ Mitglieder und Gefahrenstufe 3 von 5 geführt. Als Schwerpunkt nennt die Quelle Schönefeld. Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 130–133",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
+    "global_id": "berlin-2080:person:the-blades"
+  },
+  {
+    "id": "die-frontarbeiter",
+    "name": "Die Frontarbeiter",
+    "aliases": [],
+    "category": "Gangs",
+    "entity_type": "group",
+    "dataset": "berlin-2080-gangradar",
+    "role": "Gewerkschaftsgang | Splittergruppe des Arbeiter-Policlubs.",
+    "affiliation": "Schönefeld",
+    "status": "Aktiv (Stand 2080)",
+    "members": "60",
+    "danger": 2,
+    "summary": "Die Frontarbeiter wird als Gewerkschaftsgang | Splittergruppe des Arbeiter-Policlubs. mit etwa 60 Mitglieder und Gefahrenstufe 2 von 5 geführt.",
+    "description": "Die Frontarbeiter wird als Gewerkschaftsgang | Splittergruppe des Arbeiter-Policlubs. mit etwa 60 Mitglieder und Gefahrenstufe 2 von 5 geführt. Als Schwerpunkt nennt die Quelle Schönefeld. Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+    "source": "Berlin 2080, S. 130–133",
+    "locations": [
+      {
+        "id": 456,
+        "relation": "Bekanntes Revier Schönefeld",
+        "global_id": "berlin-2080:place:456-schonefeld"
+      }
+    ],
+    "scope": "Schönefeld",
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 130–133",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Gruppendossier",
+        "preview": "Die Frontarbeiter wird als Gewerkschaftsgang | Splittergruppe des Arbeiter-Policlubs. mit etwa 60 Mitglieder und Gefahrenstufe 2 von 5 geführt.",
+        "full": "Die Frontarbeiter wird als Gewerkschaftsgang | Splittergruppe des Arbeiter-Policlubs. mit etwa 60 Mitglieder und Gefahrenstufe 2 von 5 geführt. Als Schwerpunkt nennt die Quelle Schönefeld. Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 130–133",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
+    "global_id": "berlin-2080:person:die-frontarbeiter"
+  },
+  {
+    "id": "dorf-defenders",
+    "name": "Dorf Defenders",
+    "aliases": [],
+    "category": "Gangs",
+    "entity_type": "group",
+    "dataset": "berlin-2080-gangradar",
+    "role": "Berliner Gang",
+    "affiliation": "Spandau (Gatow)",
+    "status": "Aktiv (Stand 2080)",
+    "members": "30",
+    "danger": 1,
+    "summary": "Dorf Defenders wird als Gang ohne näher ausgewiesenen Typ mit etwa 30 Mitglieder und Gefahrenstufe 1 von 5 geführt.",
+    "description": "Dorf Defenders wird als Gang ohne näher ausgewiesenen Typ mit etwa 30 Mitglieder und Gefahrenstufe 1 von 5 geführt. Als Schwerpunkt nennt die Quelle Spandau (Gatow). Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+    "source": "Berlin 2080, S. 130–133",
+    "locations": [
+      {
+        "id": 333,
+        "relation": "Bekanntes Revier Gartenstadt Gatow",
+        "global_id": "berlin-2080:place:333-gartenstadt-gatow"
+      },
+      {
+        "id": 445,
+        "relation": "Aktionsraum Spandau",
+        "global_id": "berlin-2080:place:445-spandau"
+      }
+    ],
+    "scope": "Spandau (Gatow)",
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 130–133",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Gruppendossier",
+        "preview": "Dorf Defenders wird als Gang ohne näher ausgewiesenen Typ mit etwa 30 Mitglieder und Gefahrenstufe 1 von 5 geführt.",
+        "full": "Dorf Defenders wird als Gang ohne näher ausgewiesenen Typ mit etwa 30 Mitglieder und Gefahrenstufe 1 von 5 geführt. Als Schwerpunkt nennt die Quelle Spandau (Gatow). Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 130–133",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
+    "global_id": "berlin-2080:person:dorf-defenders"
+  },
+  {
+    "id": "kladow-kombat-krew",
+    "name": "Kladow Kombat Krew",
+    "aliases": [],
+    "category": "Gangs",
+    "entity_type": "group",
+    "dataset": "berlin-2080-gangradar",
+    "role": "Party-Gang",
+    "affiliation": "Spandau (Kladow)",
+    "status": "Aktiv (Stand 2080)",
+    "members": "20",
+    "danger": 1,
+    "summary": "Kladow Kombat Krew wird als Party-Gang mit etwa 20 Mitglieder und Gefahrenstufe 1 von 5 geführt.",
+    "description": "Kladow Kombat Krew wird als Party-Gang mit etwa 20 Mitglieder und Gefahrenstufe 1 von 5 geführt. Als Schwerpunkt nennt die Quelle Spandau (Kladow). Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+    "source": "Berlin 2080, S. 130–133",
+    "locations": [
+      {
+        "id": 445,
+        "relation": "Bekanntes Revier Kladow im Bezirk Spandau",
+        "global_id": "berlin-2080:place:445-spandau"
+      }
+    ],
+    "scope": "Spandau (Kladow)",
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 130–133",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Gruppendossier",
+        "preview": "Kladow Kombat Krew wird als Party-Gang mit etwa 20 Mitglieder und Gefahrenstufe 1 von 5 geführt.",
+        "full": "Kladow Kombat Krew wird als Party-Gang mit etwa 20 Mitglieder und Gefahrenstufe 1 von 5 geführt. Als Schwerpunkt nennt die Quelle Spandau (Kladow). Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 130–133",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
+    "global_id": "berlin-2080:person:kladow-kombat-krew"
+  },
+  {
+    "id": "lynar-boyz",
+    "name": "Lynar Boyz",
+    "aliases": [],
+    "category": "Gangs",
+    "entity_type": "group",
+    "dataset": "berlin-2080-gangradar",
+    "role": "Party-Gang",
+    "affiliation": "Spandau (Kladow)",
+    "status": "Aktiv (Stand 2080)",
+    "members": "60",
+    "danger": 3,
+    "summary": "Lynar Boyz wird als Party-Gang mit etwa 60 Mitglieder und Gefahrenstufe 3 von 5 geführt.",
+    "description": "Lynar Boyz wird als Party-Gang mit etwa 60 Mitglieder und Gefahrenstufe 3 von 5 geführt. Als Schwerpunkt nennt die Quelle Spandau (Kladow). Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+    "source": "Berlin 2080, S. 130–133",
+    "locations": [
+      {
+        "id": 445,
+        "relation": "Bekanntes Revier Kladow im Bezirk Spandau",
+        "global_id": "berlin-2080:place:445-spandau"
+      }
+    ],
+    "scope": "Spandau (Kladow)",
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 130–133",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Gruppendossier",
+        "preview": "Lynar Boyz wird als Party-Gang mit etwa 60 Mitglieder und Gefahrenstufe 3 von 5 geführt.",
+        "full": "Lynar Boyz wird als Party-Gang mit etwa 60 Mitglieder und Gefahrenstufe 3 von 5 geführt. Als Schwerpunkt nennt die Quelle Spandau (Kladow). Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 130–133",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
+    "global_id": "berlin-2080:person:lynar-boyz"
+  },
+  {
+    "id": "sleipnir",
+    "name": "Sleipnir",
+    "aliases": [],
+    "category": "Gangs",
+    "entity_type": "group",
+    "dataset": "berlin-2080-gangradar",
+    "role": "Rassisten-Gang",
+    "affiliation": "Spandau (Nord)",
+    "status": "Aktiv (Stand 2080)",
+    "members": "?",
+    "danger": 3,
+    "summary": "Sleipnir wird als Rassisten-Gang mit eine nicht bezifferte Mitgliederzahl und Gefahrenstufe 3 von 5 geführt.",
+    "description": "Sleipnir wird als Rassisten-Gang mit eine nicht bezifferte Mitgliederzahl und Gefahrenstufe 3 von 5 geführt. Als Schwerpunkt nennt die Quelle Spandau (Nord). Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+    "source": "Berlin 2080, S. 130–133",
+    "locations": [
+      {
+        "id": 445,
+        "relation": "Bekanntes Revier im Norden Spandaus",
+        "global_id": "berlin-2080:place:445-spandau"
+      }
+    ],
+    "scope": "Spandau (Nord)",
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 130–133",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Gruppendossier",
+        "preview": "Sleipnir wird als Rassisten-Gang mit eine nicht bezifferte Mitgliederzahl und Gefahrenstufe 3 von 5 geführt.",
+        "full": "Sleipnir wird als Rassisten-Gang mit eine nicht bezifferte Mitgliederzahl und Gefahrenstufe 3 von 5 geführt. Als Schwerpunkt nennt die Quelle Spandau (Nord). Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 130–133",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
+    "global_id": "berlin-2080:person:sleipnir"
+  },
+  {
+    "id": "x-ray",
+    "name": "X-Ray",
+    "aliases": [],
+    "category": "Gangs",
+    "entity_type": "group",
+    "dataset": "berlin-2080-gangradar",
+    "role": "Parkour-Gang | Hellblau/Schwarz. Kontakte zur Schattenszene.",
+    "affiliation": "Strausberg",
+    "status": "Aktiv (Stand 2080)",
+    "members": "50",
+    "danger": 2,
+    "summary": "X-Ray wird als Parkour-Gang | Hellblau/Schwarz. Kontakte zur Schattenszene. mit etwa 50 Mitglieder und Gefahrenstufe 2 von 5 geführt.",
+    "description": "X-Ray wird als Parkour-Gang | Hellblau/Schwarz. Kontakte zur Schattenszene. mit etwa 50 Mitglieder und Gefahrenstufe 2 von 5 geführt. Als Schwerpunkt nennt die Quelle Strausberg. Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+    "source": "Berlin 2080, S. 130–133",
+    "locations": [
+      {
+        "id": 457,
+        "relation": "Bekanntes Revier Strausberg",
+        "global_id": "berlin-2080:place:457-strausberg"
+      }
+    ],
+    "scope": "Strausberg",
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 130–133",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Gruppendossier",
+        "preview": "X-Ray wird als Parkour-Gang | Hellblau/Schwarz. Kontakte zur Schattenszene. mit etwa 50 Mitglieder und Gefahrenstufe 2 von 5 geführt.",
+        "full": "X-Ray wird als Parkour-Gang | Hellblau/Schwarz. Kontakte zur Schattenszene. mit etwa 50 Mitglieder und Gefahrenstufe 2 von 5 geführt. Als Schwerpunkt nennt die Quelle Strausberg. Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 130–133",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
+    "global_id": "berlin-2080:person:x-ray"
+  },
+  {
+    "id": "leet-legion",
+    "name": "Leet Legion",
+    "aliases": [],
+    "category": "Gangs",
+    "entity_type": "group",
+    "dataset": "berlin-2080-gangradar",
+    "role": "Berliner Gang",
+    "affiliation": "Überall",
+    "status": "Aktiv (Stand 2080)",
+    "members": "500+",
+    "danger": 2,
+    "summary": "Leet Legion wird als Gang ohne näher ausgewiesenen Typ mit etwa 500+ Mitglieder und Gefahrenstufe 2 von 5 geführt.",
+    "description": "Leet Legion wird als Gang ohne näher ausgewiesenen Typ mit etwa 500+ Mitglieder und Gefahrenstufe 2 von 5 geführt. Die Gruppe ist keinem einzelnen Berliner Revier zugeordnet. Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+    "source": "Berlin 2080, S. 130–133",
+    "locations": [],
+    "scope": "Berlinweit; kein einzelnes Revier",
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 130–133",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Gruppendossier",
+        "preview": "Leet Legion wird als Gang ohne näher ausgewiesenen Typ mit etwa 500+ Mitglieder und Gefahrenstufe 2 von 5 geführt.",
+        "full": "Leet Legion wird als Gang ohne näher ausgewiesenen Typ mit etwa 500+ Mitglieder und Gefahrenstufe 2 von 5 geführt. Die Gruppe ist keinem einzelnen Berliner Revier zugeordnet. Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 130–133",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
+    "global_id": "berlin-2080:person:leet-legion"
+  },
+  {
+    "id": "die-horde",
+    "name": "Die Horde",
+    "aliases": [],
+    "category": "Gangs",
+    "entity_type": "group",
+    "dataset": "berlin-2080-gangradar",
+    "role": "Ork-/Troll-Gang",
+    "affiliation": "Überall",
+    "status": "Aktiv (Stand 2080)",
+    "members": "700",
+    "danger": 5,
+    "summary": "Die Horde wird als Ork-/Troll-Gang mit etwa 700 Mitglieder und Gefahrenstufe 5 von 5 geführt.",
+    "description": "Die Horde wird als Ork-/Troll-Gang mit etwa 700 Mitglieder und Gefahrenstufe 5 von 5 geführt. Die Gruppe ist keinem einzelnen Berliner Revier zugeordnet. Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+    "source": "Deutschland in den Schatten, S. 58–59 (SR1/SR2); Berlin 2080, S. 130–133",
+    "locations": [
+      {
+        "id": 9,
+        "relation": "Hauptquartier Block X",
+        "global_id": "berlin-2080:place:9-block-x"
+      },
+      {
+        "id": 448,
+        "relation": "Beherrschtes Territorium Gropiusstadt",
+        "global_id": "berlin-2080:place:448-gropiusstadt"
+      }
+    ],
+    "scope": "Berlinweit; kein einzelnes Revier",
+    "sources": [
+      {
+        "bookId": "deutschland-in-den-schatten",
+        "title": "Deutschland in den Schatten (Ausgabe 1992)",
+        "edition": "SR1",
+        "citation": "Deutschland in den Schatten, S. 58–59",
+        "purpose": "description"
+      },
+      {
+        "bookId": "deutschland-in-den-schatten-1993",
+        "title": "Deutschland in den Schatten (Ausgabe 1993)",
+        "edition": "SR2",
+        "citation": "Deutschland in den Schatten (Ausgabe 1993), S. 58–59",
+        "purpose": "description"
+      },
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 130–133",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR1",
+      "SR2",
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Gruppendossier",
+        "preview": "Die Horde wird als Ork-/Troll-Gang mit etwa 700 Mitglieder und Gefahrenstufe 5 von 5 geführt.",
+        "full": "Die Horde wird als Ork-/Troll-Gang mit etwa 700 Mitglieder und Gefahrenstufe 5 von 5 geführt. Die Gruppe ist keinem einzelnen Berliner Revier zugeordnet. Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 130–133",
+            "purpose": "description"
+          }
+        ]
+      },
+      "SR1": {
+        "kind": "Gruppendossier",
+        "preview": "Die frühe Horde besteht aus besonders großen Orks und ist für brutale Angriffe auf Außenstehende bekannt.",
+        "full": "Bereits in den frühen Berliner Quellen erscheint die Horde als gewalttätige Ork-Gang. Diese historische Beschreibung bildet den Ausgangspunkt ihrer späteren Entwicklung zur dominierenden Macht Gropiusstadts.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "deutschland-in-den-schatten",
+            "title": "Deutschland in den Schatten (Ausgabe 1992)",
+            "edition": "SR1",
+            "citation": "Deutschland in den Schatten, S. 58–59",
+            "purpose": "description"
+          }
+        ]
+      },
+      "SR2": {
+        "kind": "Gruppendossier",
+        "preview": "Die frühe Horde besteht aus besonders großen Orks und ist für brutale Angriffe auf Außenstehende bekannt.",
+        "full": "Bereits in den frühen Berliner Quellen erscheint die Horde als gewalttätige Ork-Gang. Diese historische Beschreibung bildet den Ausgangspunkt ihrer späteren Entwicklung zur dominierenden Macht Gropiusstadts.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "deutschland-in-den-schatten-1993",
+            "title": "Deutschland in den Schatten (Ausgabe 1993)",
+            "edition": "SR2",
+            "citation": "Deutschland in den Schatten (Ausgabe 1993), S. 58–59",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
+    "global_id": "berlin-2080:person:die-horde"
+  },
+  {
+    "id": "ancients",
+    "name": "Ancients",
+    "aliases": [],
+    "category": "Gangs",
+    "entity_type": "group",
+    "dataset": "berlin-2080-gangradar",
+    "role": "Elfische Go-Gang",
+    "affiliation": "Überall",
+    "status": "Aktiv (Stand 2080)",
+    "members": "60",
+    "danger": 3,
+    "summary": "Ancients wird als Elfische Go-Gang mit etwa 60 Mitglieder und Gefahrenstufe 3 von 5 geführt.",
+    "description": "Ancients wird als Elfische Go-Gang mit etwa 60 Mitglieder und Gefahrenstufe 3 von 5 geführt. Die Gruppe ist keinem einzelnen Berliner Revier zugeordnet. Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+    "source": "Berlin 2080, S. 130–133",
+    "locations": [],
+    "scope": "Berlinweit; kein einzelnes Revier",
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 130–133",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Gruppendossier",
+        "preview": "Ancients wird als Elfische Go-Gang mit etwa 60 Mitglieder und Gefahrenstufe 3 von 5 geführt.",
+        "full": "Ancients wird als Elfische Go-Gang mit etwa 60 Mitglieder und Gefahrenstufe 3 von 5 geführt. Die Gruppe ist keinem einzelnen Berliner Revier zugeordnet. Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 130–133",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
+    "global_id": "berlin-2080:person:ancients"
+  },
+  {
+    "id": "trybe",
+    "name": "Trybe",
+    "aliases": [],
+    "category": "Gangs",
+    "entity_type": "group",
+    "dataset": "berlin-2080-gangradar",
+    "role": "Troll-Go-Gang",
+    "affiliation": "Überall",
+    "status": "Aktiv (Stand 2080)",
+    "members": "40",
+    "danger": 3,
+    "summary": "Trybe wird als Troll-Go-Gang mit etwa 40 Mitglieder und Gefahrenstufe 3 von 5 geführt.",
+    "description": "Trybe wird als Troll-Go-Gang mit etwa 40 Mitglieder und Gefahrenstufe 3 von 5 geführt. Die Gruppe ist keinem einzelnen Berliner Revier zugeordnet. Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+    "source": "Berlin 2080, S. 130–133",
+    "locations": [],
+    "scope": "Berlinweit; kein einzelnes Revier",
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 130–133",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Gruppendossier",
+        "preview": "Trybe wird als Troll-Go-Gang mit etwa 40 Mitglieder und Gefahrenstufe 3 von 5 geführt.",
+        "full": "Trybe wird als Troll-Go-Gang mit etwa 40 Mitglieder und Gefahrenstufe 3 von 5 geführt. Die Gruppe ist keinem einzelnen Berliner Revier zugeordnet. Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 130–133",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
+    "global_id": "berlin-2080:person:trybe"
+  },
+  {
+    "id": "spreeratten",
+    "name": "Spreeratten",
+    "aliases": [],
+    "category": "Gangs",
+    "entity_type": "group",
+    "dataset": "berlin-2080-gangradar",
+    "role": "Berliner Gang",
+    "affiliation": "Überall",
+    "status": "Aktiv (Stand 2080)",
+    "members": "40",
+    "danger": 2,
+    "summary": "Spreeratten wird als Gang ohne näher ausgewiesenen Typ mit etwa 40 Mitglieder und Gefahrenstufe 2 von 5 geführt.",
+    "description": "Spreeratten wird als Gang ohne näher ausgewiesenen Typ mit etwa 40 Mitglieder und Gefahrenstufe 2 von 5 geführt. Die Gruppe ist keinem einzelnen Berliner Revier zugeordnet. Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+    "source": "Berlin 2080, S. 130–133",
+    "locations": [],
+    "scope": "Berlinweit; kein einzelnes Revier",
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 130–133",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Gruppendossier",
+        "preview": "Spreeratten wird als Gang ohne näher ausgewiesenen Typ mit etwa 40 Mitglieder und Gefahrenstufe 2 von 5 geführt.",
+        "full": "Spreeratten wird als Gang ohne näher ausgewiesenen Typ mit etwa 40 Mitglieder und Gefahrenstufe 2 von 5 geführt. Die Gruppe ist keinem einzelnen Berliner Revier zugeordnet. Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 130–133",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
+    "global_id": "berlin-2080:person:spreeratten"
+  },
+  {
+    "id": "zegida",
+    "name": "ZeGiDa",
+    "aliases": [],
+    "category": "Gangs",
+    "entity_type": "group",
+    "dataset": "berlin-2080-gangradar",
+    "role": "Beschützer-Gang",
+    "affiliation": "Z-IC Tegel",
+    "status": "Aktiv (Stand 2080)",
+    "members": "20",
+    "danger": 2,
+    "summary": "ZeGiDa wird als Beschützer-Gang mit etwa 20 Mitglieder und Gefahrenstufe 2 von 5 geführt.",
+    "description": "ZeGiDa wird als Beschützer-Gang mit etwa 20 Mitglieder und Gefahrenstufe 2 von 5 geführt. Als Schwerpunkt nennt die Quelle Z-IC Tegel. Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+    "source": "Berlin 2080, S. 130–133",
+    "locations": [
+      {
+        "id": 440,
+        "relation": "Aktionsraum im Z-IC-kontrollierten Tegel",
+        "global_id": "berlin-2080:place:440-reinickendorf"
+      }
+    ],
+    "scope": "Z-IC Tegel",
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 130–133",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Gruppendossier",
+        "preview": "ZeGiDa wird als Beschützer-Gang mit etwa 20 Mitglieder und Gefahrenstufe 2 von 5 geführt.",
+        "full": "ZeGiDa wird als Beschützer-Gang mit etwa 20 Mitglieder und Gefahrenstufe 2 von 5 geführt. Als Schwerpunkt nennt die Quelle Z-IC Tegel. Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 130–133",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
+    "global_id": "berlin-2080:person:zegida"
+  },
+  {
+    "id": "twc",
+    "name": "TWC",
+    "aliases": [],
+    "category": "Gangs",
+    "entity_type": "group",
+    "dataset": "berlin-2080-gangradar",
+    "role": "Randalekids-Gang",
+    "affiliation": "Z-IC Tegel",
+    "status": "Aktiv (Stand 2080)",
+    "members": "20",
+    "danger": 1,
+    "summary": "TWC wird als Randalekids-Gang mit etwa 20 Mitglieder und Gefahrenstufe 1 von 5 geführt.",
+    "description": "TWC wird als Randalekids-Gang mit etwa 20 Mitglieder und Gefahrenstufe 1 von 5 geführt. Als Schwerpunkt nennt die Quelle Z-IC Tegel. Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+    "source": "Berlin 2080, S. 130–133",
+    "locations": [
+      {
+        "id": 440,
+        "relation": "Aktionsraum im Z-IC-kontrollierten Tegel",
+        "global_id": "berlin-2080:place:440-reinickendorf"
+      }
+    ],
+    "scope": "Z-IC Tegel",
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 130–133",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Gruppendossier",
+        "preview": "TWC wird als Randalekids-Gang mit etwa 20 Mitglieder und Gefahrenstufe 1 von 5 geführt.",
+        "full": "TWC wird als Randalekids-Gang mit etwa 20 Mitglieder und Gefahrenstufe 1 von 5 geführt. Als Schwerpunkt nennt die Quelle Z-IC Tegel. Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 130–133",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
+    "global_id": "berlin-2080:person:twc"
+  },
+  {
+    "id": "maddoxx",
+    "name": "Maddoxx",
+    "aliases": [],
+    "category": "Gangs",
+    "entity_type": "group",
+    "dataset": "berlin-2080-gangradar",
+    "role": "Berliner Gang",
+    "affiliation": "Zehlendorf",
+    "status": "Aktiv (Stand 2080)",
+    "members": "20",
+    "danger": 1,
+    "summary": "Maddoxx wird als Gang ohne näher ausgewiesenen Typ mit etwa 20 Mitglieder und Gefahrenstufe 1 von 5 geführt.",
+    "description": "Maddoxx wird als Gang ohne näher ausgewiesenen Typ mit etwa 20 Mitglieder und Gefahrenstufe 1 von 5 geführt. Als Schwerpunkt nennt die Quelle Zehlendorf. Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+    "source": "Berlin 2080, S. 130–133",
+    "locations": [
+      {
+        "id": 447,
+        "relation": "Bekanntes Revier Zehlendorf",
+        "global_id": "berlin-2080:place:447-zehlendorf"
+      }
+    ],
+    "scope": "Zehlendorf",
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 130–133",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Gruppendossier",
+        "preview": "Maddoxx wird als Gang ohne näher ausgewiesenen Typ mit etwa 20 Mitglieder und Gefahrenstufe 1 von 5 geführt.",
+        "full": "Maddoxx wird als Gang ohne näher ausgewiesenen Typ mit etwa 20 Mitglieder und Gefahrenstufe 1 von 5 geführt. Als Schwerpunkt nennt die Quelle Zehlendorf. Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 130–133",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
+    "global_id": "berlin-2080:person:maddoxx"
+  },
+  {
+    "id": "fine-young-capitalists",
+    "name": "Fine Young Capitalists",
+    "aliases": [],
+    "category": "Gangs",
+    "entity_type": "group",
+    "dataset": "berlin-2080-gangradar",
+    "role": "Berliner Gang",
+    "affiliation": "Zehlendorf",
+    "status": "Aktiv (Stand 2080)",
+    "members": "20",
+    "danger": 4,
+    "summary": "Fine Young Capitalists wird als Gang ohne näher ausgewiesenen Typ mit etwa 20 Mitglieder und Gefahrenstufe 4 von 5 geführt.",
+    "description": "Fine Young Capitalists wird als Gang ohne näher ausgewiesenen Typ mit etwa 20 Mitglieder und Gefahrenstufe 4 von 5 geführt. Als Schwerpunkt nennt die Quelle Zehlendorf. Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+    "source": "Berlin 2080, S. 130–133",
+    "locations": [
+      {
+        "id": 447,
+        "relation": "Bekanntes Revier Zehlendorf",
+        "global_id": "berlin-2080:place:447-zehlendorf"
+      }
+    ],
+    "scope": "Zehlendorf",
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 130–133",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Gruppendossier",
+        "preview": "Fine Young Capitalists wird als Gang ohne näher ausgewiesenen Typ mit etwa 20 Mitglieder und Gefahrenstufe 4 von 5 geführt.",
+        "full": "Fine Young Capitalists wird als Gang ohne näher ausgewiesenen Typ mit etwa 20 Mitglieder und Gefahrenstufe 4 von 5 geführt. Als Schwerpunkt nennt die Quelle Zehlendorf. Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 130–133",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
+    "global_id": "berlin-2080:person:fine-young-capitalists"
+  },
+  {
+    "id": "shader",
+    "name": "Shader",
+    "aliases": [],
+    "category": "Gangs",
+    "entity_type": "group",
+    "dataset": "berlin-2080-gangradar",
+    "role": "Technomancer-Gang",
+    "affiliation": "Zehlendorf",
+    "status": "Aktiv (Stand 2080)",
+    "members": "50",
+    "danger": 4,
+    "summary": "Shader wird als Technomancer-Gang mit etwa 50 Mitglieder und Gefahrenstufe 4 von 5 geführt.",
+    "description": "Shader wird als Technomancer-Gang mit etwa 50 Mitglieder und Gefahrenstufe 4 von 5 geführt. Als Schwerpunkt nennt die Quelle Zehlendorf. Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+    "source": "Berlin 2080, S. 130–133",
+    "locations": [
+      {
+        "id": 447,
+        "relation": "Bekanntes Revier Zehlendorf",
+        "global_id": "berlin-2080:place:447-zehlendorf"
+      }
+    ],
+    "scope": "Zehlendorf",
+    "sources": [
+      {
+        "bookId": "berlin-2080",
+        "title": "Berlin 2080",
+        "edition": "SR6",
+        "citation": "Berlin 2080, S. 130–133",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR6"
+    ],
+    "edition_descriptions": {
+      "SR6": {
+        "kind": "Gruppendossier",
+        "preview": "Shader wird als Technomancer-Gang mit etwa 50 Mitglieder und Gefahrenstufe 4 von 5 geführt.",
+        "full": "Shader wird als Technomancer-Gang mit etwa 50 Mitglieder und Gefahrenstufe 4 von 5 geführt. Als Schwerpunkt nennt die Quelle Zehlendorf. Die Einstufung stammt aus dem Berliner Gangradar und beschreibt die Gruppe als Ganzes, nicht einzelne Mitglieder.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "berlin-2080",
+            "title": "Berlin 2080",
+            "edition": "SR6",
+            "citation": "Berlin 2080, S. 130–133",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
+    "global_id": "berlin-2080:person:shader"
+  },
+  {
+    "id": "magnifiker",
+    "name": "Magnifiker",
+    "aliases": [],
+    "category": "Gangs",
+    "entity_type": "group",
+    "dataset": "deutschland-in-den-schatten-gangs",
+    "role": "Magisch aktive Trick- und Diebesgang",
+    "affiliation": "Berliner Gangszene",
+    "status": "Historisch belegt (2053)",
+    "members": "ca. 200",
+    "danger": null,
+    "summary": "Die Magnifiker setzen Illusionen und kleine Geister ein, um Passanten zu erschrecken und zu bestehlen.",
+    "description": "Die ausschließlich männliche Gang versteht sich als Zusammenschluss von Magiern. Ihre bevorzugte Masche verbindet illusionistische Schocks, kleine Geister und anschließend geforderte oder entwendete Zahlungen.",
+    "source": "Deutschland in den Schatten, S. 58–59 (SR1/SR2)",
+    "locations": [],
+    "scope": "Berlinweit; kein engeres Revier belegt",
+    "sources": [
+      {
+        "bookId": "deutschland-in-den-schatten",
+        "title": "Deutschland in den Schatten (Ausgabe 1992)",
+        "edition": "SR1",
+        "citation": "Deutschland in den Schatten, S. 58–59",
+        "purpose": "description"
+      },
+      {
+        "bookId": "deutschland-in-den-schatten-1993",
+        "title": "Deutschland in den Schatten (Ausgabe 1993)",
+        "edition": "SR2",
+        "citation": "Deutschland in den Schatten (Ausgabe 1993), S. 58–59",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR1",
+      "SR2"
+    ],
+    "edition_descriptions": {
+      "SR1": {
+        "kind": "Gruppendossier",
+        "preview": "Die Magnifiker setzen Illusionen und kleine Geister ein, um Passanten zu erschrecken und zu bestehlen.",
+        "full": "Die ausschließlich männliche Gang versteht sich als Zusammenschluss von Magiern. Ihre bevorzugte Masche verbindet illusionistische Schocks, kleine Geister und anschließend geforderte oder entwendete Zahlungen.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "deutschland-in-den-schatten",
+            "title": "Deutschland in den Schatten (Ausgabe 1992)",
+            "edition": "SR1",
+            "citation": "Deutschland in den Schatten, S. 58–59",
+            "purpose": "description"
+          }
+        ]
+      },
+      "SR2": {
+        "kind": "Gruppendossier",
+        "preview": "Die Magnifiker setzen Illusionen und kleine Geister ein, um Passanten zu erschrecken und zu bestehlen.",
+        "full": "Die ausschließlich männliche Gang versteht sich als Zusammenschluss von Magiern. Ihre bevorzugte Masche verbindet illusionistische Schocks, kleine Geister und anschließend geforderte oder entwendete Zahlungen.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "deutschland-in-den-schatten-1993",
+            "title": "Deutschland in den Schatten (Ausgabe 1993)",
+            "edition": "SR2",
+            "citation": "Deutschland in den Schatten (Ausgabe 1993), S. 58–59",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
+    "global_id": "berlin-2080:person:magnifiker"
+  },
+  {
+    "id": "surfturf",
+    "name": "Surfturf",
+    "aliases": [],
+    "category": "Gangs",
+    "entity_type": "group",
+    "dataset": "deutschland-in-den-schatten-gangs",
+    "role": "U-Bahn- und Thrill-Gang",
+    "affiliation": "Berliner Gangszene",
+    "status": "Historisch belegt (2053)",
+    "members": "?",
+    "danger": null,
+    "summary": "Surfturf lebt in der Berliner U-Bahn und verbindet riskantes Bahn-Surfen mit dem Handel von Flugechseneiern.",
+    "description": "Die Mitglieder hängen sich mit Cybersaugern außen an Züge, suchen in Tunneln nach verwertbaren Flugechseneiern und provozieren dabei Fahrgäste und Gefahren der erwachten Unterwelt.",
+    "source": "Deutschland in den Schatten, S. 58–59 (SR1/SR2)",
+    "locations": [],
+    "scope": "Berlinweit; kein engeres Revier belegt",
+    "sources": [
+      {
+        "bookId": "deutschland-in-den-schatten",
+        "title": "Deutschland in den Schatten (Ausgabe 1992)",
+        "edition": "SR1",
+        "citation": "Deutschland in den Schatten, S. 58–59",
+        "purpose": "description"
+      },
+      {
+        "bookId": "deutschland-in-den-schatten-1993",
+        "title": "Deutschland in den Schatten (Ausgabe 1993)",
+        "edition": "SR2",
+        "citation": "Deutschland in den Schatten (Ausgabe 1993), S. 58–59",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR1",
+      "SR2"
+    ],
+    "edition_descriptions": {
+      "SR1": {
+        "kind": "Gruppendossier",
+        "preview": "Surfturf lebt in der Berliner U-Bahn und verbindet riskantes Bahn-Surfen mit dem Handel von Flugechseneiern.",
+        "full": "Die Mitglieder hängen sich mit Cybersaugern außen an Züge, suchen in Tunneln nach verwertbaren Flugechseneiern und provozieren dabei Fahrgäste und Gefahren der erwachten Unterwelt.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "deutschland-in-den-schatten",
+            "title": "Deutschland in den Schatten (Ausgabe 1992)",
+            "edition": "SR1",
+            "citation": "Deutschland in den Schatten, S. 58–59",
+            "purpose": "description"
+          }
+        ]
+      },
+      "SR2": {
+        "kind": "Gruppendossier",
+        "preview": "Surfturf lebt in der Berliner U-Bahn und verbindet riskantes Bahn-Surfen mit dem Handel von Flugechseneiern.",
+        "full": "Die Mitglieder hängen sich mit Cybersaugern außen an Züge, suchen in Tunneln nach verwertbaren Flugechseneiern und provozieren dabei Fahrgäste und Gefahren der erwachten Unterwelt.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "deutschland-in-den-schatten-1993",
+            "title": "Deutschland in den Schatten (Ausgabe 1993)",
+            "edition": "SR2",
+            "citation": "Deutschland in den Schatten (Ausgabe 1993), S. 58–59",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
+    "global_id": "berlin-2080:person:surfturf"
+  },
+  {
+    "id": "white-skins",
+    "name": "White Skins",
+    "aliases": [],
+    "category": "Gangs",
+    "entity_type": "group",
+    "dataset": "deutschland-in-den-schatten-gangs",
+    "role": "Rassistische Terrorgang",
+    "affiliation": "Berliner Gangszene",
+    "status": "Historisch belegt (2053)",
+    "members": "?",
+    "danger": null,
+    "summary": "Die White Skins verfolgen eine extrem rassistische Ideologie und führen gewaltsame angebliche Abstammungstests durch.",
+    "description": "Die Gang tritt mit pseudowissenschaftlichen Gentests auf, sperrt Straßenzüge ab und greift alle Menschen an, die nicht ihrem konstruierten Reinheitsbild entsprechen.",
+    "source": "Deutschland in den Schatten, S. 58–59 (SR1/SR2)",
+    "locations": [],
+    "scope": "Berlinweit; kein engeres Revier belegt",
+    "sources": [
+      {
+        "bookId": "deutschland-in-den-schatten",
+        "title": "Deutschland in den Schatten (Ausgabe 1992)",
+        "edition": "SR1",
+        "citation": "Deutschland in den Schatten, S. 58–59",
+        "purpose": "description"
+      },
+      {
+        "bookId": "deutschland-in-den-schatten-1993",
+        "title": "Deutschland in den Schatten (Ausgabe 1993)",
+        "edition": "SR2",
+        "citation": "Deutschland in den Schatten (Ausgabe 1993), S. 58–59",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR1",
+      "SR2"
+    ],
+    "edition_descriptions": {
+      "SR1": {
+        "kind": "Gruppendossier",
+        "preview": "Die White Skins verfolgen eine extrem rassistische Ideologie und führen gewaltsame angebliche Abstammungstests durch.",
+        "full": "Die Gang tritt mit pseudowissenschaftlichen Gentests auf, sperrt Straßenzüge ab und greift alle Menschen an, die nicht ihrem konstruierten Reinheitsbild entsprechen.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "deutschland-in-den-schatten",
+            "title": "Deutschland in den Schatten (Ausgabe 1992)",
+            "edition": "SR1",
+            "citation": "Deutschland in den Schatten, S. 58–59",
+            "purpose": "description"
+          }
+        ]
+      },
+      "SR2": {
+        "kind": "Gruppendossier",
+        "preview": "Die White Skins verfolgen eine extrem rassistische Ideologie und führen gewaltsame angebliche Abstammungstests durch.",
+        "full": "Die Gang tritt mit pseudowissenschaftlichen Gentests auf, sperrt Straßenzüge ab und greift alle Menschen an, die nicht ihrem konstruierten Reinheitsbild entsprechen.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "deutschland-in-den-schatten-1993",
+            "title": "Deutschland in den Schatten (Ausgabe 1993)",
+            "edition": "SR2",
+            "citation": "Deutschland in den Schatten (Ausgabe 1993), S. 58–59",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
+    "global_id": "berlin-2080:person:white-skins"
+  },
+  {
+    "id": "red-skins",
+    "name": "Red Skins",
+    "aliases": [],
+    "category": "Gangs",
+    "entity_type": "group",
+    "dataset": "deutschland-in-den-schatten-gangs",
+    "role": "Straßengang",
+    "affiliation": "Berliner Gangszene",
+    "status": "Historisch belegt (2053)",
+    "members": "?",
+    "danger": null,
+    "summary": "Die Red Skins sind erbitterte Gegner der White Skins und werden wegen ähnlicher äußerer Merkmale häufig mit ihnen verwechselt.",
+    "description": "Die Gang trägt Glatzen mit gläsernen Schädelimplantaten, ist jedoch nicht an der Ideologie der White Skins interessiert. Viele ihrer Kämpfe entstehen aus Verwechslungen und daraus folgender Gegenwehr.",
+    "source": "Deutschland in den Schatten, S. 58–59 (SR1/SR2)",
+    "locations": [],
+    "scope": "Berlinweit; kein engeres Revier belegt",
+    "sources": [
+      {
+        "bookId": "deutschland-in-den-schatten",
+        "title": "Deutschland in den Schatten (Ausgabe 1992)",
+        "edition": "SR1",
+        "citation": "Deutschland in den Schatten, S. 58–59",
+        "purpose": "description"
+      },
+      {
+        "bookId": "deutschland-in-den-schatten-1993",
+        "title": "Deutschland in den Schatten (Ausgabe 1993)",
+        "edition": "SR2",
+        "citation": "Deutschland in den Schatten (Ausgabe 1993), S. 58–59",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR1",
+      "SR2"
+    ],
+    "edition_descriptions": {
+      "SR1": {
+        "kind": "Gruppendossier",
+        "preview": "Die Red Skins sind erbitterte Gegner der White Skins und werden wegen ähnlicher äußerer Merkmale häufig mit ihnen verwechselt.",
+        "full": "Die Gang trägt Glatzen mit gläsernen Schädelimplantaten, ist jedoch nicht an der Ideologie der White Skins interessiert. Viele ihrer Kämpfe entstehen aus Verwechslungen und daraus folgender Gegenwehr.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "deutschland-in-den-schatten",
+            "title": "Deutschland in den Schatten (Ausgabe 1992)",
+            "edition": "SR1",
+            "citation": "Deutschland in den Schatten, S. 58–59",
+            "purpose": "description"
+          }
+        ]
+      },
+      "SR2": {
+        "kind": "Gruppendossier",
+        "preview": "Die Red Skins sind erbitterte Gegner der White Skins und werden wegen ähnlicher äußerer Merkmale häufig mit ihnen verwechselt.",
+        "full": "Die Gang trägt Glatzen mit gläsernen Schädelimplantaten, ist jedoch nicht an der Ideologie der White Skins interessiert. Viele ihrer Kämpfe entstehen aus Verwechslungen und daraus folgender Gegenwehr.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "deutschland-in-den-schatten-1993",
+            "title": "Deutschland in den Schatten (Ausgabe 1993)",
+            "edition": "SR2",
+            "citation": "Deutschland in den Schatten (Ausgabe 1993), S. 58–59",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
+    "global_id": "berlin-2080:person:red-skins"
+  },
+  {
+    "id": "kreuzritter",
+    "name": "Kreuzritter",
+    "aliases": [],
+    "category": "Gangs",
+    "entity_type": "group",
+    "dataset": "deutschland-in-den-schatten-gangs",
+    "role": "Religiöse Terrorgang",
+    "affiliation": "Berliner Gangszene",
+    "status": "Historisch belegt (2053)",
+    "members": "?",
+    "danger": null,
+    "summary": "Die Kreuzritter verfolgen vermeintliche Ketzer mit ritualisierter und demonstrativer Gewalt.",
+    "description": "Die fanatische Gang verbindet ein radikales christliches Selbstbild mit Entführungen, Folter und Hinrichtungen von Personen, die sie zu Sündern erklärt.",
+    "source": "Deutschland in den Schatten, S. 58–59 (SR1/SR2)",
+    "locations": [],
+    "scope": "Berlinweit; kein engeres Revier belegt",
+    "sources": [
+      {
+        "bookId": "deutschland-in-den-schatten",
+        "title": "Deutschland in den Schatten (Ausgabe 1992)",
+        "edition": "SR1",
+        "citation": "Deutschland in den Schatten, S. 58–59",
+        "purpose": "description"
+      },
+      {
+        "bookId": "deutschland-in-den-schatten-1993",
+        "title": "Deutschland in den Schatten (Ausgabe 1993)",
+        "edition": "SR2",
+        "citation": "Deutschland in den Schatten (Ausgabe 1993), S. 58–59",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR1",
+      "SR2"
+    ],
+    "edition_descriptions": {
+      "SR1": {
+        "kind": "Gruppendossier",
+        "preview": "Die Kreuzritter verfolgen vermeintliche Ketzer mit ritualisierter und demonstrativer Gewalt.",
+        "full": "Die fanatische Gang verbindet ein radikales christliches Selbstbild mit Entführungen, Folter und Hinrichtungen von Personen, die sie zu Sündern erklärt.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "deutschland-in-den-schatten",
+            "title": "Deutschland in den Schatten (Ausgabe 1992)",
+            "edition": "SR1",
+            "citation": "Deutschland in den Schatten, S. 58–59",
+            "purpose": "description"
+          }
+        ]
+      },
+      "SR2": {
+        "kind": "Gruppendossier",
+        "preview": "Die Kreuzritter verfolgen vermeintliche Ketzer mit ritualisierter und demonstrativer Gewalt.",
+        "full": "Die fanatische Gang verbindet ein radikales christliches Selbstbild mit Entführungen, Folter und Hinrichtungen von Personen, die sie zu Sündern erklärt.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "deutschland-in-den-schatten-1993",
+            "title": "Deutschland in den Schatten (Ausgabe 1993)",
+            "edition": "SR2",
+            "citation": "Deutschland in den Schatten (Ausgabe 1993), S. 58–59",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
+    "global_id": "berlin-2080:person:kreuzritter"
+  },
+  {
+    "id": "die-grunen-barden",
+    "name": "Die Grünen Barden",
+    "aliases": [],
+    "category": "Gangs",
+    "entity_type": "group",
+    "dataset": "deutschland-in-den-schatten-gangs",
+    "role": "Minnesänger- und Thrill-Gang",
+    "affiliation": "Berliner Gangszene",
+    "status": "Historisch belegt (2053)",
+    "members": "?",
+    "danger": null,
+    "summary": "Die Grünen Barden treten als moderne Minnesänger auf und reagieren auf Zurückweisung mit Gewalt.",
+    "description": "Die Gruppe entstand aus einer Mode um wiederentdeckte mittelalterliche Lieder. Hinter ihrem romantischen Auftreten steht ein erzwungenes Werben, bei dem Zurückweisung gefährliche Folgen haben kann.",
+    "source": "Deutschland in den Schatten, S. 58–59 (SR1/SR2)",
+    "locations": [],
+    "scope": "Berlinweit; kein engeres Revier belegt",
+    "sources": [
+      {
+        "bookId": "deutschland-in-den-schatten",
+        "title": "Deutschland in den Schatten (Ausgabe 1992)",
+        "edition": "SR1",
+        "citation": "Deutschland in den Schatten, S. 58–59",
+        "purpose": "description"
+      },
+      {
+        "bookId": "deutschland-in-den-schatten-1993",
+        "title": "Deutschland in den Schatten (Ausgabe 1993)",
+        "edition": "SR2",
+        "citation": "Deutschland in den Schatten (Ausgabe 1993), S. 58–59",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR1",
+      "SR2"
+    ],
+    "edition_descriptions": {
+      "SR1": {
+        "kind": "Gruppendossier",
+        "preview": "Die Grünen Barden treten als moderne Minnesänger auf und reagieren auf Zurückweisung mit Gewalt.",
+        "full": "Die Gruppe entstand aus einer Mode um wiederentdeckte mittelalterliche Lieder. Hinter ihrem romantischen Auftreten steht ein erzwungenes Werben, bei dem Zurückweisung gefährliche Folgen haben kann.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "deutschland-in-den-schatten",
+            "title": "Deutschland in den Schatten (Ausgabe 1992)",
+            "edition": "SR1",
+            "citation": "Deutschland in den Schatten, S. 58–59",
+            "purpose": "description"
+          }
+        ]
+      },
+      "SR2": {
+        "kind": "Gruppendossier",
+        "preview": "Die Grünen Barden treten als moderne Minnesänger auf und reagieren auf Zurückweisung mit Gewalt.",
+        "full": "Die Gruppe entstand aus einer Mode um wiederentdeckte mittelalterliche Lieder. Hinter ihrem romantischen Auftreten steht ein erzwungenes Werben, bei dem Zurückweisung gefährliche Folgen haben kann.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "deutschland-in-den-schatten-1993",
+            "title": "Deutschland in den Schatten (Ausgabe 1993)",
+            "edition": "SR2",
+            "citation": "Deutschland in den Schatten (Ausgabe 1993), S. 58–59",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
+    "global_id": "berlin-2080:person:die-grunen-barden"
+  },
+  {
+    "id": "streiter-gottes",
+    "name": "Streiter Gottes",
+    "aliases": [],
+    "category": "Gangs",
+    "entity_type": "group",
+    "dataset": "deutschland-in-den-schatten-gangs",
+    "role": "Religiöse Kampfgruppe",
+    "affiliation": "Berliner Gangszene",
+    "status": "Historisch belegt (2053)",
+    "members": "?",
+    "danger": null,
+    "summary": "Die Streiter Gottes bilden den Berliner Arm der Ritter Christi und unterstützen religiöse Gruppen als bewaffnete Verbündete.",
+    "description": "Die Gang versteht verschiedene Religionen als Teile einer höheren Macht. Sie meidet manche innerreligiösen Konflikte, tritt gegen erklärte Gottlose jedoch offen und organisiert an.",
+    "source": "Deutschland in den Schatten, S. 58–59 (SR1/SR2)",
+    "locations": [],
+    "scope": "Berlinweit; kein engeres Revier belegt",
+    "sources": [
+      {
+        "bookId": "deutschland-in-den-schatten",
+        "title": "Deutschland in den Schatten (Ausgabe 1992)",
+        "edition": "SR1",
+        "citation": "Deutschland in den Schatten, S. 58–59",
+        "purpose": "description"
+      },
+      {
+        "bookId": "deutschland-in-den-schatten-1993",
+        "title": "Deutschland in den Schatten (Ausgabe 1993)",
+        "edition": "SR2",
+        "citation": "Deutschland in den Schatten (Ausgabe 1993), S. 58–59",
+        "purpose": "description"
+      }
+    ],
+    "editions": [
+      "SR1",
+      "SR2"
+    ],
+    "edition_descriptions": {
+      "SR1": {
+        "kind": "Gruppendossier",
+        "preview": "Die Streiter Gottes bilden den Berliner Arm der Ritter Christi und unterstützen religiöse Gruppen als bewaffnete Verbündete.",
+        "full": "Die Gang versteht verschiedene Religionen als Teile einer höheren Macht. Sie meidet manche innerreligiösen Konflikte, tritt gegen erklärte Gottlose jedoch offen und organisiert an.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "deutschland-in-den-schatten",
+            "title": "Deutschland in den Schatten (Ausgabe 1992)",
+            "edition": "SR1",
+            "citation": "Deutschland in den Schatten, S. 58–59",
+            "purpose": "description"
+          }
+        ]
+      },
+      "SR2": {
+        "kind": "Gruppendossier",
+        "preview": "Die Streiter Gottes bilden den Berliner Arm der Ritter Christi und unterstützen religiöse Gruppen als bewaffnete Verbündete.",
+        "full": "Die Gang versteht verschiedene Religionen als Teile einer höheren Macht. Sie meidet manche innerreligiösen Konflikte, tritt gegen erklärte Gottlose jedoch offen und organisiert an.",
+        "hasMore": true,
+        "hasExcerpt": true,
+        "sources": [
+          {
+            "bookId": "deutschland-in-den-schatten-1993",
+            "title": "Deutschland in den Schatten (Ausgabe 1993)",
+            "edition": "SR2",
+            "citation": "Deutschland in den Schatten (Ausgabe 1993), S. 58–59",
+            "purpose": "description"
+          }
+        ]
+      }
+    },
+    "global_id": "berlin-2080:person:streiter-gottes"
   }
 ]

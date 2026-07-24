@@ -1,6 +1,8 @@
 *
 !.gitignore
 !README.md
+!SOURCES.md
+!Karte-lokal-starten.cmd
 !index.html
 !manifest.webmanifest
 !service-worker.js
@@ -16,6 +18,9 @@
 !tools/
 tools/*
 !tools/build_geographic_shadowrun_map.py
+!tools/build_gang_dossiers.py
+!tools/reconcile_zone_topology.py
+!tools/sync_shared_editions.py
 !tools/validate_city_data.py
 !tmp/
 tmp/*

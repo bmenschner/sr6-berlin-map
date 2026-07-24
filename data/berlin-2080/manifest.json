@@ -3,8 +3,11 @@
   "id": "berlin-2080",
   "name": "Berlin",
   "year": 2080,
-  "dataVersion": 2,
+  "dataVersion": 13,
   "availableEditions": [
+    "SR1",
+    "SR2",
+    "SR3",
     "SR4",
     "SR5",
     "SR6"
@@ -45,18 +48,24 @@
     ]
   ],
   "summary": {
-    "entities": 439,
+    "entities": 486,
     "marker_instances": 457,
     "overview_marker_instances": 292,
     "detail_marker_instances": 133,
-    "gangs": 65,
+    "gangs": 72,
     "corporations": 20
   },
   "files": {
     "places": "places.geojson",
+    "virtualPlaces": "virtual-places.geojson",
+    "historicalPlaces": "historical-places.geojson",
+    "placeAugmentations": "place-augmentations.json",
     "people": "people.json",
+    "historicalPeople": "historical-people.json",
+    "personAugmentations": "person-augmentations.json",
     "atlas": "atlas.json",
     "zones": "zones.geojson",
+    "exterritorial": "exterritorial.geojson",
     "districts": "districts.geojson",
     "neighborhoods": "neighborhoods.geojson",
     "outskirts": "outskirts.geojson",
